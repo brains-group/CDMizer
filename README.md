@@ -1,15 +1,15 @@
 # Smart Encoding and Automation of Over-The-Counter Derivatives Contracts
 
-*A modular pipeline for converting natural language OTC derivatives into executable smart contracts via Common-Domain-Model (CDM) representations and reinforcement learning.*
+*A modular pipeline for converting natural language OTC derivatives into Common-Domain-Model (CDM) representations using LLM and RAG.*
 
 ---
+
+Paper : https://arxiv.org/abs/2506.01063
 
 ## Overview
 
 This repository enables an end-to-end automation flow for OTC derivatives processing:
-
-1. **Natural Language contract description → CDM representation**
-2. **CDM representation → Optimized Smart Contracts** (via Reinforcement Learning)
+ - **Natural Language contract description → CDM representation**
 
 It also supports synthetic data generation and contract template creation.
 
@@ -39,9 +39,6 @@ pip install -r requirements.txt
 
 - `src/natural_language_to_cdm/`  
   Contains experiments and models for converting contract descriptions to CDM format
-
-- `src/cdm_to_smart_contract/`  
-  Implements CDM-to-Solidity translation using reinforcement learning
 
 - `generate_text_from_cdm.py`  
   Generates synthetic natural language descriptions from CDM data
