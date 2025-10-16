@@ -1,0 +1,645 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "UniqueTransactionIdentifier",
+            "issuerReference": {
+                "globalReference": "5b0baa7d",
+                "externalReference": "party1"
+            },
+            "issuer": {
+                "value": "UTIPREFIX",
+                "meta": {
+                    "scheme": "http://www.fpml.org/coding-scheme/external/cftc/issuer-identifier"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "UTITRADEID",
+                        "meta": {
+                            "scheme": "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
+                        }
+                    }
+                },
+                {
+                    "identifier": {
+                        "value": "a41bc6e9",
+                        "meta": {
+                            "scheme": "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
+                        }
+                    }
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "2010-08-16",
+            "meta": {
+                "globalKey": "tradeDate",
+                "externalKey": "tradeDate"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourceProvider": {
+                                                    "value": "Party1"
+                                                },
+                                                "sourcePage": {
+                                                    "value": "ISDA"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "observationSchedule": {
+                                                "observationDate": [
+                                                    {
+                                                        "adjustedDate": "2010-08-16",
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "rollConvention": "Following",
+                                                    "periodMultiplier": 1,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "Party2",
+                                                    "receiver": "Party1"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "style",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-08-16",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "FOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "adjustableDate": {
+                                                "adjustedDate": {
+                                                    "value": "2010-08-16",
+                                                    "meta": {
+                                                        "globalKey": "tradeDate"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "value": 0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "ExchangeRate",
+                                            "composite": {
+                                                "baseValue": null
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "ISDA"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "Sponsor Mid Page"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2010-08-16"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "16:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"settlementType\" : \"Cash\"",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2010-08-16"
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade",
+                                                            "value": "2010-08-16"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "Party2",
+                                                    "receiver": "Party1"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade",
+                                                            "value": "2010-08-16"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "tenorPeriod": {
+                                            "periodMultiplier": 1,
+                                            "period": "Year"
+                                        },
+                                        "exchangeRate": {
+                                            "crossRate": [
+                                                {
+                                                    "rate": 1.0,
+                                                    "currency1": {
+                                                        "value": "MXN"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Spot"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": ""
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": ""
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2010-08-16",
+                                                                "dateAdjustments": {
+                                                                    "businessDayConvention": ""
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "16:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"settlementType\" : \"Cash\"",
+                                        "settlementCurrency": {
+                                            "value": "2010-08-16"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2010-08-16"
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourcePage": {
+                                                    "value": "ISDA"
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "currencyPair": {
+                                                "value": {
+                                                    "currency1": {
+                                                        "value": "MXN"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Currency2PerCurrency1"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "Not specified"
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Not specified"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": "Business"
+                                            }
+                                        },
+                                        "numberOfObservationDates": "22"
+                                    },
+                                    "valuationDates": {
+                                        "finalValuationDate": {
+                                            "valuationDates": {
+                                                "relativeDates": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "cef5340c"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "InterestRate",
+                                                "value": 0.151,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": 100000.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 252,
+                                            "meanAdjustment": true
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "InterestRate",
+                                                "value": 0.151,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 252,
+                                            "meanAdjustment": true
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party2",
+                                        "receiver": "Party1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-4"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "adjustedDate": {
+                                                    "value": "2010-08-16",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": ""
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": ""
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "ISDA"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "productQualifier": "ForeignExchange_Swap",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "ForeignExchange_VanillaOption",
+                                "meta": {
+                                    "scheme": "http://www.fpml.org/coding-scheme/product-type-simple"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        },
+                                        "priceType": "ExchangeRate",
+                                        "composite": {
+                                            "baseValue": 0.8935
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": 1750,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "currencyPair": {
+                                    "value": {
+                                        "currency1": {
+                                            "value": "MXN"
+                                        },
+                                        "currency2": {
+                                            "value": "USD"
+                                        },
+                                        "quoteBasis": ""
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "7H6GLXDRUGQFU57RNE97",
+                        "externalReference": "party1"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "7H6GLXDRUGQFU57RNE97",
+                            "externalReference": "Party1"
+                        },
+                        {
+                            "globalReference": "213800QILIUD4ROSUO03",
+                            "externalReference": "Party2"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "7H6GLXDRUGQFU57RNE97"
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "c87765a4"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Party1"
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "213800QILIUD4ROSUO03"
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "4a5d2d9f"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Party2"
+                }
+            }
+        ],
+        "account": [
+            {
+                "accountNumber": {
+                    "value": "5b0baa7d"
+                },
+                "servicingParty": {
+                    "globalReference": "7H6GLXDRUGQFU57RNE97",
+                    "externalReference": "Party1"
+                }
+            }
+        ]
+    }
+}

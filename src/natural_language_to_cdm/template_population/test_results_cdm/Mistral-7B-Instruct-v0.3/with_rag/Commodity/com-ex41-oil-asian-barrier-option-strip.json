@@ -1,0 +1,649 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Commodity Option",
+                "issuerReference": {
+                    "globalReference": "7fd57548",
+                    "externalReference": "Party A"
+                },
+                "issuer": {
+                    "value": "Party A",
+                    "meta": {
+                        "scheme": "Party Reference"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "100000",
+                            "meta": {
+                                "scheme": "Barrels of Oil"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "80.00",
+                            "meta": {
+                                "scheme": "USD"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Commodity Option Contract",
+            "meta": {
+                "globalKey": "tradeType",
+                "externalKey": "commodityOption"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": {
+                                            "partyReference": "4041c228",
+                                            "externalReference": "Party B"
+                                        },
+                                        "seller": {
+                                            "partyReference": "7fd57548",
+                                            "externalReference": "Party A"
+                                        }
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": false,
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9",
+                                                    "externalKey": "floatingLegCalculationPeriods"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "First",
+                                                "businessCenters": ""
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Counterparty",
+                                                "value": [
+                                                    {
+                                                        "partyReference": "7fd57548",
+                                                        "externalReference": "Party A"
+                                                    },
+                                                    {
+                                                        "partyReference": "4041c228",
+                                                        "externalReference": "Party B"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the 'key' is 'optionType'. The prior context suggests that we should look for the type of option (call or put) in the 'trade details' section of the derivatives contract description.\n\nFrom the contract description, we can see that the option is a call option. Therefore, the placeholder for 'optionType' should be populated with the string 'call'.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"optionType\": \"call\"\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2013-01-01",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "0"
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2013-03-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "commencementDate",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "BusinessDay",
+                                                    "periodMultiplier": 1,
+                                                    "period": "M"
+                                                }
+                                            },
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2013-02-28",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "commencementDate",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "BusinessDay",
+                                                    "periodMultiplier": 1,
+                                                    "period": "M"
+                                                }
+                                            },
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2013-01-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "commencementDate",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "BusinessDay",
+                                                    "periodMultiplier": 1,
+                                                    "period": "M"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": "BBL"
+                                            },
+                                            "priceType": "AssetPrice",
+                                            "datedValue": [
+                                                {
+                                                    "date": "2013-01-31",
+                                                    "value": 80.0
+                                                },
+                                                {
+                                                    "date": "2013-02-28",
+                                                    "value": 80.0
+                                                },
+                                                {
+                                                    "date": "2013-03-31",
+                                                    "value": 80.0
+                                                }
+                                            ],
+                                            "value": 80.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": ""
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": " Based on the provided inputs, the key is'settlementType'. The prior context (path) leads to 'trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType'.\n\nFrom the derivatives contract description, it is clear that the contract is a commodity option, and the settlement is done in cash. However, the settlement type is not explicitly mentioned in the contract description.\n\nSince the settlement is done in cash, a suitable value for the'settlementType' key could be 'Cash'. However, it's important to note that the contract does not explicitly state this, so it's essential to verify this information with the original contract or a reliable source.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [ {\n                \"settlementTerms\": {\n                  \"settlementType\": \"Cash\"\n                }\n              } ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "classification": [
+                                                    {
+                                                        "value": "Energy",
+                                                        "ordinal": 1
+                                                    },
+                                                    {
+                                                        "value": "Oil",
+                                                        "ordinal": 2
+                                                    },
+                                                    {
+                                                        "value": "OilBrent",
+                                                        "ordinal": 3
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "exerciseDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 5,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingFeature": {
+                                            "averagingMethod": {
+                                                "isWeighted": false,
+                                                "calculationMethod": "Arithmetic"
+                                            }
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "Brent oil price"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": null
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business",
+                                            "dayDistribution": "First",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "DowJonesPower"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "e1cbae2a"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": false,
+                                            "periodMultiplier": 1,
+                                            "period": "M"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodEndDate",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business",
+                                            "periodMultiplier": 5,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NotApplicable",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Not specified (as the contract does not provide specific business centers)"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Counterparty",
+                                                "value": {
+                                                    "partyReference": "7fd57548",
+                                                    "externalReference": "Party A"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "5f333497"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "80c9229e"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "ExerciseDate",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business",
+                                            "periodMultiplier": 5,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York"
+                                                    },
+                                                    {
+                                                        "value": "London"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Counterparty",
+                                                "value": "Party B"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "CONTRACT",
+                                                "value": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].priceQuantity"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "partyA",
+                            "calculationAgentPartyEnum": "partyA"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Oil",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "OilWTI",
+                                    "meta": {
+                                        "scheme": "http://www.dtcc.com/coding-scheme/product-taxonomy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Oil",
+                            "source": "EMIR",
+                            "value": {
+                                "name": {
+                                    "value": "WTIO",
+                                    "meta": {
+                                        "scheme": "http://www.dtcc.com/coding-scheme/product-taxonomy"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "value": 120.0,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        },
+                                        "perUnitOf": {
+                                            "capacityUnit": "MWH"
+                                        },
+                                        "priceType": "CashPrice",
+                                        "cashPrice": {
+                                            "cashPriceType": "Fee"
+                                        }
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "price-1"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "63"
+                                            }
+                                        },
+                                        "value": 100000,
+                                        "unit": {
+                                            "capacityUnit": "BBL"
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "Business",
+                                                "periodMultiplier": null,
+                                                "period": "5"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "10fb089c",
+                        "externalReference": "partyA"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "f0466d0f",
+                        "externalReference": "partyB"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Party1",
+                    "partyReference": [
+                        {
+                            "globalReference": "1bf2f883",
+                            "externalReference": "partyA"
+                        }
+                    ]
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": [
+                        {
+                            "globalReference": "1bf2f883",
+                            "externalReference": "partyB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "f0466d0f",
+                            "meta": {
+                                "scheme": "Custom"
+                            }
+                        },
+                        "identifierType": "Custom"
+                    },
+                    {
+                        "identifier": {
+                            "value": "7fd57548",
+                            "meta": {
+                                "scheme": "Custom"
+                            }
+                        },
+                        "identifierType": "Custom"
+                    }
+                ],
+                "name": {
+                    "value": "Party A"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "USA"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2012-11-15",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Confirmation",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Commodity Option"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "None"
+                            }
+                        },
+                        "vintage": "2013"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "7fd57548",
+                            "externalReference": "PartyA"
+                        },
+                        {
+                            "globalReference": "4041c228",
+                            "externalReference": "PartyB"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

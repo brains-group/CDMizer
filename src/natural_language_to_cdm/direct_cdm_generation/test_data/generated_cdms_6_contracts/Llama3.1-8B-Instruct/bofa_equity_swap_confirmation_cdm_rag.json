@@ -1,0 +1,219 @@
+{
+    "meta": {
+        "globalKey": "ed419c4c"
+    },
+    "tradeDate": {
+        "isoDate": "2018-04-19"
+    },
+    "effectiveDate": {
+        "isoDate": "2018-04-23"
+    },
+    "terminationDate": {
+        "adjustableDate": {
+            "unadjustedDate": "2019-04-23",
+            "dateAdjustments": {
+                "businessDayConvention": "NONE",
+                "meta": {
+                    "globalKey": "24a738"
+                }
+            },
+            "meta": {
+                "globalKey": "ed5fcd97"
+            }
+        },
+        "meta": {
+            "globalKey": "ed5fcd97"
+        }
+    },
+    "payout": {
+        "interestRatePayout": [
+            {
+                "payerReceiver": {
+                    "payer": "Party B",
+                    "receiver": "Merrill Lynch International"
+                },
+                "priceQuantity": {
+                    "quantitySchedule": {
+                        "address": {
+                            "scope": "DOCUMENT",
+                            "value": "quantity-1"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "0"
+                    }
+                },
+                "rateSpecification": {
+                    "floatingRate": {
+                        "rateOption": {
+                            "address": {
+                                "scope": "DOCUMENT",
+                                "value": "rateOption-1"
+                            }
+                        },
+                        "spreadSchedule": {
+                            "price": {
+                                "address": {
+                                    "scope": "DOCUMENT",
+                                    "value": "price-1"
+                                }
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "138698f1"
+                        },
+                        "calculationParameters": {
+                            "calculationMethod": "Compounding",
+                            "lookbackCalculation": {
+                                "offsetDays": 2
+                            },
+                            "applicableBusinessDays": {
+                                "businessCenter": [
+                                    {
+                                        "value": "Sydney"
+                                    }
+                                ]
+                            },
+                            "meta": {
+                                "globalKey": "138698f1"
+                            }
+                        }
+                    }
+                },
+                "dayCountFraction": {
+                    "value": "Actual/365(Fixed)"
+                },
+                "calculationPeriodDates": {
+                    "effectiveDate": {
+                        "adjustableDate": {
+                            "unadjustedDate": "2018-04-23",
+                            "dateAdjustments": {
+                                "businessDayConvention": "NONE",
+                                "meta": {
+                                    "globalKey": "24a738"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "ed5fcd97"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "ed5fcd97"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "ed5fcd97"
+                    }
+                },
+                "meta": {
+                    "globalKey": "12022cd2"
+                }
+            }
+        ],
+        "meta": {
+            "globalKey": "ea9d7bcf"
+        }
+    },
+    "party": [
+        {
+            "partyId": [
+                {
+                    "identifier": {
+                        "value": "Merrill Lynch International",
+                        "meta": {
+                            "scheme": "ISDA"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "3cfd165"
+                    }
+                }
+            ],
+            "meta": {
+                "globalKey": "3cfd165",
+                "externalKey": "Merrill Lynch International"
+            }
+        },
+        {
+            "partyId": [
+                {
+                    "identifier": {
+                        "value": "Party B",
+                        "meta": {
+                            "scheme": "ISDA"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "3cfd166"
+                    }
+                }
+            ],
+            "meta": {
+                "globalKey": "3cfd166",
+                "externalKey": "Party B"
+            }
+        }
+    ],
+    "contractDetails": {
+        "documentation": [
+            {
+                "agreementDate": "2014-11-04",
+                "legalAgreementIdentification": {
+                    "agreementName": {
+                        "agreementType": "MasterConfirmation",
+                        "masterConfirmationType": {
+                            "value": "Equity"
+                        }
+                    }
+                },
+                "contractualParty": [
+                    {
+                        "globalReference": "3cfd165",
+                        "externalReference": "Merrill Lynch International"
+                    },
+                    {
+                        "globalReference": "3cfd166",
+                        "externalReference": "Party B"
+                    }
+                ],
+                "meta": {
+                    "globalKey": "f78f4bde"
+                }
+            }
+        ],
+        "meta": {
+            "globalKey": "f78f4bde"
+        }
+    },
+    "collateral": {
+        "independentAmount": {
+            "payerPartyReference": {
+                "globalReference": "3cfd165",
+                "externalReference": "Merrill Lynch International"
+            },
+            "receiverPartyReference": {
+                "globalReference": "3cfd166",
+                "externalReference": "Party B"
+            },
+            "paymentDetail": [
+                {
+                    "paymentRule": {
+                        "percentageRule": {
+                            "paymentPercent": 0.02,
+                            "notionalAmountReference": {
+                                "globalReference": "4cf",
+                                "externalReference": "equityNotionalAmount"
+                            }
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "3cfd165"
+                    }
+                }
+            ],
+            "meta": {
+                "globalKey": "3cfd165"
+            }
+        }
+    }
+}

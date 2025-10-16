@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "DebtType",
+  "description": "Specifies the type of debt instrument.",
+  "properties": {
+    "debtClass": {
+      "description": "Specifies the characteristics of a debt instrument.",
+      "$ref": "cdm-base-staticdata-asset-common-DebtClassEnum.schema.json"
+    },
+    "debtEconomics": {
+      "description": "Specifies selected financial terms of a debt instrument.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-DebtEconomics.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

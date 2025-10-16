@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "SettlementOrigin",
+  "description": "Defines the origin to the transfer as a reference for lineage purposes, whether it originated from trade level settlement terms or from payment terms on an economic payout.",
+  "properties": {
+    "commodityPayout": {
+      "description": "Represents a reference to an Commodity Payout.",
+      "$ref": "cdm-product-asset-metafields-ReferenceWithMetaCommodityPayout.schema.json"
+    },
+    "creditDefaultPayout": {
+      "description": "Represents a reference to a Credit Default Payout.",
+      "$ref": "cdm-product-asset-metafields-ReferenceWithMetaCreditDefaultPayout.schema.json"
+    },
+    "forwardPayout": {
+      "description": "Represents a reference to a Forward Payout.",
+      "$ref": "cdm-product-template-metafields-ReferenceWithMetaForwardPayout.schema.json"
+    },
+    "interestRatePayout": {
+      "description": "Represents a reference to an Interest Rate Payout.",
+      "$ref": "cdm-product-asset-metafields-ReferenceWithMetaInterestRatePayout.schema.json"
+    },
+    "optionPayout": {
+      "description": "Represents a reference to an Option Payout.",
+      "$ref": "cdm-product-template-metafields-ReferenceWithMetaOptionPayout.schema.json"
+    },
+    "assetPayout": {
+      "description": "Represents a reference to an Asset Payout.",
+      "$ref": "cdm-product-template-metafields-ReferenceWithMetaAssetPayout.schema.json"
+    },
+    "settlementTerms": {
+      "description": "Represents a reference to settlement terms, which may have been specified at execution.",
+      "$ref": "cdm-product-common-settlement-metafields-ReferenceWithMetaSettlementTerms.schema.json"
+    },
+    "performancePayout": {
+      "description": "Represents a reference to a Performance Payout.",
+      "$ref": "cdm-product-template-metafields-ReferenceWithMetaPerformancePayout.schema.json"
+    },
+    "fixedPricePayout": {
+      "description": "Represents a reference to a Fixed Price Payout",
+      "$ref": "cdm-product-template-metafields-ReferenceWithMetaFixedPricePayout.schema.json"
+    }
+  }
+}

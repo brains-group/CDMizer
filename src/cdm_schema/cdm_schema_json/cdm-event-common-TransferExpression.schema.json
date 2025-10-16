@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "TransferExpression",
+  "description": "Specifies a transfer expression (cash price, performance amount, scheduled payment amount, etc.) to define the nature of the transfer amount and its source.",
+  "properties": {
+    "priceTransfer": {
+      "description": "Specifies a transfer amount exchanged as a price or fee for entering into a Business Event, e.g. Premium, Termination fee, Novation fee.",
+      "$ref": "cdm-observable-asset-FeeTypeEnum.schema.json"
+    },
+    "scheduledTransfer": {
+      "description": "Specifies a transfer created from a scheduled or contingent event on a contract, e.g. Exercise, Performance, Credit Event",
+      "$ref": "cdm-event-common-ScheduledTransfer.schema.json"
+    }
+  }
+}

@@ -1,0 +1,1271 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Commodity Option Contract",
+                "issuerReference": {
+                    "globalReference": "7fd57548",
+                    "externalReference": "Party A"
+                },
+                "issuer": {
+                    "value": "Party A",
+                    "meta": {
+                        "scheme": "http://www.PartyA.com/com-issuer"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "http://www.PartyA.com/com-trade-id"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "2345",
+                            "meta": {
+                                "scheme": "http://www.PartyB.com/com-trade-id"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "9599b8e6"
+                },
+                "tradeDate": {
+                    "value": "2012-11-15",
+                    "meta": {
+                        "globalKey": "3ec85c"
+                    }
+                },
+                "tradableProduct": {
+                    "product": {
+                        "contractualProduct": {
+                            "productTaxonomy": [
+                                {
+                                    "source": "Commodity",
+                                    "value": {
+                                        "name": {
+                                            "value": "Oil",
+                                            "meta": {
+                                                "scheme": "http://www.PartyA.com/com-product-taxonomy"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "USD 80.00",
+            "meta": {
+                "globalKey": "c1f74247",
+                "externalKey": "contract"
+            },
+            "name": {
+                "value": "Commodity Option Contract"
+            },
+            "tradeDetails": [
+                {
+                    "tradeDate": "2012-11-15",
+                    "effectiveDate": "2013-01-01",
+                    "exercisePrice": "USD 80.00",
+                    "notionalAmount": "100,000",
+                    "exerciseDates": [
+                        "2013-01-31",
+                        "2013-02-28",
+                        "2013-03-31"
+                    ]
+                }
+            ],
+            "paymentTerms": "",
+            "termination": "",
+            "riskDisclosure": "",
+            "representations": "",
+            "governingLaw": "",
+            "counterpartyInformation": {
+                "partyA": {
+                    "partyReference": "7fd57548",
+                    "externalReference": "partyA"
+                },
+                "partyB": {
+                    "partyReference": "4041c228",
+                    "externalReference": "partyB"
+                }
+            },
+            "transferHistory": [
+                {
+                    "transferDate": "2012-11-15",
+                    "amount": "USD 30,000",
+                    "partyB": "Party B",
+                    "partyA": "Party A"
+                }
+            ],
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "productTaxonomy": [
+                                            {
+                                                "source": "ISDA",
+                                                "value": {
+                                                    "classification": [
+                                                        {
+                                                            "value": "Energy",
+                                                            "ordinal": 1
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "calculationAgent": {
+                "partyReference": "7fd57548",
+                "externalReference": "partyA"
+            },
+            "acceptance": {
+                "acceptanceDate": "2012-11-15",
+                "acceptanceSignature": {
+                    "partyA": "Signature A",
+                    "partyB": "Signature B"
+                }
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable",
+                                    "meta": {
+                                        "globalKey": "7fd57548"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "4041c228"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable",
+                                    "meta": {
+                                        "globalKey": "7fd57548"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "4041c228"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": {
+                                            "partyReference": "4041c228",
+                                            "externalReference": "partyB",
+                                            "partyName": {
+                                                "value": "Party B",
+                                                "meta": {
+                                                    "scheme": "http://www.fpml.org/coding-scheme/esma-emir-refit-contract-type"
+                                                }
+                                            }
+                                        },
+                                        "seller": {
+                                            "partyReference": "7fd57548",
+                                            "externalReference": "partyA",
+                                            "partyName": {
+                                                "value": "Party A",
+                                                "meta": {
+                                                    "scheme": "http://www.fpml.org/coding-scheme/esma-emir-refit-contract-type"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9",
+                                                    "externalKey": "floatingLegCalculationPeriods"
+                                                },
+                                                "balanceOfFirstPeriod": false
+                                            },
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "First"
+                                            }
+                                        },
+                                        "observationTerms": [
+                                            {
+                                                "observationType": "Price",
+                                                "observationFrequency": "Regular",
+                                                "observationSchedule": {
+                                                    "calculationPeriodDates": {
+                                                        "calculationPeriodFrequency": {
+                                                            "periodMultiplier": 1,
+                                                            "period": "M",
+                                                            "meta": {
+                                                                "globalKey": "11e9",
+                                                                "externalKey": "floatingLegCalculationPeriods"
+                                                            },
+                                                            "balanceOfFirstPeriod": false
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "11e9"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodStartDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "period": "D",
+                                                "meta": {
+                                                    "globalKey": "ea4acac1"
+                                                }
+                                            }
+                                        },
+                                        "paymentTerms": {
+                                            "paymentType": "Cash",
+                                            "paymentSchedule": {
+                                                "calculationPeriodDates": {
+                                                    "calculationPeriodFrequency": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "M",
+                                                        "meta": {
+                                                            "globalKey": "11e9",
+                                                            "externalKey": "floatingLegCalculationPeriods"
+                                                        },
+                                                        "balanceOfFirstPeriod": false
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "11e9"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "counterpartyInformation": [
+                                            {
+                                                "partyReference": "7fd57548",
+                                                "externalReference": "Party A"
+                                            },
+                                            {
+                                                "partyReference": "4041c228",
+                                                "externalReference": "Party B"
+                                            }
+                                        ],
+                                        "tradeLot": {
+                                            "tradeQuantity": 100000,
+                                            "tradePrice": 80.0
+                                        },
+                                        "calculationAgent": "Party A",
+                                        "governingLaw": "Jurisdiction of Contract",
+                                        "riskDisclosure": "Market Risk, Credit Risk, Liquidity Risk",
+                                        "representations": "Power to Enter Contract, Authorization to Execute Contract",
+                                        "acceptance": {
+                                            "acceptanceDate": "2012-11-15",
+                                            "acceptanceSignature": {
+                                                "partyA": "Signature of Party A",
+                                                "partyB": "Signature of Party B"
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Brent oil",
+                                                "value": "USD 80.00 per barrel"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "Based on the provided inputs, I will populate the JSON key with the relevant data.\n\n**Inputs:**\n\n1. Key: `optionType`\n2. Placeholder: `optionType`\n3. Derivatives Contract Description: **Commodity Option Contract**\n4. Prior Context (Path): `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`\n\n**Populating the Placeholder:**\n\nFrom the provided contract description, I can see that the option is a call option with an exercise price of USD 80.00 per barrel. Therefore, the best-suited value for the `optionType` key is `Call`.\n\nSince the placeholder is an empty string (\"\"), I will replace it with a STRING derived from the contract information.\n\n**Populated Placeholder:**\n\n```json\n\"optionType\": \"Call\"\n```\n\n**Additional Information:**\n\nBased on the prior context (path), I can see that the `optionType` key is nested within the `optionPayout` array. To maintain the same structure, I will populate the `optionType` key with a LIST of objects following the same structure.\n\n**Populated JSON:**\n\n```json\n{\n  \"meta\": {\n    \"globalKey\": \"12fbca14\"\n  },\n  \"tradeLot\": [\n    {\n      \"priceQuantity\": [\n        {\n          \"observable\": {\n            \"commodity\": {\n              \"value\": {\n                \"productTaxonomy\": [\n                  {\n                    \"source\": \"ISDA\",\n                    \"value\": {\n                      \"classification\": [\n                        {\n                          \"value\": \"Energy\",\n                          \"ordinal\": 1\n                        },\n                        {\n                          \"value\": \"Oil\",\n                          \"ordinal\": 2\n                        },\n                        {\n                          \"value\": \"OilWTI\",\n                          \"ordinal\": 3\n                        }\n                      ]\n                    }\n                  },\n                  {\n                    \"source\": \"EMIR\",\n                    \"value\": {\n                      \"classification\": [\n                        {\n                          \"value\": \"NRGY\",\n                          \"ordinal\": 1\n                        }\n                      ]\n                    }\n                  }\n                ]\n              }\n            }\n          }\n        }\n      ]\n    }\n  ],\n  \"optionType\": \"Call\"\n}\n```\n\nNote that I have maintained the same structure and datatype as the original JSON object, and populated the `optionType` key with the relevant value.",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": ""
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": null
+                                            },
+                                            "followUpConfirmation": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "value": 80,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "perUnitOf": {
+                                                "capacityUnit": "BBL"
+                                            },
+                                            "priceType": "AssetPrice"
+                                        },
+                                        "meta": {
+                                            "globalKey": "2ee78817"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "quantity": {
+                                            "value": 100000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        },
+                                        "priceQuantity": {
+                                            "quantitySchedule": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "quantity-1"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "0"
+                                            }
+                                        },
+                                        "settlementTerms": {
+                                            "settlementType": "Cash",
+                                            "settlementCurrency": {
+                                                "value": "USD"
+                                            },
+                                            "settlementDate": {
+                                                "adjustableOrRelativeDate": {
+                                                    "relativeDate": {
+                                                        "periodMultiplier": 5,
+                                                        "period": "D",
+                                                        "meta": {
+                                                            "globalKey": "5f333497"
+                                                        },
+                                                        "dayType": "Business",
+                                                        "businessDayConvention": "NONE"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "calculationAgent": {
+                                            "globalReference": "Party A",
+                                            "externalReference": "partyA"
+                                        },
+                                        "counterpartyInformation": {
+                                            "partyA": {
+                                                "globalReference": "7fd57548",
+                                                "externalReference": "partyA"
+                                            },
+                                            "partyB": {
+                                                "globalReference": "4041c228",
+                                                "externalReference": "partyB"
+                                            }
+                                        },
+                                        "tradeLot": {
+                                            "quantity": 100000,
+                                            "price": 80000
+                                        },
+                                        "transferHistory": [
+                                            {
+                                                "transfer": {
+                                                    "quantity": {
+                                                        "value": 30000,
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "USD"
+                                                            }
+                                                        }
+                                                    },
+                                                    "asset": {
+                                                        "Cash": {
+                                                            "identifier": [
+                                                                {
+                                                                    "identifier": {
+                                                                        "value": "USD"
+                                                                    },
+                                                                    "identifierType": "CurrencyCode"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "payerReceiver": {
+                                                        "payerPartyReference": {
+                                                            "globalReference": "f0466d0f",
+                                                            "externalReference": "partyB"
+                                                        },
+                                                        "receiverPartyReference": {
+                                                            "globalReference": "10fb089c"
+                                                        }
+                                                    }
+                                                },
+                                                "eventDate": "2012-11-15",
+                                                "effectiveDate": "2012-11-15"
+                                            }
+                                        ],
+                                        "acceptance": {
+                                            "date": "2012-11-15",
+                                            "signatures": [
+                                                {
+                                                    "partyA": {
+                                                        "globalReference": "Party A",
+                                                        "externalReference": "partyA"
+                                                    },
+                                                    "partyB": {
+                                                        "globalReference": "Party B",
+                                                        "externalReference": "partyB"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided inputs, I will populate the placeholder for the'settlementType' key.\n\nThe prior context (traversal path) is: trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType\n\nThe contract description mentions that the option will be settled in cash on the settlement date, which is 5 business days after the exercise date. The settlement currency is USD.\n\nBased on the examples provided, I will populate the placeholder with a string value.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"meta\" : {\n    \"globalKey\" : \"3a4b88ab\"\n  }\n}\n```\n\nHowever, considering the context, I will replace the placeholder with a string value that describes the settlement type.\n\n```json\n{\n  \"settlementType\" : \"Cash Settlement\"\n}\n```\n\nThis value accurately reflects the settlement type mentioned in the contract description.",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "classification": [
+                                                    {
+                                                        "value": "Energy",
+                                                        "ordinal": 1
+                                                    },
+                                                    {
+                                                        "value": "Oil",
+                                                        "ordinal": 2
+                                                    },
+                                                    {
+                                                        "value": "OilWTI",
+                                                        "ordinal": 3
+                                                    }
+                                                ]
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "commodity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "exerciseDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "60481a18"
+                                                    }
+                                                },
+                                                "businessDayConvention": "",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "USNY"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "27e4e9"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "externalReference": "exerciseDate"
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": "",
+                                                "meta": {
+                                                    "globalKey": "2128d871"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingFeature": {
+                                            "averagingMethod": {
+                                                "isWeighted": false,
+                                                "calculationMethod": "Arithmetic"
+                                            }
+                                        },
+                                        "pricingDates": {
+                                            "parametricDates": {
+                                                "dayType": "Calendar",
+                                                "dayDistribution": "All",
+                                                "businessCenters": {
+                                                    "commodityBusinessCalendar": [
+                                                        {
+                                                            "value": "DowJonesPower"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "e1cbae2a"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9"
+                                                }
+                                            }
+                                        },
+                                        "commodityPriceReturnTerms": {
+                                            "conversionFactor": 0.4913
+                                        },
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodEndDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "daysOffset": 5
+                                            }
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "price-1"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": "1.0"
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Calendar",
+                                            "dayDistribution": "All",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "DowJonesPower"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "e1cbae2a"
+                                                }
+                                            }
+                                        },
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodStartDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "period": "D",
+                                                "meta": {
+                                                    "globalKey": "ea4acac1"
+                                                },
+                                                "dayType": "Business"
+                                            },
+                                            "paymentDatesAdjustments": {
+                                                "businessDayConvention": "NotApplicable",
+                                                "meta": {
+                                                    "globalKey": "3a4b88ab"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "M",
+                                            "meta": {
+                                                "globalKey": "11e9",
+                                                "externalKey": "floatingLegCalculationPeriods"
+                                            },
+                                            "balanceOfFirstPeriod": false
+                                        },
+                                        "meta": {
+                                            "globalKey": "11e9"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodStartDate",
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodStartDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "period": "D",
+                                                "meta": {
+                                                    "globalKey": "11e9"
+                                                },
+                                                "dayType": "Business"
+                                            },
+                                            "paymentDatesAdjustments": {
+                                                "businessDayConvention": "NotApplicable",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "DowJonesPower"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Brent oil",
+                                                "value": "USD 80.00 per barrel"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "quantity": {
+                                            "value": 100000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "5f333497"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "5f333497"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "80c9229e"
+                                        },
+                                        "buyerSeller": {
+                                            "buyer": "Party A",
+                                            "seller": "Party B"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodStartDate",
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodStartDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "period": "D",
+                                                "meta": {
+                                                    "globalKey": "11e9"
+                                                },
+                                                "dayType": "Business"
+                                            },
+                                            "paymentDatesAdjustments": {
+                                                "businessDayConvention": "NotApplicable",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "DowJonesPower"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "commodity-2"
+                                            }
+                                        },
+                                        "tradeLot": [
+                                            {
+                                                "priceQuantity": [
+                                                    {
+                                                        "observable": {
+                                                            "commodity": {
+                                                                "value": {
+                                                                    "productTaxonomy": [
+                                                                        {
+                                                                            "source": "ISDA",
+                                                                            "value": {
+                                                                                "classification": [
+                                                                                    {
+                                                                                        "value": "Energy",
+                                                                                        "ordinal": 1
+                                                                                    },
+                                                                                    {
+                                                                                        "value": "Oil",
+                                                                                        "ordinal": 2
+                                                                                    },
+                                                                                    {
+                                                                                        "value": "OilWTI",
+                                                                                        "ordinal": 3
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "source": "EMIR",
+                                                                            "value": {
+                                                                                "classification": [
+                                                                                    {
+                                                                                        "value": "NRGY",
+                                                                                        "ordinal": 1
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "source": "ISDACRP",
+                                                                            "meta": {
+                                                                                "globalKey": "f420d6a1"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "meta": {
+                                                                    "location": [
+                                                                        {
+                                                                            "scope": "DOCUMENT",
+                                                                            "value": "commodity-2"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "meta": {
+                                                                "globalKey": "7803e258"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "7803e258"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "counterparty": [
+                                            {
+                                                "role": "Party1",
+                                                "meta": {
+                                                    "globalKey": "12fbca14"
+                                                }
+                                            },
+                                            {
+                                                "meta": {
+                                                    "globalKey": "12fbca14"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "quantity": {
+                                            "value": 100000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party A",
+                            "calculationAgentPartyEnum": "Seller"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "EMIR",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "NRGY",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "OILP",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "WTIO",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "Other",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "Other",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "NRGY",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "OILP",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "WTIO",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "Other",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "NRGY",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "OILP",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "WTIO",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "Other",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "NRGY",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "OILP",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "WTIO",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call Option",
+                            "source": "Other",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "NRGY",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "OILP",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "WTIO",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": "barrel"
+                                        },
+                                        "priceType": "Call",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": "USD"
+                                        },
+                                        "value": 295,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "price-1"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "capacityUnit": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "Business",
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            }
+                                        }
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "14966"
+                                },
+                                "pricingDates": {
+                                    "parametricDates": {
+                                        "dayType": "Business",
+                                        "dayDistribution": "All"
+                                    }
+                                },
+                                "underlier": {
+                                    "commodity": {
+                                        "address": {
+                                            "scope": "DOCUMENT",
+                                            "value": "commodity-2"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "0"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Seller",
+                    "partyReference": {
+                        "globalReference": "7fd57548",
+                        "externalReference": "Party A"
+                    }
+                },
+                {
+                    "role": "Buyer",
+                    "partyReference": {
+                        "globalReference": "4041c228",
+                        "externalReference": "Party B"
+                    }
+                }
+            ],
+            "ancillaryParty": {
+                "role": "CommodityOption",
+                "partyReference": [
+                    {
+                        "globalReference": "7fd57548",
+                        "externalReference": "Party A"
+                    },
+                    {
+                        "globalReference": "4041c228",
+                        "externalReference": "Party B"
+                    }
+                ]
+            }
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "7fd57548",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "22ea1e40"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "4041c228",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "22ea1e40"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Commodity Option Contract"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "United States"
+                            }
+                        }
+                    ]
+                },
+                "calculationAgent": {
+                    "value": "Party A"
+                },
+                "governingLaw": {
+                    "value": "United States"
+                },
+                "riskDisclosure": {
+                    "value": "Market risk, credit risk, and liquidity risk"
+                },
+                "representations": {
+                    "value": "The buyer and seller represent that they have the power to enter into this contract and that they have taken all necessary action to authorize such execution."
+                },
+                "acceptance": {
+                    "value": "The buyer and seller acknowledge that they have read and understood the terms and conditions of this contract and that they accept the risks associated with this contract."
+                },
+                "acceptanceDate": {
+                    "value": "2012-11-15"
+                },
+                "acceptanceSignature": {
+                    "value": "Party A: ________________________, Party B: _______________________"
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2012-11-15",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Commodity Option Contract",
+                            "masterAgreementType": {
+                                "value": "ISDA 2013 Standard Credit Support Annex English Law"
+                            }
+                        },
+                        "vintage": 2012,
+                        "contractualDefinitionsType": [
+                            {
+                                "value": "Commodity Option"
+                            }
+                        ],
+                        "meta": {
+                            "globalKey": "eaa25386"
+                        }
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "4041c228",
+                            "externalReference": "partyB"
+                        },
+                        {
+                            "globalReference": "7fd57548",
+                            "externalReference": "partyA"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

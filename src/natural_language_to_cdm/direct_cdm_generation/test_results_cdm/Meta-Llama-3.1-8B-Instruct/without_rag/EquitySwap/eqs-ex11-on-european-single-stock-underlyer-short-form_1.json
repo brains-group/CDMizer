@@ -1,0 +1,129 @@
+{
+    "tradeDate": "2007-09-24",
+    "tradeDateAdjustments": {
+        "tradeDate": "2007-09-24"
+    },
+    "tradeIdentifiers": [
+        {
+            "tradeIdentifier": "33f59567"
+        },
+        {
+            "tradeIdentifier": "33f59568"
+        }
+    ],
+    "tradeLots": [
+        {
+            "tradeLot": 2
+        }
+    ],
+    "parties": [
+        {
+            "party": "Party1",
+            "partyRole": "PartyA"
+        },
+        {
+            "party": "Party2",
+            "partyRole": "PartyB"
+        },
+        {
+            "party": "CalculationAgentIndependent",
+            "partyRole": "CalculationAgent"
+        }
+    ],
+    "contractualProduct": {
+        "productTaxonomy": "Equity:Swap:PriceReturnBasicPerformance:SingleName",
+        "effectiveDate": "2007-09-27",
+        "terminationDate": "2007-09-27",
+        "payout": {
+            "interestRatePayout": {
+                "payer": "Party1",
+                "receiver": "Party2",
+                "rate": 4.427,
+                "currency": "USD",
+                "notionalAmount": {
+                    "currency": "USD"
+                }
+            },
+            "performancePayout": {
+                "payer": "Party2",
+                "receiver": "Party1",
+                "underlyingSecurity": {
+                    "productIdentifier": "NOK1V.HE",
+                    "securityType": "Equity"
+                },
+                "notionalAmount": {
+                    "currency": "USD"
+                }
+            }
+        },
+        "calculationAgent": "CalculationAgentIndependent"
+    },
+    "tradableProduct": {
+        "productIdentifier": "NOK1V.HE",
+        "securityType": "Equity",
+        "returnTerms": {
+            "priceReturnTerms": {
+                "returnType": "TotalReturn"
+            },
+            "dividendReturnTerms": {
+                "dividendPayoutRatio": 1,
+                "dividendPaymentDate": "EquityPaymentDate",
+                "dividendPaymentFrequency": "FirstPeriod"
+            }
+        }
+    },
+    "tradeLotDetails": [
+        {
+            "priceQuantity": {
+                "price": 37.44,
+                "currency": "EUR",
+                "quantity": 760400,
+                "observable": "NOK1V.HE"
+            }
+        },
+        {
+            "priceQuantity": {
+                "price": 0.002,
+                "currency": "EUR",
+                "quantity": 1,
+                "observable": "EUR-EURIBOR-Telerate"
+            }
+        }
+    ],
+    "paymentTerms": {
+        "partyAPaymentDates": [
+            "2007-10-08"
+        ],
+        "partyBPaymentDates": [
+            "2007-10-08"
+        ],
+        "businessDayConvention": "Following",
+        "dayCountFraction": "ACT/360"
+    },
+    "termination": {
+        "mandatoryEarlyTermination": true,
+        "mandatoryEarlyTerminationDate": "2007-09-27",
+        "terminationDate": "2007-09-27"
+    },
+    "riskDisclosure": {
+        "riskDisclosureText": "The parties acknowledge that there are significant risks associated with this Transaction, including but not limited to, foreign exchange risk, price risk, liquidity risk, and credit risk."
+    },
+    "representations": {
+        "representationText": "Each party represents to the other party that they are acting for their own account and have made their own independent decisions to enter into this Transaction."
+    },
+    "governingLaw": "GBEN",
+    "documentation": "ISDA",
+    "calculationAgent": "CalculationAgentIndependent",
+    "valuation": {
+        "valuationStatement": "Valuation statements will be made available to the Counterparty on the Optimize Platform."
+    },
+    "scenarioAnalysis": {
+        "scenarioAnalysisText": "The following Scenario Analysis is provided for illustrative and convenience purposes only:\nScenario 1: USD SOFR-COMPOUND remains unchanged over the tenor of the trade\nScenario 2: USD SOFR-COMPOUND increases over the tenor of the trade\nScenario 3: USD SOFR-COMPOUND decreases over the tenor of the trade"
+    },
+    "mtmSensitivityAnalysis": {
+        "mtmSensitivityAnalysisText": "The following MTM Analysis is provided for illustrative and convenience purposes only:\nParallel Shift in USD SOFR-COMPOUND Curve: -3,969,875 USD, -796,597 USD, -398,415 USD, -79,698 USD, 0 USD, 79,712 USD"
+    },
+    "levelOfPricingVariables": {
+        "levelOfPricingVariablesText": "The following analysis is provided for information and illustrative purposes only:\nUSD 10 year SOFR-COMPOUND Rate: 4.427%\nPrimary market variables used for determining the mark-to-market value along with their directional impact are listed below for information purposes only and is subject to change."
+    }
+}

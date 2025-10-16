@@ -1,0 +1,355 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "EquityOptionContract_2001_07_13",
+                    "externalReference": "STMicroelectronics_Call_Option_32.00_EUR_2001-09-27"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "EquityOptionContract_2001_07_13_STMicroelectronics_Call_Option_32.00_EUR_2001-09-27",
+                            "meta": {
+                                "scheme": "EquityOptionContractIdentifierScheme"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Equity Option Contract",
+            "meta": {
+                "globalKey": "trade.tradeId",
+                "externalKey": "trade.externalId"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Equity Option Contract",
+                                                        "value": "STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity Option",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Product",
+                                                        "value": "STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "Equity Option Contract"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "STMicroelectronics N.V. ordinary shares",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "Equity Option Contract"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "STMicroelectronics N.V. ordinary shares"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the 'key' is 'optionType'. The prior context leads us to the 'optionType' of the derivatives contract, which is a 'Call' option as stated in the 'Trade Details' section.\n\nThe placeholder for the 'optionType' key should be populated with the string 'Call'.\n\nSo, the populated JSON object would look like this:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"optionType\": \"Call\"\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-07-13",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2001-09-27",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "European",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 150000,
+                                            "integralMultipleAmount": 1,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": false
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "EUR"
+                                            },
+                                            "priceType": "Single",
+                                            "value": "32.00",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party2",
+                                        "receiver": "Party1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].priceQuantity",
+                                                "value": "405000"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Physical",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "None",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "trade.tradeDetails.expirationDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": "ExpirationDate"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "CalculationAgentIndependent"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "Equity Option Contract",
+                            "value": {
+                                "name": {
+                                    "value": "Equity Option"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": 31000,
+                                    "unit": {
+                                        "financialUnit": "EUR"
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Equity Option",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "2001-09-27"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "STMicroelectronics N.V. ordinary shares",
+                                                "meta": {
+                                                    "scheme": "ISIN"
+                                                }
+                                            },
+                                            "source": "ISIN"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party A",
+                    "partyReference": {
+                        "globalReference": "Party1GlobalRef",
+                        "externalReference": "Party1ExtRef"
+                    }
+                },
+                {
+                    "role": "Party B",
+                    "partyReference": {
+                        "globalReference": "Party2GlobalRef",
+                        "externalReference": "Party2ExtRef"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgent",
+                    "partyReference": [
+                        {
+                            "globalReference": "CalculationAgentIndependent",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party1",
+                            "meta": {
+                                "scheme": "Custom",
+                                "hash": "SHA-256:<hash_value_for_Party1>"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party2",
+                            "meta": {
+                                "scheme": "Custom",
+                                "hash": "SHA-256:<hash_value_for_Party2>"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2001-07-13",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Equity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "General Terms"
+                                },
+                                {
+                                    "value": "Trade Details"
+                                },
+                                {
+                                    "value": "Payout Terms"
+                                },
+                                {
+                                    "value": "Trade Lot"
+                                },
+                                {
+                                    "value": "Counterparty"
+                                },
+                                {
+                                    "value": "Ancillary Party"
+                                },
+                                {
+                                    "value": "Contract Details"
+                                },
+                                {
+                                    "value": "Transfer History"
+                                },
+                                {
+                                    "value": "Representations"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDAMaster"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party1",
+                            "externalReference": "Party A"
+                        },
+                        {
+                            "globalReference": "Party2",
+                            "externalReference": "Party B"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "GBEN"
+            }
+        }
+    }
+}

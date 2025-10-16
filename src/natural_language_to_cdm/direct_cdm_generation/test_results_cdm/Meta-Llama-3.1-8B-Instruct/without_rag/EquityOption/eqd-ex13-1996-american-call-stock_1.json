@@ -1,0 +1,105 @@
+{
+    "Contract": {
+        "ContractId": "Contract1",
+        "ContractDate": "2001-07-13",
+        "ContractType": "EquityOption",
+        "ContractDescription": "Equity Option Contract",
+        "ContractTerms": {
+            "GeneralTerms": {
+                "TradeDate": "2001-07-13",
+                "TradeType": "Option",
+                "TradeDescription": "STMicroelectronics N.V. ordinary shares Call Option"
+            },
+            "TradeDetails": {
+                "Underlying": {
+                    "UnderlyingType": "Equity",
+                    "UnderlyingId": "STMicroelectronics N.V.",
+                    "UnderlyingDescription": "STMicroelectronics N.V. ordinary shares"
+                },
+                "Option": {
+                    "OptionType": "Call",
+                    "StrikePrice": {
+                        "Currency": "EUR",
+                        "Amount": 32.0
+                    },
+                    "ExpirationDate": "2001-09-27",
+                    "ExerciseStyle": "American",
+                    "MultipleExercise": {
+                        "MinMultiple": 1,
+                        "MaxMultiple": 150000
+                    }
+                }
+            },
+            "PayoutTerms": {
+                "Payer": "Party2",
+                "Receiver": "Party1",
+                "SettlementType": "Physical",
+                "SettlementCurrency": "EUR",
+                "CalculationAgent": "CalculationAgentIndependent"
+            },
+            "TradeLot": {
+                "Lot": [
+                    {
+                        "LotId": "Lot1",
+                        "Quantity": 31000
+                    },
+                    {
+                        "LotId": "Lot2",
+                        "Quantity": 150000,
+                        "Multiplier": 1.0
+                    }
+                ]
+            },
+            "Counterparty": {
+                "PartyA": "Party1",
+                "PartyB": "Party2"
+            },
+            "AncillaryParty": {
+                "CalculationAgent": "CalculationAgentIndependent"
+            },
+            "ContractDetails": {
+                "GoverningLaw": "GBEN",
+                "Documentation": "ISDA",
+                "MasterAgreement": "ISDAMaster",
+                "Confirmation": [
+                    "ISDA2000",
+                    "ISDA1996EquityDerivatives"
+                ]
+            },
+            "TransferHistory": {
+                "Transfer": [
+                    {
+                        "TransferDate": "2001-07-17",
+                        "Quantity": 405000,
+                        "Asset": "Cash",
+                        "Payer": "Party2",
+                        "Receiver": "Party1",
+                        "TransferExpression": "Premium"
+                    }
+                ]
+            },
+            "Representations": {
+                "PartyA": {
+                    "Representation": [
+                        {
+                            "Text": "Party A represents that they have the power to enter into this contract and have made their own independent decisions to do so."
+                        },
+                        {
+                            "Text": "Party A represents that they are capable of assessing the merits and risks of this contract and understand and accept the terms and conditions."
+                        }
+                    ]
+                },
+                "PartyB": {
+                    "Representation": [
+                        {
+                            "Text": "Party B represents that they have the power to enter into this contract and have made their own independent decisions to do so."
+                        },
+                        {
+                            "Text": "Party B represents that they are capable of assessing the merits and risks of this contract and understand and accept the terms and conditions."
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

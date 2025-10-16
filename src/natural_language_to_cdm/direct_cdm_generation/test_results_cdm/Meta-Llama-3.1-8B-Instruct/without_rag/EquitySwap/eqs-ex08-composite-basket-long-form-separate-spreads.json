@@ -1,0 +1,162 @@
+{
+    "Agreement": {
+        "AgreementDate": "2002-07-17",
+        "AgreementID": "33f59567",
+        "AgreementIDPartyA": "33f59567",
+        "AgreementIDPartyB": "33f59568",
+        "AgreementType": "EquitySwap",
+        "BusinessDayConvention": "ModifiedFollowing",
+        "BusinessCentres": [
+            "London",
+            "Toronto"
+        ],
+        "Currency": "EUR",
+        "DayCountFraction": "ACT/360",
+        "GoverningLaw": "GBEN",
+        "GoverningLawJurisdiction": "Province of Ontario and the laws of Canada applicable therein",
+        "IssuePrice": 100.0,
+        "NetProceeds": 1060000.0,
+        "Redemption": 100.0,
+        "TerminationDate": "2004-01-17",
+        "TradeDate": "2002-07-17"
+    },
+    "Product": {
+        "ProductType": "EquitySwap",
+        "ProductTaxonomy": "Equity:Swap:PriceReturnBasicPerformance:Basket",
+        "EffectiveDate": "2002-07-17",
+        "TerminationDate": "2004-01-17",
+        "Payout": {
+            "InterestRatePayout": {
+                "Rate": 4.427,
+                "Currency": "EUR",
+                "NotionalAmount": {
+                    "Currency": "USD",
+                    "Amount": 0.0
+                }
+            },
+            "PerformancePayout": {
+                "Rate": "USD SOFR-COMPOUND",
+                "Currency": "EUR",
+                "NotionalAmount": {
+                    "Currency": "USD",
+                    "Amount": 0.0
+                }
+            }
+        },
+        "CalculationPeriodDates": {
+            "CalculationPeriodStartDate": "2002-10-05",
+            "CalculationPeriodEndDate": "2004-01-17",
+            "CalculationPeriodFrequency": "Annually",
+            "CalculationPeriodOffset": 2
+        },
+        "PaymentDates": {
+            "PaymentDate": "2002-10-05",
+            "PaymentFrequency": "Annually",
+            "PaymentOffset": 2
+        },
+        "ResetDates": {
+            "ResetDate": "2002-10-05",
+            "ResetFrequency": "Annually",
+            "ResetOffset": 2
+        },
+        "Underlying": [
+            {
+                "UnderlyingName": "Telecom Italia spa",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            },
+            {
+                "UnderlyingName": "Nokya Oyj",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            },
+            {
+                "UnderlyingName": "Telecom Italia Mobile spa",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            },
+            {
+                "UnderlyingName": "Telefonica de Espana",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            },
+            {
+                "UnderlyingName": "Portugal Telecom SA",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            },
+            {
+                "UnderlyingName": "Vodafone Group",
+                "UnderlyingCurrency": "EUR",
+                "UnderlyingQuantity": 1.0
+            }
+        ]
+    },
+    "Counterparty": {
+        "PartyA": {
+            "PartyName": "Telecom Italia spa",
+            "PartyID": "33f59567",
+            "PartyIDType": "ISIN",
+            "PartyIDSource": "Party A"
+        },
+        "PartyB": {
+            "PartyName": "Vodafone Group",
+            "PartyID": "33f59568",
+            "PartyIDType": "ISIN",
+            "PartyIDSource": "Party B"
+        },
+        "CalculationAgent": "Calculation Agent Independent"
+    },
+    "RiskDisclosure": {
+        "RiskDisclosureText": "There are significant risks associated with this Transaction, including but not limited to, foreign exchange risk, price risk, liquidity risk, and credit risk. Counterparties should consult their own financial, legal, accounting, and tax advisors about the risks associated with this Transaction."
+    },
+    "ScenarioAnalysis": {
+        "ScenarioAnalysisText": "The following Scenario Analysis is provided for illustrative and convenience purposes only. It should not be relied on by Party B, and JPMorgan expressly disclaims any responsibility or reliance by Party B.",
+        "Scenario": [
+            {
+                "ScenarioName": "Scenario 1",
+                "ScenarioDescription": "USD SOFR-COMPOUND remains unchanged over the tenor of the trade; USD Overnight SOFR Curve remains unchanged till the Mandatory Termination Date."
+            },
+            {
+                "ScenarioName": "Scenario 2",
+                "ScenarioDescription": "USD SOFR-COMPOUND increases over the tenor of the trade; USD Overnight SOFR Curve is 10bps higher on the Mandatory Termination Date as compared to that on Trade Date."
+            },
+            {
+                "ScenarioName": "Scenario 3",
+                "ScenarioDescription": "USD SOFR-COMPOUND decreases over the tenor of the trade; USD Overnight SOFR Curve is 10bps lower on the Mandatory Termination Date as compared to that on Trade Date."
+            }
+        ]
+    },
+    "MTMSensitivityAnalysis": {
+        "MTMSensitivityAnalysisText": "The following MTM Analysis is provided for illustrative and convenience purposes only. It should not be relied on by Party B, and JPMorgan expressly disclaims any responsibility or reliance by Party B.",
+        "MTMSensitivity": {
+            "MTMSensitivityDescription": "MTM Sensitivity due to parallel shift in USD SOFR-COMPOUND Curve immediately after Trade Date:",
+            "MTMSensitivityData": [
+                {
+                    "MTMSensitivityValue": "-3979875",
+                    "MTMSensitivityDescription": "500 bps up"
+                },
+                {
+                    "MTMSensitivityValue": "-796597",
+                    "MTMSensitivityDescription": "100 bps up"
+                },
+                {
+                    "MTMSensitivityValue": "-398415",
+                    "MTMSensitivityDescription": "50 bps up"
+                },
+                {
+                    "MTMSensitivityValue": "-79798",
+                    "MTMSensitivityDescription": "10 bps up"
+                },
+                {
+                    "MTMSensitivityValue": "0",
+                    "MTMSensitivityDescription": "0"
+                },
+                {
+                    "MTMSensitivityValue": "79712",
+                    "MTMSensitivityDescription": "10 bps down"
+                }
+            ]
+        }
+    }
+}

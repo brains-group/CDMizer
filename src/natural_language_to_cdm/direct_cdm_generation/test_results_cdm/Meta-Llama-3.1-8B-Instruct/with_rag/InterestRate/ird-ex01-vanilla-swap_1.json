@@ -1,0 +1,244 @@
+{
+    "tradeDate": {
+        "value": "1994-12-12",
+        "meta": {
+            "globalKey": "3f2907"
+        }
+    },
+    "tradableProduct": {
+        "product": {
+            "contractualProduct": {
+                "productTaxonomy": [
+                    {
+                        "source": "ISDA",
+                        "productQualifier": "InterestRate_IRSwap_FixedFloat"
+                    }
+                ],
+                "economicTerms": {
+                    "payout": {
+                        "interestRatePayout": [
+                            {
+                                "payerReceiver": {
+                                    "payer": "PartyA",
+                                    "receiver": "PartyB"
+                                },
+                                "priceQuantity": {
+                                    "quantitySchedule": {
+                                        "address": {
+                                            "scope": "DOCUMENT",
+                                            "value": "50000000.00"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "0",
+                                        "externalKey": "notional0"
+                                    }
+                                },
+                                "rateSpecification": {
+                                    "floatingRate": {
+                                        "rateOption": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "EUR-LIBOR-BBA"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    }
+                                },
+                                "dayCountFraction": {
+                                    "value": "ACT/360"
+                                },
+                                "calculationPeriodDates": {
+                                    "effectiveDate": {
+                                        "adjustableDate": {
+                                            "unadjustedDate": "1994-12-14",
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "NONE",
+                                                "meta": {
+                                                    "globalKey": "24a738"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "eae921d6"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "eae921d6"
+                                        }
+                                    },
+                                    "terminationDate": {
+                                        "adjustableDate": {
+                                            "unadjustedDate": "1999-12-14",
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "meta": {
+                                                    "globalKey": "24a738"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "eae921d6"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "eae921d6"
+                                        }
+                                    },
+                                    "calculationPeriodFrequency": {
+                                        "value": "6M"
+                                    },
+                                    "rollConvention": {
+                                        "value": "14"
+                                    }
+                                },
+                                "paymentDates": {
+                                    "paymentFrequency": {
+                                        "value": "6M"
+                                    },
+                                    "payRelativeTo": {
+                                        "value": "CalculationPeriodEndDate"
+                                    },
+                                    "paymentDatesAdjustments": {
+                                        "businessDayConvention": {
+                                            "value": "MODFOLLOWING"
+                                        }
+                                    }
+                                },
+                                "resetDates": {
+                                    "resetRelativeTo": {
+                                        "value": "CalculationPeriodStartDate"
+                                    },
+                                    "fixingDates": {
+                                        "value": "-2D"
+                                    },
+                                    "resetFrequency": {
+                                        "value": "6M"
+                                    },
+                                    "resetDatesAdjustments": {
+                                        "businessDayConvention": {
+                                            "value": "MODFOLLOWING"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "party": [
+        {
+            "partyId": "549300VBWWV6BYQOWM67",
+            "partyName": "PartyA"
+        },
+        {
+            "partyId": "529900DTJ5A7S5UCBB52",
+            "partyName": "PartyB"
+        }
+    ],
+    "tradeIdentifier": {
+        "partyAIdentifier": "TW9235",
+        "partyBIdentifier": "SW2000"
+    },
+    "tradeLot": {
+        "value": "1"
+    },
+    "counterparty": {
+        "partyA": "PartyA",
+        "partyB": "PartyB"
+    },
+    "governingLaw": {
+        "value": "Province of Ontario and Canada"
+    },
+    "calculationAgent": {
+        "partyId": "549300VBWWV6BYQOWM67",
+        "partyName": "PartyA"
+    },
+    "terminationDate": {
+        "value": "1999-12-14"
+    },
+    "mandatoryEarlyTermination": {
+        "value": "1999-11-03"
+    },
+    "cashSettlementAmount": {
+        "value": "absolute value of market value"
+    },
+    "scenarioAnalysis": [
+        {
+            "scenario": "EUR-LIBOR-BBA remains unchanged"
+        },
+        {
+            "scenario": "EUR-LIBOR-BBA increases"
+        },
+        {
+            "scenario": "EUR-LIBOR-BBA decreases"
+        }
+    ],
+    "mtmSensitivityAnalysis": [
+        {
+            "parallelShift": {
+                "value": "500 bps up"
+            },
+            "mtmValue": {
+                "value": "-3969875 EUR"
+            }
+        },
+        {
+            "parallelShift": {
+                "value": "100 bps up"
+            },
+            "mtmValue": {
+                "value": "-796597 EUR"
+            }
+        },
+        {
+            "parallelShift": {
+                "value": "50 bps up"
+            },
+            "mtmValue": {
+                "value": "-398415 EUR"
+            }
+        },
+        {
+            "parallelShift": {
+                "value": "10 bps up"
+            },
+            "mtmValue": {
+                "value": "-79698 EUR"
+            }
+        },
+        {
+            "parallelShift": {
+                "value": "0"
+            },
+            "mtmValue": {
+                "value": "0 EUR"
+            }
+        },
+        {
+            "parallelShift": {
+                "value": "10 bps down"
+            },
+            "mtmValue": {
+                "value": "79712 EUR"
+            }
+        }
+    ],
+    "levelOfPricingVariables": {
+        "eur10YearLiborBbaRate": {
+            "value": "4.427%"
+        }
+    },
+    "impactOfVariablesOnPricing": {
+        "directionalImpact": {
+            "downwardParallelShift": {
+                "value": "favorably impacted"
+            },
+            "upwardParallelShift": {
+                "value": "adversely impacted"
+            }
+        }
+    }
+}

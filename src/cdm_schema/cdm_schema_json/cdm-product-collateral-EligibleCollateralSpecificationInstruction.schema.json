@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.collateral",
+  "type": "object",
+  "title": "EligibleCollateralSpecificationInstruction",
+  "properties": {
+    "common": {
+      "$ref": "cdm-product-collateral-EligibleCollateralCriteria.schema.json"
+    },
+    "variable": {
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-collateral-EligibleCollateralCriteria.schema.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "common"
+  ]
+}

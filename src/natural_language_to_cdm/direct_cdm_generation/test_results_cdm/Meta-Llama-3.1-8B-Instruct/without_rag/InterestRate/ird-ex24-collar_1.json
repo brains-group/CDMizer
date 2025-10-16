@@ -1,0 +1,118 @@
+{
+    "Agreement": {
+        "AgreementDate": "2001-04-29",
+        "EffectiveDate": "2001-04-29",
+        "TerminationDate": "2033-10-05",
+        "MandatoryEarlyTerminationDate": "2023-11-03",
+        "CalculationAgent": "Party A",
+        "GoverningLaw": "Jurisdiction of the parties' location"
+    },
+    "Counterparty": [
+        {
+            "PartyReference": "Party 1",
+            "PartyRole": "Payer",
+            "Party": {
+                "PartyID": "Party A",
+                "GlobalPartyID": "33f59567"
+            }
+        },
+        {
+            "PartyReference": "Party 2",
+            "PartyRole": "Receiver",
+            "Party": {
+                "PartyID": "Party B",
+                "GlobalPartyID": "33f59568"
+            }
+        }
+    ],
+    "Trade": {
+        "TradeDate": "2001-04-29",
+        "TradeID": "Interest Rate Cap and Floor Swap",
+        "TradeType": "Interest Rate Cap and Floor Swap",
+        "TradeLot": {
+            "TradeLotType": "Single Trade",
+            "PriceQuantity": {
+                "Currency": "EUR",
+                "Amount": 100000000,
+                "PriceType": "Interest Rate"
+            }
+        },
+        "Observable": {
+            "ObservableType": "Floating Rate Index",
+            "ObservableName": "EUR-EURIBOR-Telerate",
+            "ObservableValue": "EUR-EURIBOR-Telerate"
+        },
+        "RiskDisclosure": "Significant risks, including interest rate risk, fixing risk, liquidity risk, and credit risk.",
+        "Representations": "Each party represents to the other party that it is acting for its own account, has made its own independent decisions to enter into this contract, and is not relying on any communication from the other party as investment advice or as a recommendation to enter into this contract."
+    },
+    "Leg": [
+        {
+            "LegType": "Cap",
+            "LegRole": "Payer",
+            "NotionalAmount": {
+                "Currency": "EUR",
+                "Amount": 100000000
+            },
+            "StrikeRate": {
+                "Currency": "EUR",
+                "Rate": 4.427,
+                "Frequency": "Annual"
+            },
+            "CalculationPeriod": {
+                "StartDate": "2001-04-29",
+                "EndDate": "2024-10-05",
+                "CalculationPeriodType": "Annual",
+                "CalculationPeriodFrequency": "Year"
+            },
+            "PaymentDate": {
+                "StartDate": "2024-10-07",
+                "EndDate": "2033-10-07",
+                "PaymentDateType": "Annual",
+                "PaymentDateFrequency": "Year"
+            },
+            "DayCountConvention": "ACT/360",
+            "ResetDate": {
+                "StartDate": "2001-04-29",
+                "EndDate": "2024-10-05",
+                "ResetDateType": "Calculation Period Start Date",
+                "ResetDateFrequency": "Year"
+            },
+            "BusinessDayConvention": "MODFOLLOWING",
+            "BusinessCenter": "GBLO"
+        },
+        {
+            "LegType": "Floor",
+            "LegRole": "Receiver",
+            "NotionalAmount": {
+                "Currency": "EUR",
+                "Amount": 100000000
+            },
+            "StrikeRate": {
+                "Currency": "EUR",
+                "Rate": 4.0625,
+                "Frequency": "Annual"
+            },
+            "CalculationPeriod": {
+                "StartDate": "2001-04-29",
+                "EndDate": "2024-10-05",
+                "CalculationPeriodType": "Annual",
+                "CalculationPeriodFrequency": "Year"
+            },
+            "PaymentDate": {
+                "StartDate": "2024-10-07",
+                "EndDate": "2033-10-07",
+                "PaymentDateType": "Annual",
+                "PaymentDateFrequency": "Year"
+            },
+            "DayCountConvention": "ACT/360",
+            "ResetDate": {
+                "StartDate": "2001-04-29",
+                "EndDate": "2024-10-05",
+                "ResetDateType": "Calculation Period Start Date",
+                "ResetDateFrequency": "Year"
+            },
+            "BusinessDayConvention": "MODFOLLOWING",
+            "BusinessCenter": "EUTA"
+        }
+    ]
+}

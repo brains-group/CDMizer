@@ -1,0 +1,173 @@
+{
+    "DerivativesContract": {
+        "TradeDate": "2018-04-19",
+        "TradeTime": "Available on request",
+        "EffectiveDate": "2018-04-23",
+        "TerminationDate": "The final Cash Settlement Payment Date",
+        "EquityAmounts": {
+            "LongPortfolio": "As specified in Annex 1",
+            "ShortPortfolio": "As specified in Annex 1",
+            "Number of Units": "As specified in Annex 1"
+        },
+        "FloatingAmounts": {
+            "FloatingAmountPayer": "Party B",
+            "FloatingAmountPayment": {
+                "paymentDateSchedule": {
+                    "interimPaymentDates": [
+                        {
+                            "adjustableDates": {
+                                "unadjustedDate": "2018-05-02",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "FOLLOWING",
+                                    "businessCenters": {
+                                        "businessCenter": [
+                                            {
+                                                "value": "EUTA"
+                                            },
+                                            {
+                                                "value": "GBLO"
+                                            }
+                                        ],
+                                        "meta": {
+                                            "globalKey": "4158421"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "da3b6050"
+                                    }
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "da15ebc2",
+                                "externalKey": "trs-eq1-InterimEquityPaymentDate"
+                            }
+                        }
+                    ],
+                    "finalPaymentDate": {
+                        "relativeDate": {
+                            "periodMultiplier": 2,
+                            "period": "D",
+                            "meta": {
+                                "globalKey": "fc30271"
+                            },
+                            "dayType": "CurrencyBusiness",
+                            "businessDayConvention": "FOLLOWING",
+                            "businessCenters": {
+                                "businessCenter": [
+                                    {
+                                        "value": "EUTA"
+                                    }
+                                ],
+                                "meta": {
+                                    "globalKey": "20a71d"
+                                }
+                            },
+                            "dateRelativeTo": {
+                                "globalReference": "ec0c393",
+                                "externalReference": "finalValuationDate"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "fc30271"
+                        }
+                    }
+                }
+            },
+            "FloatingRateOption": "AUD-BBR-BBSW",
+            "Spread": "+0.500000%",
+            "DesignatedMaturity": "1 Month",
+            "FloatingRateDay": "Actual/365(Fixed)",
+            "Compounding": "Not Applicable",
+            "FlatCompounding": "Not Applicable",
+            "BusinessDays": "Sydney",
+            "SettlementTerms": {
+                "SettlementCurrency": "AUD",
+                "CashSettlementPaymentDate": {
+                    "adjustableDate": {
+                        "unadjustedDate": "2018-05-02",
+                        "dateAdjustments": {
+                            "businessDayConvention": "FOLLOWING",
+                            "meta": {
+                                "globalKey": "d3bf0271"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "bf772f3a"
+                        }
+                    }
+                }
+            },
+            "Offices": {
+                "OfficeOfPartyA": "London, United Kingdom",
+                "OfficeOfPartyB": "New York - NY, United States"
+            },
+            "PartyA": {
+                "Authorisation": "Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority and is a member of the London Stock Exchange",
+                "Principal": "Entered into this Transaction as principal"
+            }
+        },
+        "Payout": {
+            "InterestRatePayout": [
+                {
+                    "payerReceiver": {
+                        "payer": "Party1",
+                        "receiver": "Party2"
+                    },
+                    "priceQuantity": {
+                        "quantityReference": {
+                            "globalReference": "4cf",
+                            "externalReference": "equityNotionalAmount"
+                        },
+                        "meta": {
+                            "globalKey": "54b65ddd"
+                        }
+                    },
+                    "rateSpecification": {
+                        "floatingRate": {
+                            "rateOption": {
+                                "address": {
+                                    "scope": "DOCUMENT",
+                                    "value": "rateOption-1"
+                                }
+                            },
+                            "spreadSchedule": {
+                                "price": {
+                                    "address": {
+                                        "scope": "DOCUMENT",
+                                        "value": "price-2"
+                                    }
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "0"
+                            }
+                        }
+                    },
+                    "dayCountFraction": {
+                        "value": "ACT/360"
+                    },
+                    "calculationPeriodDates": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2009-09-11",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "FOLLOWING",
+                                    "meta": {
+                                        "globalKey": "1ff50d"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "211d10fc"
+                                }
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "ec0c393",
+                            "externalKey": "finalValuationDate"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

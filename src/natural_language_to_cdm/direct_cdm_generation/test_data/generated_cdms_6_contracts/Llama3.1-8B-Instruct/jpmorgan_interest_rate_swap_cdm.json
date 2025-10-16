@@ -1,0 +1,68 @@
+{
+    "Agreement": {
+        "AgreementDate": "2023-10-05",
+        "EffectiveDate": "2023-10-05",
+        "TerminationDate": "2033-10-05",
+        "Termination": {
+            "TerminationType": "MandatoryEarlyTermination",
+            "TerminationDate": "2023-11-03"
+        },
+        "Currency": "USD",
+        "NotionalAmount": 10000000,
+        "BusinessDayConvention": "ModifiedFollowing",
+        "FixingBusinessDays": "USGovernmentBondsMarket",
+        "BusinessDays": "NewYork",
+        "CalculationAgent": "JPMorgan",
+        "GoverningLaw": "English",
+        "Documentation": "ISDA",
+        "DealerName": "",
+        "ClientType": "Non-Retail"
+    },
+    "PartyA": {
+        "PartyAName": "JPMorgan Chase Bank, N.A., Mumbai Branch",
+        "PartyAPayment": {
+            "PaymentType": "Fixed",
+            "PaymentAmount": 442700,
+            "PaymentFrequency": "Annually",
+            "PaymentDate": "2024-10-07",
+            "CalculationPeriod": {
+                "StartDate": "2023-10-05",
+                "EndDate": "2024-10-05"
+            },
+            "DayCount": "A/360",
+            "DayCountAdjustment": "Adjusted"
+        }
+    },
+    "PartyB": {
+        "PartyBName": "",
+        "PartyBPayer": {
+            "PaymentType": "Floating",
+            "PaymentAmount": "USD SOFR-COMPOUND",
+            "PaymentFrequency": "Annually",
+            "PaymentDate": "2024-10-07",
+            "CalculationPeriod": {
+                "StartDate": "2023-10-05",
+                "EndDate": "2024-10-05"
+            },
+            "DayCount": "A/360",
+            "DayCountAdjustment": "Adjusted"
+        }
+    },
+    "MandatoryEarlyTermination": {
+        "TerminationType": "MandatoryEarlyTermination",
+        "TerminationDate": "2023-11-03",
+        "CashSettlementAmount": {
+            "Currency": "USD",
+            "Amount": "absolute value of the market value of the swap"
+        }
+    },
+    "RiskDisclosure": {
+        "RiskDisclosureText": "There are significant risks associated with this Transaction including, but not limited to, foreign exchange risk, price risk, liquidity risk and credit risk."
+    },
+    "OrdinaryCourseOfBusiness": {
+        "OrdinaryCourseOfBusinessText": "In the ordinary course of their business, JPMorgan or any of its affiliates or subsidiaries may affect transactions for their own account or for the account of their customers."
+    },
+    "PotentialConflictsOfInterest": {
+        "PotentialConflictsOfInterestText": "Potential conflicts of interest may exist in the structure and operation of the strategy and the course of the normal business activities of JPMorgan or any of its affiliates or subsidiaries or their respective directors, officers, employees, representatives, delegates or agents of their normal business activities"
+    }
+}

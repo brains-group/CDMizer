@@ -1,0 +1,664 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "ISDA",
+                    "externalReference": ""
+                },
+                "issuer": {
+                    "value": "Party1",
+                    "meta": {
+                        "scheme": "LEI",
+                        "identifier": "7H6GLXDRUGQFU57RNE97"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "5b0baa7d",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "a41bc6e9",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "2010-08-16",
+            "meta": {
+                "globalKey": "5b0baa7d",
+                "externalKey": "a41bc6e9"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourceProvider": {
+                                                    "value": "Issuer"
+                                                },
+                                                "sourcePage": {
+                                                    "value": "Trade Identifier"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "observationSchedule": {
+                                                "observationDate": [
+                                                    {
+                                                        "adjustedDate": "2010-08-16",
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "Not specified"
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "rollConvention": "Not specified",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Not specified"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "Party2",
+                                                    "receiver": "Party1"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "### Provided Inputs:\n\n- Key: `style`\n- Placeholder: `[]`\n- Derivatives Contract Description: **Foreign Exchange Vanilla Option Contract**\n- Prior Context (Path): `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].exerciseTerms.style`\n\n### Task:\n\nFind a value that is best suited for the provided key from the provided derivatives contract. Use the key and prior context to accurately find the value.\n\n### Solution:\n\nBased on the prior context and the contract description, we are looking for the `style` of the exercise terms in the option payout. In the context of a foreign exchange vanilla option contract, the style of exercise is typically specified as either `American` or `European`.\n\nFrom the contract description, we can see that the `Trade Details` section mentions the `Economic Terms`, which include the `Exercise Terms`. However, the specific style of exercise is not explicitly mentioned.\n\nHowever, since the contract is a foreign exchange vanilla option, we can infer that the style of exercise is likely to be `American`, as vanilla options are typically exercised on the expiration date.\n\nTherefore, we can populate the placeholder with the following value:\n\n```json\n[\n  {\n    \"style\": \"American\"\n  }\n]\n```\n\nThis value maintains the same datatype as the placeholder, which is a list containing a single object. The object has a single key-value pair, where the key is `style` and the value is the string `\"American\"`.",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-08-16",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "ModifiedFollowing",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "New York"
+                                                            },
+                                                            {
+                                                                "value": "Toronto"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "adjustedDate": {
+                                                        "value": "2010-08-16",
+                                                        "meta": {
+                                                            "globalKey": "TradeDate"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "StrikePrice",
+                                            "composite": {
+                                                "baseValue": null,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            },
+                                            "value": 1.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "Foreign Exchange Vanilla Option Contract",
+                                                                "value": "MXN/USD"
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "Party1 (LEI: 7H6GLXDRUGQFU57RNE97)"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "ISDA Documentation"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2010-08-16"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the best-suited information for the `settlementType` key.\n\nFrom the contract description, we can see that the `settlementType` is mentioned in the **Trade Details** section under **Economic Terms**. Specifically, it is mentioned as part of the `Settlement Terms`.\n\nThe relevant information for the `settlementType` key is:\n\n* Settlement Terms: SettlementDate\n\nHowever, since the placeholder is expecting a value for `settlementType`, we can infer that the `settlementType` is likely related to the type of settlement, which in this case is likely \"Physical\" or \"Cash\".\n\nGiven the context of a Foreign Exchange Vanilla Option Contract, it is likely that the settlement type is \"Physical\", as this is a common settlement type for foreign exchange contracts.\n\n### Populating the Placeholder with the Correct Datatype\n\nThe placeholder is expecting a string value, so we will replace the placeholder with the string \"Physical\".\n\n```json\n\"settlementType\": \"Physical\"\n```\n\n### Final Answer\n\nThe final answer is:\n\n```json\n{\n  \"settlementType\": \"Physical\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2010-08-16"
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "Party2",
+                                                    "receiver": "Party1"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "One price quantity with two observable currencies, MXN and USD."
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "tenorPeriod": {
+                                                "periodMultiplier": 1,
+                                                "period": "Year"
+                                            },
+                                            "exchangeRate": {
+                                                "crossRate": [
+                                                    {
+                                                        "rate": 1,
+                                                        "currency1": {
+                                                            "value": "MXN"
+                                                        },
+                                                        "currency2": {
+                                                            "value": "USD"
+                                                        },
+                                                        "quoteBasis": "Spot"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "Foreign Exchange Vanilla Option",
+                                                                "value": "MXN/USD"
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "Party1"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "ISDA"
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "OptionPayout"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2010-08-16",
+                                                                "dateAdjustments": {
+                                                                    "businessDayConvention": "Following"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description, we can identify the relevant information for the key \"settlementType\".\n\nThe key \"settlementType\" is part of the \"settlementTerms\" object within the \"forwardPayout\" list under the \"economicTerms\" object. \n\nIn the contract description, under \"Trade Details\" > \"Economic Terms\" > \"Settlement Terms\", it is mentioned that the \"Settlement Terms\" are \"SettlementDate\". \n\nHowever, since the key \"settlementType\" is part of the \"settlementTerms\" object, we need to consider the structure of the \"settlementTerms\" object. \n\nIn the contract description, there is no explicit mention of the \"settlementType\" within the \"settlementTerms\" object. However, based on the context and the structure of the \"settlementTerms\" object, we can infer that the \"settlementType\" is likely to be \"Physical\" or \"Cash\", as these are common settlement types for foreign exchange vanilla option contracts.\n\nGiven the lack of explicit information about the \"settlementType\" in the contract description, we will assume a default value of \"Physical\" for the sake of this example.\n\n### Maintaining the Same Datatype\n\nThe placeholder is an empty string (\"\"). We will replace it with a STRING derived from the contract information.\n\n```json\n\"settlementType\": \"Physical\"\n```\n\n### Final Output\n\n```json\n{\n  \"settlementType\": \"Physical\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2010-08-16"
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourcePage": {
+                                                    "value": "InformationSource"
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "currencyPair": {
+                                                "value": {
+                                                    "currency1": {
+                                                        "value": "MXN"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Spot"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2010-08-16"
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            },
+                                                            {
+                                                                "value": "Canada"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": "Business Day"
+                                            }
+                                        },
+                                        "numberOfObservationDates": "Based on the provided inputs, I will populate the placeholder for the key \"numberOfObservationDates\".\n\n### Placeholder:\nNone\n\n### Derivatives Contract Description:\n**Foreign Exchange Vanilla Option Contract**\n\n### Prior Context (Path):\ntrade.tradableProduct.product.contractualProduct.economicTerms.payout.performancePayout[0].observationTerms.numberOfObservationDates\n\n### Relevant Information from the Contract Description:\nIn the \"Trade Details\" section, under \"Economic Terms\", we find the following information:\n* Observation Terms: PricingTime, InformationSource, ObservationDates\n\n### Populating the Placeholder:\nBased on the prior context and the relevant information, I will populate the placeholder with the value \"ObservationDates\".\n\nHowever, since the placeholder is expected to be a list of items derived from the contract information, I will replace it with a list containing the value \"ObservationDates\".\n\n### Populated Placeholder:\n[ObservationDates]\n\n### Final Answer:\n[ObservationDates]\n\nNote: The placeholder is populated with a list containing the value \"ObservationDates\" to maintain the same datatype as the prior context."
+                                    },
+                                    "valuationDates": {
+                                        "finalValuationDate": {
+                                            "valuationDates": {
+                                                "relativeDates": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "ISDA"
+                                                            },
+                                                            {
+                                                                "value": "ISDA"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dayType": "Business Day",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Day"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "StrikePrice",
+                                                "value": 1.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": 1000.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 1.0,
+                                            "meanAdjustment": 0.0
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "StrikePrice",
+                                                "value": 1.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 1.0,
+                                            "meanAdjustment": 0.0
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Foreign Exchange Vanilla Option Contract",
+                                                "value": "Foreign Exchange Vanilla Option Contract"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "adjustedDate": {
+                                                    "value": "2010-08-16",
+                                                    "meta": {
+                                                        "globalKey": "TradeDate"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": {
+                                "Party1": {
+                                    "LEI": "7H6GLXDRUGQFU57RNE97",
+                                    "name": "Party1"
+                                },
+                                "Party2": {
+                                    "LEI": "213800QILIUD4ROSUO03",
+                                    "name": "Party2"
+                                }
+                            }
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "ForeignExchange_VanillaOption",
+                            "source": "ForeignExchange",
+                            "value": {
+                                "name": {
+                                    "value": "ForeignExchange_VanillaOption",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "priceType": "",
+                                        "composite": {
+                                            "baseValue": null,
+                                            "operand": null,
+                                            "arithmeticOperator": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": "Foreign Exchange Vanilla Option",
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "currencyPair": {
+                                    "value": {
+                                        "currency1": {
+                                            "value": "MXN"
+                                        },
+                                        "currency2": {
+                                            "value": "USD"
+                                        },
+                                        "quoteBasis": "Spot"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": {
+                        "globalReference": "7H6GLXDRUGQFU57RNE97",
+                        "externalReference": "213800QILIUD4ROSUO03"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party1",
+                            "externalReference": "LEI 7H6GLXDRUGQFU57RNE97"
+                        },
+                        {
+                            "globalReference": "Party2",
+                            "externalReference": "LEI 213800QILIUD4ROSUO03"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "7H6GLXDRUGQFU57RNE97",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    },
+                    {
+                        "identifier": {
+                            "value": "213800QILIUD4ROSUO03",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    }
+                ],
+                "name": {
+                    "value": "Party1 and Party2"
+                }
+            }
+        ],
+        "account": [
+            {
+                "accountNumber": {
+                    "value": "1234567890"
+                },
+                "servicingParty": {
+                    "globalReference": "Party1",
+                    "externalReference": "7H6GLXDRUGQFU57RNE97"
+                }
+            }
+        ]
+    }
+}

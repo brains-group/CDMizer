@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.legaldocumentation.master",
+  "type": "object",
+  "title": "AdditionalDisruptionEvents",
+  "description": "A type for defining the Additional Disruption Events.",
+  "properties": {
+    "changeInLaw": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions: ",
+      "type": "boolean"
+    },
+    "failureToDeliver": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions",
+      "type": "boolean"
+    },
+    "insolvencyFiling": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions",
+      "type": "boolean"
+    },
+    "hedgingDisruption": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions",
+      "type": "boolean"
+    },
+    "increasedCostOfHedging": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions",
+      "type": "boolean"
+    },
+    "foreignOwnershipEvent": {
+      "description": "Per ISDA Def ",
+      "type": "boolean"
+    },
+    "lossOfStockBorrow": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions:",
+      "type": "boolean"
+    },
+    "maximumStockLoanRate": {
+      "description": "Specifies the maximum stock loan rate for Loss of Stock Borrow. A percentage of 5% is represented as 0.05.",
+      "type": "number"
+    },
+    "increasedCostOfStockBorrow": {
+      "description": "Per 2002 ISDA Equity Derivatives Definitions",
+      "type": "boolean"
+    },
+    "initialStockLoanRate": {
+      "description": "Specifies the initial stock loan per ISDA Def. A percentage of 5% is represented as 0.05.",
+      "type": "number"
+    },
+    "determiningParty": {
+      "description": "Specifies the party which determines additional disruption events.",
+      "$ref": "cdm-base-staticdata-party-AncillaryRoleEnum.schema.json"
+    },
+    "additionalBespokeTerms": {
+      "description": "Where parties may optionnaly describe any extra bespoke agreements, in regards of the standardized Extraordinary Events.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-legaldocumentation-master-Clause.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.legaldocumentation.common",
+  "type": "object",
+  "title": "AddressForNotices",
+  "description": "Specification of the address and other details for notices.",
+  "properties": {
+    "primaryNotices": {
+      "description": "Specification of primary notice details",
+      "$ref": "cdm-product-collateral-ContactElection.schema.json"
+    },
+    "additionalNotices": {
+      "description": "The optional specification of additional information when a party requires notices to be delivered to more than one address.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-party-PartyContactInformation.schema.json"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "primaryNotices"
+  ]
+}

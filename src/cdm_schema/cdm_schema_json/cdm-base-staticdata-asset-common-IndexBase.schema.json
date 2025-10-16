@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "IndexBase",
+  "description": "Identifies an index by referencing an identifier.",
+  "properties": {
+    "name": {
+      "description": "A description of the Index.",
+      "type": "string"
+    },
+    "provider": {
+      "description": "The organisation that creates or maintains the Index.",
+      "type": "string"
+    },
+    "assetClass": {
+      "description": "The Asset Class of the Index.",
+      "$ref": "cdm-base-staticdata-asset-common-AssetClassEnum.schema.json"
+    },
+    "exchange": {
+      "description": "If the Index is listed, defines the public exchange(s) of the listing.",
+      "type": "array",
+      "items": {
+        "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+      },
+      "minItems": 0
+    },
+    "relatedExchange": {
+      "description": "Provides the related Exchanges, if applicable.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "identifier": {
+      "description": "The identifier value.",
+      "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+    },
+    "identifierType": {
+      "description": "Defines the symbology source of the Asset Identifier, eg CUSIP, ISIN, etc.",
+      "$ref": "cdm-base-staticdata-asset-common-AssetIdTypeEnum.schema.json"
+    }
+  }
+}

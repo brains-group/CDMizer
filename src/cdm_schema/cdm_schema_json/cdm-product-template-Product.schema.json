@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "Product",
+  "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+  "properties": {
+    "contractualProduct": {
+      "description": "Specifies the contractual product's economic terms, product identifier, and product taxonomy.",
+      "$ref": "cdm-product-template-ContractualProduct.schema.json"
+    },
+    "index": {
+      "description": "Identifies an index by referencing a product identifier.",
+      "$ref": "cdm-base-staticdata-asset-common-Index.schema.json"
+    },
+    "loan": {
+      "description": "Identifies a loan by referencing a product identifier and an optional set of attributes.",
+      "$ref": "cdm-base-staticdata-asset-common-Loan.schema.json"
+    },
+    "foreignExchange": {
+      "description": "Defines a foreign exchange spot or forward transaction.",
+      "$ref": "cdm-product-asset-ForeignExchange.schema.json"
+    },
+    "commodity": {
+      "description": "Identifies a commodity by referencing a product identifier.",
+      "$ref": "cdm-base-staticdata-asset-common-metafields-ReferenceWithMetaCommodity.schema.json"
+    },
+    "security": {
+      "description": "Identifies a security by referencing a product identifier and a security type, plus an optional set of attributes.",
+      "$ref": "cdm-base-staticdata-asset-common-Security.schema.json"
+    },
+    "basket": {
+      "description": "Identifies a custom basket by referencing a product identifier and its constituents.",
+      "$ref": "cdm-product-template-Basket.schema.json"
+    }
+  }
+}

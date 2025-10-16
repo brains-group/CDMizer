@@ -1,0 +1,573 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "https://example.com/trade-identifier",
+                    "externalReference": "163476"
+                },
+                "issuer": {
+                    "value": "Company A Inc.",
+                    "meta": {
+                        "scheme": "ISIN"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "ISIN"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "ISIN"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "163476",
+            "meta": {
+                "globalKey": "Electricity Option Contract",
+                "externalKey": "Company A Inc. vs Company B Inc."
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2012-07-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2012-07-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Company A Inc.",
+                                        "seller": "Company B Inc."
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": "0",
+                                                "periodMultiplier": "1",
+                                                "period": "day"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "business",
+                                                "dayDistribution": "uniform",
+                                                "businessCenters": {
+                                                    "businessCenter": "CAISO"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "ELECTRICITY-CAISO-SP 15 GEN HUB-DAY AHEAD"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description, we can identify the relevant information for the key \"optionType\".\n\nFrom the contract description, we find that the trade is for a commodity option with a contractual product of Commodity_Option. This indicates that the option type is a commodity option.\n\n### Maintaining the Same Datatype\n\nThe placeholder is an empty string (\"\"). We will replace it with a STRING derived from the contract information.\n\n### Replacing the Placeholder\n\n```json\n\"optionType\": \"Commodity Option\"\n```\n\n### Final Output\n\nThe final output for the key \"optionType\" is:\n\n```json\n{\n  \"optionType\": \"Commodity Option\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "Electricity Option Contract",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2012-04-10",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2012-07-01",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "2012-07-01",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business Day",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Day"
+                                                }
+                                            },
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2012-09-30",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "2012-07-01",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business Day",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Day"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            },
+                                            "followUpConfirmation": false
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": "MW"
+                                            },
+                                            "priceType": "LocationalMarginal",
+                                            "datedValue": [
+                                                {
+                                                    "date": "2012-07-01",
+                                                    "value": 25.0
+                                                }
+                                            ],
+                                            "value": 25.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Company A Inc.",
+                                        "receiver": "Company B Inc."
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "25.00 MW"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and the prior context, we can identify the best-suited information for the `settlementType` key.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`, which indicates that we are looking for the settlement type of the option payout.\n\nFrom the contract description, we can see that the payout is an option payout with a payer/receiver of Party2/Party1, respectively. This suggests that the settlement type is likely related to the option payout.\n\n### Populating the Placeholder with Relevant Data\n\nBased on the contract description, we can identify the following relevant data for the `settlementType` key:\n\n* The payout is an option payout, which suggests that the settlement type is likely \"Option\".\n\n### Maintaining the Same Datatype\n\nSince the placeholder is an empty string (\"\") and we have identified a string value for the `settlementType` key, we can replace the placeholder with the string value.\n\n### Final Placeholder Value\n\n```json\n\"Option\"\n```\n\n### Final JSON Template\n\n```json\n{\n  \"settlementType\": \"Option\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Unadjusted",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "CAISO"
+                                                            },
+                                                            {
+                                                                "value": "SP 15 GEN HUB-DAY AHEAD"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "2012-04-10"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Day"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": false,
+                                            "calculationMethod": "Simple Averaging"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "Company A Inc.",
+                                                    "value": "Company B Inc."
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": 25.0,
+                                        "tradeDate": "2012-04-10",
+                                        "tradeIdentifier": 163476,
+                                        "effectiveDate": "2012-07-01",
+                                        "terminationDate": "2012-09-30",
+                                        "payoutType": "Option Payout",
+                                        "payer": "Company B Inc.",
+                                        "receiver": "Company A Inc.",
+                                        "observable": "ELECTRICITY-CAISO-SP 15 GEN HUB-DAY AHEAD",
+                                        "priceQuoteType": "LocationalMarginal",
+                                        "counterparty": "Company B Inc.",
+                                        "party": [
+                                            {
+                                                "partyId": "Party1",
+                                                "name": "Company A Inc.",
+                                                "role": "Party1"
+                                            },
+                                            {
+                                                "partyId": "Party2",
+                                                "name": "Company B Inc.",
+                                                "role": "Party2"
+                                            }
+                                        ],
+                                        "contractDetails": {
+                                            "documentation": [
+                                                {
+                                                    "agreement": "Master Agreement",
+                                                    "date": "2007-07-05"
+                                                },
+                                                {
+                                                    "agreement": "Confirmation",
+                                                    "date": "2012-04-10"
+                                                }
+                                            ]
+                                        },
+                                        "transferHistory": [
+                                            {
+                                                "transferDate": "2012-04-05",
+                                                "quantity": 342000.0,
+                                                "payer": "PartyA",
+                                                "receiver": "PartyB"
+                                            }
+                                        ],
+                                        "riskDisclosure": [
+                                            "Foreign Exchange Risk",
+                                            "Price Risk",
+                                            "Liquidity Risk",
+                                            "Credit Risk"
+                                        ],
+                                        "representations": [
+                                            "Each party represents that they are acting for their own account.",
+                                            "Each party represents that they have made their own independent decisions to enter into this transaction.",
+                                            "Each party represents that they are not relying on any communication from the other party as investment advice or as a recommendation to enter into this transaction."
+                                        ],
+                                        "governingLaw": "Not Specified",
+                                        "calculationAgent": "Not Specified",
+                                        "businessDayConvention": "Not Specified",
+                                        "mandatoryEarlyTermination": "No",
+                                        "scenarioAnalysis": "Not Specified",
+                                        "mtmSensitivityAnalysis": "Not Specified",
+                                        "pricingVariables": "Not Specified",
+                                        "impactOfVariables": "Not Specified",
+                                        "disclosure": "This document is confidential and may not be reproduced, distributed, or transmitted without the prior written permission of the issuer."
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Termination",
+                                            "dayDistribution": "Termination",
+                                            "businessCenters": {
+                                                "businessCenter": "CAISO"
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": "0",
+                                            "periodMultiplier": "1",
+                                            "period": "day"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Calendar Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Day"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Unadjusted",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "CAISO"
+                                                    },
+                                                    {
+                                                        "value": "SP 15 GEN HUB-DAY AHEAD"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "ELECTRICITY-CAISO-SP 15 GEN HUB-DAY AHEAD"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Company A Inc.",
+                                        "receiver": "Company B Inc."
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "Commodity_Option"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Calendar Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Day"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "CAISO"
+                                                    },
+                                                    {
+                                                        "value": "SP 15 GEN HUB-DAY AHEAD"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "ELECTRICITY-CAISO-SP 15 GEN HUB-DAY AHEAD"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Company A Inc.",
+                                        "receiver": "Company B Inc."
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity_Option",
+                                                "value": "25.00 MW"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Company A Inc.",
+                            "calculationAgentPartyEnum": "Party1"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Commodity"
+                        },
+                        "productQualifier": "Commodity_Option",
+                        "source": "Company A Inc.",
+                        "value": {
+                            "name": {
+                                "value": "ELECTRICITY-CAISO-SP 15 GEN HUB-DAY AHEAD",
+                                "meta": {
+                                    "scheme": "LocationalMarginal"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": ""
+                                        },
+                                        "priceType": "",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": {
+                                "value": {
+                                    "frequency": {
+                                        "periodMultiplier": 1,
+                                        "period": "day"
+                                    },
+                                    "value": 25.0,
+                                    "unit": {
+                                        "capacityUnit": "MW"
+                                    }
+                                }
+                            },
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "LocationalMarginal",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "Company B Inc.",
+                        "externalReference": "Company B Inc."
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Party1",
+                    "partyReference": [
+                        {
+                            "globalReference": "Company A Inc.",
+                            "externalReference": "Company A Inc."
+                        },
+                        {
+                            "globalReference": "Company B Inc.",
+                            "externalReference": "Company B Inc."
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        },
+                        "identifierType": "Trade Identifier"
+                    }
+                ],
+                "name": {
+                    "value": "Company A Inc."
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "USA"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2012-04-10",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Electricity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Commodity_Option"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "Master Agreement"
+                            }
+                        },
+                        "vintage": "2012"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Company A Inc.",
+                            "externalReference": "Party1",
+                            "role": "Party1"
+                        },
+                        {
+                            "globalReference": "Company B Inc.",
+                            "externalReference": "Party2",
+                            "role": "Party2"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

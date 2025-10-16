@@ -1,0 +1,1835 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "10fb089c",
+                    "externalReference": "partyA"
+                },
+                "issuer": {
+                    "value": "Bank A (LEI: DUMMY0000000000LEI02)",
+                    "meta": {
+                        "scheme": "http://www.PartyA.com/issuer"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "MOCKUPSTRIKEPRICEE01",
+                            "meta": {
+                                "scheme": "http://www.PartyA.com/com-trade-id"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "9598cc47"
+                },
+                "tradeDate": {
+                    "value": "2021-12-03",
+                    "meta": {
+                        "globalKey": "3ec85c"
+                    }
+                },
+                "tradableProduct": {
+                    "product": {
+                        "contractualProduct": {
+                            "productTaxonomy": [
+                                {
+                                    "source": "Commodity",
+                                    "value": {
+                                        "name": {
+                                            "value": "Natural Gas",
+                                            "meta": {
+                                                "scheme": "http://www.PartyA.com/product"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "MOCKUPSTRIKEPRICEE01",
+            "meta": {
+                "globalKey": "12fbca14",
+                "externalKey": "tradeIdentifier"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2021-12-03",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable",
+                                    "meta": {
+                                        "globalKey": "DUMMY0000000000LEI02"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "DUMMY0000000000LEI02"
+                                }
+                            },
+                            "terminationDate": {
+                                "unadjustedDate": "2022-07-31",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable",
+                                    "meta": {
+                                        "globalKey": "DUMMY0000000000LEI01"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "DUMMY0000000000LEI01"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2021-12-03",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable",
+                                    "meta": {
+                                        "globalKey": "DUMMY0000000000LEI02"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "DUMMY0000000000LEI01"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Bank B (LEI: DUMMY0000000000LEI01)",
+                                        "seller": "Bank A (LEI: DUMMY0000000000LEI02)"
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9",
+                                                    "externalKey": "floatingLegCalculationPeriods"
+                                                },
+                                                "balanceOfFirstPeriod": false
+                                            },
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "First"
+                                            }
+                                        },
+                                        "observationTerms": [
+                                            {
+                                                "observationType": "Price",
+                                                "observationFrequency": "Daily",
+                                                "observationSchedule": {
+                                                    "firstPeriodStartDate": "2022-01-01",
+                                                    "firstRegularPeriodStartDate": "2022-01-03",
+                                                    "lastRegularPeriodEndDate": "2022-12-31"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01)",
+                                                "value": "This contract is a commodity option agreement between Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01) for the purchase and sale of natural gas futures."
+                                            }
+                                        }
+                                    },
+                                    "optionType": "Based on the provided inputs, I will populate the placeholder for the given key \"optionType\" from the JSON object.\n\n**Contract Description:**\nThis contract is a commodity option agreement between Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01) for the purchase and sale of natural gas futures.\n\n**Trade Details:**\n* Trade Date: 2021-12-03\n* Trade Identifier: MOCKUPSTRIKEPRICEE01\n* Trade Lot: 1,000,000 units of natural gas futures\n* Notional Amount: USD 1,000,000\n* Trade Type: Call option\n\n**Commodity Details:**\n* Commodity: Natural Gas\n* Underlying: HTOXVX (Henry Hub Natural Gas Futures)\n* Delivery Date: The 1st business day following the last trading day of the contract month\n* Delivery Location: New York Mercantile Exchange (NYMEX)\n\n**Option Terms:**\n* Strike Price: USD 2,000 (fixed on 2022-07-01) and USD 3,000 (fixed on 2022-08-01)\n* Expiration Date: 2022-07-31\n* Exercise Style: European\n* Automatic Exercise: Applicable\n* Follow-up Confirmation: Not applicable\n\n**Payout Terms:**\n* Payer: Bank B\n* Receiver: Bank A\n* Settlement Currency: USD\n* Settlement Date: The 5th business day following the expiration date\n* Settlement Type: Cash\n\n**Counterparty Details:**\n* Bank A (Party 1): LEI: DUMMY0000000000LEI02\n* Bank B (Party 2): LEI: DUMMY0000000000LEI01\n\n**Contractual Party:**\n* Master Agreement: ISDA Master Agreement (2002 vintage)\n* Agreement Name: Master Agreement\n* Agreement Type: ISDA Master Agreement\n\n**Transfer History:**\n* Transfer Date: 2021-12-07\n* Transfer Type: Premium payment\n* Payer: Bank A\n* Receiver: Bank B\n* Amount: USD 452,500.00\n\n**Risk Disclosure:**\n* The parties acknowledge that this contract involves significant risks, including but not limited to, price risk, liquidity risk, and credit risk.\n* The parties represent that they have made their own independent decisions to enter into this contract and have sufficient financial resources to bear the risks associated with it.\n\n**Representations:**\n* Each party represents that it has the power to enter into this contract and has taken all necessary action to authorize its execution.\n* Each party represents that its entry into and performance of its obligations under this contract does not and will not result in a breach or violation of any applicable law or regulation.\n\n**Governing Law:**\n* The contract shall be governed by and construed in accordance with the laws of the Province of Ontario and the laws of Canada applicable therein.\n\n**Calculation Agent:**\n* The calculation agent for this contract is Bank A (LEI: DUMMY0000000000LEI02).\n\n**Valuation:**\n* The valuation of this contract shall be made available to Bank B on the Optimize platform.\n\n**Termination:**\n* The contract shall terminate on the expiration date, unless terminated earlier by either party in accordance with the terms of the contract.\n\n**Miscellaneous:**\n* This contract is confidential and shall not be disclosed to any third party without the prior written consent of both parties.\n* The parties acknowledge that this contract involves significant risks and that they have made their own independent decisions to enter into it.\n\nBased on the provided contract description, the best-suited value for the key \"optionType\" is \"Call option\".\n\n**Populated Placeholder:**\n\"optionType\" : \"Call option\"\n\nThe populated placeholder maintains the same datatype as the original placeholder, which was an empty string (\"\").",
+                                    "exerciseTerms": {
+                                        "style": "European",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2022-07-01",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "NotApplicable",
+                                                    "meta": {
+                                                        "globalKey": "3a4b88ab"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "25a6aeac"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "25a6aeac"
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2022-07-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NotApplicable",
+                                                        "meta": {
+                                                            "globalKey": "3a4b88ab"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "25fdf5ec"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "25fdf5ec"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            },
+                                            "followUpConfirmation": null
+                                        },
+                                        "meta": {
+                                            "globalKey": "a48309e3"
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "value": 2000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "perUnitOf": {
+                                                "capacityUnit": "USD"
+                                            },
+                                            "priceType": "AssetPrice"
+                                        },
+                                        "meta": {
+                                            "globalKey": "2ee78817"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided inputs, I will populate the placeholder for the 'key''settlementType' from the provided derivatives contract.\n\n**Contract Description:**\nThis contract is a commodity option agreement between Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01) for the purchase and sale of natural gas futures.\n\n**Trade Details:**\n* Trade Date: 2021-12-03\n* Trade Identifier: MOCKUPSTRIKEPRICEE01\n* Trade Lot: 1,000,000 units of natural gas futures\n* Notional Amount: USD 1,000,000\n* Trade Type: Call option\n\n**Commodity Details:**\n* Commodity: Natural Gas\n* Underlying: HTOXVX (Henry Hub Natural Gas Futures)\n* Delivery Date: The 1st business day following the last trading day of the contract month\n* Delivery Location: New York Mercantile Exchange (NYMEX)\n\n**Option Terms:**\n* Strike Price: USD 2,000 (fixed on 2022-07-01) and USD 3,000 (fixed on 2022-08-01)\n* Expiration Date: 2022-07-31\n* Exercise Style: European\n* Automatic Exercise: Applicable\n* Follow-up Confirmation: Not applicable\n\n**Payout Terms:**\n* Payer: Bank B\n* Receiver: Bank A\n* Settlement Currency: USD\n* Settlement Date: The 5th business day following the expiration date\n* Settlement Type: Cash\n\n**Counterparty Details:**\n* Bank A (Party 1): LEI: DUMMY0000000000LEI02\n* Bank B (Party 2): LEI: DUMMY0000000000LEI01\n\n**Contractual Party:**\n* Master Agreement: ISDA Master Agreement (2002 vintage)\n* Agreement Name: Master Agreement\n* Agreement Type: ISDA Master Agreement\n\n**Transfer History:**\n* Transfer Date: 2021-12-07\n* Transfer Type: Premium payment\n* Payer: Bank A\n* Receiver: Bank B\n* Amount: USD 452,500.00\n\n**Risk Disclosure:**\n* The parties acknowledge that this contract involves significant risks, including but not limited to, price risk, liquidity risk, and credit risk.\n* The parties represent that they have made their own independent decisions to enter into this contract and have sufficient financial resources to bear the risks associated with it.\n\n**Representations:**\n* Each party represents that it has the power to enter into this contract and has taken all necessary action to authorize its execution.\n* Each party represents that its entry into and performance of its obligations under this contract does not and will not result in a breach or violation of any applicable law or regulation.\n\n**Governing Law:**\n* The contract shall be governed by and construed in accordance with the laws of the Province of Ontario and the laws of Canada applicable therein.\n\n**Calculation Agent:**\n* The calculation agent for this contract is Bank A (LEI: DUMMY0000000000LEI02).\n\n**Valuation:**\n* The valuation of this contract shall be made available to Bank B on the Optimize platform.\n\n**Termination:**\n* The contract shall terminate on the expiration date, unless terminated earlier by either party in accordance with the terms of the contract.\n\n**Miscellaneous:**\n* This contract is confidential and shall not be disclosed to any third party without the prior written consent of both parties.\n* The parties acknowledge that this contract involves significant risks and that they have made their own independent decisions to enter into it.\n\nBased on the provided contract description, the best-suited value for the'settlementType' key is 'Cash'.\n\n**Populated Placeholder:**\n```json\n{\n  \"settlementType\": \"Cash\"\n}\n```\nThe populated placeholder maintains the same datatype (STRING) as the original placeholder.",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "classification": [
+                                                    {
+                                                        "value": "Energy",
+                                                        "ordinal": 1
+                                                    },
+                                                    {
+                                                        "value": "Natural Gas",
+                                                        "ordinal": 2
+                                                    }
+                                                ]
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "commodity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "exerciseDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "60481a18"
+                                                    }
+                                                },
+                                                "businessDayConvention": "",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "USNY"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "27e4e9"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "externalReference": "exerciseDate"
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": "",
+                                                "meta": {
+                                                    "globalKey": "2128d871"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingFeature": {
+                                            "averagingMethod": {
+                                                "isWeighted": false,
+                                                "calculationMethod": "Arithmetic"
+                                            }
+                                        },
+                                        "pricingDates": {
+                                            "parametricDates": {
+                                                "dayType": "Calendar",
+                                                "dayDistribution": "All",
+                                                "businessCenters": {
+                                                    "commodityBusinessCalendar": [
+                                                        {
+                                                            "value": "DowJonesPower"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "e1cbae2a"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9"
+                                                }
+                                            }
+                                        },
+                                        "commodityPriceReturnTerms": {
+                                            "conversionFactor": 0.4913
+                                        },
+                                        "paymentDates": {
+                                            "payRelativeTo": "CalculationPeriodEndDate",
+                                            "paymentDaysOffset": {
+                                                "periodMultiplier": 5,
+                                                "daysOffset": 5
+                                            }
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "USD 2,000"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "1.0000"
+                                            }
+                                        }
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business",
+                                            "dayDistribution": "First",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "DowJonesPower"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "e1cbae2a"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "M",
+                                            "meta": {
+                                                "globalKey": "11e9",
+                                                "externalKey": "floatingLegCalculationPeriods"
+                                            },
+                                            "balanceOfFirstPeriod": false
+                                        },
+                                        "meta": {
+                                            "globalKey": "11e9"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodStartDate",
+                                        "paymentDaysOffset": {
+                                            "periodMultiplier": 5,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            },
+                                            "dayType": "Business"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NotApplicable",
+                                            "businessCenters": {
+                                                "businessDayConvention": "NotApplicable",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "DowJonesPower"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01)",
+                                                "value": "This contract is a commodity option agreement between Bank A (LEI: DUMMY0000000000LEI02) and Bank B (LEI: DUMMY0000000000LEI01) for the purchase and sale of natural gas futures."
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "5f333497"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "5f333497"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "80c9229e"
+                                        },
+                                        "buyerSeller": {
+                                            "buyer": "Bank A (LEI: DUMMY0000000000LEI02)",
+                                            "seller": "Bank B (LEI: DUMMY0000000000LEI01)"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodStartDate",
+                                        "paymentDaysOffset": {
+                                            "periodMultiplier": 5,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            },
+                                            "dayType": "Business"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NotApplicable",
+                                            "businessCenters": {
+                                                "meta": {
+                                                    "globalKey": "e1cbae2a"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "commodity-2"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Bank A (LEI: DUMMY0000000000LEI02)",
+                            "calculationAgentPartyEnum": "Bank A (LEI: DUMMY0000000000LEI02)"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Call option",
+                            "source": "ISDA",
+                            "value": {
+                                "classification": [
+                                    {
+                                        "value": "Energy",
+                                        "ordinal": 1
+                                    },
+                                    {
+                                        "value": "Oil",
+                                        "ordinal": 2
+                                    },
+                                    {
+                                        "value": "OilWTI",
+                                        "ordinal": 3
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": "USMMBTU"
+                                        },
+                                        "priceType": "CashPrice",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": "Fee"
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "C",
+                                            "meta": {
+                                                "globalKey": "62"
+                                            }
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "capacityUnit": ""
+                                        }
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "value": 1000000,
+                                        "unit": {
+                                            "capacityUnit": "USMMBTU"
+                                        }
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-3"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "meta": {
+                                        "globalKey": "e9ce4fd3"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "63"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 1825000,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "daa36163"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "C",
+                                                    "meta": {
+                                                        "globalKey": "62"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "f07c402"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "63"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 77500,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "4bf9210f"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 250000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "C",
+                                                    "meta": {
+                                                        "globalKey": "62"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "f07c402"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "63"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 77500,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "4bf9210f"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 250000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "C",
+                                                    "meta": {
+                                                        "globalKey": "62"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "f07c402"
+                                    }
+                                },
+                                {
+                                    "quantity": [
+                                        {
+                                            "value": {
+                                                "value": 1000000,
+                                                "frequency": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "63"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-1"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "value": {
+                                                "value": 77500,
+                                                "unit": {
+                                                    "capacityUnit": "USMMBTU"
+                                                }
+                                            },
+                                            "meta": {
+                                                "location": [
+                                                    {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "quantity-3"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "meta": {
+                                        "globalKey": "4bf9210f"
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "productIdentifier": [
+                                            {
+                                                "value": {
+                                                    "identifier": {
+                                                        "value": "NATURAL GAS-HENRY HUB-NYMEX",
+                                                        "meta": {
+                                                            "scheme": "http://www.partyA.com/instrumentId/commodity-reference-price"
+                                                        }
+                                                    },
+                                                    "source": "ISDACRP",
+                                                    "meta": {
+                                                        "globalKey": "3d14f030"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            }
+                                        }
+                                    }
+                                },
+                                "pricingDates": {
+                                    "parametricDates": {
+                                        "dayType": "Business",
+                                        "dayDistribution": "All"
+                                    }
+                                },
+                                "underlier": {
+                                    "commodity": {
+                                        "address": {
+                                            "scope": "DOCUMENT",
+                                            "value": "NATURAL GAS-HENRY HUB-NYMEX"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "0"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "ef3726ba"
+                                },
+                                "forwardPayout": [
+                                    {
+                                        "payerReceiver": {
+                                            "payer": "Bank B",
+                                            "receiver": "Bank A"
+                                        },
+                                        "underlier": {
+                                            "commodity": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "NATURAL GAS-HENRY HUB-NYMEX"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "payerReceiver": {
+                                            "payer": "Bank B",
+                                            "receiver": "Bank A"
+                                        },
+                                        "underlier": {
+                                            "commodity": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "NATURAL GAS-HENRY HUB-NYMEX"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "observable": {
+                                    "commodity": {
+                                        "value": {
+                                            "productIdentifier": [
+                                                {
+                                                    "value": {
+                                                        "identifier": {
+                                                            "value": "NATURAL GAS-HENRY HUB-NYMEX",
+                                                            "meta": {
+                                                                "scheme": "http://www.partyA.com/instrumentId/commodity-reference-price"
+                                                            }
+                                                        },
+                                                        "source": "ISDACRP",
+                                                        "meta": {
+                                                            "globalKey": "3d14f030"
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "priceQuoteType": "Settlement",
+                                            "deliveryDateReference": {
+                                                "deliveryNearby": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "M"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Master Agreement",
+                    "partyReference": {
+                        "globalReference": "ISDA Master Agreement (2002 vintage)",
+                        "externalReference": "Master Agreement"
+                    }
+                }
+            ],
+            "ancillaryParty": {
+                "role": "Call option",
+                "partyReference": [
+                    {
+                        "globalReference": "MOCKUPSTRIKEPRICEE01",
+                        "externalReference": "Trade Identifier"
+                    }
+                ]
+            }
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI02",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "22ea1e40"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI01",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "22ea1e41"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Natural Gas Futures"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Canada"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2021-12-03",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "MasterAgreement",
+                            "masterAgreementType": {
+                                "value": "ISDAMaster"
+                            }
+                        },
+                        "vintage": 2002
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "90d00cc3",
+                            "externalReference": "PartyA"
+                        },
+                        {
+                            "globalReference": "90cf9865",
+                            "externalReference": "PartyB"
+                        }
+                    ],
+                    "meta": {
+                        "globalKey": "8241870c"
+                    }
+                }
+            ]
+        }
+    }
+}

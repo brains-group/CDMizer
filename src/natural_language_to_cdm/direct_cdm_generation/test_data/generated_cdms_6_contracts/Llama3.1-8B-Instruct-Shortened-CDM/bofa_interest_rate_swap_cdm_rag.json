@@ -1,0 +1,286 @@
+{
+    "tradeDate": "2018-03-01",
+    "effectiveDate": "2018-03-16",
+    "terminationDate": {
+        "adjustableDate": {
+            "unadjustedDate": "2048-03-16",
+            "dateAdjustments": {
+                "businessDayConvention": "FOLLOWING",
+                "businessCenters": {
+                    "businessCenter": [
+                        {
+                            "value": "LOND"
+                        },
+                        {
+                            "value": "USNY"
+                        },
+                        {
+                            "value": "SYDN"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "parties": {
+        "partyA": {
+            "partyId": "MLI",
+            "partyName": "Merrill Lynch International"
+        },
+        "partyB": {
+            "partyId": "PB",
+            "partyName": "Party B"
+        }
+    },
+    "product": {
+        "productType": "FixedForFloat",
+        "fixedLeg": {
+            "fixedAmountPayer": "PartyA",
+            "notionalAmount": {
+                "quantitySchedule": {
+                    "address": {
+                        "scope": "DOCUMENT",
+                        "value": "ScheduleA"
+                    }
+                }
+            },
+            "fixedRate": {
+                "rate": "0.0460000",
+                "dayCountFraction": "30/360"
+            },
+            "paymentDates": {
+                "paymentDateSchedule": {
+                    "interimPaymentDates": [
+                        {
+                            "adjustableDates": {
+                                "unadjustedDate": "2019-03-16",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "FOLLOWING",
+                                    "businessCenters": {
+                                        "businessCenter": [
+                                            {
+                                                "value": "LOND"
+                                            },
+                                            {
+                                                "value": "USNY"
+                                            },
+                                            {
+                                                "value": "SYDN"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "floatLeg": {
+            "floatingRatePayer": "PartyB",
+            "notionalAmount": {
+                "quantitySchedule": {
+                    "address": {
+                        "scope": "DOCUMENT",
+                        "value": "ScheduleB"
+                    }
+                }
+            },
+            "floatingRate": {
+                "rateOption": {
+                    "address": {
+                        "scope": "DOCUMENT",
+                        "value": "USD-LIBOR-BBA"
+                    }
+                },
+                "spreadSchedule": {
+                    "price": {
+                        "address": {
+                            "scope": "DOCUMENT",
+                            "value": "ScheduleB"
+                        }
+                    }
+                },
+                "dayCountFraction": "ACT/360",
+                "resetDates": {
+                    "resetDateSchedule": {
+                        "interimResetDates": [
+                            {
+                                "adjustableDates": {
+                                    "unadjustedDate": "2018-06-16",
+                                    "dateAdjustments": {
+                                        "businessDayConvention": "MODIFIEDFOLLOWING",
+                                        "businessCenters": {
+                                            "businessCenter": [
+                                                {
+                                                    "value": "LOND"
+                                                },
+                                                {
+                                                    "value": "USNY"
+                                                },
+                                                {
+                                                    "value": "SYDN"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "paymentDates": {
+                "paymentDateSchedule": {
+                    "interimPaymentDates": [
+                        {
+                            "adjustableDates": {
+                                "unadjustedDate": "2018-06-16",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODIFIEDFOLLOWING",
+                                    "businessCenters": {
+                                        "businessCenter": [
+                                            {
+                                                "value": "LOND"
+                                            },
+                                            {
+                                                "value": "USNY"
+                                            },
+                                            {
+                                                "value": "SYDN"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "earlyTermination": {
+        "optionalEarlyTermination": {
+            "optionStyle": "BERMUDA",
+            "buyer": "PartyA",
+            "seller": "PartyB",
+            "businessDaysForPayments": {
+                "businessCenter": [
+                    {
+                        "value": "LOND"
+                    },
+                    {
+                        "value": "USNY"
+                    },
+                    {
+                        "value": "SYDN"
+                    }
+                ]
+            },
+            "exerciseBusinessDay": {
+                "businessCenter": [
+                    {
+                        "value": "LOND"
+                    },
+                    {
+                        "value": "USNY"
+                    },
+                    {
+                        "value": "SYDN"
+                    }
+                ]
+            },
+            "valuationBusinessDay": {
+                "businessCenter": [
+                    {
+                        "value": "LOND"
+                    },
+                    {
+                        "value": "USNY"
+                    },
+                    {
+                        "value": "SYDN"
+                    }
+                ]
+            },
+            "procedureForExercise": {
+                "bermudaOptionExerciseDates": {
+                    "exerciseDateSchedule": {
+                        "interimExerciseDates": [
+                            {
+                                "adjustableDates": {
+                                    "unadjustedDate": "2019-03-16",
+                                    "dateAdjustments": {
+                                        "businessDayConvention": "FOLLOWING",
+                                        "businessCenters": {
+                                            "businessCenter": [
+                                                {
+                                                    "value": "LOND"
+                                                },
+                                                {
+                                                    "value": "USNY"
+                                                },
+                                                {
+                                                    "value": "SYDN"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "contactDetailsForPurposeOfGivingNoticeOfExercise": {
+                "partyA": {
+                    "address": {
+                        "scope": "DOCUMENT",
+                        "value": "+1 212 497 8860"
+                    }
+                },
+                "partyB": {
+                    "address": {
+                        "scope": "DOCUMENT",
+                        "value": "PLEASE ADVISE"
+                    }
+                }
+            },
+            "settlementTerms": {
+                "cashSettlement": "INAPPLICABLE"
+            }
+        }
+    },
+    "calculationAgent": {
+        "address": {
+            "scope": "AGREEMENT",
+            "value": "As stated in the Agreement"
+        }
+    },
+    "recordingOfConversations": {
+        "address": {
+            "scope": "DOCUMENT",
+            "value": "Each party to this Transaction acknowledges and agrees to the recording of conversations between trading and marketing personnel of the parties to this Transaction whether by one or other or both of the parties or their agents."
+        }
+    },
+    "accountDetails": {
+        "address": {
+            "scope": "DOCUMENT",
+            "value": "As advised under separate cover with reference to this Confirmation, each party shall provide appropriate payment instructions to the other party in writing and such instructions shall be deemed to be incorporated into this Confirmation."
+        }
+    },
+    "offices": {
+        "partyA": {
+            "address": {
+                "scope": "DOCUMENT",
+                "value": "London, United Kingdom"
+            }
+        },
+        "partyB": {
+            "address": {
+                "scope": "DOCUMENT",
+                "value": "Sydney-NSW, AUSTRALIA"
+            }
+        }
+    }
+}

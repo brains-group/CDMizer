@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.collateral",
+  "type": "object",
+  "title": "AssetCriteria",
+  "description": "Represents a set of criteria used to specify eligible collateral assets.",
+  "properties": {
+    "collateralAssetType": {
+      "description": "Represents a filter based on the asset product type.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-AssetType.schema.json"
+      },
+      "minItems": 0
+    },
+    "assetCountryOfOrigin": {
+      "description": "Represents a filter on the asset country of origin based on the ISO Standard 3166.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ISOCountryCodeEnum.schema.json"
+      },
+      "minItems": 0
+    },
+    "denominatedCurrency": {
+      "description": "Represents a filter on the underlying asset denominated currency based on ISO Standards.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-CurrencyCodeEnum.schema.json"
+      },
+      "minItems": 0
+    },
+    "agencyRating": {
+      "description": "Represents an agency rating based on default risk and creditors claim in event of default associated with specific instrument.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-collateral-AgencyRatingCriteria.schema.json"
+      },
+      "minItems": 0
+    },
+    "maturityType": {
+      "description": "Specifies whether the maturity range is the remaining or original maturity.",
+      "$ref": "cdm-base-staticdata-asset-common-MaturityTypeEnum.schema.json"
+    },
+    "maturityRange": {
+      "description": "Represents a filter based on the underlying asset maturity.",
+      "$ref": "cdm-base-datetime-PeriodRange.schema.json"
+    },
+    "productIdentifier": {
+      "description": "Represents a filter based on specific instrument identifiers (e.g. specific ISINs, CUSIPs etc).",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ProductIdentifier.schema.json"
+      },
+      "minItems": 0
+    },
+    "collateralTaxonomy": {
+      "description": "Specifies the collateral taxonomy,which is composed of a taxonomy value and a taxonomy source.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-CollateralTaxonomy.schema.json"
+      },
+      "minItems": 0
+    },
+    "domesticCurrencyIssued": {
+      "description": "Identifies that the Security must be denominated in the domestic currency of the issuer.",
+      "type": "boolean"
+    },
+    "listing": {
+      "description": "Specifies the exchange, index or sector specific to listing of a security.",
+      "$ref": "cdm-product-collateral-ListingType.schema.json"
+    }
+  }
+}

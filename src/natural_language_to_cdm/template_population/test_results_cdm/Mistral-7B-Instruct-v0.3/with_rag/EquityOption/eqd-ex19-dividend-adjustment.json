@@ -1,0 +1,459 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "33f59568",
+                    "externalReference": "PartyB"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "EquityOptionContract_2006-08-14",
+                            "meta": {
+                                "scheme": "http://www.PartyA.com/tradeId/OTC"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": {
+                "tradeDate": "2006-08-14"
+            },
+            "meta": {
+                "globalKey": "unique_global_key",
+                "externalKey": "unique_external_key"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "PartyB",
+                                        "seller": "jb2890"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "CONTRACT",
+                                                        "value": "STM-FP, STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-4"
+                                                    }
+                                                },
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-5"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "STM-FP"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "STM-FP"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "",
+                                                                                "value": "STM-FP"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "",
+                                                                                "value": "STMicroelectronics N.V."
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the 'key' is 'optionType', the prior context is 'trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType', and the derivatives contract description is given.\n\nFrom the contract description, we can see that the option type is 'Call'.\n\nGiven the prior context, we can infer that the option type should be nested within the 'optionPayout' list, specifically at the index 0.\n\nTherefore, the placeholder for 'optionType' should be populated as follows:\n\n```json\n\"optionType\": [\"Call\"]\n```\n\nThis ensures that the datatype is maintained as a list, and the option type is correctly identified and placed according to the prior context.",
+                                    "exerciseTerms": {
+                                        "style": "American",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2006-08-14",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "NONE",
+                                                    "meta": {
+                                                        "globalKey": "eae7f1c5"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eae7f1c5"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "eae7f1c5"
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-08-14",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NONE",
+                                                        "meta": {
+                                                            "globalKey": "eae7f1c5"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "eae7f1c5"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eae7f1c5"
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "17:15:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "Close",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 150000,
+                                            "integralMultipleAmount": 150000,
+                                            "minimumNumberOfOptions": 1,
+                                            "meta": {
+                                                "globalKey": "6bfa93dd"
+                                            }
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            },
+                                            "meta": {
+                                                "globalKey": "6bfa93dd"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "6bfa93dd"
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "Share"
+                                            },
+                                            "priceType": "AssetPrice",
+                                            "value": "32.00",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "unique_identifier"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": {
+                                            "payerPartyReference": {
+                                                "globalReference": "33f59568",
+                                                "externalReference": "PartyB"
+                                            }
+                                        },
+                                        "receiver": {
+                                            "receiverPartyReference": {
+                                                "globalReference": "33f59567",
+                                                "externalReference": "jb2890"
+                                            }
+                                        }
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "CONTRACT",
+                                                "value": "payoutTerms.optionPayout[0].priceQuantity"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 0,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "2c4c46fb"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "2c4c46fb"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "38606287"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "CalculationAgentIndependent"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "Equity Option Contract",
+                            "value": {
+                                "name": {
+                                    "value": "Equity Option Taxonomy"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "priceQuantity": [
+                                        {
+                                            "quantity": [
+                                                {
+                                                    "value": {
+                                                        "value": "150000",
+                                                        "unit": {
+                                                            "financialUnit": "Contract"
+                                                        },
+                                                        "multiplier": {
+                                                            "value": 1.0
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "location": [
+                                                            {
+                                                                "scope": "DOCUMENT",
+                                                                "value": "trade.tradableProduct.tradeLot[0].priceQuantity[0].quantity"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ],
+                                            "meta": {
+                                                "globalKey": "98dd29f9"
+                                            }
+                                        }
+                                    ],
+                                    "unit": {
+                                        "financialUnit": "Contract"
+                                    },
+                                    "multiplier": {
+                                        "value": 1.0
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "trade.tradableProduct.tradeLot[0]"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "STM-FP",
+                                                "meta": {
+                                                    "scheme": "http://www.partyA.com/coding-scheme/product-id"
+                                                }
+                                            },
+                                            "source": "Trade Lot"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "33f59568",
+                        "externalReference": "PartyB"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "33f59567",
+                        "externalReference": "jb2890"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party B",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/dummy-party-id"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "33f59568"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party A",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/dummy-party-id"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "33f59567"
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2006-08-14",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Confirmation",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Equity Option Contract"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "Not specified"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": {
+                    "governingLaw": {
+                        "value": "Not specified"
+                    }
+                }
+            }
+        }
+    }
+}

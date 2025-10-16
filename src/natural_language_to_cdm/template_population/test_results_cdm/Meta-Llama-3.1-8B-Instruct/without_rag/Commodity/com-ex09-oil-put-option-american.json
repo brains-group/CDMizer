@@ -1,0 +1,560 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "ISDA",
+                    "externalReference": "ISDA Master Agreement"
+                },
+                "issuer": {
+                    "value": "Rusty",
+                    "meta": {
+                        "scheme": "Party A"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "163476",
+            "meta": {
+                "globalKey": "Commodity Option Contract",
+                "externalKey": "Trade Identifier"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "October 27, 2008",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Modified Following"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "October 27, 2008",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Modified Following"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Rusty",
+                                        "seller": "SwapsWire Ltd (LE)"
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": "1",
+                                                "periodMultiplier": "1",
+                                                "period": "Year"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business Day",
+                                                "dayDistribution": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": "London"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Physical",
+                                                "value": "Oil (Brent IPE)"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and the prior context, we can identify the best-suited information for the given key `optionType`.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`, which indicates that we are looking for the option type of the payout structure.\n\nFrom the contract description, we can see that the option type is specified under the `Trade Details` section as `Put`.\n\n### Maintaining the Same Datatype\n\nSince the placeholder is an empty string (`\"\"`), we will replace it with a string derived from the contract information.\n\n### Replacing the Placeholder\n\n```json\n{\n  \"optionType\": \"Put\"\n}\n```\n\n### Final Output\n\nThe final output is a JSON object with the `optionType` key populated with the value `Put`.",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": ""
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": null
+                                            },
+                                            "followUpConfirmation": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": "BBL"
+                                            },
+                                            "priceType": "Strike Price",
+                                            "datedValue": [
+                                                {
+                                                    "date": "January 12, 2009",
+                                                    "value": 78.0
+                                                }
+                                            ],
+                                            "value": 78.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Rusty",
+                                        "receiver": "SwapsWire Ltd (LE)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Party A",
+                                                "value": "Rusty"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided inputs, I will populate the placeholder for the'settlementType' key.\n\n### Placeholder:\n```\n\"settlementType\"\n```\n\n### Derivatives Contract Description:\nThe relevant section for the'settlementType' key is under the 'Settlement Terms' section, which states:\n\n* Settlement Type: Cash\n* Settlement Currency: USD\n* Settlement Date: 5 Business Days after Expiration Date\n\n### Prior Context (Path):\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`. This indicates that we are looking for the settlement type of the option payout.\n\n### Populated Placeholder:\n```\n\"cash\"\n```\n\n### Reasoning:\nThe'settlementType' key is associated with the settlement terms of the option payout. Based on the contract description, the settlement type is 'Cash', which is the best-suited information for this key.\n\n### Maintaining the same datatype:\nThe placeholder is a string, and the populated value is also a string, so the datatype remains the same.\n\n### Leaving placeholder unchanged if no data is available:\nNo highly relevant data exists for the given key, but since the'settlementType' key has a specific value in the contract description, we can populate the placeholder accordingly.",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "New York"
+                                                            },
+                                                            {
+                                                                "value": "London"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -1,
+                                                    "period": "day"
+                                                },
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "New York"
+                                                        },
+                                                        {
+                                                            "value": "London"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "externalReference": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementDate"
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": -1,
+                                                "period": "day"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": false,
+                                            "calculationMethod": "Arithmetic Mean"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "Party A",
+                                                    "value": "Rusty"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": {
+                                            "value": 1.0
+                                        },
+                                        "underlier": {
+                                            "value": "Oil (Brent IPE)"
+                                        },
+                                        "optionType": {
+                                            "value": "Put"
+                                        },
+                                        "strikePrice": {
+                                            "value": 78.0
+                                        },
+                                        "expirationDate": {
+                                            "value": "January 12, 2009"
+                                        },
+                                        "paymentTerms": {
+                                            "partyAPaymentDates": [
+                                                {
+                                                    "value": "Annually 2 Business Days after October 5 of each year, commencing October 7, 2009, up to and including October 7, 2013"
+                                                }
+                                            ],
+                                            "partyBPaymentDates": [
+                                                {
+                                                    "value": "Annually 2 Business Days after October 5 of each year, commencing October 7, 2009, up to and including October 7, 2013"
+                                                }
+                                            ]
+                                        },
+                                        "calculationAgent": {
+                                            "value": "As Specified in Master Agreement"
+                                        },
+                                        "settlementTerms": {
+                                            "settlementType": "Cash",
+                                            "settlementCurrency": "USD",
+                                            "settlementDate": "5 Business Days after Expiration Date"
+                                        },
+                                        "transferHistory": {
+                                            "transferDate": "October 29, 2008",
+                                            "transferAmount": 72000,
+                                            "transferType": "Premium"
+                                        },
+                                        "riskDisclosure": {
+                                            "value": "The parties acknowledge that this contract involves significant risks, including but not limited to, price risk, liquidity risk, and credit risk."
+                                        },
+                                        "counterparty": {
+                                            "partyA": {
+                                                "value": "Rusty"
+                                            },
+                                            "partyB": {
+                                                "value": "SwapsWire Ltd (LE)"
+                                            }
+                                        }
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Modified Following",
+                                            "dayDistribution": "A/360, Adjusted",
+                                            "businessCenters": {
+                                                "businessCentersOrReference": [
+                                                    {
+                                                        "businessCenter": "ISDA"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": "Annually",
+                                            "periodMultiplier": 1,
+                                            "period": "Year"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Year"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York"
+                                                    },
+                                                    {
+                                                        "value": "London"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Underlier",
+                                                "value": "Oil (Brent IPE)"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Rusty",
+                                        "receiver": "SwapsWire Ltd (LE)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity Option Contract",
+                                                "value": "Oil (Brent IPE)"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Year"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York"
+                                                    },
+                                                    {
+                                                        "value": "London"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Commodity Option Contract",
+                                                "value": "78.0 USD/BBL"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Rusty",
+                                        "receiver": "SwapsWire Ltd (LE)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Party A",
+                                                "value": "Rusty"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "As Specified in Master Agreement",
+                            "calculationAgentPartyEnum": "ISDA Calculation Agent"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Commodity"
+                        },
+                        "productQualifier": "Option",
+                        "source": "ISDA Master Agreement and Confirmation",
+                        "value": {
+                            "name": {
+                                "value": "Commodity Option",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": "Barrel (BBL)"
+                                        },
+                                        "priceType": "Commodity Option",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": "Premium"
+                                        },
+                                        "value": 78.0,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "A"
+                                        },
+                                        "value": 78.0,
+                                        "unit": {
+                                            "capacityUnit": "BBL"
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Spot",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "Calendar Days"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "Modified Following",
+                                                "periodMultiplier": 1,
+                                                "period": "Calendar Days"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party A",
+                    "partyReference": {
+                        "globalReference": "Rusty",
+                        "externalReference": "Party A"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Buyer",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party A",
+                            "externalReference": "Rusty"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "163476",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        },
+                        "identifierType": "Trade Identifier"
+                    }
+                ],
+                "name": {
+                    "value": "Rusty"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Canada"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "October 27, 2008",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Commodity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA 2013 Standard Credit Support Annex English Law"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement"
+                            }
+                        },
+                        "vintage": "2008"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Rusty",
+                            "externalReference": "SwapsWire Ltd (LE)"
+                        },
+                        {
+                            "globalReference": "SwapsWire Ltd (LE)",
+                            "externalReference": "Rusty"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

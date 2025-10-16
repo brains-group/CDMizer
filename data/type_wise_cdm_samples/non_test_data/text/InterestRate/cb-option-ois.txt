@@ -1,0 +1,93 @@
+**Interest Rate Option Debt Option Contract**
+
+**General Terms**
+
+This contract is an interest rate option debt option contract between Party A (Party1) and Party B (Party2). The trade date is August 18, 2021.
+
+**Trade Details**
+
+* Trade Identifier: Trade234
+* Global Reference: 33f59567
+* External Reference: Party1
+* Assigned Identifier: Trade234
+* Meta: Global Key 5c8ba844
+
+**Trade Date**
+
+* Value: August 18, 2021
+* Meta: Global Key 3f2a12, External Key TRADEDATE
+
+**Product Details**
+
+* Tradable Product: Interest Rate Option Debt Option
+* Product Taxonomy: InterestRate_Option_DebtOption
+* Economic Terms:
+	+ Payout: Option Payout
+		- Payer Receiver: Party2 (payer), Party1 (receiver)
+		- Price Quantity: Quantity Schedule
+			- Address: DOCUMENT, quantity-1
+		- Settlement Terms: Physical
+			- Settlement Type: Physical
+			- Settlement Currency: CHF
+			- Settlement Date: Adjustable or Relative Date
+				- Relative Date: Period Multiplier 8, Period D, Day Type Business, Business Day Convention NONE, Business Centers GBLO, CHZU
+				- DateRelativeTo: Global Reference 49fbb45f, External Reference EXERCISE
+		- Buyer Seller: Party1 (buyer), Party2 (seller)
+		- Underlier: Security
+			- Product Identifier: DOCUMENT, productIdentifier-1
+		- Option Type: Call
+		- Exercise Terms: American
+			- Commencement Date: Adjustable Date
+				- Unadjusted Date: August 23, 2021
+				- Date Adjustments: Business Day Convention FOLLOWING, Business Centers GBLO, CHZU
+			- Expiration Date: Adjustable Date
+				- Unadjusted Date: August 18, 2025
+				- Date Adjustments: Business Day Convention FOLLOWING, Business Centers GBLO, CHZU
+			- Earliest Exercise Time: 09:00:00, Business Center GBLO
+			- Expiration Time: 16:00:00, Business Center GBLO
+			- Exercise Procedure: Manual Exercise
+				- Exercise Notice: Exercise Notice Giver Seller, Business Center GBLO
+			- Follow Up Confirmation: True
+			- Limited Right To Confirm: False
+			- Split Ticket: True
+		- Strike: Reference Swap Curve
+			- Swap Unwind Value: Floating Rate Index EUR-EONIA-OIS Compound, Index Tenor 6M, Spread 115, Side Bid
+			- Make Whole Amount: Floating Rate Index EUR-EONIA-OIS Compound, Spread 115, Side Bid, Interpolation Method LinearZeroYield, Early Call Date August 18, 2022
+
+**Trade Lot**
+
+* Trade Lot: 1
+* Price Quantity: Quantity Schedule
+	+ Quantity: Value 1, Unit Contract, Multiplier 1100000, Unit Currency CHF
+	+ Observable: Product Identifier
+		- Value: ExampleISIN1
+		- Source: ISIN
+	+ Settlement Terms: Physical
+
+**Counterparty**
+
+* Counterparty: Party1 (Party A), Party2 (Party B)
+
+**Party**
+
+* Party: Party1 (Party A), Party2 (Party B)
+
+**Risk Disclosure**
+
+The parties acknowledge that this contract involves significant risks, including but not limited to, foreign exchange risk, price risk, liquidity risk, and credit risk. The parties should consult their own financial, legal, accounting, and tax advisors about the risks associated with this contract.
+
+**Representations**
+
+Each party represents to the other party that it is acting for its own account, has made its own independent decisions to enter into this contract, and has sufficient financial resources to bear the risks associated with this contract.
+
+**Governing Law**
+
+The contract is governed by the laws of the relevant jurisdiction.
+
+**Calculation Agent**
+
+The calculation agent is CalculationAgentIndependent.
+
+**Termination**
+
+The contract shall be terminated on the Mandatory Early Termination Date at the market value of the contract, subject to adjustment in accordance with the Modified Following Business Day Convention.

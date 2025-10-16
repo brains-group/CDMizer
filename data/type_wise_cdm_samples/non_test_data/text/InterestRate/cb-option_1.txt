@@ -1,0 +1,133 @@
+**Interest Rate Option Debt Option Contract**
+
+**General Terms**
+
+This contract is an interest rate option debt option contract between Party A (Party1) and Party B (Party2). The trade date is January 16, 2006.
+
+**Trade Details**
+
+* Trade Identifier: Trade234
+* Global Reference: 33f59567
+* External Reference: Party1
+* Assigned Identifier: Trade234
+* Meta: Global Key 5c8ba844
+
+**Trade Date**
+
+* Value: January 16, 2006
+* Meta: Global Key 3eb050, External Key TRADEDATE
+
+**Tradable Product**
+
+* Product: Interest Rate Option Debt Option
+* Contractual Product:
+	+ Product Taxonomy: InterestRate_Option_DebtOption (ISDA)
+	+ Economic Terms:
+		- Payout: Option Payout
+			- Payer/Receiver: Party2/Party1
+			- Price/Quantity: Quantity Schedule
+				- Address: DOCUMENT, quantity-1
+				- Meta: Global Key 0
+			- Settlement Terms:
+				- Settlement Type: Physical
+				- Settlement Currency: CHF
+				- Settlement Date: Adjustable or Relative Date
+					- Relative Date:
+						- Period Multiplier: 8
+						- Period: D
+						- Meta: Global Key b3836fa6
+						- Day Type: Business
+						- Business Day Convention: NONE
+						- Business Centers: GBLO, CHZU
+						- DateRelativeTo: Global Reference 7683e50c, External Reference EXERCISE
+					- Meta: Global Key b3836fa6
+				- Meta: Global Key 7b9413e
+			- Buyer/Seller: Party1/Party2
+			- Underlier: Security
+				- Product Identifier: DOCUMENT, productIdentifier-1
+				- Security Type: Debt
+			- Option Type: Call
+			- Exercise Terms:
+				- Style: American
+				- Commencement Date: Adjustable Date
+					- Unadjusted Date: January 19, 2006
+					- Date Adjustments:
+						- Business Day Convention: FOLLOWING
+						- Business Centers: GBLO, CHZU
+						- Meta: Global Key da4d16b1
+					- Meta: Global Key 3529f2fe
+				- Expiration Date: Adjustable Date
+					- Unadjusted Date: August 5, 2010
+					- Date Adjustments:
+						- Business Day Convention: FOLLOWING
+						- Business Centers: GBLO, CHZU
+						- Meta: Global Key da4d16b1
+					- Meta: Global Key 7683e50c
+				- Earliest Exercise Time: 09:00:00, GBLO
+				- Expiration Time: 16:00:00, GBLO
+				- Exercise Procedure:
+					- Manual Exercise:
+						- Exercise Notice:
+							- Exercise Notice Giver: Seller
+							- Business Center: GBLO
+					- Follow Up Confirmation: True
+					- Limited Right To Confirm: False
+					- Split Ticket: True
+				- Meta: Global Key f86a126c
+			- Strike:
+				- Reference Swap Curve:
+					- Swap Unwind Value:
+						- Floating Rate Index: EUR-LIBOR-BBA
+						- Index Tenor: 6M
+						- Spread: 85
+						- Side: Bid
+					- Make Whole Amount:
+						- Floating Rate Index: EUR-LIBOR-BBA
+						- Spread: 85
+						- Side: Bid
+						- Interpolation Method: LinearZeroYield
+						- Early Call Date: January 19, 2006
+		- Meta: Global Key 31e984a8
+		- Calculation Agent: CalculationAgentIndependent
+* Meta: Global Key a9e6e392
+
+**Trade Lot**
+
+* Price/Quantity:
+	+ Quantity: 1
+	+ Unit: Contract
+	+ Multiplier:
+		- Value: 1100000
+		- Unit: CHF
+	+ Meta: Location DOCUMENT, quantity-1
+* Observable:
+	+ Product Identifier: DOCUMENT, ExampleISIN1
+	+ Meta: Global Key 63b03797
+* Settlement Terms:
+	+ Settlement Type: Physical
+	+ Meta: Global Key f3b1d0d7
+
+**Counterparty**
+
+* Role: Party1
+* Party Reference: Global Reference 33f59568, External Reference Party2
+* Role: Party2
+* Party Reference: Global Reference 33f59567, External Reference Party1
+
+**Ancillary Party**
+
+* Role: CalculationAgentIndependent
+* Party Reference: Global Reference 33f59567, External Reference Party1
+
+**Party**
+
+* Party ID:
+	+ Identifier: Party A
+	+ Meta: Global Key 33f59567, External Key Party1
+* Party ID:
+	+ Identifier: Party B
+	+ Meta: Global Key 33f59568, External Key Party2
+
+**Meta**
+
+* Global Key: e52b517a

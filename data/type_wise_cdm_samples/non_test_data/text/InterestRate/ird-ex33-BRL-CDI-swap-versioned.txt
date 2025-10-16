@@ -1,0 +1,179 @@
+**Interest Rate Swap Contract**
+
+**General Terms**
+
+This interest rate swap contract is entered into between Party A (Delta Bank Ltd) and Party B (Metro Bank Ltd) on June 29, 2012.
+
+**Trade Details**
+
+* Trade Identifier: c3ef6b82
+* Trade Date: June 29, 2012
+* Trade Lot: The contract consists of two trade lots, each with a different price quantity and observable.
+
+**Trade Lot 1**
+
+* Price Quantity:
+	+ Price: 0.0876 (BRL)
+	+ Quantity: 100,000,000 (BRL)
+* Observable:
+	+ Rate Option: BRL-CDI
+
+**Trade Lot 2**
+
+* Price Quantity:
+	+ Quantity: 100,000,000 (BRL)
+* Observable:
+	+ Rate Option: BRL-CDI
+
+**Party Details**
+
+* Party A: Delta Bank Ltd
+	+ Party ID: DELTA123
+	+ Name: Delta Bank Ltd
+* Party B: Metro Bank Ltd
+	+ Party ID: METRO123
+	+ Name: Metro Bank Ltd
+
+**Calculation Agent**
+
+* Calculation Agent: Calculation Agent Independent
+* Calculation Agent Business Center: USNY
+
+**Trade Terms**
+
+* Trade Product: Interest Rate IRSwap_FixedFloat_ZeroCoupon
+* Calculation Period Dates:
+	+ Effective Date: September 26, 2012
+	+ Termination Date: March 26, 2013
+	+ Calculation Period Frequency: 1T
+* Payment Dates:
+	+ Payment Frequency: 1T
+	+ PayRelativeTo: ValuationDate
+	+ Payment Days Offset: 1D
+* Reset Dates:
+	+ Calculation Period Dates Reference: floatingLegCalcPeriodDates
+	+ Fixing Dates:
+		- PeriodMultiplier: -1
+		- Period: D
+		- DayType: Business
+		- BusinessDayConvention: NONE
+		- BusinessCenters: BRBD
+		- DateRelativeTo: floatingLegResetDates
+	+ Reset Frequency: 1T
+* Day Count Fraction: CAL/252
+
+**Payout Terms**
+
+* Payer Receiver:
+	+ Payer: Party1
+	+ Receiver: Party2
+* Price Quantity:
+	+ Quantity Schedule:
+		- Address: DOCUMENT
+		- Value: quantity-1
+	+ Future Value Notional:
+		- Quantity:
+			- Address: DOCUMENT
+			- Value: quantity-3
+		- Currency: BRL
+		- CalculationPeriodNumberOfDays: 122
+		- ValueDate: March 26, 2013
+* Settlement Terms:
+	+ SettlementCurrency: USD
+	+ CashSettlementTerms:
+		- ValuationMethod:
+			- ValuationSource:
+				+ SettlementRateOption:
+					- SettlementRateOption: BRL.PTAX/BRL09
+		- ValuationDate:
+			- FxFixingDate:
+				- PeriodMultiplier: -2
+				- Period: D
+				- Meta:
+					- GlobalKey: 1483817f
+					- ExternalKey: fixedLegFxFixingDates
+				- DayType: Business
+				- BusinessDayConvention: NONE
+				- BusinessCenters:
+					- BusinessCenter:
+						- Value: BRBD
+						- Value: USNY
+				- DateRelativeToCalculationPeriodDates:
+					- CalculationPeriodDatesReference:
+						- GlobalReference: efeee7e7
+						- ExternalReference: fixedLegTerminationDate
+		- Meta:
+			- GlobalKey: e77415a3
+* Rate Specification:
+	+ Fixed Rate:
+		- RateSchedule:
+			- Price:
+				- Address: DOCUMENT
+				- Value: price-1
+		- Meta:
+			- GlobalKey: 0
+
+**Floating Leg Terms**
+
+* Payer Receiver:
+	+ Payer: Party2
+	+ Receiver: Party1
+* Price Quantity:
+	+ Quantity Schedule:
+		- Address: DOCUMENT
+		- Value: quantity-2
+* Settlement Terms:
+	+ SettlementCurrency: USD
+	+ CashSettlementTerms:
+		- ValuationMethod:
+			- ValuationSource:
+				+ SettlementRateOption:
+					- SettlementRateOption: BRL.PTAX/BRL09
+		- ValuationDate:
+			- FxFixingDate:
+				- PeriodMultiplier: -2
+				- Period: D
+				- Meta:
+					- GlobalKey: ffa86191
+					- ExternalKey: floatingLegFxFixingDates
+				- DayType: Business
+				- BusinessDayConvention: NONE
+				- BusinessCenters:
+					- BusinessCenter:
+						- Value: BRBD
+						- Value: USNY
+				- DateRelativeToCalculationPeriodDates:
+					- CalculationPeriodDatesReference:
+						- GlobalReference: efeee7e7
+						- ExternalReference: floatingLegTerminationDate
+		- Meta:
+			- GlobalKey: d298f5b5
+* Rate Specification:
+	+ Floating Rate:
+		- RateOption:
+			- Address: DOCUMENT
+			- Value: rateOption-1
+		- Meta:
+			- GlobalKey: 866f31bf
+		- Initial Rate:
+			- Value: 0.10432
+			- Unit:
+				- Currency:
+					- Value: BRL
+			- PerUnitOf:
+				- Currency:
+					- Value: BRL
+			- PriceType: InterestRate
+
+**Termination Terms**
+
+* Mandatory Early Termination Date: November 3, 2023
+* Termination Date: March 26, 2013
+* Termination Value: Market value of the swap on the Mandatory Early Termination Date
+
+**Representations**
+
+* Each party represents to the other party that it has the power to enter into this transaction and has taken all necessary action to authorize such execution, delivery, and performance.
+* Each party represents to the other party that its entry into and performance of its obligations under this transaction does not and will not result in a breach or violation of any applicable law or regulation.
+* Each party represents to the other party that it is entering into this transaction solely for the purpose of hedging its underlying exposure and not for purposes of speculation.
+* Each party represents to the other party that it has familiarized itself and fully understood the terms and conditions of this transaction and accepts the risks of entering into this transaction.

@@ -1,0 +1,262 @@
+{
+    "trade": {
+        "tradeId": {
+            "value": "trade-1"
+        },
+        "tradeDate": {
+            "value": "2009-04-30"
+        },
+        "tradeType": {
+            "value": "Swap"
+        },
+        "tradeStatus": {
+            "value": "Active"
+        },
+        "tradeLot": [
+            {
+                "priceQuantity": [
+                    {
+                        "price": [
+                            {
+                                "value": {
+                                    "value": 1.06,
+                                    "unit": {
+                                        "currency": {
+                                            "value": "CAD"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "counterparty": [
+            {
+                "role": "Party1",
+                "partyReference": {
+                    "externalReference": "party1"
+                }
+            },
+            {
+                "role": "Party2",
+                "partyReference": {
+                    "externalReference": "party2"
+                }
+            }
+        ],
+        "party": [
+            {
+                "name": {
+                    "value": "Royal Bank of Canada (Toronto Branch)"
+                },
+                "meta": {
+                    "externalKey": "party1"
+                }
+            },
+            {
+                "name": {
+                    "value": "Royal Bank of Canada Europe Limited"
+                },
+                "meta": {
+                    "externalKey": "party2"
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2009-04-30",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "MasterConfirmation"
+                        }
+                    },
+                    "contractualParty": [
+                        {
+                            "externalReference": "Party2"
+                        },
+                        {
+                            "externalReference": "Party1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "terminationDate": {
+            "adjustableDate": {
+                "unadjustedDate": "2011-05-26",
+                "dateAdjustments": {
+                    "businessDayConvention": "FOLLOWING"
+                }
+            }
+        },
+        "dateAdjustments": {
+            "businessDayConvention": "FOLLOWING",
+            "businessCenters": {
+                "businessCenter": [
+                    {
+                        "value": "GBLO"
+                    },
+                    {
+                        "value": "USNY"
+                    }
+                ]
+            }
+        },
+        "payout": {
+            "interestRatePayout": [
+                {
+                    "payerReceiver": {
+                        "payer": "Party2",
+                        "receiver": "Party1"
+                    },
+                    "priceQuantity": {
+                        "quantitySchedule": {
+                            "address": {
+                                "scope": "DOCUMENT",
+                                "value": "quantity-1"
+                            }
+                        }
+                    },
+                    "rateSpecification": {
+                        "floatingRate": {
+                            "referenceRate": {
+                                "indexName": {
+                                    "value": "3 Month CAD-BA-CDOR"
+                                }
+                            },
+                            "spread": {
+                                "value": 0.00515,
+                                "unit": {
+                                    "currency": {
+                                        "value": "CAD"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "dayCountFraction": {
+                        "value": "ACT/360"
+                    },
+                    "calculationPeriodDates": {
+                        "calculationPeriodFrequency": {
+                            "periodMultiplier": 1,
+                            "period": "M",
+                            "rollConvention": "25"
+                        }
+                    },
+                    "paymentDates": {
+                        "paymentFrequency": {
+                            "periodMultiplier": 1,
+                            "period": "M"
+                        },
+                        "firstPaymentDate": "2009-08-26",
+                        "lastRegularPaymentDate": "2011-05-26"
+                    }
+                }
+            ],
+            "creditDefaultPayout": {
+                "payerReceiver": {
+                    "payer": "Party1",
+                    "receiver": "Party2"
+                },
+                "priceQuantity": {
+                    "quantitySchedule": {
+                        "address": {
+                            "scope": "DOCUMENT",
+                            "value": "quantity-2"
+                        }
+                    }
+                },
+                "settlementTerms": {
+                    "settlementType": "Physical",
+                    "physicalSettlementTerms": {
+                        "physicalSettlementPeriod": {
+                            "maximumBusinessDays": 30
+                        },
+                        "deliverableObligations": {
+                            "category": "Loan",
+                            "notSubordinated": true,
+                            "notContingent": true,
+                            "consentRequiredLoan": {
+                                "applicable": true
+                            },
+                            "transferable": true,
+                            "maximumMaturity": {
+                                "periodMultiplier": 30,
+                                "period": "Y"
+                            },
+                            "notBearer": true,
+                            "excluded": "true",
+                            "othReferenceEntityObligations": "true"
+                        }
+                    }
+                },
+                "generalTerms": {
+                    "referenceInformation": {
+                        "referenceEntity": {
+                            "name": {
+                                "value": "Royal Bank of Canada (Toronto Branch)"
+                            }
+                        }
+                    },
+                    "optionType": "Payer",
+                    "exerciseTerms": {
+                        "style": "European",
+                        "expirationDate": [
+                            {
+                                "adjustableDate": {
+                                    "unadjustedDate": "2011-02-26",
+                                    "dateAdjustments": {
+                                        "businessDayConvention": "FOLLOWING"
+                                    }
+                                }
+                            }
+                        ],
+                        "earliestExerciseTime": {
+                            "hourMinuteTime": "09:00:00",
+                            "businessCenter": {
+                                "value": "USNY"
+                            }
+                        },
+                        "expirationTime": {
+                            "hourMinuteTime": "11:00:00",
+                            "businessCenter": {
+                                "value": "USNY"
+                            }
+                        },
+                        "exerciseProcedure": {
+                            "followUpConfirmation": true
+                        },
+                        "partialExercise": {
+                            "notionaReference": {
+                                "externalReference": "NOTIONAL"
+                            },
+                            "integralMultipleAmount": 1,
+                            "minimumNotionalAmount": 1
+                        }
+                    },
+                    "strike": {
+                        "strikePrice": {
+                            "value": 0.03,
+                            "unit": {
+                                "currency": {
+                                    "value": "CAD"
+                                }
+                            },
+                            "perUnitOf": {
+                                "currency": {
+                                    "value": "CAD"
+                                }
+                            },
+                            "priceType": "FixedRate",
+                            "arithmeticOperator": "Add"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

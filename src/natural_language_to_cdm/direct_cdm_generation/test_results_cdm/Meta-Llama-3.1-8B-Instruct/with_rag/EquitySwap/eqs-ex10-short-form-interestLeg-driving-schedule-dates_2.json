@@ -1,0 +1,268 @@
+{
+    "trade": {
+        "tradeDate": "2008-06-02",
+        "tradeIdentifier": "124897",
+        "tradeLot": 1,
+        "tradeType": "EquitySwap",
+        "tradeStatus": "Active"
+    },
+    "party": [
+        {
+            "partyId": "72ad7ed7",
+            "partyName": "Party1",
+            "partyExternalReference": "party1"
+        },
+        {
+            "partyId": "72ad8d67",
+            "partyName": "Party2",
+            "partyExternalReference": "party2"
+        }
+    ],
+    "product": {
+        "productType": "EquitySwap",
+        "underlyingSecurity": {
+            "isin": "NL0000009322",
+            "ric": "PHGe.AS",
+            "name": "PHILIPS BUY BACK ORD"
+        },
+        "returnType": "PriceReturn",
+        "notionalAmount": {
+            "value": "300000.00",
+            "currency": "EUR"
+        }
+    },
+    "pricingAndPayment": {
+        "floatingRate": {
+            "name": "EUR-EURIBOR-Reuters",
+            "tenor": "1M"
+        },
+        "fixedRate": {
+            "value": "0.00",
+            "currency": "EUR"
+        },
+        "paymentDates": [
+            {
+                "paymentDate": "2008-06-06",
+                "paymentFrequency": "Annually"
+            },
+            {
+                "paymentDate": "2009-06-06",
+                "paymentFrequency": "Annually"
+            }
+        ],
+        "paymentFrequency": "Annually",
+        "dayCountFraction": "ACT/360",
+        "calculationPeriodDates": [
+            {
+                "startDate": "2008-06-04",
+                "endDate": "2009-06-04"
+            }
+        ]
+    },
+    "performancePayout": [
+        {
+            "payerReceiver": {
+                "payer": "Party2",
+                "receiver": "Party1"
+            },
+            "priceQuantity": {
+                "reset": true,
+                "meta": {
+                    "globalKey": "4cf",
+                    "externalKey": "equityNotionalAmount"
+                }
+            },
+            "settlementTerms": {
+                "settlementType": "Cash",
+                "settlementCurrency": {
+                    "value": "EUR"
+                },
+                "meta": {
+                    "globalKey": "76108015"
+                }
+            },
+            "valuationDates": {
+                "interimValuationDate": {
+                    "determinationMethod": "ValuationTime",
+                    "valuationDates": {
+                        "periodicDates": {
+                            "startDate": {
+                                "relativeDate": {
+                                    "periodMultiplier": 0,
+                                    "period": "D",
+                                    "meta": {
+                                        "globalKey": "9229ce57"
+                                    },
+                                    "businessDayConvention": "NotApplicable",
+                                    "dateRelativeTo": {
+                                        "globalReference": "c71e4c53",
+                                        "externalReference": "equityEffectiveDate"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "9229ce57"
+                                }
+                            },
+                            "endDate": {
+                                "relativeDate": {
+                                    "periodMultiplier": 0,
+                                    "period": "D",
+                                    "meta": {
+                                        "globalKey": "b635d2a0"
+                                    },
+                                    "businessDayConvention": "NotApplicable",
+                                    "dateRelativeTo": {
+                                        "globalReference": "ec0c393",
+                                        "externalReference": "finalValuationDate"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "b635d2a0"
+                                }
+                            },
+                            "periodFrequency": {
+                                "periodMultiplier": 1,
+                                "period": "M",
+                                "meta": {
+                                    "globalKey": "18ce"
+                                },
+                                "rollConvention": "9"
+                            },
+                            "periodDatesAdjustments": {
+                                "businessDayConvention": "FOLLOWING",
+                                "businessCenters": {
+                                    "businessCenter": [
+                                        {
+                                            "value": "DEFR"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "3c7152e0",
+                            "externalKey": "interimValuationDate"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "100bc215"
+                    }
+                },
+                "finalValuationDate": {
+                    "determinationMethod": "HedgeExecution",
+                    "valuationDate": {
+                        "adjustableDate": {
+                            "unadjustedDate": "2009-06-02",
+                            "meta": {
+                                "globalKey": "f4c6d3a0"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "f4c6d3a0"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "f4c6d3a0"
+                    }
+                }
+            }
+        }
+    ],
+    "resetDates": {
+        "resetFrequency": "Monthly",
+        "resetDates": [
+            {
+                "startDate": "2008-06-04",
+                "endDate": "2009-06-04"
+            }
+        ]
+    },
+    "adjustmentTerms": {
+        "adjustment": "Standard"
+    },
+    "governingLawAndJurisdiction": {
+        "governingLaw": "English law",
+        "jurisdiction": "English courts"
+    },
+    "riskDisclosure": {
+        "riskDisclosure": [
+            {
+                "riskType": "Foreign exchange risk",
+                "riskDescription": "The contract involves foreign exchange risk."
+            },
+            {
+                "riskType": "Price risk",
+                "riskDescription": "The contract involves price risk."
+            },
+            {
+                "riskType": "Liquidity risk",
+                "riskDescription": "The contract involves liquidity risk."
+            },
+            {
+                "riskType": "Credit risk",
+                "riskDescription": "The contract involves credit risk."
+            }
+        ]
+    },
+    "scenarioAnalysis": {
+        "scenarioAnalysis": [
+            {
+                "scenarioDescription": "EUR-EURIBOR-Reuters remains unchanged over the tenor of the trade.",
+                "scenarioImpact": "No impact on the contract."
+            },
+            {
+                "scenarioDescription": "EUR-EURIBOR-Reuters increases over the tenor of the trade.",
+                "scenarioImpact": "The contract will increase in value."
+            },
+            {
+                "scenarioDescription": "EUR-EURIBOR-Reuters decreases over the tenor of the trade.",
+                "scenarioImpact": "The contract will decrease in value."
+            }
+        ]
+    },
+    "markToMarketSensitivityAnalysis": {
+        "markToMarketSensitivityAnalysis": [
+            {
+                "sensitivityType": "Parallel shifts in EUR-EURIBOR-Reuters curve",
+                "sensitivityImpact": "The contract will increase in value."
+            }
+        ]
+    },
+    "levelOfPricingVariables": {
+        "levelOfPricingVariables": [
+            {
+                "pricingVariable": "EUR-EURIBOR-Reuters",
+                "pricingVariableType": "Floating rate",
+                "pricingVariableImpact": "The contract will increase in value."
+            }
+        ]
+    },
+    "valuationStatements": {
+        "valuationStatements": [
+            {
+                "valuationStatement": "Valuation statements will be made available to Party 2 on the Optimize application present on JPMorgan's online platform, J.P.Morgan Markets.",
+                "valuationStatementFrequency": "Annually"
+            }
+        ]
+    },
+    "representations": {
+        "representations": [
+            {
+                "representation": "Each party represents that it is acting for its own account and has made its own independent decisions to enter into this contract.",
+                "representationType": "Party representation"
+            },
+            {
+                "representation": "Each party represents that it is capable of assessing the merits and risks of this contract and understands and accepts the terms, conditions, and risks of this contract.",
+                "representationType": "Party representation"
+            }
+        ]
+    },
+    "acceptanceAndAgreement": {
+        "acceptanceAndAgreement": [
+            {
+                "acceptance": "This contract is accepted and agreed by Party 2 on behalf of itself and its affiliates.",
+                "acceptanceType": "Party acceptance"
+            }
+        ]
+    }
+}

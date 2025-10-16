@@ -1,0 +1,123 @@
+{
+    "Agreement": {
+        "AgreementDate": "2006-10-26",
+        "AgreementID": "56323",
+        "AgreementType": "CreditDefaultSwap",
+        "Counterparty": [
+            {
+                "CounterpartyID": "54930084UKLVMY22DS16",
+                "CounterpartyRole": "Payer",
+                "CounterpartyName": "Party A"
+            },
+            {
+                "CounterpartyID": "48750084UKLVTR22DS78",
+                "CounterpartyRole": "Receiver",
+                "CounterpartyName": "Party B"
+            }
+        ],
+        "EffectiveDate": "2006-10-27",
+        "TerminationDate": "2010-06-27",
+        "GoverningLaw": "English",
+        "RiskDisclosure": "The parties acknowledge that this contract involves significant risks, including but not limited to, credit risk, liquidity risk, and market risk."
+    },
+    "CalculationAgent": {
+        "CalculationAgentParty": "CalculationAgentIndependent",
+        "CalculationAgentBusinessCenter": "USNY"
+    },
+    "AncillaryParty": {
+        "AncillaryPartyRole": "CalculationAgentIndependent",
+        "AncillaryPartyReference": "Party A"
+    },
+    "Documentation": {
+        "DocumentationType": "ISDA",
+        "DocumentationDate": "2006-10-26"
+    },
+    "Representations": {
+        "Representations": [
+            {
+                "Text": "Each party represents that it has the power to enter into this contract and has made its own independent decisions to enter into this contract."
+            }
+        ]
+    },
+    "Acceptance": {
+        "AcceptanceDate": "2006-10-26",
+        "AcceptanceText": "This contract is accepted by the parties on October 26, 2006."
+    },
+    "Product": {
+        "ProductType": "CreditDefaultSwap",
+        "ProductTaxonomy": "CreditDefaultSwap_Loan",
+        "NotionalAmount": "100000000",
+        "FixedRate": "0.013",
+        "DayCountFraction": "ACT/360",
+        "CalculationPeriod": {
+            "CalculationPeriodFrequency": "Quarterly",
+            "CalculationPeriodStartDate": "2006-10-27",
+            "CalculationPeriodEndDate": "2010-06-27"
+        },
+        "Payment": {
+            "PaymentFrequency": "Quarterly",
+            "FirstPaymentDate": "2006-12-20",
+            "LastRegularPaymentDate": "2010-06-20"
+        }
+    },
+    "CreditDefaultPayout": {
+        "PayerReceiver": "Party B",
+        "PriceQuantity": {
+            "QuantitySchedule": "100000000",
+            "PriceSchedule": "1.0000000000"
+        },
+        "SettlementTerms": {
+            "SettlementType": "Physical",
+            "PhysicalSettlementPeriod": "30",
+            "DeliverableObligations": {
+                "AccruedInterest": "False",
+                "Category": "Loan",
+                "NotSubordinated": "True",
+                "NotContingent": "True",
+                "ConsentRequiredLoan": "True",
+                "Transferable": "True",
+                "MaximumMaturity": "30",
+                "NotBearer": "True",
+                "Excluded": "True",
+                "OthReferenceEntityObligations": "True"
+            }
+        },
+        "GeneralTerms": {
+            "ReferenceInformation": {
+                "ReferenceEntity": "CompanyABC",
+                "ReferenceObligation": {
+                    "Loan": "23490234",
+                    "Lien": "FirstLienLoan",
+                    "FacilityType": "RevolvingLoan",
+                    "CreditAgreementDate": "2005-11-04",
+                    "Tranche": "LN190325"
+                }
+            },
+            "AllGuarantees": "False",
+            "ReferencePrice": "1.0000000000",
+            "SecuredList": "False"
+        }
+    },
+    "ProtectionTerms": {
+        "CreditEvents": {
+            "Bankruptcy": "True",
+            "FailureToPay": "True",
+            "PaymentRequirement": "1000000",
+            "DefaultRequirement": "10000000",
+            "CreditEventNotice": {
+                "NotifyingParty": "Party A, Party B",
+                "PubliclyAvailableInformation": {
+                    "PublicSource": "Standard Public Sources",
+                    "SpecifiedNumber": "2"
+                }
+            }
+        },
+        "Obligations": {
+            "Category": "Borrowed Money",
+            "NotSubordinated": "True",
+            "Excluded": "True",
+            "OthReferenceEntityObligations": "True",
+            "DesignatedPriority": "FirstLienLoan"
+        }
+    }
+}

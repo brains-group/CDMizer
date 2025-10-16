@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.asset",
+  "type": "object",
+  "title": "CreditIndexReferenceInformation",
+  "description": "A class defining a Credit Default Swap Index.",
+  "properties": {
+    "indexSeries": {
+      "description": "A CDS index series identifier, e.g. 1, 2, 3 etc.",
+      "type": "integer"
+    },
+    "indexAnnexVersion": {
+      "description": "A CDS index series version identifier, e.g. 1, 2, 3 etc.",
+      "type": "integer"
+    },
+    "indexAnnexDate": {
+      "description": "A CDS index series annex date.",
+      "type": "string"
+    },
+    "indexAnnexSource": {
+      "description": "A CDS index series annex source.",
+      "$ref": "cdm-product-asset-metafields-FieldWithMetaIndexAnnexSourceEnum.schema.json"
+    },
+    "excludedReferenceEntity": {
+      "description": "Excluded reference entity.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-asset-ReferenceInformation.schema.json"
+      },
+      "minItems": 0
+    },
+    "tranche": {
+      "description": "This element contains CDS tranche terms.",
+      "$ref": "cdm-product-asset-Tranche.schema.json"
+    },
+    "settledEntityMatrix": {
+      "description": "Used to specify the Relevant Settled Entity Matrix when there are settled entities at the time of the trade.",
+      "$ref": "cdm-product-asset-SettledEntityMatrix.schema.json"
+    },
+    "indexFactor": {
+      "description": "Index Factor is the index version factor or percent, expressed as an absolute decimal value between 0 and 1, that multiplied by the original notional amount yields the notional amount covered by the seller of protection.",
+      "type": "number"
+    },
+    "seniority": {
+      "description": "Seniority of debt instruments comprising the index.",
+      "$ref": "cdm-product-asset-CreditSeniorityEnum.schema.json"
+    },
+    "indexName": {
+      "description": "The name of the index expressed as a free format string with an associated scheme.",
+      "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+    },
+    "indexId": {
+      "description": "An index identifier (e.g. RED pair code).",
+      "type": "array",
+      "items": {
+        "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

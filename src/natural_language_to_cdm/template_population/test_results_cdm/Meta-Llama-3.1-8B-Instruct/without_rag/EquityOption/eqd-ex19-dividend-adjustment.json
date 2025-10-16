@@ -1,0 +1,364 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "33f59568",
+                    "externalReference": "PartyB"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "STM-FP",
+                            "meta": {
+                                "scheme": "ISIN"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "33f59568",
+                            "meta": {
+                                "scheme": "Global Reference"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "2006-08-14",
+            "meta": {
+                "globalKey": "Equity Option Contract",
+                "externalKey": "STM-FP, STMicroelectronics N.V. ordinary shares"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party 2",
+                                        "seller": "Party 1"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "STM-FP",
+                                                        "value": "STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Option",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Equity",
+                                                        "value": "STM-FP, STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "ISIN",
+                                                                    "value": "US88160VAA62"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "ISIN",
+                                                                    "value": "US88160VAA62"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "ISIN",
+                                                                                "value": "US88160VAA62"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "Based on the provided inputs, I will populate the placeholder for the 'optionType' key.\n\n### Placeholder:\n```\noptionType\n```\n\n### Derivatives Contract Description:\nThe contract is an **Equity Option Contract** with the following details:\n\n* **Option Type**: Call\n\n### Prior Context (Path):\n`trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`\n\n### Populated Placeholder:\n```\nCall\n```\n\n### Reasoning:\nThe prior context indicates that we are dealing with the option payout details. The key 'optionType' is used to specify the type of option (Call or Put). In this case, the contract is an equity option with the option type specified as 'Call'. Therefore, the best-suited value for the 'optionType' key is 'Call'.\n\n### Maintaining the same datatype:\nThe placeholder is a string, and the populated value is also a string. Therefore, the datatype remains the same.\n\n### Leaving placeholder unchanged if no data is available:\nNo additional data is required for the 'optionType' key, and the provided information is sufficient to populate the placeholder.",
+                                    "exerciseTerms": {
+                                        "style": "American",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2006-08-14",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-08-14",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "17:15:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "Close",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 150000,
+                                            "integralMultipleAmount": 1,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "EUR"
+                                            },
+                                            "priceType": "Strike Price",
+                                            "value": 32.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party 1",
+                                        "receiver": "Party 2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].priceQuantity",
+                                                "value": {
+                                                    "quantity": 150000,
+                                                    "schedule": {
+                                                        "type": "predefinedSchedule",
+                                                        "scheduleType": "amortisingNotional"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": "Day"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": {
+                                "Party 1": {
+                                    "Global Reference": "33f59568",
+                                    "External Reference": "PartyB"
+                                },
+                                "Party 2": {
+                                    "Global Reference": "33f59567",
+                                    "External Reference": "jb2890"
+                                }
+                            }
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "Equity Option",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "STMicroelectronics N.V. ordinary shares"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": 150000,
+                                            "unit": {
+                                                "financialUnit": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Spot",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "Business Days"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "STM-FP",
+                                                "meta": {
+                                                    "scheme": "ISIN"
+                                                }
+                                            },
+                                            "source": "STMicroelectronics N.V. ordinary shares"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Buyer/Seller",
+                    "partyReference": {
+                        "globalReference": "33f59568",
+                        "externalReference": "PartyB"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "33f59568",
+                            "meta": {
+                                "scheme": "Global Reference"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "33f59567",
+                            "meta": {
+                                "scheme": "Global Reference"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2006-08-14",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Equity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA Master Agreement"
+                                },
+                                {
+                                    "value": "ISDA Confirmation"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement"
+                            }
+                        },
+                        "vintage": "2013"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "Not specified"
+            }
+        }
+    }
+}

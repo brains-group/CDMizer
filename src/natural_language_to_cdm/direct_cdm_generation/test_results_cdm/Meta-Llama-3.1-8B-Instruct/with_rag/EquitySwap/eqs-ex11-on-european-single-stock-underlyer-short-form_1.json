@@ -1,0 +1,509 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "33f59567",
+                    "externalReference": "party1"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "6234",
+                            "meta": {
+                                "scheme": "http://www.partyA.com/eqs-trade-id"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "9593cc32"
+                }
+            },
+            {
+                "issuerReference": {
+                    "globalReference": "33f59568",
+                    "externalReference": "party2"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "6569",
+                            "meta": {
+                                "scheme": "http://www.partyB.com/eqs-trade-id"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "95944c36"
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "2007-09-24",
+            "meta": {
+                "globalKey": "3e8a58",
+                "externalKey": "TradeDate"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "productTaxonomy": [
+                        {
+                            "source": "Other",
+                            "value": {
+                                "name": {
+                                    "value": "Equity:Swap:PriceReturnBasicPerformance:SingleName"
+                                }
+                            }
+                        },
+                        {
+                            "source": "ISDA",
+                            "productQualifier": "EquitySwap_TotalReturnBasicPerformance_SingleName"
+                        }
+                    ],
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "relativeDate": {
+                                "periodMultiplier": 3,
+                                "period": "D",
+                                "meta": {
+                                    "globalKey": "9229ce57"
+                                },
+                                "businessDayConvention": "Following",
+                                "dateRelativeTo": {
+                                    "globalReference": "34547413",
+                                    "externalReference": "equityEffectiveDate"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "9229ce57"
+                            }
+                        },
+                        "terminationDate": {
+                            "relativeDate": {
+                                "periodMultiplier": 3,
+                                "period": "D",
+                                "meta": {
+                                    "globalKey": "b635d2a0"
+                                },
+                                "businessDayConvention": "Following",
+                                "dateRelativeTo": {
+                                    "globalReference": "34547413",
+                                    "externalReference": "finalEquityPaymentDate"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "b635d2a0"
+                            }
+                        },
+                        "payout": {
+                            "interestRatePayout": {
+                                "payerReceiver": {
+                                    "payer": "Party1",
+                                    "receiver": "Party2"
+                                },
+                                "settlementTerms": {
+                                    "settlementType": "Cash",
+                                    "settlementCurrency": {
+                                        "value": "USD"
+                                    },
+                                    "meta": {
+                                        "globalKey": "76108015"
+                                    }
+                                },
+                                "valuationDates": {
+                                    "initialValuationDate": {
+                                        "determinationMethod": "AgreedInitialPrice",
+                                        "meta": {
+                                            "globalKey": "643bb87"
+                                        }
+                                    },
+                                    "interimValuationDate": {
+                                        "determinationMethod": "ValuationTime",
+                                        "valuationDates": {
+                                            "periodicDates": {
+                                                "startDate": {
+                                                    "relativeDate": {
+                                                        "periodMultiplier": 0,
+                                                        "period": "D",
+                                                        "meta": {
+                                                            "globalKey": "9229ce57"
+                                                        },
+                                                        "businessDayConvention": "Following",
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "34547413",
+                                                            "externalReference": "equityEffectiveDate"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "9229ce57"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "relativeDate": {
+                                                        "periodMultiplier": 0,
+                                                        "period": "D",
+                                                        "meta": {
+                                                            "globalKey": "b635d2a0"
+                                                        },
+                                                        "businessDayConvention": "Following",
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "34547413",
+                                                            "externalReference": "equityPaymentDate"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "b635d2a0"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "76108015"
+                                }
+                            },
+                            "performancePayout": [
+                                {
+                                    "payerReceiver": {
+                                        "payer": "Party2",
+                                        "receiver": "Party1"
+                                    },
+                                    "priceQuantity": {
+                                        "reset": true,
+                                        "meta": {
+                                            "globalKey": "4cf",
+                                            "externalKey": "equityNotionalAmount"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "meta": {
+                                            "globalKey": "76108015"
+                                        }
+                                    },
+                                    "valuationDates": {
+                                        "initialValuationDate": {
+                                            "determinationMethod": "AgreedInitialPrice",
+                                            "meta": {
+                                                "globalKey": "643bb87"
+                                            }
+                                        },
+                                        "interimValuationDate": {
+                                            "determinationMethod": "ValuationTime",
+                                            "valuationDates": {
+                                                "periodicDates": {
+                                                    "startDate": {
+                                                        "relativeDate": {
+                                                            "periodMultiplier": 0,
+                                                            "period": "D",
+                                                            "meta": {
+                                                                "globalKey": "9229ce57"
+                                                            },
+                                                            "businessDayConvention": "Following",
+                                                            "dateRelativeTo": {
+                                                                "globalReference": "34547413",
+                                                                "externalReference": "equityEffectiveDate"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "9229ce57"
+                                                        }
+                                                    },
+                                                    "endDate": {
+                                                        "relativeDate": {
+                                                            "periodMultiplier": 0,
+                                                            "period": "D",
+                                                            "meta": {
+                                                                "globalKey": "b635d2a0"
+                                                            },
+                                                            "businessDayConvention": "Following",
+                                                            "dateRelativeTo": {
+                                                                "globalReference": "34547413",
+                                                                "externalReference": "equityPaymentDate"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "b635d2a0"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "76108015"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "meta": {
+                    "globalKey": "9593cc32"
+                }
+            }
+        },
+        "counterparty": {
+            "party": {
+                "partyId": {
+                    "issuerReference": {
+                        "globalReference": "party2",
+                        "externalReference": "party2"
+                    },
+                    "assignedIdentifier": [
+                        {
+                            "identifier": {
+                                "value": "party2",
+                                "meta": {
+                                    "scheme": "http://www.partyB.com/eqs-party-id"
+                                }
+                            }
+                        }
+                    ],
+                    "meta": {
+                        "globalKey": "95944c36"
+                    }
+                }
+            }
+        },
+        "ancillaryParty": {
+            "party": {
+                "partyId": {
+                    "issuerReference": {
+                        "globalReference": "calculationAgentIndependent",
+                        "externalReference": "calculationAgentIndependent"
+                    },
+                    "assignedIdentifier": [
+                        {
+                            "identifier": {
+                                "value": "calculationAgentIndependent",
+                                "meta": {
+                                    "scheme": "http://www.calculationAgentIndependent.com/eqs-party-id"
+                                }
+                            }
+                        }
+                    ],
+                    "meta": {
+                        "globalKey": "95944c36"
+                    }
+                }
+            }
+        },
+        "paymentTerms": {
+            "partyAPaymentDates": {
+                "paymentDate": {
+                    "relativeDate": {
+                        "periodMultiplier": 1,
+                        "period": "Y",
+                        "meta": {
+                            "globalKey": "9229ce57"
+                        },
+                        "businessDayConvention": "Following",
+                        "dateRelativeTo": {
+                            "globalReference": "34547413",
+                            "externalReference": "october5th"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                }
+            },
+            "partyBPaymentDates": {
+                "paymentDate": {
+                    "relativeDate": {
+                        "periodMultiplier": 1,
+                        "period": "Y",
+                        "meta": {
+                            "globalKey": "9229ce57"
+                        },
+                        "businessDayConvention": "Following",
+                        "dateRelativeTo": {
+                            "globalReference": "34547413",
+                            "externalReference": "october5th"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                }
+            },
+            "businessDayConvention": "Following",
+            "dayCountFraction": "ACT/360"
+        },
+        "termination": {
+            "mandatoryEarlyTermination": true,
+            "mandatoryEarlyTerminationDate": {
+                "relativeDate": {
+                    "periodMultiplier": 2,
+                    "period": "D",
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    },
+                    "businessDayConvention": "Following",
+                    "dateRelativeTo": {
+                        "globalReference": "34547413",
+                        "externalReference": "mandatoryEarlyTerminationDate"
+                    }
+                },
+                "meta": {
+                    "globalKey": "9229ce57"
+                }
+            },
+            "terminationDate": {
+                "relativeDate": {
+                    "periodMultiplier": 3,
+                    "period": "D",
+                    "meta": {
+                        "globalKey": "b635d2a0"
+                    },
+                    "businessDayConvention": "Following",
+                    "dateRelativeTo": {
+                        "globalReference": "34547413",
+                        "externalReference": "finalEquityPaymentDate"
+                    }
+                },
+                "meta": {
+                    "globalKey": "b635d2a0"
+                }
+            }
+        },
+        "riskDisclosure": {
+            "riskDisclosureText": {
+                "value": "The parties acknowledge that there are significant risks associated with this Transaction, including but not limited to, foreign exchange risk, price risk, liquidity risk, and credit risk."
+            }
+        },
+        "representations": {
+            "representation": {
+                "value": "Each party represents to the other party that they are acting for their own account and have made their own independent decisions to enter into this Transaction."
+            }
+        },
+        "governingLaw": {
+            "governingLaw": {
+                "value": "GBEN"
+            }
+        },
+        "documentation": {
+            "documentation": {
+                "value": "ISDA"
+            }
+        },
+        "calculationAgent": {
+            "calculationAgent": {
+                "value": "CalculationAgentIndependent"
+            }
+        },
+        "valuation": {
+            "valuationStatement": {
+                "value": "Valuation statements will be made available to the Counterparty on the Optimize Platform."
+            }
+        },
+        "scenarioAnalysis": {
+            "scenario": [
+                {
+                    "description": {
+                        "value": "USD SOFR-COMPOUND remains unchanged over the tenor of the trade"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "USD SOFR-COMPOUND increases over the tenor of the trade"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "USD SOFR-COMPOUND decreases over the tenor of the trade"
+                    }
+                }
+            ]
+        },
+        "mtmSensitivityAnalysis": {
+            "mtmSensitivity": [
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": -3969875,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": -796597,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": -398415,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": -79697,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": 0,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                },
+                {
+                    "description": {
+                        "value": "Parallel Shift in USD SOFR-COMPOUND Curve"
+                    },
+                    "value": 79712,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                }
+            ]
+        },
+        "levelOfPricingVariables": {
+            "pricingVariable": [
+                {
+                    "description": {
+                        "value": "USD 10 year SOFR-COMPOUND Rate"
+                    },
+                    "value": 4.427,
+                    "meta": {
+                        "globalKey": "9229ce57"
+                    }
+                }
+            ]
+        },
+        "impactOfVariablesOnPricing": {
+            "pricingVariable": [
+                {
+                    "description": {
+                        "value": "Primary market variables used for determining the mark-to-market value along with their directional impact"
+                    }
+                }
+            ]
+        }
+    }
+}

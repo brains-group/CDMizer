@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.observable.asset",
+  "type": "object",
+  "title": "ExchangeRate",
+  "description": "A class that is used for describing the exchange rate for a particular transaction.",
+  "properties": {
+    "crossRate": {
+      "description": "An optional element that allow for definition of the currency exchange rates used to cross between the traded currencies for non-base currency FX contracts.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-observable-asset-CrossRate.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

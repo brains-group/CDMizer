@@ -1,0 +1,757 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Commodity Option Contract",
+                "issuerReference": {
+                    "globalReference": "10fb089c",
+                    "externalReference": "partyA"
+                },
+                "issuer": {
+                    "value": "Bank",
+                    "meta": {
+                        "scheme": "Party ID"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "2345",
+                            "meta": {
+                                "scheme": "Trade Identifier"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "",
+            "meta": {
+                "globalKey": "78ae45cf",
+                "externalKey": ""
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "",
+                                "dateAdjustments": {
+                                    "businessDayConvention": ""
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "",
+                                "dateAdjustments": {
+                                    "businessDayConvention": ""
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Bank (Bank)",
+                                        "seller": "Energy Co. (Energy Co.)"
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": null,
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "",
+                                                "dayDistribution": "",
+                                                "businessCenters": ""
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "commodity-1",
+                                                "value": "Gas Oil-IPE"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "Based on the provided inputs, the key to be populated is \"optionType\". The prior context leads us to the \"economicTerms\" object, specifically to the \"payout\" object, which contains an \"optionPayout\" array. The first element of this array is the \"optionType\" object.\n\nLooking at the contract description, we see that the \"optionType\" is \"Call\". Therefore, the value to be populated for the \"optionType\" key is \"Call\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"optionType\": \"Call\"\n}\n```\n\nPlease note that this is a simple example and the actual implementation may require more complex logic based on the structure of the JSON object and the specific requirements of the task.\n",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": ""
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": null
+                                            },
+                                            "followUpConfirmation": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": ""
+                                            },
+                                            "priceType": "",
+                                            "datedValue": [
+                                                {
+                                                    "date": "",
+                                                    "value": null
+                                                }
+                                            ],
+                                            "value": null,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank",
+                                        "receiver": "Energy Co."
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        },
+                                        "trade": {
+                                            "tradableProduct": {
+                                                "product": {
+                                                    "contractualProduct": {
+                                                        "economicTerms": {
+                                                            "payout": {
+                                                                "optionPayout": [
+                                                                    {
+                                                                        "priceQuantity": {
+                                                                            "amount": "100000",
+                                                                            "currency": "USD",
+                                                                            "address": {
+                                                                                "scope": "commodity-1"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "tradeDetails": {
+                                            "tradeDate": "February 5, 2008",
+                                            "tradeIdentifier": "1234 and 2345",
+                                            "globalReference": "10fb089c and f0466d0f",
+                                            "externalReference": "partyA and partyB",
+                                            "tradeLot": "100,000 MT and 30,000 MT",
+                                            "counterparty": "Party A and Party B"
+                                        },
+                                        "contractualProduct": {
+                                            "productTaxonomy": "Commodity_Option",
+                                            "economicTerms": {
+                                                "effectiveDate": "August 1, 2008",
+                                                "payout": "Option Payout with a payer/receiver of Party 2/Party 1",
+                                                "settlementTerms": "Cash settlement in USD on the 5th business day after the expiration date",
+                                                "expirationDate": "August 30, 2008, September 30, 2008, and October 31, 2008",
+                                                "observationTerms": "Calculation Period Dates with a frequency of 1 month",
+                                                "underlier": "Commodity with an address of commodity-1",
+                                                "optionType": "Call",
+                                                "exerciseTerms": "European style with a style of European"
+                                            }
+                                        },
+                                        "partyInformation": {
+                                            "partyA": {
+                                                "partyID": "549300KFSLY4U7N3LL12",
+                                                "name": "Bank"
+                                            },
+                                            "partyB": {
+                                                "partyID": "549300AJRHKBLY9GM262",
+                                                "name": "Energy Co."
+                                            }
+                                        },
+                                        "contractDetails": {
+                                            "documentation": "ISDA Master Agreement and ISDA Confirmation",
+                                            "contractualParty": "Party A and Party B",
+                                            "meta": "Global Key of 78ae45cf"
+                                        },
+                                        "transferHistory": {
+                                            "transfer": "A transfer of 400,000 USD from Party A to Party B on February 7, 2008",
+                                            "asset": "Cash with a currency of USD",
+                                            "payerReceiver": "Party A/Party B",
+                                            "settlementDate": "February 7, 2008",
+                                            "transferExpression": "Premium"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided inputs, the key to be populated is'settlementType'. The prior context leads us to the'settlementTerms' object, which contains the'settlementType' field. \n\nThe'settlementType' field in the contract description is set to 'Cash settlement in USD on the 5th business day after the expiration date'. Therefore, the value to be populated for the'settlementType' key in the JSON object is 'Cash settlement in USD on the 5th business day after the expiration date'.\n\nHere is the populated JSON object:\n\n```json\n{\n    \"settlementType\": \"Cash settlement in USD on the 5th business day after the expiration date\"\n}\n```\n\nPlease note that this is a simple example and the actual implementation may vary based on the specific requirements of your application.\n",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "trade": {
+                                                    "tradeDate": "February 5, 2008",
+                                                    "tradeIdentifier": [
+                                                        "1234",
+                                                        "2345"
+                                                    ],
+                                                    "globalReference": [
+                                                        "10fb089c",
+                                                        "f0466d0f"
+                                                    ],
+                                                    "externalReference": [
+                                                        "partyA",
+                                                        "partyB"
+                                                    ],
+                                                    "tradeLot": [
+                                                        "100,000 MT",
+                                                        "30,000 MT"
+                                                    ],
+                                                    "counterparty": [
+                                                        "Party A",
+                                                        "Party B"
+                                                    ]
+                                                },
+                                                "tradableProduct": {
+                                                    "product": {
+                                                        "contractualProduct": {
+                                                            "productTaxonomy": "Commodity_Option",
+                                                            "economicTerms": {
+                                                                "effectiveDate": "August 1, 2008",
+                                                                "payout": {
+                                                                    "optionPayout": [
+                                                                        {
+                                                                            "payerReceiver": "Party 2/Party 1",
+                                                                            "settlementTerms": {
+                                                                                "settlementCurrency": "USD",
+                                                                                "settlementDate": "5th business day after the expiration date"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "settlementTerms": "Cash settlement in USD on the 5th business day after the expiration date",
+                                                                "expirationDate": [
+                                                                    "August 30, 2008",
+                                                                    "September 30, 2008",
+                                                                    "October 31, 2008"
+                                                                ],
+                                                                "observationTerms": "Calculation Period Dates with a frequency of 1 month",
+                                                                "underlier": "Commodity with an address of commodity-1",
+                                                                "optionType": "Call",
+                                                                "exerciseTerms": "European style with a style of European"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "partyInformation": {
+                                                    "partyA": {
+                                                        "partyId": "549300KFSLY4U7N3LL12",
+                                                        "name": "Bank"
+                                                    },
+                                                    "partyB": {
+                                                        "partyId": "549300AJRHKBLY9GM262",
+                                                        "name": "Energy Co."
+                                                    }
+                                                },
+                                                "contractDetails": {
+                                                    "documentation": "ISDA Master Agreement and ISDA Confirmation",
+                                                    "contractualParty": [
+                                                        "Party A",
+                                                        "Party B"
+                                                    ],
+                                                    "meta": "Global Key of 78ae45cf"
+                                                },
+                                                "transferHistory": {
+                                                    "transfer": {
+                                                        "transferDate": "February 7, 2008",
+                                                        "asset": "Cash with a currency of USD",
+                                                        "payerReceiver": "Party A/Party B",
+                                                        "settlementDate": "February 7, 2008",
+                                                        "transferExpression": "Premium"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USD"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "partyA"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Month"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": false,
+                                            "calculationMethod": "Average"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "",
+                                                    "value": ""
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": null
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business day",
+                                            "dayDistribution": "Equal distribution",
+                                            "businessCenters": ""
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": null,
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "",
+                                        "paymentDaysOffset": {
+                                            "dayType": "",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "commodity-1",
+                                                "value": "100,000 MT of Gas Oil-IPE"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank",
+                                        "receiver": "Energy Co."
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        },
+                                        "trade": {
+                                            "tradeDate": "February 5, 2008",
+                                            "tradeIdentifier": "1234 and 2345",
+                                            "globalReference": "10fb089c and f0466d0f",
+                                            "externalReference": "partyA and partyB",
+                                            "tradeLot": "100,000 MT and 30,000 MT",
+                                            "counterparty": "Party A and Party B"
+                                        },
+                                        "tradableProduct": {
+                                            "product": {
+                                                "contractualProduct": {
+                                                    "economicTerms": {
+                                                        "payout": {
+                                                            "commodityPayout": [
+                                                                {
+                                                                    "priceQuantity": {
+                                                                        "notionalAmount": "100,000 MT",
+                                                                        "strikePrice": "1120 USD/MT",
+                                                                        "effectiveDate": "August 1, 2008",
+                                                                        "payerReceiver": "Party 2/Party 1",
+                                                                        "settlementTerms": "Cash settlement in USD on the 5th business day after the expiration date",
+                                                                        "expirationDate": "August 30, 2008, September 30, 2008, and October 31, 2008",
+                                                                        "observationTerms": "Calculation Period Dates with a frequency of 1 month",
+                                                                        "underlier": "Commodity with an address of commodity-1",
+                                                                        "optionType": "Call",
+                                                                        "exerciseTerms": "European style with a style of European"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "party": [
+                                            {
+                                                "partyId": "549300KFSLY4U7N3LL12",
+                                                "partyName": "Bank"
+                                            },
+                                            {
+                                                "partyId": "549300AJRHKBLY9GM262",
+                                                "partyName": "Energy Co."
+                                            }
+                                        ],
+                                        "contractualDetails": {
+                                            "documentation": "ISDA Master Agreement and ISDA Confirmation",
+                                            "contractualParty": "Party A and Party B",
+                                            "meta": "Global Key of 78ae45cf"
+                                        },
+                                        "transferHistory": [
+                                            {
+                                                "transfer": "A transfer of 400,000 USD from Party A to Party B on February 7, 2008",
+                                                "asset": "Cash with a currency of USD",
+                                                "payerReceiver": "Party A/Party B",
+                                                "settlementDate": "February 7, 2008",
+                                                "transferExpression": "Premium"
+                                            }
+                                        ]
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash settlement in USD on the 5th business day after the expiration date",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "",
+                                        "paymentDaysOffset": {
+                                            "dayType": "",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].fixedPrice",
+                                                "value": "400,000 USD"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        },
+                                        "trade": {
+                                            "tradeDate": "February 5, 2008",
+                                            "tradeIdentifier": "1234 and 2345",
+                                            "globalReference": "10fb089c and f0466d0f",
+                                            "externalReference": "partyA and partyB",
+                                            "tradeLot": "100,000 MT and 30,000 MT",
+                                            "counterparty": "Party A and Party B"
+                                        },
+                                        "tradableProduct": {
+                                            "product": {
+                                                "contractualProduct": {
+                                                    "economicTerms": {
+                                                        "payout": {
+                                                            "fixedPricePayout": [
+                                                                {
+                                                                    "priceQuantity": {
+                                                                        "notionalAmount": "100,000 MT",
+                                                                        "strikePrice": "1120 USD/MT",
+                                                                        "effectiveDate": "August 1, 2008",
+                                                                        "payerReceiver": "Party 2/Party 1",
+                                                                        "settlementTerms": "Cash settlement in USD on the 5th business day after the expiration date",
+                                                                        "expirationDate": "August 30, 2008, September 30, 2008, and October 31, 2008",
+                                                                        "observationTerms": "Calculation Period Dates with a frequency of 1 month",
+                                                                        "underlier": "Commodity with an address of commodity-1",
+                                                                        "optionType": "Call",
+                                                                        "exerciseTerms": "European style with a style of European"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "party": [
+                                            {
+                                                "partyId": "549300KFSLY4U7N3LL12",
+                                                "partyName": "Bank"
+                                            },
+                                            {
+                                                "partyId": "549300AJRHKBLY9GM262",
+                                                "partyName": "Energy Co."
+                                            }
+                                        ],
+                                        "contractualDetails": {
+                                            "documentation": "ISDA Master Agreement and ISDA Confirmation",
+                                            "contractualParty": "Party A and Party B",
+                                            "meta": "Global Key of 78ae45cf"
+                                        },
+                                        "transferHistory": {
+                                            "transfer": "A transfer of 400,000 USD from Party A to Party B on February 7, 2008",
+                                            "asset": "Cash with a currency of USD",
+                                            "payerReceiver": "Party A/Party B",
+                                            "settlementDate": "February 7, 2008",
+                                            "transferExpression": "Premium"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Bank (Party A) and Energy Co. (Party B)",
+                            "calculationAgentPartyEnum": [
+                                "Bank",
+                                "Energy Co."
+                            ]
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Commodity_Option"
+                            },
+                            "productQualifier": "Commodity_Option",
+                            "source": "ISDA Master Agreement and ISDA Confirmation",
+                            "value": {
+                                "name": {
+                                    "value": "Commodity_Option",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": ""
+                                        },
+                                        "priceType": "",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "capacityUnit": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party A and Party B",
+                    "partyReference": {
+                        "globalReference": "10fb089c and f0466d0f",
+                        "externalReference": "partyA and partyB"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Party A",
+                    "partyReference": [
+                        {
+                            "globalReference": "10fb089c",
+                            "externalReference": "partyA"
+                        }
+                    ]
+                },
+                {
+                    "role": "Party B",
+                    "partyReference": [
+                        {
+                            "globalReference": "f0466d0f",
+                            "externalReference": "partyB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "549300KFSLY4U7N3LL12",
+                            "meta": {
+                                "scheme": "Party ID Scheme"
+                            }
+                        },
+                        "identifierType": "Party A"
+                    },
+                    {
+                        "identifier": {
+                            "value": "549300AJRHKBLY9GM262",
+                            "meta": {
+                                "scheme": "Party ID Scheme"
+                            }
+                        },
+                        "identifierType": "Party B"
+                    }
+                ],
+                "name": {
+                    "value": "Bank and Energy Co."
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": ""
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "February 5, 2008",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Commodity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Commodity_Option"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement and ISDA Confirmation"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "10fb089c and f0466d0f",
+                            "externalReference": "partyA and partyB"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

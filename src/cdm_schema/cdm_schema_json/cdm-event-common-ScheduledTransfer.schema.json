@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "ScheduledTransfer",
+  "properties": {
+    "transferType": {
+      "description": "Specifies a transfer created from a scheduled or contingent event on a contract, e.g. Exercise, Performance, Credit Event",
+      "$ref": "cdm-product-common-settlement-ScheduledTransferEnum.schema.json"
+    },
+    "corporateActionTransferType": {
+      "$ref": "cdm-event-common-CorporateActionTypeEnum.schema.json"
+    }
+  },
+  "required": [
+    "transferType"
+  ]
+}

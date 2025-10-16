@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "IndexReferenceInformation",
+  "description": "A class defining information related to Index",
+  "properties": {
+    "indexName": {
+      "description": "The name of the index expressed as a free format string with an associated scheme.",
+      "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+    },
+    "indexId": {
+      "description": "An index identifier (e.g. RED pair code).",
+      "type": "array",
+      "items": {
+        "$ref": "com-rosetta-model-metafields-FieldWithMetaString.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

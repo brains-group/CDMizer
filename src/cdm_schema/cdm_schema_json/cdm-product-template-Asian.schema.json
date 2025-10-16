@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "Asian",
+  "description": "As per ISDA 2002 Definitions.",
+  "properties": {
+    "averagingInOut": {
+      "$ref": "cdm-product-template-AveragingInOutEnum.schema.json"
+    },
+    "strikeFactor": {
+      "description": "The factor of strike.",
+      "type": "number"
+    },
+    "averagingPeriodIn": {
+      "description": "The averaging in period.",
+      "$ref": "cdm-product-common-schedule-AveragingPeriod.schema.json"
+    },
+    "averagingPeriodOut": {
+      "description": "The averaging out period.",
+      "$ref": "cdm-product-common-schedule-AveragingPeriod.schema.json"
+    }
+  },
+  "required": [
+    "averagingInOut"
+  ]
+}

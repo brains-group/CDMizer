@@ -1,0 +1,761 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "7fd57548",
+                    "externalReference": "Party A"
+                },
+                "issuer": {
+                    "value": "Party A",
+                    "meta": {
+                        "scheme": "Party Reference"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "4041c228",
+                            "meta": {
+                                "scheme": "Party Reference"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "100000",
+            "meta": {
+                "globalKey": "7fd57548",
+                "externalKey": "Party A"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following business day convention"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2013-01-01",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following business day convention"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": {
+                                            "partyReference": "4041c228",
+                                            "externalReference": "Party B",
+                                            "partyType": "Buyer",
+                                            "name": "Buyer",
+                                            "identification": {
+                                                "type": "String",
+                                                "value": "Buyer"
+                                            }
+                                        },
+                                        "seller": {
+                                            "partyReference": "7fd57548",
+                                            "externalReference": "Party A",
+                                            "partyType": "Seller",
+                                            "name": "Seller",
+                                            "identification": {
+                                                "type": "String",
+                                                "value": "Seller"
+                                            }
+                                        }
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": "USD 80.00",
+                                                "periodMultiplier": "1",
+                                                "period": "Monthly"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business Day",
+                                                "dayDistribution": "Uniformly Distributed",
+                                                "businessCenters": {
+                                                    "businessCenters": [
+                                                        {
+                                                            "businessCenter": "New York",
+                                                            "reference": "FpML BusinessCentersOrReference"
+                                                        },
+                                                        {
+                                                            "businessCenter": "London",
+                                                            "reference": "FpML BusinessCentersOrReference"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Brent oil",
+                                                "value": "USD 80.00 per barrel"
+                                            }
+                                        },
+                                        "tradeLot": {
+                                            "quantity": "100,000 barrels",
+                                            "price": "USD 80.00 per barrel"
+                                        },
+                                        "calculationAgent": "Party A",
+                                        "counterpartyInformation": [
+                                            {
+                                                "partyReference": "7fd57548",
+                                                "externalReference": "Party A"
+                                            },
+                                            {
+                                                "partyReference": "4041c228",
+                                                "externalReference": "Party B"
+                                            }
+                                        ],
+                                        "transferHistory": [
+                                            {
+                                                "amount": "30,000 USD",
+                                                "date": "2012-11-15"
+                                            }
+                                        ],
+                                        "tradeDetails": [
+                                            {
+                                                "exerciseDate": "2013-01-31",
+                                                "settlementDate": "2013-02-28"
+                                            },
+                                            {
+                                                "exerciseDate": "2013-02-28",
+                                                "settlementDate": "2013-03-31"
+                                            },
+                                            {
+                                                "exerciseDate": "2013-03-31",
+                                                "settlementDate": "2013-04-25"
+                                            }
+                                        ],
+                                        "payout": {
+                                            "optionPayout": [
+                                                {
+                                                    "underlier": "Brent oil",
+                                                    "type": "call",
+                                                    "notionalAmount": "100,000 barrels",
+                                                    "exercisePrice": "USD 80.00 per barrel"
+                                                }
+                                            ]
+                                        },
+                                        "governingLaw": "The laws of the jurisdiction specified in the contract",
+                                        "riskDisclosure": "The buyer and seller acknowledge that they have read and understood the risk disclosure statement and that they are aware of the risks associated with this contract, including but not limited to, market risk, credit risk, and liquidity risk.",
+                                        "representations": "The buyer and seller represent that they have the power to enter into this contract and that they have taken all necessary action to authorize such execution.",
+                                        "acceptance": "By signing below, the buyer and seller acknowledge that they have read and understood the terms and conditions of this contract and that they accept the risks associated with this contract.",
+                                        "acceptanceDate": "2012-11-15",
+                                        "acceptanceSignature": {
+                                            "Party A": "______________________",
+                                            "Party B": "______________________"
+                                        }
+                                    },
+                                    "optionType": "Based on the provided inputs, I will populate the placeholders with the relevant data from the derivatives contract.\n\n**Inputs:**\n\n* Key: optionType\n* Placeholder: {{optionType}}\n* Derivatives Contract Description:... (not relevant for this task)\n* Prior Context (Path): trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType\n\n**Task:**\n\nFind the value that is best suited for the provided key from the provided derivatives contract.\n\n**Result:**\n\nBased on the prior context, the key is optionType. The prior context points to the optionPayout object, which contains an optionType property.\n\n**Populate Placeholder:**\n\nSince the placeholder is empty, I will replace it with a string derived from the contract information.\n\n**Result:**\n\n{{optionType}} = Call",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2013-01-01",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2013-03-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": ""
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": null
+                                            },
+                                            "followUpConfirmation": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": "barrel"
+                                            },
+                                            "priceType": "fixed",
+                                            "datedValue": [
+                                                {
+                                                    "date": "2013-01-01",
+                                                    "value": "USD 80.00"
+                                                }
+                                            ],
+                                            "value": "USD 80.00",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "amortising notional",
+                                                "value": "100,000"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided inputs, I will populate the placeholders with the relevant data from the derivatives contract.\n\n### Inputs:\n\n* Key: settlementType\n* Placeholder: `{{ settlementType }}`\n* Derivatives Contract Description: **Commodity Option Contract**\n* Prior Context (Path): `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`\n\n### Processing:\n\nFrom the contract description, I can identify that the settlement type is related to the option payout. The contract mentions that the option will be settled in cash on the settlement date, which is 5 business days after the exercise date.\n\nBased on this information, I will populate the placeholder with the settlement type.\n\n### Output:\n\n* Key: settlementType\n* Placeholder: `cash`\n\n### Explanation:\n\nThe settlement type is set to `cash` because the contract specifies that the option will be settled in cash on the settlement date.\n\n### Additional Processing:\n\nSince the prior context (path) is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`, I will also populate the `optionPayout` array with the settlement type.\n\n### Output:\n\n* Key: settlementType\n* Placeholder: `cash`\n* `optionPayout`: `[ { settlementType: \"cash\" } ]`\n\n### Explanation:\n\nThe `optionPayout` array is populated with a single object that contains the settlement type, which is `cash`. This reflects the bilateral nature of the contract, where the option is settled in cash on the settlement date.",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USD"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "USD"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": null,
+                                                    "period": "BusinessDays"
+                                                },
+                                                "businessDayConvention": "NONE",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "USD"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "externalReference": "USD"
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": null,
+                                                "period": "BusinessDays"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": "true",
+                                            "calculationMethod": "Average"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "Brent oil price",
+                                                    "value": "USD 80.00 per barrel"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": "1.0"
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "BusinessDay",
+                                            "dayDistribution": "Uniformly",
+                                            "businessCenters": {
+                                                "businessCenterReference": "USD",
+                                                "businessCenterReferenceType": "ExternalReference",
+                                                "externalReference": "USD"
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": null,
+                                            "periodMultiplier": null,
+                                            "period": "Monthly"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "calendar",
+                                        "paymentDaysOffset": {
+                                            "dayType": "calendar",
+                                            "periodMultiplier": null,
+                                            "period": "calendar"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "actual/actual",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "USD"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Brent oil",
+                                                "value": "USD 80.00 per barrel"
+                                            },
+                                            "underlier": [
+                                                {
+                                                    "party": {
+                                                        "partyReference": "7fd57548",
+                                                        "externalReference": "Party A"
+                                                    },
+                                                    "quantity": "100,000 barrels",
+                                                    "price": "USD 80.00 per barrel"
+                                                },
+                                                {
+                                                    "party": {
+                                                        "partyReference": "4041c228",
+                                                        "externalReference": "Party B"
+                                                    },
+                                                    "quantity": "100,000 barrels",
+                                                    "price": "USD 80.00 per barrel"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "amortising notional",
+                                                "value": "100,000"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].paymentDates",
+                                        "paymentDaysOffset": {
+                                            "dayType": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].paymentDaysOffset.dayType",
+                                            "periodMultiplier": null,
+                                            "period": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].paymentDaysOffset.period"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].paymentDatesAdjustments.businessDayConvention",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.fixedPricePayout[0].paymentDatesAdjustments.businessCenters.businessCenter[0].value"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Brent oil price",
+                                                "value": "USD 80.00 per barrel"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": "amortising notional"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party A",
+                            "calculationAgentPartyEnum": "Seller"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Energy"
+                        },
+                        "productQualifier": "Call Option",
+                        "source": "Brent Oil",
+                        "value": {
+                            "name": {
+                                "value": "Oil",
+                                "meta": {
+                                    "scheme": "Brent"
+                                }
+                            }
+                        },
+                        "tradeDetails": [
+                            {
+                                "tradeDate": "2012-11-15",
+                                "effectiveDate": "2013-01-01",
+                                "notionalAmount": "100,000",
+                                "exercisePrice": "80.00",
+                                "exerciseDates": [
+                                    "2013-01-31",
+                                    "2013-02-28",
+                                    "2013-03-31"
+                                ]
+                            }
+                        ],
+                        "pricingAndSettlement": {
+                            "settlementCurrency": "USD",
+                            "settlementDate": "5 business days after exercise date"
+                        },
+                        "paymentTerms": {
+                            "paymentDirection": "Buyer pays Seller the difference between Brent oil price and exercise price",
+                            "paymentDirectionDetails": "If Brent oil price is above exercise price, Buyer receives difference. If Brent oil price is below exercise price, Seller receives difference."
+                        },
+                        "termination": {
+                            "expirationDate": "Option expiration date",
+                            "terminationDate": "2013-03-30",
+                            "mandatoryEarlyTerminationEvent": "Occurrence of a mandatory early termination event"
+                        },
+                        "riskDisclosure": {
+                            "riskDisclosureStatement": "Buyer and Seller acknowledge that they have read and understood the risk disclosure statement and that they are aware of the risks associated with this contract, including but not limited to, market risk, credit risk, and liquidity risk."
+                        },
+                        "representations": {
+                            "buyerRepresentations": "Buyer represents that they have the power to enter into this contract and that they have taken all necessary action to authorize such execution.",
+                            "sellerRepresentations": "Seller represents that they have the power to enter into this contract and that they have taken all necessary action to authorize such execution."
+                        },
+                        "counterpartyInformation": {
+                            "partyA": {
+                                "partyReference": "7fd57548",
+                                "externalReference": "Party A"
+                            },
+                            "partyB": {
+                                "partyReference": "4041c228",
+                                "externalReference": "Party B"
+                            }
+                        },
+                        "transferHistory": [
+                            {
+                                "transferDate": "2012-11-15",
+                                "transferAmount": "30,000",
+                                "transferDirection": "Buyer to Seller"
+                            }
+                        ],
+                        "tradeLot": {
+                            "quantity": "100,000",
+                            "price": "80.00"
+                        },
+                        "calculationAgent": "Party A",
+                        "governingLaw": "Jurisdiction specified in contract"
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": "barrel"
+                                        },
+                                        "priceType": "USD",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": "fixed"
+                                        },
+                                        "value": "USD 80.00",
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": null,
+                                    "unit": {
+                                        "capacityUnit": "barrels"
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Brent oil",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "calendar days"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "calendar days",
+                                                "periodMultiplier": 1,
+                                                "period": "calendar days"
+                                            }
+                                        }
+                                    }
+                                },
+                                "tradeDetails": {
+                                    "tradeType": "Commodity Option",
+                                    "tradeDate": "2012-11-15",
+                                    "effectiveDate": "2013-01-01",
+                                    "notionalAmount": {
+                                        "quantity": 100000,
+                                        "unit": "barrels",
+                                        "currency": "USD"
+                                    },
+                                    "optionType": "Call",
+                                    "exercisePrice": {
+                                        "price": 80,
+                                        "currency": "USD"
+                                    },
+                                    "exerciseDates": [
+                                        {
+                                            "date": "2013-01-31",
+                                            "type": "calendar date"
+                                        },
+                                        {
+                                            "date": "2013-02-28",
+                                            "type": "calendar date"
+                                        },
+                                        {
+                                            "date": "2013-03-31",
+                                            "type": "calendar date"
+                                        }
+                                    ],
+                                    "settlementCurrency": "USD",
+                                    "settlementDate": {
+                                        "date": "5 business days after the exercise date",
+                                        "type": "calendar date"
+                                    }
+                                },
+                                "paymentTerms": {
+                                    "paymentType": "Difference between Brent oil price and exercise price",
+                                    "currency": "USD"
+                                },
+                                "termination": {
+                                    "terminationDates": [
+                                        {
+                                            "date": "2013-03-31",
+                                            "type": "calendar date"
+                                        },
+                                        {
+                                            "date": "2013-03-30",
+                                            "type": "calendar date"
+                                        },
+                                        {
+                                            "type": "event"
+                                        }
+                                    ]
+                                },
+                                "riskDisclosure": {
+                                    "riskTypes": [
+                                        {
+                                            "type": "market risk"
+                                        },
+                                        {
+                                            "type": "credit risk"
+                                        },
+                                        {
+                                            "type": "liquidity risk"
+                                        }
+                                    ]
+                                },
+                                "representations": {
+                                    "representationTypes": [
+                                        {
+                                            "type": "power to enter"
+                                        },
+                                        {
+                                            "type": "authorization to execute"
+                                        }
+                                    ]
+                                },
+                                "counterpartyInformation": {
+                                    "partyA": {
+                                        "partyReference": "7fd57548",
+                                        "externalReference": "Party A"
+                                    },
+                                    "partyB": {
+                                        "partyReference": "4041c228",
+                                        "externalReference": "Party B"
+                                    }
+                                },
+                                "transferHistory": {
+                                    "transferHistoryEntries": [
+                                        {
+                                            "amount": 30000,
+                                            "currency": "USD",
+                                            "transferDate": "2012-11-15"
+                                        }
+                                    ]
+                                },
+                                "tradeLot": {
+                                    "quantity": 100000,
+                                    "unit": "barrels",
+                                    "currency": "USD",
+                                    "price": 80
+                                },
+                                "calculationAgent": {
+                                    "partyReference": "7fd57548",
+                                    "externalReference": "Party A"
+                                },
+                                "governingLaw": {
+                                    "jurisdiction": "Jurisdiction specified in the contract"
+                                },
+                                "acceptance": {
+                                    "acceptanceDate": "2012-11-15",
+                                    "acceptanceSignature": {
+                                        "partyA": "______________________",
+                                        "partyB": "______________________"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": {
+                "role": "Seller",
+                "partyReference": {
+                    "globalReference": "7fd57548",
+                    "externalReference": "Party A"
+                }
+            },
+            "ancillaryParty": {
+                "role": "AncillaryRoleEnum",
+                "partyReference": [
+                    {
+                        "globalReference": "7fd57548",
+                        "externalReference": "Party A"
+                    },
+                    {
+                        "globalReference": "4041c228",
+                        "externalReference": "Party B"
+                    }
+                ]
+            }
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "7fd57548",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": "partyReference"
+                    },
+                    {
+                        "identifier": {
+                            "value": "4041c228",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": "partyReference"
+                    }
+                ],
+                "name": {
+                    "value": "Commodity Option Contract"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "United States"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2012-11-15",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Master Agreement",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "English Law"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA 2013 Standard"
+                            }
+                        },
+                        "vintage": "2013"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "7fd57548",
+                            "externalReference": "Party A"
+                        },
+                        {
+                            "globalReference": "4041c228",
+                            "externalReference": "Party B"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

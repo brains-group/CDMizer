@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "Basket",
+  "description": "Defines a custom basket by referencing a product identifier and its consituents.",
+  "properties": {
+    "basketConstituent": {
+      "description": "Identifies the constituents of the basket",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-BasketConstituent.schema.json"
+      },
+      "minItems": 1
+    },
+    "productTaxonomy": {
+      "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ProductTaxonomy.schema.json"
+      },
+      "minItems": 0
+    },
+    "productIdentifier": {
+      "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-metafields-ReferenceWithMetaProductIdentifier.schema.json"
+      },
+      "minItems": 0
+    }
+  }
+}

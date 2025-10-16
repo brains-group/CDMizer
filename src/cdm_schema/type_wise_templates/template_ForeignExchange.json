@@ -1,0 +1,770 @@
+{
+    "trade": {
+        "description": "Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.",
+        "tradeIdentifier": [
+            {
+                "description": "Defines a trade identifier as a special case of the generic identifier type, that also includes the trade identifier class.",
+                "identifierType": "",
+                "issuerReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "issuer": {
+                    "value": "",
+                    "meta": {
+                        "scheme": ""
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "description": "A class to specify the identifier value and its associated version.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "",
+            "meta": {
+                "globalKey": "",
+                "externalKey": ""
+            }
+        },
+        "tradableProduct": {
+            "description": "Definition of a product as ready to be traded, i.e. included in an execution or contract, by associating a specific price and quantity to this product plus an (optional) mechanism for any potential future quantity adjustment.",
+            "product": {
+                "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                "contractualProduct": {
+                    "description": " A class to specify the contractual products' economic terms, alongside their product identification and product taxonomy. The contractual product class is meant to be used across the pre-execution, execution and (as part of the Contract) post-execution lifecycle contexts.",
+                    "economicTerms": {
+                        "description": " This class represents the full set of price-forming features associated with a contractual product: the payout component, the notional/quantity, the effective and termination date and the date adjustment provisions when applying uniformily across the payout components. This class also includes the legal provisions which have valuation implications: cancelable provision, extendible provision, early termination provision and extraordinary events specification.",
+                        "payout": {
+                            "description": "A class to represent the set of future cashflow methodologies in the form of specific payout class(es) that can be associated for the purpose of specifying a financial product. For example, two interest rate payouts can be combined to specify an interest rate swap, or one interest rate payout can be combined with a credit default payout to specify a credit default swap.",
+                            "optionPayout": [
+                                {
+                                    "description": " The option payout specification terms. The associated globalKey denotes the ability to associate a hash value to the respective OptionPayout instantiation for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                    "buyerSeller": {
+                                        "description": "This class corresponds to the FpML BuyerSeller.model construct.",
+                                        "buyer": "",
+                                        "seller": ""
+                                    },
+                                    "observationTerms": {
+                                        "description": "Class containing terms that are associated with observing a price/benchmark/index across either single or multiple observations. ",
+                                        "pricingTime": {
+                                            "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                            "hourMinuteTime": "",
+                                            "businessCenter": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "description": "A class defining the rate source and fixing time for an FX rate.",
+                                            "primarySource": {
+                                                "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.",
+                                                "sourceProvider": {
+                                                    "value": ""
+                                                },
+                                                "sourcePage": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "description": "Describes date details for a set of observation dates in parametric or non-parametric form.",
+                                            "observationSchedule": {
+                                                "description": "Specifies a single date on which market observations take place and specifies optional associated weighting.",
+                                                "observationDate": [
+                                                    {
+                                                        "description": "Specifies a single date on which market observations take place and specifies optional associated weighting.",
+                                                        "adjustedDate": "",
+                                                        "weight": null
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "description": "A class for specifying a calculation period schedule.",
+                                                "startDate": {
+                                                    "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                    "adjustableDate": {
+                                                        "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                        "unadjustedDate": ""
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                    "adjustableDate": {
+                                                        "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                        "unadjustedDate": ""
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "description": "A class to specify the frequency at which calculation period end dates occur within the regular part of the calculation period schedule and their roll date convention.",
+                                                    "rollConvention": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                                        "foreignExchange": {
+                                            "description": "From FpML: A type defining either a spot or forward FX transactions.",
+                                            "exchangedCurrency1": {
+                                                "description": "Class to specify a cashflow, i.e. the outcome of either of computation (e.g. interest accrual) or an assessment of some sort (e.g. a fee). The cashflow can then be turned into a cash transfer, artefact to be used as the input to a payment system or the outcome of it. The associated globalKey denotes the ability to associate a hash value to the Cashflow instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                                "payerReceiver": {
+                                                    "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                                    "payer": "",
+                                                    "receiver": ""
+                                                },
+                                                "priceQuantity": {
+                                                    "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "",
+                                                            "value": ""
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "description": "Class to specify a cashflow, i.e. the outcome of either of computation (e.g. interest accrual) or an assessment of some sort (e.g. a fee). The cashflow can then be turned into a cash transfer, artefact to be used as the input to a payment system or the outcome of it. The associated globalKey denotes the ability to associate a hash value to the Cashflow instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                                "payerReceiver": {
+                                                    "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                                    "payer": "",
+                                                    "receiver": ""
+                                                },
+                                                "priceQuantity": {
+                                                    "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "",
+                                                            "value": ""
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "description": "A class defining the exercise period for an option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees.",
+                                        "style": "",
+                                        "commencementDate": {
+                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                            "adjustableDate": {
+                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                "adjustableDate": {
+                                                    "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                    "adjustedDate": {
+                                                        "value": "",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "expirationTime": {
+                                            "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                            "hourMinuteTime": "",
+                                            "businessCenter": {
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "description": "Defines the strike price of an option.",
+                                        "strikePrice": {
+                                            "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                            "perUnitOf": {
+                                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                "currency": {
+                                                    "value": ""
+                                                }
+                                            },
+                                            "priceType": "",
+                                            "composite": {
+                                                "description": "Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers and a simple arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX) etc.",
+                                                "baseValue": null
+                                            },
+                                            "value": null,
+                                            "unit": {
+                                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                "currency": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "cashSettlementTerms": [
+                                            {
+                                                "description": "Defines the terms required to compute and settle a cash settlement amount according to a fixing value, including the fixing source, fixing method and fixing date. In FpML, PhysicalSettlementTerms and CashSettlementTerms extend SettlementTerms. In the CDM, this extension paradigm has not been used because SettlementTerms class has been used for purposes related to securities transactions, while it is not used as such in the FpML standard (i.e. only as an abstract construct.",
+                                                "valuationMethod": {
+                                                    "description": "Specifies the parameters required to obtain a valuation, including the source, quotation method (bid, mid etc.) and any applicable quotation amount.",
+                                                    "valuationSource": {
+                                                        "description": "A class describing the method for obtaining a settlement rate, specified through either an information source (page), a settlement rate option (fixing) or by using quotes from reference banks.",
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "description": "A class defining the rate source and fixing time for an FX rate.",
+                                                            "primarySource": {
+                                                                "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.",
+                                                                "sourceProvider": {
+                                                                    "value": ""
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "description": "A single object that represents the different methods to specify a valuation date, as used for cash settlement. The Single / Multiple ValuationDate is used for the determination of recovery in a credit event, the RelativeDateOffset is used for cash-settled option, and FxFixingDate is used for cross-currency settlement.",
+                                                    "fxFixingDate": {
+                                                        "description": "Extends the Offset structure to specify an FX fixing date as an offset to dates specified somewhere else in the document.",
+                                                        "fxFixingDate": {
+                                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                            "adjustableDate": {
+                                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                                "unadjustedDate": ""
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                                    "hourMinuteTime": "",
+                                                    "businessCenter": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "",
+                                        "settlementCurrency": {
+                                            "value": ""
+                                        },
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "valueDate": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "description": "Represents a forward settling payout. The underlier attribute captures the underlying payout, which is settled according to the settlementTerms attribute (which is part of PayoutBase). Both FX Spot and FX Forward should use this component.",
+                                    "underlier": {
+                                        "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                                        "foreignExchange": {
+                                            "description": "From FpML: A type defining either a spot or forward FX transactions.",
+                                            "exchangedCurrency1": {
+                                                "description": "Class to specify a cashflow, i.e. the outcome of either of computation (e.g. interest accrual) or an assessment of some sort (e.g. a fee). The cashflow can then be turned into a cash transfer, artefact to be used as the input to a payment system or the outcome of it. The associated globalKey denotes the ability to associate a hash value to the Cashflow instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                                "payerReceiver": {
+                                                    "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                                    "payer": "",
+                                                    "receiver": ""
+                                                },
+                                                "priceQuantity": {
+                                                    "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "",
+                                                            "value": ""
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "description": "Class to specify a cashflow, i.e. the outcome of either of computation (e.g. interest accrual) or an assessment of some sort (e.g. a fee). The cashflow can then be turned into a cash transfer, artefact to be used as the input to a payment system or the outcome of it. The associated globalKey denotes the ability to associate a hash value to the Cashflow instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                                "payerReceiver": {
+                                                    "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                                    "payer": "",
+                                                    "receiver": ""
+                                                },
+                                                "priceQuantity": {
+                                                    "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "",
+                                                            "value": ""
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "tenorPeriod": {
+                                                "description": "A class to define recurring periods or time offsets.",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "exchangeRate": {
+                                                "description": "A class that is used for describing the exchange rate for a particular transaction.",
+                                                "crossRate": [
+                                                    {
+                                                        "description": "A class that is used for including the currency exchange rates used to cross between the traded currencies for non-base currency FX contracts.",
+                                                        "rate": null,
+                                                        "currency1": {
+                                                            "value": ""
+                                                        },
+                                                        "currency2": {
+                                                            "value": ""
+                                                        },
+                                                        "quoteBasis": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "cashSettlementTerms": [
+                                            {
+                                                "description": "Defines the terms required to compute and settle a cash settlement amount according to a fixing value, including the fixing source, fixing method and fixing date. In FpML, PhysicalSettlementTerms and CashSettlementTerms extend SettlementTerms. In the CDM, this extension paradigm has not been used because SettlementTerms class has been used for purposes related to securities transactions, while it is not used as such in the FpML standard (i.e. only as an abstract construct.",
+                                                "valuationMethod": {
+                                                    "description": "Specifies the parameters required to obtain a valuation, including the source, quotation method (bid, mid etc.) and any applicable quotation amount.",
+                                                    "valuationSource": {
+                                                        "description": "A class describing the method for obtaining a settlement rate, specified through either an information source (page), a settlement rate option (fixing) or by using quotes from reference banks.",
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "description": "A class defining the rate source and fixing time for an FX rate.",
+                                                            "primarySource": {
+                                                                "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.",
+                                                                "sourceProvider": {
+                                                                    "value": ""
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "description": "Defines the settlement rate option to use for fixing in case of cash settlement. Currently only applicable to foreign exchange fixing in case of cross-currency settlement.",
+                                                            "settlementRateOption": {
+                                                                "value": ""
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "description": "A single object that represents the different methods to specify a valuation date, as used for cash settlement. The Single / Multiple ValuationDate is used for the determination of recovery in a credit event, the RelativeDateOffset is used for cash-settled option, and FxFixingDate is used for cross-currency settlement.",
+                                                    "fxFixingDate": {
+                                                        "description": "Extends the Offset structure to specify an FX fixing date as an offset to dates specified somewhere else in the document.",
+                                                        "fxFixingDate": {
+                                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                            "adjustableDate": {
+                                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                                "unadjustedDate": "",
+                                                                "dateAdjustments": {
+                                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                                    "businessDayConvention": ""
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                                    "hourMinuteTime": "",
+                                                    "businessCenter": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "",
+                                        "settlementCurrency": {
+                                            "value": ""
+                                        },
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "valueDate": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "description": "Contains the necessary specifications for all performance payouts, encompassing equity return, dividend, variance, volatility and correlation products.",
+                                    "observationTerms": {
+                                        "description": "Class containing terms that are associated with observing a price/benchmark/index across either single or multiple observations. ",
+                                        "pricingTime": {
+                                            "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                            "hourMinuteTime": "",
+                                            "businessCenter": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "description": "A class defining the rate source and fixing time for an FX rate.",
+                                            "primarySource": {
+                                                "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.",
+                                                "sourcePage": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+                                            "currencyPair": {
+                                                "value": {
+                                                    "description": "A class that describes the composition of a rate that has been quoted or is to be quoted. This includes the two currencies and the quotation relationship between the two currencies and is used as a building block throughout the FX specification.",
+                                                    "currency1": {
+                                                        "value": ""
+                                                    },
+                                                    "currency2": {
+                                                        "value": ""
+                                                    },
+                                                    "quoteBasis": ""
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "description": "Describes date details for a set of observation dates in parametric or non-parametric form.",
+                                            "periodicSchedule": {
+                                                "description": "A class for specifying a calculation period schedule.",
+                                                "startDate": {
+                                                    "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                    "adjustableDate": {
+                                                        "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                        "unadjustedDate": ""
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                    "adjustableDate": {
+                                                        "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                        "unadjustedDate": ""
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": ""
+                                            }
+                                        },
+                                        "numberOfObservationDates": null
+                                    },
+                                    "valuationDates": {
+                                        "description": "Defines how and when a performance type option or performance type swap is to be valued, including initial, interim and final valuation dates.",
+                                        "finalValuationDate": {
+                                            "description": "Defines how and when a performance type option or performance type swap is to be valued.",
+                                            "valuationDates": {
+                                                "description": "A class giving the choice between defining a series of dates as an explicit list of dates together with applicable adjustments or as relative to some other series of (anchor) dates, or as a calculation period schedule.",
+                                                "relativeDates": {
+                                                    "description": "A class describing a set of dates defined as relative to another set of dates.",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "description": "Specifies the type of return of a performance payout.",
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                                "perUnitOf": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                },
+                                                "priceType": "",
+                                                "value": null,
+                                                "unit": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": null,
+                                                "unit": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": null,
+                                            "meanAdjustment": null
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                                "perUnitOf": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                },
+                                                "priceType": "",
+                                                "value": null,
+                                                "unit": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": null,
+                                            "meanAdjustment": null
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "priceQuantity": {
+                                        "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "settlementType": "",
+                                        "settlementCurrency": {
+                                            "value": ""
+                                        },
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "adjustableOrRelativeDate": {
+                                                "description": "This Rosetta class specifies the date as either an unadjusted, adjusted or relative date. It supplements the features of the AdjustableOrAdjustedDate to support the credit default swap option premium, which uses the relative date construct.",
+                                                "adjustedDate": {
+                                                    "value": "",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "description": "A class defining the ISDA calculation agent responsible for performing duties as defined in the applicable product definitions.",
+                            "calculationAgentParty": ""
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+                            "productQualifier": "",
+                            "source": "",
+                            "value": {
+                                "description": "Defines a taxonomy value as either a simple string or a more granular expression with class names and values for each class.",
+                                "name": {
+                                    "value": "",
+                                    "meta": {
+                                        "scheme": ""
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "description": "Specifies the price and quantity of a trade lot, where the same product could be traded multiple times with the same counterparty but in different lots (at a different date, in a different quantity and at a different price). One trade lot combined with a product definition specifies the entire economics of a trade. The lifecycle mechanics of each such trade lot (e.g. cashflow payments) is independent of the other lots.",
+                    "priceQuantity": [
+                        {
+                            "description": "Defines a settlement as an exchange between two parties of a specified quantity of an asset (the quantity) against a specified quantity of another asset (the price). The settlement is optional and can be either cash or physical. In the case of non-cash products, the settlement of the price/quantity would not be specified here and instead would be delegated to the product mechanics, as parameterised by the price/quantity values.",
+                            "price": [
+                                {
+                                    "value": {
+                                        "description": "Specifies the price of a financial instrument in a trade as a schedule of measures. A price generically expresses the value of an exchange as a ratio: it measures the amount of one thing needed to be exchanged for 1 unit of another thing (e.g. cash in a specific currency in exchange for a bond or share). This generic representation can be used to support any type of financial price beyond just cash price: e.g. an interest rate, a foreign exchange rate, etc. This data type is generically based on a schedule and can also be used to represent a price as a single value.",
+                                        "perUnitOf": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "priceType": "",
+                                        "composite": {
+                                            "description": "Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers and a simple arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX) etc.",
+                                            "baseValue": null,
+                                            "operand": null,
+                                            "arithmeticOperator": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": null,
+                                        "unit": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+                                "currencyPair": {
+                                    "value": {
+                                        "description": "A class that describes the composition of a rate that has been quoted or is to be quoted. This includes the two currencies and the quotation relationship between the two currencies and is used as a building block throughout the FX specification.",
+                                        "currency1": {
+                                            "value": ""
+                                        },
+                                        "currency2": {
+                                            "value": ""
+                                        },
+                                        "quoteBasis": ""
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "description": "Defines a counterparty enumerated value, e.g. Party1 or Party2, with an associated party reference. The product is agnostic to the actual parties to the transaction, with the party references abstracted away from the product definition and replaced by the CounterpartyEnum (e.g. values Party1 or Party2). The CounterpartyEnum can then be positioned in the product (e.g. to specify which counterparty is the payer, receiver etc) and this Counterparty type, which is positioned outside of the product definition, allows the CounterpartyEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "",
+                        "externalReference": ""
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "description": "Defines an ancillary role enumerated value with an associated party reference. The product is agnostic to the actual parties involved in the transaction, with the party references abstracted away from the product definition and replaced by the AncillaryRoleEnum. The AncillaryRoleEnum can then be positioned in the product and this AncillaryParty type, which is positioned outside of the product definition, allows the AncillaryRoleEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": [
+                        {
+                            "globalReference": "",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "description": "A class to specify the FIRST party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": ""
+                }
+            },
+            {
+                "description": "A class to specify the SECOND party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": ""
+                }
+            }
+        ],
+        "account": [
+            {
+                "description": "A class to specify an account as an account number alongside, optionally. an account name, an account type, an account beneficiary and a servicing party.",
+                "accountNumber": {
+                    "value": ""
+                },
+                "servicingParty": {
+                    "globalReference": "",
+                    "externalReference": ""
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "TransferableProduct",
+  "description": "A TransferableProduct is a type of Product which can be used in a SettlementCommitment for a basic cash settled trade of either an Asset with or without the addition of specific EconomicTerms.",
+  "properties": {
+    "asset": {
+      "$ref": "cdm-base-staticdata-asset-common-Asset.schema.json"
+    },
+    "economicTerms": {
+      "$ref": "cdm-product-template-EconomicTerms.schema.json"
+    }
+  },
+  "required": [
+    "asset"
+  ]
+}

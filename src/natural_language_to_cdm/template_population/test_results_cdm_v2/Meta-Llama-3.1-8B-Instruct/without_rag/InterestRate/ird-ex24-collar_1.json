@@ -1,0 +1,1867 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "Trade Identifier",
+            "issuerReference": {
+                "globalReference": "33f59567",
+                "externalReference": "Party 1"
+            },
+            "issuer": {
+                "value": "Party A",
+                "meta": {
+                    "scheme": "Party Reference"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "Trade Identifier",
+                        "meta": {
+                            "scheme": "Trade Identifier Scheme"
+                        }
+                    },
+                    "version": "1.0"
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "Interest Rate Cap and Floor Swap Contract",
+            "meta": {
+                "globalKey": "33f59567",
+                "externalKey": "Party A"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "April 29, 2001",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODFOLLOWING"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "April 29, 2001",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODFOLLOWING"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "interestRatePayout": [
+                                {
+                                    "rateSpecification": {
+                                        "fixedRate": {
+                                            "rateSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "GBLO",
+                                                        "value": "33f59567"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "floatingRate": {
+                                            "initialRate": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                },
+                                                "priceType": "Interest Rate",
+                                                "value": 100000000,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            },
+                                            "finalRateRounding": {
+                                                "roundingDirection": "ROUND_HALF_UP",
+                                                "precision": 4
+                                            },
+                                            "floatingRateMultiplierSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Party A",
+                                                        "value": "33f59567"
+                                                    }
+                                                }
+                                            },
+                                            "rateTreatment": "rateTreatment: \"ACT/360\"",
+                                            "calculationParameters": {
+                                                "calculationMethod": "ACT/360",
+                                                "observationShiftCalculation": {
+                                                    "offsetDays": 2,
+                                                    "calculationBase": "MODFOLLOWING",
+                                                    "additionalBusinessDays": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "lookbackCalculation": {
+                                                    "offsetDays": 2
+                                                },
+                                                "lockoutCalculation": {
+                                                    "offsetDays": 2
+                                                },
+                                                "applicableBusinessDays": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "observationParameters": {
+                                                    "observationCapRate": 4.427
+                                                }
+                                            },
+                                            "fallbackRate": {
+                                                "floatingRateIndex": "EUR-EURIBOR-Telerate",
+                                                "effectiveDate": "2001-04-29",
+                                                "calculationParameters": {
+                                                    "calculationMethod": "ACT/360",
+                                                    "observationShiftCalculation": {
+                                                        "offsetDays": 2,
+                                                        "calculationBase": "MODFOLLOWING",
+                                                        "additionalBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "applicableBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "spreadAdjustment": 0
+                                                }
+                                            },
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "Interest Rate Cap and Floor Swap",
+                                                    "value": "EUR-EURIBOR-Telerate index"
+                                                }
+                                            },
+                                            "spreadSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Party A",
+                                                        "value": "Party 1"
+                                                    }
+                                                }
+                                            },
+                                            "capRateSchedule": {
+                                                "buyer": "Party B",
+                                                "seller": "Party A",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "EUR-EURIBOR-Telerate",
+                                                        "value": "EUR 100,000,000"
+                                                    }
+                                                }
+                                            },
+                                            "floorRateSchedule": {
+                                                "buyer": "Party B",
+                                                "seller": "Party A",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "EUR-EURIBOR-Telerate",
+                                                        "value": "EUR 100,000,000"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "inflationRate": {
+                                            "inflationLag": {
+                                                "periodMultiplier": 1,
+                                                "period": "year"
+                                            },
+                                            "indexSource": {
+                                                "value": "EUR-EURIBOR-Telerate",
+                                                "meta": {
+                                                    "scheme": "Floating Rate Index"
+                                                }
+                                            },
+                                            "mainPublication": {
+                                                "value": "EUR-EURIBOR-Telerate",
+                                                "meta": {
+                                                    "scheme": "Floating Rate Index"
+                                                }
+                                            },
+                                            "interpolationMethod": {
+                                                "value": "Linear Interpolation"
+                                            },
+                                            "initialIndexLevel": 0,
+                                            "fallbackBondApplicable": false,
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "Party A",
+                                                    "value": "33f59567"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dayCountFraction": {
+                                        "value": "ACT/360"
+                                    },
+                                    "calculationPeriodDates": {
+                                        "effectiveDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "2001-04-29",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "relativeDateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "ACT/360",
+                                                "periodMultiplier": 1,
+                                                "period": "year"
+                                            }
+                                        },
+                                        "terminationDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "2001-04-29",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "P1Y"
+                                            }
+                                        },
+                                        "calculationPeriodDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        },
+                                        "firstPeriodStartDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "firstRegularPeriodStartDate": "\"2024-10-05\"",
+                                        "firstCompoundingPeriodEndDate": "\"2024-10-05\"",
+                                        "lastRegularPeriodEndDate": "\"2024-10-05\"",
+                                        "stubPeriodType": "\"stubPeriodType\": \"Annual\"",
+                                        "calculationPeriodFrequency": {
+                                            "rollConvention": "ACT/360",
+                                            "periodMultiplier": 1,
+                                            "period": "Annually"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "paymentFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "year"
+                                        },
+                                        "firstPaymentDate": "2024-10-07",
+                                        "lastRegularPaymentDate": "2033-10-07",
+                                        "paymentDateSchedule": {
+                                            "interimPaymentDates": [
+                                                {
+                                                    "periodicDates": {
+                                                        "periodFrequency": {
+                                                            "periodMultiplier": 1,
+                                                            "period": "year"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "payRelativeTo": "trade date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "business day",
+                                            "periodMultiplier": 2,
+                                            "period": "day"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "paymentDate": {
+                                        "unadjustedDate": "2001-04-29",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resetDates": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        },
+                                        "resetRelativeTo": "calculation period dates",
+                                        "fixingDates": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            },
+                                            "dateRelativeTo": {
+                                                "globalReference": "",
+                                                "externalReference": ""
+                                            },
+                                            "dayType": "Business",
+                                            "periodMultiplier": 2,
+                                            "period": "year"
+                                        },
+                                        "resetFrequency": {
+                                            "weeklyRollConvention": "",
+                                            "periodMultiplier": 1,
+                                            "period": "year"
+                                        },
+                                        "resetDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "discountingMethod": {
+                                        "discountingType": "ACT/360"
+                                    },
+                                    "compoundingMethod": "compoundingMethod: \"ACT/360\"",
+                                    "cashflowRepresentation": {
+                                        "cashflowsMatchParameters": "\"cashflowsMatchParameters\": {\n  \"calculationPeriods\": [\n    \"October 5 to October 5 of each year\"\n  ],\n  \"paymentDates\": [\n    \"October 7, 2024\",\n    \"October 7, 2033\"\n  ],\n  \"dayCountConventions\": [\n    \"ACT/360\"\n  ],\n  \"resetDates\": [\n    \"two business days after the calculation period start date\"\n  ],\n  \"businessDayConventions\": [\n    \"MODFOLLOWING\",\n    \"GBLO\",\n    \"EUTA\"\n  ]\n}",
+                                        "paymentCalculationPeriod": [
+                                            {
+                                                "adjustedPaymentDate": "October 7, 2024",
+                                                "calculationPeriod": [
+                                                    {
+                                                        "unadjustedStartDate": "October 5, 2024",
+                                                        "unadjustedEndDate": "October 5, 2024",
+                                                        "calculationPeriodNumberOfDays": 1,
+                                                        "notionalAmount": "EUR 100,000,000",
+                                                        "fxLinkedNotionalAmount": {
+                                                            "adjustedFxSpotFixingDate": ""
+                                                        },
+                                                        "floatingRateDefinition": {
+                                                            "rateObservation": [
+                                                                {
+                                                                    "adjustedFixingDate": "October 7, 2024",
+                                                                    "observationWeight": 1
+                                                                }
+                                                            ]
+                                                        },
+                                                        "fixedRate": "4.427%",
+                                                        "adjustedStartDate": "October 7, 2024",
+                                                        "adjustedEndDate": "October 7, 2033"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "stubPeriod": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "Party A",
+                                            "externalReference": "Party 1"
+                                        },
+                                        "initialStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "EUR-EURIBOR-Telerate",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "month"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": 4.427
+                                        },
+                                        "finalStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "EUR-EURIBOR-Telerate",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "month"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": 4.0625
+                                        }
+                                    },
+                                    "bondReference": {
+                                        "bond": {
+                                            "identifier": {
+                                                "value": "EUR-EURIBOR-Telerate",
+                                                "meta": {
+                                                    "scheme": "EUR-EURIBOR-Telerate"
+                                                }
+                                            },
+                                            "source": "EUR-EURIBOR-Telerate index"
+                                        },
+                                        "conditionPrecedentBond": null
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Interest Rate Cap and Floor Swap",
+                                                "value": "EUR 100,000,000"
+                                            }
+                                        },
+                                        "quantityReference": {
+                                            "globalReference": "33f59567",
+                                            "externalReference": "Party 1"
+                                        },
+                                        "quantityMultiplier": {
+                                            "fxLinkedNotionalSchedule": {
+                                                "varyingNotionalCurrency": {
+                                                    "value": "EUR"
+                                                },
+                                                "varyingNotionalFixingDates": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -2,
+                                                    "period": "Year"
+                                                }
+                                            },
+                                            "fxSpotRateSource": {
+                                                "primarySource": {
+                                                    "sourceProvider": {
+                                                        "value": "EUR-EURIBOR-Telerate"
+                                                    },
+                                                    "sourcePage": {
+                                                        "value": "EUR-EURIBOR-Telerate"
+                                                    },
+                                                    "sourcePageHeading": ""
+                                                },
+                                                "fixingTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            },
+                                            "varyingNotionalInterimExchangePaymentDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": -2,
+                                                "period": "Year"
+                                            }
+                                        },
+                                        "futureValueNotional": {
+                                            "quantity": {
+                                                "address": {
+                                                    "scope": "Party A",
+                                                    "value": "Party 1"
+                                                }
+                                            },
+                                            "currency": {
+                                                "value": "EUR"
+                                            },
+                                            "calculationPeriodNumberOfDays": 365,
+                                            "valueDate": "2001-04-29"
+                                        }
+                                    },
+                                    "principalPayment": {
+                                        "initialPayment": {
+                                            "principalPaymentDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "adjustedDate": {
+                                                    "value": "2001-04-30",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "payerReceiver": {
+                                                "payer": "Party A",
+                                                "receiver": "Party B"
+                                            },
+                                            "principalAmount": {
+                                                "value": "100000000",
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "finalPayment": {
+                                            "principalPaymentDate": {
+                                                "unadjustedDate": "2033-10-05",
+                                                "adjustedDate": {
+                                                    "value": "2033-10-06",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "payerReceiver": {
+                                                "payer": "Party A",
+                                                "receiver": "Party B"
+                                            },
+                                            "principalAmount": {
+                                                "value": "100000000",
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "intermediatePayment": null,
+                                        "principalPaymentSchedule": {
+                                            "initialPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2001-04-29",
+                                                    "adjustedDate": {
+                                                        "value": "2001-04-30",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Party A",
+                                                    "receiver": "Party B"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "100000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "finalPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2033-10-05",
+                                                    "adjustedDate": {
+                                                        "value": "2033-10-06",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Party A",
+                                                    "receiver": "Party B"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "100000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "fixing",
+                                                                "meta": {
+                                                                    "scheme": "EUR-EURIBOR-Telerate"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "EUR"
+                                                            }
+                                                        }
+                                                    },
+                                                    "minimumQuotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "EUR"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToPaymentDates": {
+                                                            "paymentDatesReference": [
+                                                                {
+                                                                    "globalReference": "Party 1"
+                                                                },
+                                                                {
+                                                                    "globalReference": "Party 2"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToCalculationPeriodDates": {
+                                                            "calculationPeriodDatesReference": [
+                                                                {
+                                                                    "globalReference": "Party 1"
+                                                                },
+                                                                {
+                                                                    "globalReference": "Party 2"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dayType": "ACT/360",
+                                                        "periodMultiplier": 1,
+                                                        "period": "year"
+                                                    },
+                                                    "fxFixingSchedule": {
+                                                        "unadjustedDate": [
+                                                            "2024-10-05"
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "businessDayConvention": "MODFOLLOWING",
+                                                            "businessCenters": {
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": "GBLO"
+                                                                    },
+                                                                    {
+                                                                        "value": "EUTA"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "cashSettlementAmount": {
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        }
+                                    }
+                                }
+                            ],
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party A",
+                                        "seller": "Party B"
+                                    },
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Cap and Floor Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "EUR-EURIBOR-Telerate",
+                                                        "value": "EUR-EURIBOR-Telerate"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "optionType: \"Cap\"",
+                                    "exerciseTerms": {
+                                        "style": "style=\"Asian\"",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2001-04-29",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 1,
+                                            "integralMultipleAmount": 10000000,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "manualExercise": {
+                                                "exerciseNotice": {
+                                                    "exerciseNoticeGiver": "",
+                                                    "businessCenter": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            },
+                                            "followUpConfirmation": null,
+                                            "limitedRightToConfirm": null,
+                                            "splitTicket": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            },
+                                            "priceType": "Interest Rate",
+                                            "value": 4427,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "referenceSwapCurve": {
+                                            "swapUnwindValue": {
+                                                "floatingRateIndex": "EUR-EURIBOR-Telerate",
+                                                "indexTenor": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "Year"
+                                                },
+                                                "spread": 0,
+                                                "side": "Both"
+                                            },
+                                            "makeWholeAmount": {
+                                                "interpolationMethod": "Linear",
+                                                "earlyCallDate": {
+                                                    "value": "2023-11-03",
+                                                    "meta": {
+                                                        "globalKey": "Mandatory Early Termination Date"
+                                                    }
+                                                },
+                                                "floatingRateIndex": "EUR-EURIBOR-Telerate",
+                                                "spread": 0,
+                                                "side": "Both"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "party",
+                                                "value": "Party A"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "\"Fixed\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Cap and Floor Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "EUR-EURIBOR-Telerate",
+                                                        "value": "EUR-EURIBOR-Telerate"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "EUR 100,000,000",
+                                                "value": "EUR 100,000,000"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash"
+                                    }
+                                }
+                            ]
+                        },
+                        "terminationProvision": {
+                            "cancelableProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "GBLO"
+                                    }
+                                },
+                                "followUpConfirmation": "None",
+                                "exerciseTerms": {
+                                    "style": "style = \"American\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "2001-04-29"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": "buyer\n\"Party B\"",
+                                "seller": "seller\n\"Party B\""
+                            },
+                            "earlyTerminationProvision": {
+                                "mandatoryEarlyTermination": {
+                                    "mandatoryEarlyTerminationDate": {
+                                        "unadjustedDate": "April 29, 2001",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    },
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Party A"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Physical",
+                                                "valuationMethod": {
+                                                    "quotationMethod": "Bid"
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "externalReference": "Trade Date"
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": 0,
+                                                        "period": "Year"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"Physical\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        }
+                                    }
+                                },
+                                "optionalEarlyTermination": {
+                                    "exerciseNotice": [
+                                        {
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    ],
+                                    "followUpConfirmation": "None",
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Party A",
+                                        "calculationAgentPartyEnum": "Party 1"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Physical",
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": "EUR-EURIBOR-Telerate"
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationMethod": "Bid",
+                                                    "cashCollateralValuationMethod": {
+                                                        "applicableCsa": "",
+                                                        "cashCollateralCurrency": "EUR",
+                                                        "cashCollateralInterestRate": {
+                                                            "value": "4.427%"
+                                                        },
+                                                        "agreedDiscountRate": {
+                                                            "value": "4.0625%"
+                                                        },
+                                                        "protectedParty": [
+                                                            {
+                                                                "value": "Party A"
+                                                            }
+                                                        ],
+                                                        "prescribedDocumentationAdjustment": null
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": 0,
+                                                        "period": "Year"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"mandatory early termination\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableDates": {
+                                                "unadjustedDate": [
+                                                    "April 29, 2001"
+                                                ],
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "businessDateRange": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "startDate": "October 5, 2024",
+                                                "endDate": "October 5, 2033"
+                                            }
+                                        }
+                                    },
+                                    "optionalEarlyTerminationAdjustedDates": {
+                                        "earlyTerminationEvent": [
+                                            {
+                                                "adjustedExerciseDate": "October 5, 2024",
+                                                "adjustedEarlyTerminationDate": "November 3, 2023",
+                                                "adjustedCashSettlementValuationDate": "October 7, 2024",
+                                                "adjustedCashSettlementPaymentDate": "October 7, 2033"
+                                            }
+                                        ]
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "style = \"Mandatory\"",
+                                        "commencementDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": 1,
+                                                "period": "ACT/360"
+                                            }
+                                        },
+                                        "exerciseDates": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": 1,
+                                                "period": "ACT/360"
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "relevantUnderlyingDate": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "dateRelativeTo": {
+                                                    "globalReference": "Party A",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "year"
+                                            }
+                                        },
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "extendibleProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "GBLO"
+                                    }
+                                },
+                                "followUpConfirmation": "None",
+                                "exerciseTerms": {
+                                    "style": "style = \"American\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-04-29",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            },
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "2001-04-29"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        },
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00 GBLO",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": "buyer: \"Party B\"",
+                                "seller": "seller: \"Party B\""
+                            }
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party A",
+                            "calculationAgentBusinessCenter": {
+                                "value": "GBLO",
+                                "meta": {
+                                    "scheme": "ISO 10383"
+                                }
+                            }
+                        },
+                        "nonStandardisedTerms": "\"nonStandardisedTerms\": {\n    \"resetDates\": \"October 5 of each year\",\n    \"businessDayConventions\": \"MODFOLLOWING\",\n    \"businessCentres\": [\"GBLO\", \"EUTA\"],\n    \"dayCountConventions\": \"ACT/360\",\n    \"paymentDates\": \"October 7 of each year\",\n    \"terminationDate\": \"October 5, 2033\",\n    \"mandatoryEarlyTerminationDate\": \"November 3, 2023\"\n}"
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Interest Rate",
+                            "meta": {
+                                "scheme": "ISO 10962"
+                            }
+                        },
+                        "productQualifier": "Interest Rate Cap and Floor Swap",
+                        "source": "EUR-EURIBOR-Telerate",
+                        "value": {
+                            "name": {
+                                "value": "Interest Rate Cap and Floor Swap",
+                                "meta": {
+                                    "scheme": "ISO 10962"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "EUR",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        },
+                                        "priceType": "Interest Rate",
+                                        "arithmeticOperator": "",
+                                        "datedValue": [
+                                            {
+                                                "date": "2001-04-29",
+                                                "value": null
+                                            }
+                                        ],
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "EUR",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": 100000000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": ""
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "datedValue": [
+                                            {
+                                                "date": "2024-10-05",
+                                                "value": null
+                                            }
+                                        ],
+                                        "value": null,
+                                        "unit": {
+                                            "financialUnit": "",
+                                            "currency": {
+                                                "value": "EUR",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "rateOption": {
+                                    "value": {
+                                        "floatingRateIndex": {
+                                            "value": "EUR-EURIBOR-Telerate",
+                                            "meta": {
+                                                "scheme": "EUR-EURIBOR-Telerate"
+                                            }
+                                        },
+                                        "inflationRateIndex": {
+                                            "value": "",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "indexTenor": {
+                                            "periodMultiplier": 1,
+                                            "period": "year"
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "Interest Rate Cap and Floor Swap Contract",
+                                                "meta": {
+                                                    "scheme": "Interest Rate Cap and Floor Swap Contract"
+                                                }
+                                            },
+                                            "source": "Party A"
+                                        }
+                                    }
+                                ]
+                            },
+                            "settlementTerms": {
+                                "cashSettlementTerms": [
+                                    {
+                                        "valuationMethod": {
+                                            "quotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            },
+                                            "minimumQuotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "cashSettlementAmount": {
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "settlementType": "\"Fixed\""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "payer",
+                    "partyReference": {
+                        "globalReference": "33f59567",
+                        "externalReference": "Party 1"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Payer",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party 1",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party A",
+                            "meta": {
+                                "scheme": "Party Reference"
+                            }
+                        },
+                        "identifierType": "Party Reference"
+                    }
+                ],
+                "name": {
+                    "value": "Party A"
+                },
+                "businessUnit": [
+                    {
+                        "name": "Party A"
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "33f59567"
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "Party",
+                        "surname": "A"
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "GB"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party B",
+                            "meta": {
+                                "scheme": "Party Reference"
+                            }
+                        },
+                        "identifierType": "Party Reference"
+                    }
+                ],
+                "name": {
+                    "value": "Party B"
+                },
+                "businessUnit": [
+                    {
+                        "name": "Party B"
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "33f59568"
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "Party",
+                        "surname": "B"
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "EU"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "partyRole": [
+            {
+                "partyReference": {
+                    "globalReference": "Party 1",
+                    "externalReference": ""
+                },
+                "role": "payer",
+                "ownershipPartyReference": {
+                    "globalReference": "Party 1",
+                    "externalReference": ""
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Interest Rate Cap and Floor Swap",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "EUR-EURIBOR-Telerate",
+                                    "meta": {
+                                        "scheme": "Floating Rate Index"
+                                    }
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA 2013",
+                                "meta": {
+                                    "scheme": "Standard Credit Support Annex"
+                                }
+                            }
+                        },
+                        "contractualParty": [
+                            {
+                                "globalReference": "Party 1",
+                                "externalReference": "Party A"
+                            },
+                            {
+                                "globalReference": "Party 2",
+                                "externalReference": "Party B"
+                            }
+                        ]
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party 1",
+                            "externalReference": "Party A"
+                        },
+                        {
+                            "globalReference": "Party 2",
+                            "externalReference": "Party B"
+                        }
+                    ]
+                }
+            ]
+        },
+        "account": [
+            {
+                "partyReference": {
+                    "globalReference": "Party 1",
+                    "externalReference": ""
+                },
+                "accountNumber": {
+                    "value": "10000000"
+                },
+                "accountName": {
+                    "value": "Party A"
+                },
+                "accountBeneficiary": {
+                    "globalReference": "Party 2",
+                    "externalReference": ""
+                }
+            }
+        ]
+    }
+}

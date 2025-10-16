@@ -1,0 +1,71 @@
+{
+    "AgreementDate": "2012-11-15",
+    "EffectiveDate": "2013-01-01",
+    "TerminationDate": "2013-03-30",
+    "TradeDate": "2012-11-15",
+    "AcceptanceDate": "2012-11-15",
+    "AcceptanceSignature": {
+        "PartyA": "______________________",
+        "PartyB": "______________________"
+    },
+    "Counterparty": [
+        {
+            "Party": "PartyA",
+            "PartyReference": "7fd57548",
+            "ExternalReference": "Party A",
+            "Role": "Seller"
+        },
+        {
+            "Party": "PartyB",
+            "PartyReference": "4041c228",
+            "ExternalReference": "Party B",
+            "Role": "Buyer"
+        }
+    ],
+    "Trade": {
+        "TradeType": "CommodityOption",
+        "NotionalAmount": 100000,
+        "Underlying": {
+            "Commodity": {
+                "CommodityType": "Oil",
+                "CommodityIdentifier": "Brent"
+            }
+        },
+        "Option": {
+            "OptionType": "Call",
+            "StrikePrice": 80.0,
+            "ExerciseDates": [
+                "2013-01-31",
+                "2013-02-28",
+                "2013-03-31"
+            ]
+        },
+        "Settlement": {
+            "SettlementCurrency": "USD",
+            "SettlementDate": "5 business days after the exercise date"
+        },
+        "Payment": {
+            "PaymentCurrency": "USD",
+            "PaymentDate": "5 business days after the exercise date"
+        },
+        "CalculationAgent": "PartyA"
+    },
+    "TransferHistory": [
+        {
+            "TransferDate": "2012-11-15",
+            "TransferAmount": 30000,
+            "TransferCurrency": "USD",
+            "TransferType": "Transfer",
+            "TransferParty": "PartyB"
+        }
+    ],
+    "RiskDisclosure": {
+        "RiskDisclosureStatement": "The buyer and seller acknowledge that they have read and understood the risk disclosure statement and that they are aware of the risks associated with this contract, including but not limited to, market risk, credit risk, and liquidity risk."
+    },
+    "Representations": {
+        "Representation": "The buyer and seller represent that they have the power to enter into this contract and that they have taken all necessary action to authorize such execution."
+    },
+    "GoverningLaw": {
+        "Jurisdiction": "The laws of the jurisdiction specified in the contract"
+    }
+}

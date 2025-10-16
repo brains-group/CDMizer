@@ -1,0 +1,2484 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "UniqueTransactionIdentifier",
+                "issuerReference": {
+                    "globalReference": "33f59567",
+                    "externalReference": "party1"
+                },
+                "issuer": {
+                    "value": "Buyside",
+                    "meta": {
+                        "scheme": ""
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "buyside-trade-id",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "version": null
+                    },
+                    {
+                        "identifier": {
+                            "value": "sellside-trade-id",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "version": null
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Interest Rate Swap Contract",
+            "meta": {
+                "globalKey": "contract_type",
+                "externalKey": "irs"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2010-12-12",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODFOLLOWING"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2010-12-12",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Modified Following"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "interestRatePayout": [
+                                {
+                                    "rateSpecification": {
+                                        "fixedRate": {
+                                            "rateSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "CONTRACT",
+                                                        "value": "price-xyz1234"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "floatingRate": {
+                                            "initialRate": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                },
+                                                "priceType": "InterestRate",
+                                                "value": {
+                                                    "value": "4.427",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "Percent"
+                                                        }
+                                                    },
+                                                    "perUnitOf": {
+                                                        "currency": {
+                                                            "value": "Percent"
+                                                        }
+                                                    }
+                                                },
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "Annual"
+                                                    }
+                                                }
+                                            },
+                                            "finalRateRounding": {
+                                                "roundingDirection": "Nearest",
+                                                "precision": 7
+                                            },
+                                            "floatingRateMultiplierSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "CONTRACT",
+                                                        "value": "price-1"
+                                                    }
+                                                }
+                                            },
+                                            "rateTreatment": " Based on the provided context and the contract description, the key \"rateTreatment\" refers to the method used to calculate the floating rate in the contract. In this case, the floating rate is not explicitly stated to be discounted or adjusted, so the most appropriate value for the key \"rateTreatment\" would be \"plain\".\n\nHere is the populated JSON object with the placeholder replaced:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"rateSpecification\": {\n                    \"floatingRate\": {\n                      \"rateOption\": {\n                        \"address\": {\n                          \"scope\": \"DOCUMENT\",\n                          \"value\": \"rateOption-1\"\n                        }\n                      },\n                      \"meta\": {\n                        \"globalKey\": \"24779ebe\"\n                      },\n                      \"calculationParameters\": {\n                        \"calculationMethod\": \"Averaging\",\n                        \"lookbackCalculation\": {\n                          \"offsetDays\": 5\n                        },\n                        \"applicableBusinessDays\": {\n                          \"businessCenter\": [\n                            {\n                              \"value\": \"EUTA\"\n                            }\n                          ],\n                          \"meta\": {\n                            \"globalKey\": \"20a71d\"\n                          }\n                        },\n                        \"observationParameters\": {\n                          \"observationCapRate\": 0.\n                        }\n                      },\n                      \"meta\": {\n                        \"globalKey\": \"0\"\n                      }\n                    },\n                    \"rateTreatment\": \"plain\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                            "calculationParameters": {
+                                                "calculationMethod": "CompoundedIndex",
+                                                "observationShiftCalculation": {
+                                                    "offsetDays": 5,
+                                                    "calculationBase": "Standard",
+                                                    "additionalBusinessDays": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "applicableBusinessDays": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        }
+                                                    ]
+                                                },
+                                                "observationParameters": {
+                                                    "observationCapRate": 0.02
+                                                }
+                                            },
+                                            "fallbackRate": {
+                                                "floatingRateIndex": " Based on the provided inputs, the 'key' is `floatingRateIndex`. The prior context suggests that this key should be related to the floating rate of the contract.\n\nIn the given derivatives contract description, the floating rate is specified as the Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate, which is not a specific index. However, the prior context does not provide any information about a fallback rate or a specific index for the floating rate.\n\nSince no specific index is provided and the contract does not mention a fallback rate, the best suited information for the `floatingRateIndex` key would be an empty string (\"\"). This is because the key is asking for an index, but in this case, there is no index specified in the contract.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"floatingRateIndex\": \"\"\n}\n```",
+                                                "effectiveDate": " Based on the provided inputs, the key is 'effectiveDate'. The prior context suggests that we should look for the effective date of the 'calculationPeriodDates' for the 'floatingRate' and 'fixedRate' of the contract.\n\nIn the given contract description, the effective date for the floating rate and fixed rate calculation periods are both on October 5, 2010.\n\nHowever, since the prior context suggests 'calculationPeriodDates', we should look for the adjusted date of the effective date for both the floating rate and fixed rate.\n\nIn the provided contract description, the adjusted date for the effective date of the floating rate calculation period is not given. But for the fixed rate calculation period, the adjusted date is October 12, 2010.\n\nSo, the placeholder for the 'effectiveDate' key should be populated with '2010-10-12'.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"effectiveDate\": \"2010-10-12\"\n}\n```",
+                                                "calculationParameters": {
+                                                    "calculationMethod": "Compounded",
+                                                    "observationShiftCalculation": {
+                                                        "offsetDays": 5,
+                                                        "calculationBase": "CalculationPeriodEndDate",
+                                                        "additionalBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "primaryBusinessCenters"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "applicableBusinessDays": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "primaryBusinessCenters"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "spreadAdjustment": " Based on the provided context and the contract description, the'spreadAdjustment' key does not have a direct counterpart in the given derivatives contract description. The contract does not specify any spread adjustment for the floating rate. Therefore, the placeholder for'spreadAdjustment' should remain unchanged.\n\nHere is the updated JSON object with the unchanged placeholder:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"rateSpecification\": {\n                    \"floatingRate\": {\n                      \"fallbackRate\": {\n                        \"spreadAdjustment\": \"\"\n                      }\n                    }\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```"
+                                            },
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "Buyside",
+                                                    "value": "Buyside's address"
+                                                }
+                                            },
+                                            "spreadSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "CONTRACT",
+                                                        "value": "spread-type"
+                                                    }
+                                                }
+                                            },
+                                            "capRateSchedule": {
+                                                "buyer": "Receiver",
+                                                "seller": "Payer",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "price-1"
+                                                    }
+                                                }
+                                            },
+                                            "floorRateSchedule": {
+                                                "buyer": "Receiver",
+                                                "seller": "Payer",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "price-1"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "unique_key"
+                                                }
+                                            }
+                                        },
+                                        "inflationRate": {
+                                            "inflationLag": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "indexSource": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "mainPublication": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "interpolationMethod": {
+                                                "value": ""
+                                            },
+                                            "initialIndexLevel": null,
+                                            "fallbackBondApplicable": null,
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "",
+                                                    "value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dayCountFraction": {
+                                        "value": {
+                                            "name": {
+                                                "value": "Interest Rate Swap",
+                                                "meta": {
+                                                    "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-contract-type"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "effectiveDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            },
+                                                            {
+                                                                "value": "MEXICO"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "relativeDateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "20a71d"
+                                                        }
+                                                    }
+                                                },
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "20a71d"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "tradeDate",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": 1,
+                                                "period": "Y"
+                                            }
+                                        },
+                                        "terminationDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            },
+                                                            {
+                                                                "value": "MEXICO"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "20a71d"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "tradeDate",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "Y",
+                                                "meta": {
+                                                    "globalKey": "3494f012"
+                                                }
+                                            }
+                                        },
+                                        "calculationPeriodDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "42f910b",
+                                                    "externalReference": "primaryBusinessCenters"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "3494f012"
+                                            }
+                                        },
+                                        "firstPeriodStartDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "firstRegularPeriodStartDate": " Based on the provided inputs, the key is 'firstRegularPeriodStartDate', the placeholder is empty, and the prior context is 'trade.tradableProduct.product.contractualProduct.economicTerms.payout.interestRatePayout[0].calculationPeriodDates.firstRegularPeriodStartDate'.\n\nFrom the derivatives contract description, we can see that the first regular period start date for the fixed-for-floating interest rate swap is October 5, 2011.\n\nSince the placeholder is empty, we will populate it with a string representing the date.\n\nThe populated placeholder will be:\n\n\"2011-10-05\"\n\nThis string represents the first regular period start date in the format 'YYYY-MM-DD'.",
+                                        "firstCompoundingPeriodEndDate": " Based on the provided inputs, the key is `firstCompoundingPeriodEndDate`. The prior context suggests that this key should be populated with the date of the first compounding period end.\n\nIn the given derivatives contract description, the first compounding period end date is October 5, 2011. Therefore, the placeholder should be populated with the string `\"2011-10-05\"`.\n\nHowever, since the placeholder is a date object, it should be formatted according to the ISO 8601 standard, which is `\"2011-10-05T00:00:00Z\"`.\n\nSo, the populated JSON object would look like this:\n\n```json\n{\n  \"firstCompoundingPeriodEndDate\": \"2011-10-05T00:00:00Z\"\n}\n```",
+                                        "lastRegularPeriodEndDate": " Based on the provided context and the contract description, the key `lastRegularPeriodEndDate` refers to the end date of the last regular payment period for the fixed rate in the interest rate swap contract.\n\nIn this contract, the fixed rate payments are made annually, from October 5 to October 5 of the consecutive year, with a payment date 2 business days after October 5. The last regular payment period would be the one ending on October 5, 2015.\n\nHowever, the contract does not explicitly specify the end date for this last regular payment period. Therefore, according to the instructions, we should leave the placeholder unchanged as it is not possible to accurately determine the value for `lastRegularPeriodEndDate` based on the provided contract description.\n\nSo, the placeholder for `lastRegularPeriodEndDate` should remain as it is: `\"\"`.",
+                                        "stubPeriodType": " Based on the provided inputs, the key to be populated is `stubPeriodType`. However, the contract description does not explicitly provide information about the type of stub period. Therefore, we cannot accurately populate this key with a specific value.\n\nThe prior context suggests that `stubPeriodType` is related to the `calculationPeriodDates` of the `stubPeriod`. In the given contract, the calculation period dates are annual, from October 5 to October 5 of the consecutive year for both fixed and floating rates.\n\nSince the stub period type is not explicitly defined in the contract, it is reasonable to assume that the stub period type is the same as the calculation period type, which is annual in this case.\n\nHowever, it's important to note that this is an assumption, as the contract does not provide explicit information about the stub period type. If more information about the stub period type becomes available in the future, the assumption can be re-evaluated.\n\nHere's how the placeholder would be populated based on the assumption:\n\n```json\n\"stubPeriodType\": \"Annual\"\n```\n\nThis response should be considered a best effort response, as the assumption about the stub period type is not explicitly stated in the contract.",
+                                        "calculationPeriodFrequency": {
+                                            "rollConvention": "2",
+                                            "periodMultiplier": 1,
+                                            "period": "Y"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "paymentFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "A"
+                                        },
+                                        "firstPaymentDate": " Based on the provided inputs, the key to be populated is \"firstPaymentDate\". The prior context suggests that this key should be populated with the date of the first payment in the contract.\n\nFrom the derivatives contract description, we can see that the first payment date for the fixed leg is October 7, 2011. However, the prior context suggests that we should look for the first payment date of the entire contract, not just one leg.\n\nSince both the fixed and floating legs have the same first payment date, we can use that date for the \"firstPaymentDate\" key.\n\nTherefore, the placeholder should be populated as follows:\n\n\"firstPaymentDate\": \"2011-10-07\"\n\nThis ensures that the datatype is maintained (a string), and the value is the first payment date of the entire contract.",
+                                        "lastRegularPaymentDate": " Based on the provided context and the contract description, the key \"lastRegularPaymentDate\" refers to the date of the last regular payment in the contract. In this case, the contract specifies that the payments are made annually, with the last payment date being October 7, 2015.\n\nTherefore, the placeholder for \"lastRegularPaymentDate\" should be populated with the string \"2015-10-07\".\n\nHere is the updated JSON object with the populated placeholder:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"paymentDates\": {\n                    \"lastRegularPaymentDate\": \"2015-10-07\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "paymentDateSchedule": {
+                                            "interimPaymentDates": [
+                                                {
+                                                    "periodicDates": {
+                                                        "periodFrequency": {
+                                                            "periodMultiplier": 1,
+                                                            "period": "T"
+                                                        },
+                                                        "payRelativeTo": "CalculationPeriodEndDate",
+                                                        "paymentDatesAdjustments": {
+                                                            "businessDayConvention": "MODFOLLOWING",
+                                                            "businessCenters": {
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": "EUTA"
+                                                                    }
+                                                                ],
+                                                                "meta": {
+                                                                    "globalKey": "20a71d"
+                                                                }
+                                                            },
+                                                            "meta": {
+                                                                "globalKey": "365baaee"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "aaca4987",
+                                                            "externalKey": "paymentDates"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "payRelativeTo": " Based on the provided inputs, the 'payRelativeTo' key should be populated with the string \"CalculationPeriodEndDate\". This is because the payment dates for both the fixed and floating rate payments are defined as being 2 business days after the end of the calculation period, which is annually from October 5 to October 5 of the consecutive year. Therefore, the 'payRelativeTo' key should reflect this relationship.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"payRelativeTo\": \"CalculationPeriodEndDate\"\n}\n```",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business",
+                                            "periodMultiplier": 1,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "4158421",
+                                                    "externalReference": "primaryBusinessCenters"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "paymentDate": {
+                                        "unadjustedDate": "2010-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "EUTA"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resetDates": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "xyz1234",
+                                            "externalReference": "trade_calculation_period_dates"
+                                        },
+                                        "resetRelativeTo": "CalculationPeriodStartDate",
+                                        "fixingDates": {
+                                            "periodMultiplier": -2,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "fixing_dates"
+                                            },
+                                            "dayType": "Business",
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "business_centers"
+                                                }
+                                            },
+                                            "dateRelativeTo": {
+                                                "globalReference": "reset_dates",
+                                                "externalReference": "trade_reset_dates"
+                                            }
+                                        },
+                                        "resetFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "A",
+                                            "weeklyRollConvention": "None"
+                                        },
+                                        "resetDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "business_centers_adjustments"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "discountingMethod": {
+                                        "discountingMethod": {
+                                            "discountingType": "FRA"
+                                        }
+                                    },
+                                    "compoundingMethod": " Based on the provided context and the contract description, the compoundingMethod for this Interest Rate Swap Contract is \"Flat\". Therefore, the placeholder for the key \"compoundingMethod\" should be populated as follows:\n\n```json\n\"compoundingMethod\": \"Flat\"\n```\n\nThis is because the contract specifies that both the fixed and floating legs of the swap have a \"Flat\" compounding method.",
+                                    "cashflowRepresentation": {
+                                        "cashflowsMatchParameters": " Based on the provided inputs, the 'key' is `cashflowsMatchParameters`. The prior context suggests that we are looking for this key within the `cashflowRepresentation` object.\n\nThe derivatives contract description provides information about an interest rate swap contract with two parties, Buyside and Sellside. The contract has fixed and floating rate payments, with the fixed rate being 4.427% per annum and the floating rate being the Mexican TIIE rate.\n\nIn the given examples, the `cashflowsMatchParameters` key is set to `true` for both fixed and floating rate cashflows. Therefore, to maintain the same datatype and follow the examples, we should populate the `cashflowsMatchParameters` placeholder with `true` for both fixed and floating rate cashflows in the provided contract.\n\nHere's the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"cashflowRepresentation\": {\n                    \"cashflowsMatchParameters\": true,\n                    \"paymentCalculationPeriod\": [\n                      {\n                        \"calculationPeriod\": [\n                          {\n                            \"notionalAmount\": 50000000,\n                            \"fixedRate\": 4.427,\n                            \"meta\": {\n                              \"globalKey\": \"c2218d3c\"\n                            }\n                          }\n                        ],\n                        \"meta\": {\n                          \"globalKey\": \"cashflowsMatchParameters-fixed\",\n                          \"externalKey\": \"cashflowsMatchParameters-fixed\"\n                        }\n                      },\n                      {\n                        \"calculationPeriod\": [\n                          {\n                            \"notionalAmount\": 50000000,\n                            \"floatingRateDefinition\": {\n                              \"rateObservation\": [\n                                {\n                                  \"meta\": {\n                                    \"globalKey\": \"floatingRateDefinition-floating\"\n                                  }\n                                }\n                              ],\n                              \"meta\": {\n                                \"globalKey\": \"floatingRateDefinition-floating\"\n                              }\n                            },\n                            \"meta\": {\n                              \"globalKey\": \"cashflowsMatchParameters-floating\",\n                              \"externalKey\": \"cashflowsMatchParameters-floating\"\n                            }\n                          }\n                        ]\n                      }\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```\n\nThis JSON object follows the provided examples and maintains the same datatype for the `cashflowsMatchParameters` key.",
+                                        "paymentCalculationPeriod": [
+                                            {
+                                                "adjustedPaymentDate": " Based on the provided inputs, the key to be populated is \"adjustedPaymentDate\". The prior context suggests that we are looking for the adjusted payment dates for the fixed leg of the interest rate swap contract.\n\nFrom the contract description, we can see that the fixed payment dates are annually, 2 business days after October 5, commencing on October 7, 2011, and ending on October 7, 2015.\n\nTo populate the placeholder, we will create a list of adjusted payment dates that match the structure of the placeholder.\n\n```json\n[\n  {\n    \"adjustedPaymentDate\": \"2011-10-19\",\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"fixedLegPaymentDates0\"\n    }\n  },\n  {\n    \"adjustedPaymentDate\": \"2012-10-18\",\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"fixedLegPaymentDates1\"\n    }\n  },\n  {\n    \"adjustedPaymentDate\": \"2013-10-17\",\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"fixedLegPaymentDates2\"\n    }\n  },\n  {\n    \"adjustedPaymentDate\": \"2014-10-16\",\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"fixedLegPaymentDates3\"\n    }\n  },\n  {\n    \"adjustedPaymentDate\": \"2015-10-15\",\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"fixedLegPaymentDates4\"\n    }\n  }\n]\n```\n\nThis list contains the adjusted payment dates for the fixed leg of the interest rate swap contract, following the structure of the placeholder.",
+                                                "calculationPeriod": [
+                                                    {
+                                                        "unadjustedStartDate": "2010-12-12",
+                                                        "unadjustedEndDate": "2015-12-14",
+                                                        "calculationPeriodNumberOfDays": 360,
+                                                        "notionalAmount": "50000000",
+                                                        "fxLinkedNotionalAmount": {
+                                                            "adjustedFxSpotFixingDate": ""
+                                                        },
+                                                        "floatingRateDefinition": {
+                                                            "rateObservation": [
+                                                                {
+                                                                    "adjustedFixingDate": "2010-10-05",
+                                                                    "observationWeight": 1,
+                                                                    "meta": {
+                                                                        "globalKey": "floatingResetDates"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        "fixedRate": "4.427",
+                                                        "adjustedStartDate": "2011-10-07",
+                                                        "adjustedEndDate": "2015-10-07"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "stubPeriod": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "trade_identifier",
+                                            "externalReference": "calculation_period_dates"
+                                        },
+                                        "initialStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "Mexican_TIIE",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "M"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": 0.0
+                                        },
+                                        "finalStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "Mexican_TIIE",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "M"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": 0.0
+                                        }
+                                    },
+                                    "bondReference": {
+                                        "bond": {
+                                            "identifier": {
+                                                "value": "xyz1234 (buyside-trade-id) or abc1234 (sellside-trade-id)",
+                                                "meta": {
+                                                    "scheme": "Custom scheme for trade identifiers"
+                                                }
+                                            },
+                                            "source": "Custom source for trade identifiers"
+                                        },
+                                        "conditionPrecedentBond": ""
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "buyside",
+                                                "value": "Buyside"
+                                            }
+                                        },
+                                        "quantityReference": {
+                                            "globalReference": "b6bdbfc2",
+                                            "externalReference": "p1"
+                                        },
+                                        "quantityMultiplier": {
+                                            "fxLinkedNotionalSchedule": {
+                                                "varyingNotionalCurrency": {
+                                                    "value": ""
+                                                },
+                                                "varyingNotionalFixingDates": {
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                },
+                                                "fxSpotRateSource": {
+                                                    "primarySource": {
+                                                        "sourceProvider": {
+                                                            "value": ""
+                                                        },
+                                                        "sourcePage": {
+                                                            "value": ""
+                                                        },
+                                                        "sourcePageHeading": ""
+                                                    }
+                                                },
+                                                "fixingTime": {
+                                                    "hourMinuteTime": "",
+                                                    "businessCenter": {
+                                                        "value": ""
+                                                    }
+                                                },
+                                                "varyingNotionalInterimExchangePaymentDates": {
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        },
+                                        "futureValueNotional": {
+                                            "quantity": {
+                                                "address": {
+                                                    "scope": "",
+                                                    "value": ""
+                                                },
+                                                "currency": {
+                                                    "value": "MXN"
+                                                },
+                                                "calculationPeriodNumberOfDays": 365,
+                                                "valueDate": "2010-12-12"
+                                            }
+                                        }
+                                    },
+                                    "principalPayment": {
+                                        "initialPayment": " Based on the provided inputs, the key is \"initialPayment\" and the prior context is \"trade.tradableProduct.product.contractualProduct.economicTerms.payout.interestRatePayout[0].principalPayment.initialPayment\".\n\nFrom the derivatives contract description, we can see that the initial payment is made annually, 2 business days after October 5, commencing on October 7, 2011, and ending on October 7, 2015. Since the key \"initialPayment\" is a boolean, we can replace the placeholder with \"true\" for each year from 2011 to 2015.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"principalPayment\": {\n                    \"initialPayment\": [true, true, true, true, true]\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "finalPayment": " Based on the provided inputs, the key is 'finalPayment' and the prior context is 'trade.tradableProduct.product.contractualProduct.economicTerms.payout.interestRatePayout[0].principalPayment.finalPayment'.\n\nFrom the derivatives contract description, we can see that the contract involves two parties, Buyside and Sellside, and it is an interest rate swap contract with fixed and floating payments. The fixed rate is 4.427% per annum, and the floating rate is the Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate. The notional amount for both the fixed and floating payments is 50,000,000 MXN. The payment dates are annually, 2 business days after October 5, commencing on October 7, 2011, and ending on October 7, 2015.\n\nGiven the prior context, we can see that 'finalPayment' is a property within the 'principalPayment' object. The 'principalPayment' object is a property within the 'interestRatePayout' array, which is a property within the 'payout' object, which is a property within the 'economicTerms' object, which is a property within the 'contractualProduct' object, which is a property within the 'product' object, which is a property within the 'tradableProduct' object, which is a property within the 'trade' object.\n\nFrom the contract description, we can see that the final payment for the fixed rate is made annually, 2 business days after October 5, commencing on October 7, 2011, and ending on October 7, 2015. Therefore, we can populate the placeholder with a list of dates for the final payments.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"interestRatePayout\": [\n                {\n                  \"principalPayment\": {\n                    \"finalPayment\": [\n                      \"2011-10-19\",\n                      \"2012-10-18\",\n                      \"2013-10-17\",\n                      \"2014-10-16\",\n                      \"2015-10-15\"\n                    ]\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "intermediatePayment": " Based on the provided inputs, the key is \"intermediatePayment\" and the prior context is \"trade.tradableProduct.product.contractualProduct.economicTerms.payout.interestRatePayout[0].principalPayment.intermediatePayment\".\n\nFrom the derivatives contract description, it is clear that there are intermediate payments for both the fixed and floating rates. However, the provided context suggests that we should focus on the fixed rate payments.\n\nThe fixed rate payment details are as follows:\n\n* Notional Amount: 50,000,000 MXN\n* Fixed Rate: 4.427% per annum\n* Calculation Period: Annually, from October 5 to October 5 of the consecutive year\n* Payment Dates: Annually, 2 business days after October 5, commencing on October 7, 2011, and ending on October 7, 2015\n* Day Count: ACT/360\n\nSince the context suggests intermediate payments, we will focus on the payment dates and calculate the number of intermediate payments.\n\nThe first payment date is October 7, 2011, and the last payment date is October 7, 2015. There are 5 years between these dates, and since the payments are annual, there are 5 payment dates. However, the first payment is not an intermediate payment as it is the initial payment. So, there are 4 intermediate payments.\n\nNow, we need to populate the placeholder with the correct datatype. Since the placeholder is empty, we will populate it with a list of 4 objects, each representing an intermediate payment.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"intermediatePayment\": [\n    {\n      \"notionalAmount\": \"50000000\",\n      \"fixedRate\": \"4.427\",\n      \"calculationPeriod\": \"Annually\",\n      \"paymentDate\": \"October 7, 2011\",\n      \"dayCount\": \"ACT/360\"\n    },\n    {\n      \"notionalAmount\": \"50000000\",\n      \"fixedRate\": \"4.427\",\n      \"calculationPeriod\": \"Annually\",\n      \"paymentDate\": \"October 7, 2012\",\n      \"dayCount\": \"ACT/360\"\n    },\n    {\n      \"notionalAmount\": \"50000000\",\n      \"fixedRate\": \"4.427\",\n      \"calculationPeriod\": \"Annually\",\n      \"paymentDate\": \"October 7, 2013\",\n      \"dayCount\": \"ACT/360\"\n    },\n    {\n      \"notionalAmount\": \"50000000\",\n      \"fixedRate\": \"4.427\",\n      \"calculationPeriod\": \"Annually\",\n      \"paymentDate\": \"October 7, 2014\",\n      \"dayCount\": \"ACT/360\"\n    }\n  ]\n}\n```\n\nThis JSON object contains 4 objects, each representing an intermediate payment for the fixed rate. The notional amount, fixed rate, calculation period, payment date, and day count are populated based on the provided derivatives contract description and the given key and prior context.",
+                                        "principalPaymentSchedule": {
+                                            "initialPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2011-10-07",
+                                                    "adjustedDate": {
+                                                        "value": "2011-10-10",
+                                                        "meta": {
+                                                            "globalKey": "principal_payment_1_adjusted_date"
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Buyside",
+                                                    "receiver": "Sellside"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "50000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "finalPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2015-10-07",
+                                                    "adjustedDate": {
+                                                        "value": "2015-10-10",
+                                                        "meta": {
+                                                            "globalKey": "principal_payment_2_adjusted_date"
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Sellside",
+                                                    "receiver": "Buyside"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "50000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "cash settlement",
+                                                                "meta": {
+                                                                    "scheme": "cash"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "MXN"
+                                                            }
+                                                        }
+                                                    },
+                                                    "minimumQuotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "MXN"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ],
+                                                            "meta": {
+                                                                "globalKey": "20a71d"
+                                                            }
+                                                        },
+                                                        "dateRelativeToPaymentDates": {
+                                                            "paymentDatesReference": [
+                                                                {
+                                                                    "globalReference": "paymentDates",
+                                                                    "externalReference": "paymentDates"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToCalculationPeriodDates": {
+                                                            "calculationPeriodDatesReference": [
+                                                                {
+                                                                    "globalReference": "floatingCalcPeriodDates",
+                                                                    "externalReference": "floatingCalcPeriodDates"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": 1,
+                                                        "period": "D"
+                                                    },
+                                                    "fxFixingSchedule": {
+                                                        "unadjustedDate": [
+                                                            ""
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "businessDayConvention": "MODFOLLOWING",
+                                                            "businessCenters": {
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": "EUTA"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "cashSettlementAmount": {
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN",
+                                                            "meta": {
+                                                                "scheme": "http://www.fpml.org/coding-scheme/external/iso4217"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "name": {
+                                                    "value": "Interest Rate Swap",
+                                                    "meta": {
+                                                        "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-contract-type"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": {
+                                            "name": {
+                                                "value": "Buyside",
+                                                "meta": {
+                                                    "scheme": "http://www.fpml.org/coding-scheme/party-taxonomy"
+                                                }
+                                            },
+                                            "party": "Buyside"
+                                        },
+                                        "seller": {
+                                            "name": {
+                                                "value": "Sellside",
+                                                "meta": {
+                                                    "scheme": "http://www.fpml.org/coding-scheme/party-taxonomy"
+                                                }
+                                            },
+                                            "party": "Sellside"
+                                        }
+                                    },
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "InterestRate_IRSwap_FixedFloat",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISDA",
+                                                        "value": "InterestRate:IRSwap:FixedFloat"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the key is 'optionType'. The prior context suggests that we should look for the type of option in the economic terms of the contract. In this case, the contract is an Interest Rate Swap, which does not have an option type in the traditional sense. However, in a swap contract, one party can have a call option (receiving the difference if the rate goes up) and the other party can have a put option (receiving the difference if the rate goes down).\n\nIn this contract, Buyside is paying a fixed rate and Sellside is paying a floating rate based on the Mexican TIIE rate. This implies that Buyside does not have an option (it is obligated to pay the fixed rate), while Sellside has a put option (it can receive the difference if the floating rate goes down).\n\nHowever, since the contract does not explicitly state that Sellside has a put option, we cannot definitively say that Sellside has a put option. Therefore, we should leave the placeholder unchanged for the 'optionType' key, as there is no highly relevant data available for this key.\n\nSo, the placeholder for 'optionType' should remain empty:\n\noptionType: \"\"",
+                                    "exerciseTerms": {
+                                        "style": " Based on the provided inputs and the instructions, the placeholder for the key \"style\" should be populated with the string \"European\". This is derived from the \"exerciseTerms.style\" in the \"terminationProvision.extendibleProvision.exerciseTerms\" section of the derivatives contract description.\n\nThe updated JSON object with the populated placeholder would look like this:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"exerciseTerms\": {\n                    \"style\": \"European\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2010-12-12",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "earliestExerciseTime": {
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODIFIED_FOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "globalKey_for_businessCenters"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "globalKey_for_dateAdjustments"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "globalKey_for_earliestExerciseTime",
+                                                "externalKey": "EXERCISE"
+                                            },
+                                            "earliestExerciseTime": {
+                                                "hourMinuteTime": "09:00:00",
+                                                "businessCenter": {
+                                                    "value": "GBLO"
+                                                }
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 200,
+                                            "integralMultipleAmount": 1,
+                                            "minimumNumberOfOptions": 20
+                                        },
+                                        "exerciseProcedure": {
+                                            "manualExercise": {
+                                                "exerciseNotice": {
+                                                    "exerciseNoticeGiver": "Buyside, Sellside",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                },
+                                                "followUpConfirmation": true,
+                                                "limitedRightToConfirm": null,
+                                                "splitTicket": null
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "MXN",
+                                                    "meta": {
+                                                        "scheme": "ISODate"
+                                                    }
+                                                }
+                                            },
+                                            "priceType": "FixedRate",
+                                            "value": "4.427",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "%",
+                                                    "meta": {
+                                                        "scheme": "Percentage"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "referenceSwapCurve": {
+                                            "swapUnwindValue": {
+                                                "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario)",
+                                                "indexTenor": {
+                                                    "periodMultiplier": null,
+                                                    "period": "Annually"
+                                                },
+                                                "spread": null,
+                                                "side": ""
+                                            },
+                                            "makeWholeAmount": {
+                                                "interpolationMethod": "",
+                                                "earlyCallDate": {
+                                                    "value": "November 3, 2015",
+                                                    "meta": {
+                                                        "globalKey": "earlyCallDate"
+                                                    }
+                                                },
+                                                "floatingRateIndex": "",
+                                                "spread": null,
+                                                "side": ""
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "CONTRACT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": " Based on the provided inputs, the'settlementType' key should be populated with the value \"Cash\". This is derived from the \"cashSettlement\" object in the contract description, which specifies that the settlement type is \"Cash\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"settlementTerms\": {\n                    \"settlementType\": \"Cash\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "name": {
+                                                    "value": "Interest Rate Swap",
+                                                    "meta": {
+                                                        "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-contract-type"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementDate",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Annually"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "InterestRate_IRSwap_FixedFloat",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISDA",
+                                                        "value": "InterestRate:IRSwap:FixedFloat"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "CONTRACT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": {
+                                            "settlementType": "Cash",
+                                            "settlementCurrency": {
+                                                "value": "EUR"
+                                            },
+                                            "settlementDate": {
+                                                "adjustableDates": {
+                                                    "unadjustedDate": [
+                                                        "2011-10-07",
+                                                        "2012-10-07",
+                                                        "2013-10-07",
+                                                        "2014-10-07",
+                                                        "2015-10-07"
+                                                    ],
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "FOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "GBLO"
+                                                                },
+                                                                {
+                                                                    "value": "EUTA"
+                                                                }
+                                                            ],
+                                                            "meta": {
+                                                                "globalKey": "428533f"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "da4e2f6e"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "d0222bae"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "terminationProvision": {
+                            "cancelableProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "GBLO"
+                                    }
+                                },
+                                "followUpConfirmation": " Based on the provided inputs, the 'key' is 'followUpConfirmation'. The prior context suggests that we are looking for a boolean value that indicates whether a follow-up confirmation is required.\n\nIn the given derivatives contract description, there is no explicit mention of a follow-up confirmation requirement. However, in the examples provided, the 'followUpConfirmation' key is associated with a boolean value, and it is set to 'true' in the cancelableProvision object. Since there is no contradictory information in the contract description, we can assume that the follow-up confirmation is required.\n\nTherefore, the placeholder for the 'followUpConfirmation' key should be populated with 'true'.\n\nHere is the updated JSON object with the populated placeholder:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"cancelableProvision\": {\n                \"buyer\": \"Party2\",\n                \"seller\": \"Party1\",\n                \"exerciseNotice\": {\n                  \"businessCenter\": {\n                    \"value\": \"GBLO\"\n                  }\n                },\n                \"followUpConfirmation\": true,\n\n\"meta\": {\n                    \"globalKey\": \"e30c2739\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                "exerciseTerms": {
+                                    "style": " Based on the provided inputs and the instructions, the placeholder for the key \"style\" should be populated with the value \"European\". This is derived from the \"exerciseTerms.style\" in the derivatives contract description.\n\nThe updated JSON object with the populated placeholder would look like this:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"cancelableProvision\": {\n                \"exerciseTerms\": {\n                  \"style\": \"European\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            },
+                                                            {
+                                                                "value": "MX"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "93c845ff"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "214e084d"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "3494f012"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                ""
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCentersReference": {
+                                                        "globalReference": "42f910b",
+                                                        "externalReference": "primaryBusinessCenters"
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "eb13047c"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "214e084d"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "3494f012"
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "GBLO"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "globalKey_from_context"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "globalKey_from_context"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "globalKey_from_context",
+                                            "externalKey": "EXERCISE"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "09:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": " Based on the provided inputs, the key is \"buyer\". The prior context suggests that we are looking for the counterparty or party that corresponds to the buyer in the derivatives contract.\n\nFrom the contract description, we can see that the two parties involved in the contract are Buyside and Sellside. Since the key \"buyer\" is asking for the party that corresponds to the buyer, the best suited information to populate the placeholder would be \"Buyside\".\n\nHowever, since the placeholder is a list containing a single object, we need to populate it with a LIST of objects following the exact same structure (add as many items as necessary). In this case, since there is only one party that corresponds to the buyer, we will duplicate and populate the structure to reflect the bilateral nature of the contract.\n\nHere is the populated JSON object:\n\n```json\n[\n  {\n    \"partyId\": [\n      {\n        \"identifier\": {\n          \"value\": \"\",\n          \"meta\": {\n            \"globalKey\": \"\"\n          }\n        },\n        \"identifierType\": \"\",\n        \"meta\": {\n          \"globalKey\": \"\"\n        }\n      }\n    ],\n    \"name\": {\n      \"value\": \"Buyside\"\n    },\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"partyA\"\n    }\n  },\n  {\n    \"partyId\": [\n      {\n        \"identifier\": {\n          \"value\": \"\",\n          \"meta\": {\n            \"globalKey\": \"\"\n          }\n        },\n        \"identifierType\": \"\",\n        \"meta\": {\n          \"globalKey\": \"\"\n        }\n      }\n    ],\n    \"name\": {\n      \"value\": \"Sellside\"\n    },\n    \"meta\": {\n      \"globalKey\": \"\",\n      \"externalKey\": \"partyB\"\n    }\n  }\n]\n```\n\nThis JSON object contains two objects, each representing a party involved in the contract. The first object corresponds to Buyside, the buyer, and the second object corresponds to Sellside, the seller. Both objects have the same structure, as required by the prior context.",
+                                "seller": " Based on the provided inputs, the key is'seller'. The prior context (path) leads to the counterparty of the contract.\n\nIn the given derivatives contract description, the counterparty is identified as \"Buyside\" and \"Sellside\". Since the key'seller' is asking for the seller's name, we can populate the placeholder with \"Sellside\".\n\nThe placeholder is a string, so we will replace it with a string that represents the seller's name.\n\nThe populated JSON object would look like this:\n\n```json\n{\n  \"seller\": \"Sellside\"\n}\n```"
+                            },
+                            "earlyTerminationProvision": {
+                                "mandatoryEarlyTermination": {
+                                    "mandatoryEarlyTerminationDate": {
+                                        "unadjustedDate": "2010-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "EUTA"
+                                                    },
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "93c845ff"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "214e084d"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "3494f012"
+                                        }
+                                    },
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Buyside"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": " Based on the provided inputs, the 'cashSettlementMethod' key should be populated with the method used for the cash settlement of this derivatives contract. In the given contract description, there is no explicit mention of a cash settlement method. However, the contract does specify that the interest rate swap is a fixed-for-floating contract, and it involves periodic payments.\n\nSince the contract does not provide a specific cash settlement method, it is best to leave the placeholder unchanged, as per the instructions.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"earlyTerminationProvision\": {\n                \"mandatoryEarlyTermination\": {\n                  \"cashSettlement\": {\n                    \"cashSettlementTerms\": []\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  },\n  \"meta\": {\n    \"globalKey\": \"\"\n  },\n  \"cashSettlementTerms\": [],\n  \"cashflowRepresentation\": {\n    \"cashflowsMatchParameters\": false\n  },\n  \"meta\": {\n    \"globalKey\": \"\"\n  }\n}\n```\n\nIn this example, the 'cashSettlementMethod' key is left empty, as no specific method is mentioned in the contract description. The other placeholders are populated based on the provided context and contract information.",
+                                                "valuationMethod": {
+                                                    "quotationMethod": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario)"
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "dayCountFraction": {
+                                                            "value": "ACT/360"
+                                                        },
+                                                        "calculationPeriodDates": {
+                                                            "effectiveDate": {
+                                                                "adjustableDate": {
+                                                                    "unadjustedDate": "2010-12-12",
+                                                                    "dateAdjustments": {
+                                                                        "businessDayConvention": "NONE",
+                                                                        "meta": {
+                                                                            "globalKey": "24a738"
+                                                                        }
+                                                                    },
+                                                                    "meta": {
+                                                                        "globalKey": "ec508292"
+                                                                    }
+                                                                },
+                                                                "meta": {
+                                                                    "globalKey": "ec508292"
+                                                                }
+                                                            },
+                                                            "terminationDate": {
+                                                                "adjustableDate": {
+                                                                    "unadjustedDate": "2015-12-14",
+                                                                    "dateAdjustments": {
+                                                                        "businessDayConvention": "MODFOLLOWING",
+                                                                        "businessCenters": {
+                                                                            "businessCentersReference": {
+                                                                                "globalReference": "42f910b"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "meta": {
+                                                                        "globalKey": "4273a82"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementCurrency": {
+                                                            "value": "MXN"
+                                                        },
+                                                        "settlementDate": {
+                                                            "adjustableOrRelativeDate": {
+                                                                "relativeDate": {
+                                                                    "periodMultiplier": 1,
+                                                                    "period": "Y",
+                                                                    "meta": {
+                                                                        "globalKey": "b3836fa6"
+                                                                    },
+                                                                    "dayType": "Business",
+                                                                    "businessDayConvention": "NONE",
+                                                                    "businessCenters": {
+                                                                        "businessCenter": [
+                                                                            {
+                                                                                "value": "GBLO"
+                                                                            },
+                                                                            {
+                                                                                "value": "MEXU"
+                                                                            }
+                                                                        ],
+                                                                        "meta": {
+                                                                            "globalKey": "4273a82"
+                                                                        }
+                                                                    },
+                                                                    "dateRelativeTo": {
+                                                                        "globalReference": "49fbb45f",
+                                                                        "externalReference": "TRADE_DATE"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "09:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": " Based on the provided inputs and instructions, the placeholder for the key \"settlementType\" should be populated with the string \"Cash\" from the example provided in the real examples section.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"earlyTerminationProvision\": {\n                \"mandatoryEarlyTermination\": {\n                  \"cashSettlement\": {\n                    \"settlementType\": \"Cash\"\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "name": {
+                                                    "value": "InterestRateSwap",
+                                                    "meta": {
+                                                        "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-contract-type"
+                                                    }
+                                                },
+                                                "productType": {
+                                                    "value": "InterestRate",
+                                                    "meta": {
+                                                        "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-product-type"
+                                                    }
+                                                },
+                                                "productSubType": {
+                                                    "value": "Swap",
+                                                    "meta": {
+                                                        "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-product-sub-type"
+                                                    }
+                                                },
+                                                "fixedRate": {
+                                                    "value": "4.427%",
+                                                    "meta": {
+                                                        "unit": "annual"
+                                                    }
+                                                },
+                                                "floatingRate": {
+                                                    "value": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario)",
+                                                    "meta": {
+                                                        "unit": "annual"
+                                                    }
+                                                },
+                                                "notionalAmount": {
+                                                    "value": "50,000,000 MXN",
+                                                    "meta": {
+                                                        "currency": "MXN"
+                                                    }
+                                                },
+                                                "calculationPeriod": {
+                                                    "value": "Annually, from October 5 to October 5 of the consecutive year",
+                                                    "meta": {
+                                                        "unit": "year"
+                                                    }
+                                                },
+                                                "paymentDates": {
+                                                    "value": [
+                                                        {
+                                                            "value": "October 7, 2011",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 7, 2012",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 7, 2013",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 7, 2014",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 7, 2015",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "unit": "date"
+                                                    }
+                                                },
+                                                "dayCount": {
+                                                    "value": "ACT/360"
+                                                },
+                                                "resetDates": {
+                                                    "value": [
+                                                        {
+                                                            "value": "October 5, 2011",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 5, 2012",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 5, 2013",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 5, 2014",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "October 5, 2015",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "unit": "date"
+                                                    }
+                                                },
+                                                "fixingDates": {
+                                                    "value": [
+                                                        {
+                                                            "value": "2 business days prior to October 5, 2011",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "2 business days prior to October 5, 2012",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "2 business days prior to October 5, 2013",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "2 business days prior to October 5, 2014",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "2 business days prior to October 5, 2015",
+                                                            "meta": {
+                                                                "unit": "date"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "unit": "date"
+                                                    }
+                                                },
+                                                "businessDayConvention": {
+                                                    "value": "Modified Following"
+                                                },
+                                                "terminationDate": {
+                                                    "value": "December 14, 2015",
+                                                    "meta": {
+                                                        "unit": "date"
+                                                    }
+                                                },
+                                                "mandatoryEarlyTermination": {
+                                                    "value": "Applicable"
+                                                },
+                                                "mandatoryEarlyTerminationDate": {
+                                                    "value": "November 3, 2015",
+                                                    "meta": {
+                                                        "unit": "date"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "optionalEarlyTermination": {
+                                    "exerciseNotice": [
+                                        {
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    ],
+                                    "followUpConfirmation": " Based on the provided inputs, the 'key' is 'followUpConfirmation'. The prior context suggests that we are looking for this key within the 'terminationProvision' object, specifically within the 'cancelableProvision' object, and then within the 'exerciseTerms' object.\n\nIn the given derivatives contract description, there is no direct mention of a 'followUpConfirmation' within the 'exerciseTerms' object. However, the real examples provided show that the 'followUpConfirmation' key can be found within the 'cancelableProvision' object, but not within the 'exerciseTerms' object.\n\nSince the prior context leads us to the 'cancelableProvision' object, and there is no information available in the contract description to suggest otherwise, we should populate the 'followUpConfirmation' placeholder with the value 'true', as it is in the real examples provided.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"cancelableProvision\": {\n                \"buyer\": \"Party2\",\n                \"seller\": \"Party1\",\n                \"exerciseNotice\": {\n                  \"businessCenter\": {\n                    \"value\": \"GBLO\"\n                  }\n                },\n                \"followUpConfirmation\": true,\n\n                \"meta\": {\n                  \"globalKey\": \"19472b0a\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Buyside",
+                                        "calculationAgentPartyEnum": "Party"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": " Based on the provided inputs, the 'cashSettlementMethod' key should be populated with the method used for the cash settlement of this derivatives contract. In this case, the contract does not explicitly state a cash settlement method. However, the contract does mention that there is an optional early termination provision with cash settlement. Therefore, the best suited information from the contract description to populate the 'cashSettlementMethod' key would be \"Optional Early Termination Cash Settlement\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"earlyTerminationProvision\": {\n                \"optionalEarlyTermination\": {\n                  \"cashSettlement\": {\n                    \"cashSettlementTerms\": [\n                      {\n                        \"cashSettlementMethod\": \"Optional Early Termination Cash Settlement\"\n                      }\n                    ]\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "Buyside"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationMethod": "Mid",
+                                                    "cashCollateralValuationMethod": {
+                                                        "applicableCsa": "",
+                                                        "cashCollateralCurrency": "MXN",
+                                                        "cashCollateralInterestRate": {
+                                                            "value": ""
+                                                        },
+                                                        "agreedDiscountRate": {
+                                                            "value": ""
+                                                        },
+                                                        "prescribedDocumentationAdjustment": null
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "dayCountFraction": {
+                                                            "value": "ACT/360"
+                                                        },
+                                                        "calculationPeriodDates": {
+                                                            "effectiveDate": {
+                                                                "adjustableDate": {
+                                                                    "unadjustedDate": "2011-10-05",
+                                                                    "dateAdjustments": {
+                                                                        "businessDayConvention": "MODFOLLOWING",
+                                                                        "businessCenters": {
+                                                                            "businessCenter": [
+                                                                                {
+                                                                                    "value": "GBLO"
+                                                                                },
+                                                                                {
+                                                                                    "value": "MEXU"
+                                                                                }
+                                                                            ],
+                                                                            "meta": {
+                                                                                "globalKey": "4273a82"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "meta": {
+                                                                        "globalKey": "ec508292"
+                                                                    }
+                                                                },
+                                                                "meta": {
+                                                                    "globalKey": "ec508292"
+                                                                }
+                                                            },
+                                                            "terminationDate": {
+                                                                "adjustableDate": {
+                                                                    "unadjustedDate": "2015-12-14",
+                                                                    "dateAdjustments": {
+                                                                        "businessDayConvention": "NONE",
+                                                                        "meta": {
+                                                                            "globalKey": "24a738"
+                                                                        }
+                                                                    },
+                                                                    "meta": {
+                                                                        "globalKey": "ec508292"
+                                                                    }
+                                                                },
+                                                                "meta": {
+                                                                    "globalKey": "ec508292"
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementCurrency": {
+                                                            "value": "MXN"
+                                                        },
+                                                        "settlementDate": {
+                                                            "adjustableOrRelativeDate": {
+                                                                "relativeDate": {
+                                                                    "periodMultiplier": 1,
+                                                                    "period": "Y",
+                                                                    "meta": {
+                                                                        "globalKey": "b3836fa6"
+                                                                    },
+                                                                    "dayType": "Business",
+                                                                    "businessDayConvention": "NONE",
+                                                                    "businessCenters": {
+                                                                        "businessCenter": [
+                                                                            {
+                                                                                "value": "GBLO"
+                                                                            },
+                                                                            {
+                                                                                "value": "MEXU"
+                                                                            }
+                                                                        ],
+                                                                        "meta": {
+                                                                            "globalKey": "4273a82"
+                                                                        }
+                                                                    },
+                                                                    "dateRelativeTo": {
+                                                                        "globalReference": "49fbb45f",
+                                                                        "externalReference": "TRADE_DATE"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "09:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": " Based on the provided inputs and instructions, the settlementType for the given derivatives contract is \"Cash\". This is derived from the \"cashSettlement\" object in the contract description.\n\nHere is the populated JSON object with the provided key and its corresponding value:\n\n```json\n{\n  \"settlementType\": \"Cash\"\n}\n```\n\nAnd here is the updated prior context (path) with the key that has been populated:\n\n- Prior Context (Path):\n  trade.tradableProduct.product.contractualProduct.economicTerms.terminationProvision.earlyTerminationProvision.optionalEarlyTermination.cashSettlement.settlementType",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "name": {
+                                                    "value": "InterestRateSwap",
+                                                    "meta": {
+                                                        "scheme": "http://example.com/coding-scheme/derivatives-contract-type"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableDates": {
+                                                "unadjustedDate": [
+                                                    "December 12, 2010"
+                                                ],
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCentersReference": {
+                                                            "globalReference": "42f910b",
+                                                            "externalReference": "primaryBusinessCenters"
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "eb13047c"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "214e084d"
+                                                    }
+                                                }
+                                            },
+                                            "businessDateRange": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "20a71d"
+                                                    }
+                                                },
+                                                "startDate": "1995-01-16",
+                                                "endDate": "1999-12-14"
+                                            }
+                                        }
+                                    },
+                                    "optionalEarlyTerminationAdjustedDates": {
+                                        "earlyTerminationEvent": [
+                                            {
+                                                "adjustedExerciseDate": "2015-11-03",
+                                                "adjustedEarlyTerminationDate": "2015-11-03",
+                                                "adjustedCashSettlementValuationDate": "2015-11-03",
+                                                "adjustedCashSettlementPaymentDate": "2015-11-06"
+                                            }
+                                        ]
+                                    },
+                                    "exerciseTerms": {
+                                        "style": " Based on the provided inputs, the key is'style'. The prior context suggests that we are looking for the style of the exercise terms for the optional early termination provision.\n\nIn the given derivatives contract description, there is no explicit mention of the style for the optional early termination provision. However, the style for the exercise terms is provided for the cancelable provision, which is a different term.\n\nSince there is no relevant data available for the given key in the provided contract description, we should leave the placeholder unchanged.\n\nSo, the placeholder for the key'style' should remain empty:\n\n```json\n\"style\": \"\"\n```",
+                                        "commencementDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "20a71d"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "tradeDate",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": 1,
+                                                "period": "Y"
+                                            }
+                                        },
+                                        "exerciseDates": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUTA"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "20a71d"
+                                                    }
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "3a08a845",
+                                                    "externalReference": "resetDates"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "20a71d"
+                                                        }
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "tradeDate",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Y"
+                                                }
+                                            }
+                                        ],
+                                        "relevantUnderlyingDate": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "Modified Following",
+                                                "dateRelativeTo": {
+                                                    "globalReference": "trade.tradeDetails.tradeDate",
+                                                    "externalReference": "resetDates"
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "Y"
+                                            }
+                                        },
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "09:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODIFIED_FOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "GBLO"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "unique_global_key_for_business_centers"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "unique_global_key_for_date_adjustments"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "unique_global_key_for_exercise_time",
+                                                "externalKey": "EXERCISE"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "extendibleProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "GBLO"
+                                    }
+                                },
+                                "followUpConfirmation": " Based on the provided inputs, the 'key' is 'followUpConfirmation'. The prior context suggests that we are looking for this key within the 'terminationProvision' object, specifically within a 'cancelableProvision' or 'earlyTerminationProvision'.\n\nIn the given derivatives contract description, there are two 'cancelableProvision' objects, each with a 'followUpConfirmation' property set to true. However, there is no 'earlyTerminationProvision' object in the provided contract description.\n\nSince the prior context suggests 'cancelableProvision', we will populate the placeholder with the following value:\n\n```json\n[\n  {\n    \"buyer\": \"Party2\",\n    \"seller\": \"Party1\",\n    \"exerciseNotice\": {\n      \"businessCenter\": {\n        \"value\": \"GBLO\"\n      }\n    },\n    \"followUpConfirmation\": true,\n    \"meta\": {\n      \"globalKey\": \"e30c2739\"\n    }\n  },\n  {\n    \"buyer\": \"Party2\",\n    \"seller\": \"Party1\",\n    \"exerciseNotice\": {\n      \"businessCenter\": {\n        \"value\": \"GBLO\"\n      }\n    },\n    \"followUpConfirmation\": true,\n    \"meta\": {\n      \"globalKey\": \"19472b0a\"\n    }\n  }\n]\n```\n\nThis JSON array contains two objects, each representing a 'cancelableProvision' with the 'followUpConfirmation' property set to true, as per the provided contract description and prior context.",
+                                "exerciseTerms": {
+                                    "style": " Based on the provided inputs and instructions, the placeholder for the key \"style\" should be populated with the string \"European\". This is derived from the natural language description of the derivatives contract, where it is stated that this is an \"Interest Rate Swap Contract\" and the specific terms for both the fixed and floating rates have European-style exercise terms.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"extendibleProvision\": {\n                \"exerciseTerms\": {\n                  \"style\": \"European\"\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUTA"
+                                                            },
+                                                            {
+                                                                "value": "MX"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "93c845ff"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "214e084d"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "3494f012"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                ""
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCentersReference": {
+                                                        "globalReference": "42f910b",
+                                                        "externalReference": "primaryBusinessCenters"
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "eb13047c"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "214e084d"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "09:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "09:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": " Based on the provided inputs, the key is 'buyer'. The prior context suggests that we are looking for the LEI (Legal Entity Identifier) of the buyer.\n\nIn the given derivatives contract description, there are two parties involved: Buyside and Sellside. However, the contract does not explicitly provide the LEI for either party. Since no highly relevant data exists for the given key, we will leave its placeholder as-is.\n\nHere is the JSON object with the placeholder for the 'buyer' key unchanged:\n\n```json\n{\n  \"buyer\": \"\",\n  \"sellside\": {\n    \"partyId\": [\n      {\n        \"identifier\": {\n          \"value\": \"529900CPTY57S5UCBB52\",\n          \"meta\": {\n            \"scheme\": \"http://www.fpml.org/coding-scheme/external/iso17442\"\n          }\n        },\n        \"identifierType\": \"LEI\",\n        \"meta\": {\n          \"globalKey\": \"c6d87232\"\n        }\n      }\n    ],\n    \"name\": {\n      \"value\": \"SELL SECURITIES CO LTD (\\\"Counterparty\\\")\"\n    },\n    \"meta\": {\n      \"globalKey\": \"1b3745e1\",\n      \"externalKey\": \"partyB\"\n    }\n  }\n}\n```",
+                                "seller": " Based on the provided inputs, the key is'seller' and the prior context is 'trade.tradableProduct.product.contractualProduct.economicTerms.terminationProvision.extendibleProvision.seller'.\n\nFrom the contract description, we can see that the seller is identified as 'Sellside'.\n\nTo populate the placeholder, we need to find the best suited information from the contract description that aligns with the key'seller'. In this case, the best suited information is 'Sellside'.\n\nSince the placeholder is a string, we will replace it with a string that contains the best suited information.\n\nThe populated JSON object would look like this:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"terminationProvision\": {\n              \"extendibleProvision\": {\n                \"seller\": \"Sellside\"\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```"
+                            }
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Buyside",
+                            "calculationAgentBusinessCenter": {
+                                "value": "Not specified",
+                                "meta": {
+                                    "scheme": "Not specified"
+                                }
+                            }
+                        },
+                        "nonStandardisedTerms": " Based on the provided inputs, the 'key' is 'nonStandardisedTerms'. The prior context suggests that this key belongs to the 'trade' object, specifically within the 'trade.tradableProduct.product.contractualProduct.economicTerms' path.\n\nIn the given derivatives contract description, there are no non-standardized terms explicitly mentioned. However, the contract does not contain any non-standardized terms as per the examples provided. Therefore, the placeholder for 'nonStandardisedTerms' should be populated with 'false'.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"nonStandardisedTerms\": false\n          }\n        }\n      }\n    }\n  }\n}\n```"
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "InterestRate:IRSwap:FixedFloat",
+                                "meta": {
+                                    "scheme": "http://www.fpml.org/coding-scheme/product-taxonomy"
+                                }
+                            },
+                            "productQualifier": "InterestRate_IRSwap_FixedFloat",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "InterestRate:IRSwap:FixedFloat",
+                                    "meta": {
+                                        "scheme": "http://www.fpml.org/coding-scheme/product-taxonomy"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "MXN",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        },
+                                        "priceType": "InterestRate",
+                                        "arithmeticOperator": "Add",
+                                        "datedValue": [
+                                            {
+                                                "date": "2010-12-12",
+                                                "value": {
+                                                    "value": 4.427,
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN",
+                                                            "meta": {
+                                                                "scheme": "ISO 4217"
+                                                            }
+                                                        }
+                                                    },
+                                                    "perUnitOf": {
+                                                        "currency": {
+                                                            "value": "MXN",
+                                                            "meta": {
+                                                                "scheme": "ISO 4217"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "date": "2010-12-12",
+                                                "value": {
+                                                    "value": "",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN",
+                                                            "meta": {
+                                                                "scheme": "ISO 4217"
+                                                            }
+                                                        }
+                                                    },
+                                                    "perUnitOf": {
+                                                        "currency": {
+                                                            "value": "MXN",
+                                                            "meta": {
+                                                                "scheme": "ISO 4217"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "date": "2011-10-07",
+                                                "value": null
+                                            },
+                                            {
+                                                "date": "2012-10-07",
+                                                "value": null
+                                            },
+                                            {
+                                                "date": "2013-10-07",
+                                                "value": null
+                                            },
+                                            {
+                                                "date": "2014-10-07",
+                                                "value": null
+                                            },
+                                            {
+                                                "date": "2015-10-07",
+                                                "value": null
+                                            }
+                                        ],
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "MXN",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": "1",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "MXN",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "datedValue": [
+                                            {
+                                                "date": "2011-10-07",
+                                                "value": "4.427"
+                                            },
+                                            {
+                                                "date": "2012-10-07",
+                                                "value": "TIIE_rate"
+                                            },
+                                            {
+                                                "date": "2013-10-07",
+                                                "value": "TIIE_rate"
+                                            },
+                                            {
+                                                "date": "2014-10-07",
+                                                "value": "TIIE_rate"
+                                            },
+                                            {
+                                                "date": "2015-10-07",
+                                                "value": "TIIE_rate"
+                                            }
+                                        ],
+                                        "value": "50000000",
+                                        "unit": {
+                                            "financialUnit": "Contract",
+                                            "currency": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "rateOption": {
+                                    "value": {
+                                        "floatingRateIndex": {
+                                            "value": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario)",
+                                            "meta": {
+                                                "scheme": "http://www.fpml.org/coding-scheme/floating-rate-index-1-0"
+                                            }
+                                        },
+                                        "inflationRateIndex": {
+                                            "value": "",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "indexTenor": {
+                                            "periodMultiplier": 1,
+                                            "period": "A"
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "xyz1234",
+                                                "meta": {
+                                                    "scheme": "buyside-trade-id"
+                                                }
+                                            },
+                                            "source": "Buyside"
+                                        }
+                                    },
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "abc1234",
+                                                "meta": {
+                                                    "scheme": "sellside-trade-id"
+                                                }
+                                            },
+                                            "source": "Sellside"
+                                        }
+                                    }
+                                ]
+                            },
+                            "settlementTerms": {
+                                "cashSettlementTerms": [
+                                    {
+                                        "valuationMethod": {
+                                            "quotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            },
+                                            "minimumQuotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "cashSettlementAmount": {
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "MXN"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "settlementType": " Based on the provided inputs, the'settlementType' key should be populated with the value \"Cash\". This is derived from the \"cashSettlement\" object in the contract description, which specifies that the settlement type is \"Cash\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"tradeLot\": [\n        {\n          \"priceQuantity\": [\n            {\n              \"settlementTerms\": {\n                \"settlementType\": \"Cash\"\n              }\n            }\n          ]\n        }\n      ]\n    }\n  }\n}\n```"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "buyside",
+                        "externalReference": "buyside"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "sellside",
+                        "externalReference": "sellside"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgent",
+                    "partyReference": [
+                        {
+                            "globalReference": "27b20a6a",
+                            "externalReference": "Buyside"
+                        },
+                        {
+                            "globalReference": "cc892602",
+                            "externalReference": "Sellside"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "xyz1234",
+                            "meta": {
+                                "scheme": "buyside-trade-id"
+                            }
+                        },
+                        "identifierType": "Trade Identifier",
+                        "meta": {
+                            "globalKey": "identifier1"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "abc1234",
+                            "meta": {
+                                "scheme": "sellside-trade-id"
+                            }
+                        },
+                        "identifierType": "Trade Identifier",
+                        "meta": {
+                            "globalKey": "identifier2"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": {
+                        "name": {
+                            "value": "Interest Rate Swap",
+                            "meta": {
+                                "scheme": "http://www.dtcc.com/coding-scheme/external/product-classification/emir-contract-type"
+                            }
+                        }
+                    }
+                },
+                "businessUnit": [
+                    {
+                        "name": "Interest Rate Swap"
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "buyside-trade-id"
+                                    },
+                                    "meta": {
+                                        "globalKey": "tradeIdGlobalKey"
+                                    }
+                                }
+                            },
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "sellside-trade-id"
+                                    },
+                                    "meta": {
+                                        "globalKey": "sellsideTradeIdGlobalKey"
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "Buyside",
+                        "surname": "Sellside"
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Mexico"
+                            },
+                            "streetAddress": {
+                                "value": "Calle Principal 123"
+                            },
+                            "city": {
+                                "value": "Ciudad de Mexico"
+                            },
+                            "stateProvince": {
+                                "value": "Distrito Federal"
+                            },
+                            "postalCode": {
+                                "value": "06000"
+                            },
+                            "telephone": {
+                                "value": "555-1234"
+                            },
+                            "email": {
+                                "value": "buyside@example.com"
+                            },
+                            "webPage": {
+                                "value": "http://buyside.com"
+                            }
+                        },
+                        {
+                            "country": {
+                                "value": "Mexico"
+                            },
+                            "streetAddress": {
+                                "value": "Avenida Central 456"
+                            },
+                            "city": {
+                                "value": "Ciudad de Mexico"
+                            },
+                            "stateProvince": {
+                                "value": "Distrito Federal"
+                            },
+                            "postalCode": {
+                                "value": "06000"
+                            },
+                            "telephone": {
+                                "value": "555-5678"
+                            },
+                            "email": {
+                                "value": "sellside@example.com"
+                            },
+                            "webPage": {
+                                "value": "sellside.com"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "partyRole": [
+            {
+                "partyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "role": "",
+                "ownershipPartyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Interest Rate Swap",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "",
+                                    "meta": {
+                                        "scheme": ""
+                                    }
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "",
+                                "meta": {
+                                    "scheme": ""
+                                }
+                            }
+                        }
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "b6bdbfc2",
+                            "externalReference": "p1"
+                        },
+                        {
+                            "partyReference": {
+                                "globalReference": "b6bdbfc2",
+                                "externalReference": "p1"
+                            },
+                            "accountNumber": {
+                                "value": "p1-contract-id"
+                            },
+                            "accountBeneficiary": {
+                                "globalReference": "b6bdbfc2",
+                                "externalReference": "p1"
+                            },
+                            "meta": {
+                                "globalKey": "c7b66577",
+                                "externalKey": "p1-contract"
+                            }
+                        },
+                        {
+                            "partyReference": {
+                                "globalReference": "b6bdbfc2",
+                                "externalReference": "p1"
+                            },
+                            "accountNumber": {
+                                "value": "p1-counterparty"
+                            },
+                            "accountBeneficiary": {
+                                "globalReference": "b6bdbfc2",
+                                "externalReference": "p1"
+                            },
+                            "meta": {
+                                "globalKey": "c7b66938",
+                                "externalKey": "p1-party"
+                            }
+                        },
+                        {
+                            "partyReference": {
+                                "globalReference": "a14913ec",
+                                "externalReference": "p2"
+                            },
+                            "accountNumber": {
+                                "value": "p2-counterparty"
+                            },
+                            "accountBeneficiary": {
+                                "globalReference": "a14913ec",
+                                "externalReference": "p2"
+                            },
+                            "meta": {
+                                "globalKey": "c7b66938",
+                                "externalKey": "p2-party"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "account": [
+            {
+                "partyReference": {
+                    "globalReference": "buyside",
+                    "externalReference": "buyside-trade-id"
+                },
+                "accountNumber": {
+                    "value": "xyz1234"
+                },
+                "accountName": {
+                    "value": "Interest Rate Swap Account"
+                },
+                "accountBeneficiary": {
+                    "globalReference": "sellside",
+                    "externalReference": "sellside-trade-id"
+                },
+                "meta": {
+                    "globalKey": "trade-1",
+                    "externalKey": "trade-1"
+                }
+            },
+            {
+                "partyReference": {
+                    "globalReference": "sellside",
+                    "externalReference": "sellside-trade-id"
+                },
+                "accountNumber": {
+                    "value": "xyz1234"
+                },
+                "accountName": {
+                    "value": "Interest Rate Swap Account"
+                },
+                "accountBeneficiary": {
+                    "globalReference": "buyside",
+                    "externalReference": "buyside-trade-id"
+                },
+                "meta": {
+                    "globalKey": "trade-1",
+                    "externalKey": "trade-1"
+                }
+            }
+        ]
+    }
+}

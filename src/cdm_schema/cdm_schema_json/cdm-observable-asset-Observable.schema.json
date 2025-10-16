@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.observable.asset",
+  "type": "object",
+  "title": "Observable",
+  "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+  "properties": {
+    "rateOption": {
+      "description": "Specifies a floating rate index and tenor.",
+      "$ref": "cdm-observable-asset-metafields-FieldWithMetaFloatingRateOption.schema.json"
+    },
+    "commodity": {
+      "description": "Identifies a commodity by referencing a product identifier.",
+      "$ref": "cdm-base-staticdata-asset-common-metafields-FieldWithMetaCommodity.schema.json"
+    },
+    "productIdentifier": {
+      "description": "Comprises of an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-metafields-FieldWithMetaProductIdentifier.schema.json"
+      },
+      "minItems": 0
+    },
+    "identifier": {
+      "description": "Comprises of an identifier and a symbology source. The associated metadata key denotes the ability to associate a hash value to the AssetIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.  This attribute will replace ProductIdentifier in the full release.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-metafields-FieldWithMetaAssetIdentifier.schema.json"
+      },
+      "minItems": 0
+    },
+    "currencyPair": {
+      "description": "Describes the composition of a rate that has been quoted or is to be quoted, including the two currencies and the quotation relationship between the two currencies.",
+      "$ref": "cdm-observable-asset-metafields-FieldWithMetaQuotedCurrencyPair.schema.json"
+    },
+    "optionReferenceType": {
+      "description": "The underlying contract which is referenced when determining the final settlement price of the instrument. Eg. Rolling Front Month Future; Spot etc.",
+      "$ref": "cdm-observable-asset-OptionReferenceTypeEnum.schema.json"
+    }
+  }
+}

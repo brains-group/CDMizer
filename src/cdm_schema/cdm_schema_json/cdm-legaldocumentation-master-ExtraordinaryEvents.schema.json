@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.legaldocumentation.master",
+  "type": "object",
+  "title": "ExtraordinaryEvents",
+  "description": "Where the underlying is shares, defines market events affecting the issuer of those shares that may require the terms of the transaction to be adjusted.",
+  "properties": {
+    "additionalBespokeTerms": {
+      "description": "Where parties may optionnaly describe any extra bespoke agreements, in regards of the standardized Extraordinary Events.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-legaldocumentation-master-Clause.schema.json"
+      },
+      "minItems": 0
+    },
+    "mergerEvents": {
+      "description": "Per the 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
+      "$ref": "cdm-legaldocumentation-master-EquityCorporateEvents.schema.json"
+    },
+    "tenderOfferEvents": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions: ",
+      "$ref": "cdm-legaldocumentation-master-EquityCorporateEvents.schema.json"
+    },
+    "compositionOfCombinedConsideration": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions: ",
+      "type": "boolean"
+    },
+    "indexAdjustmentEvents": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions: Adjustments to Indices ",
+      "$ref": "cdm-legaldocumentation-master-IndexAdjustmentEvents.schema.json"
+    },
+    "additionalDisruptionEvents": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swaps",
+      "$ref": "cdm-legaldocumentation-master-AdditionalDisruptionEvents.schema.json"
+    },
+    "failureToDeliver": {
+      "description": "If true, failure to deliver is applicable.",
+      "type": "boolean"
+    },
+    "representations": {
+      "$ref": "cdm-legaldocumentation-master-Representations.schema.json"
+    },
+    "nationalizationOrInsolvency": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap",
+      "$ref": "cdm-legaldocumentation-master-NationalizationOrInsolvencyOrDelistingEventEnum.schema.json"
+    },
+    "delisting": {
+      "description": "Per the 2002 ISDA Equity Derivatives Definitions | 2018 ISDA CDM Equity Confirmation for Security Equity Swap:",
+      "$ref": "cdm-legaldocumentation-master-NationalizationOrInsolvencyOrDelistingEventEnum.schema.json"
+    }
+  }
+}

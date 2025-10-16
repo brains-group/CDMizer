@@ -1,0 +1,339 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "TRADE_001",
+                    "externalReference": "EQ_OP_001"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "EQ_OP_001",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Equity Option Contract",
+            "meta": {
+                "globalKey": "trade.tradeDate",
+                "externalKey": "2001-07-13"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party 2",
+                                        "seller": "Party 1"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": "STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity Option - Price Return Basic Performance - Single Name",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Product Taxonomy",
+                                                        "value": "Equity Option - Price Return Basic Performance - Single Name"
+                                                    }
+                                                },
+                                                {
+                                                    "address": {
+                                                        "scope": "Underlier",
+                                                        "value": "STMicroelectronics N.V."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "STMicroelectronics N.V."
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity Option - Price Return Basic Performance - Single Name",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "STMicroelectronics N.V."
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity Option - Price Return Basic Performance - Single Name"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the key is 'optionType' and the prior context is 'trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType'.\n\nFrom the derivatives contract description, we can see that the option type is a call option. So, the placeholder should be populated with the string \"Call\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"optionType\": \"Call\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-07-13",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Not specified"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "Not specified",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Not specified"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "American style",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": null,
+                                            "integralMultipleAmount": null,
+                                            "minimumNumberOfOptions": null
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": false
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "USD"
+                                            },
+                                            "priceType": "Single",
+                                            "value": "32",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party 2",
+                                        "receiver": "Party 1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].priceQuantity",
+                                                "value": "150000"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Physical settlement",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Not specified",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 4,
+                                                    "period": "days"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party 1"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "",
+                            "value": {
+                                "name": {
+                                    "value": "Equity Option - Price Return Basic Performance - Single Name"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": "150000",
+                                            "unit": {
+                                                "financialUnit": "contracts"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": "Not specified"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "STMicroelectronics N.V.",
+                                                "meta": {
+                                                    "scheme": "ISIN"
+                                                }
+                                            },
+                                            "source": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "PartyB",
+                        "externalReference": ""
+                    }
+                },
+                {
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "PartyA",
+                        "externalReference": ""
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Calculation Agent",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party 1",
+                            "externalReference": "Not specified"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party 1",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party 2",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2001-07-13",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Equity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "General Terms"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "Not specified"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party A",
+                            "externalReference": "Party 1"
+                        },
+                        {
+                            "globalReference": "Party B",
+                            "externalReference": "Party 2"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "Not specified"
+            }
+        }
+    }
+}

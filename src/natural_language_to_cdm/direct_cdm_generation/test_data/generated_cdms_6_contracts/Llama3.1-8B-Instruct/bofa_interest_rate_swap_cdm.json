@@ -1,0 +1,145 @@
+{
+    "Agreement": {
+        "AgreementDate": "1999-02-17",
+        "AgreementType": "ISDA Master Agreement",
+        "Counterparty": {
+            "PartyA": {
+                "Name": "Merrill Lynch International",
+                "LegalEntity": "Merrill Lynch International"
+            },
+            "PartyB": {
+                "Name": "Party B",
+                "LegalEntity": "Party B"
+            }
+        }
+    },
+    "Confirmation": {
+        "ConfirmationDate": "2018-03-01",
+        "ConfirmationType": "ISDA Confirmation",
+        "Counterparty": {
+            "PartyA": {
+                "Name": "Merrill Lynch International",
+                "LegalEntity": "Merrill Lynch International"
+            },
+            "PartyB": {
+                "Name": "Party B",
+                "LegalEntity": "Party B"
+            }
+        },
+        "TradeDate": "2018-03-01",
+        "EffectiveDate": "2018-03-16",
+        "TerminationDate": "2048-03-16",
+        "NotionalAmount": {
+            "Currency": "USD",
+            "Amount": "As per Schedule A"
+        },
+        "FixedAmountPayer": {
+            "Party": "PartyA",
+            "PaymentDates": {
+                "Type": "Periodic",
+                "PeriodEndDates": {
+                    "Type": "Fixed",
+                    "Dates": [
+                        "2019-03-16",
+                        "2048-03-16"
+                    ]
+                }
+            },
+            "FixedRate": {
+                "Rate": "4.60000%",
+                "DayCountFraction": "30/360"
+            }
+        },
+        "FloatingAmountPayer": {
+            "Party": "PartyB",
+            "PaymentDates": {
+                "Type": "Periodic",
+                "PeriodEndDates": {
+                    "Type": "Fixed",
+                    "Dates": [
+                        "2018-06-16",
+                        "2048-03-16"
+                    ]
+                }
+            },
+            "FloatingRate": {
+                "Type": "USD-LIBOR-BBA",
+                "DesignatedMaturity": "3 Month",
+                "Spread": "As per Schedule B",
+                "DayCountFraction": "Actual/360",
+                "ResetDates": {
+                    "Type": "Fixed",
+                    "Dates": [
+                        "2018-06-16",
+                        "2048-03-16"
+                    ]
+                }
+            }
+        },
+        "OptionalEarlyTermination": {
+            "Type": "Bermuda",
+            "Buyer": "PartyA",
+            "Seller": "PartyB",
+            "BusinessDays": {
+                "Type": "Fixed",
+                "Days": [
+                    "London",
+                    "New York",
+                    "Sydney"
+                ]
+            },
+            "ExerciseBusinessDay": {
+                "Type": "Fixed",
+                "Days": [
+                    "London",
+                    "New York",
+                    "Sydney"
+                ]
+            },
+            "ProcedureForExercise": "Bermuda Option Exercise",
+            "ExerciseDates": {
+                "Type": "Fixed",
+                "Dates": [
+                    "2019-03-16",
+                    "2047-03-16"
+                ]
+            },
+            "ExpirationDate": {
+                "Type": "Fixed",
+                "Dates": [
+                    "2019-03-16",
+                    "2047-03-16"
+                ]
+            },
+            "EarliestExerciseTime": "9:00 am",
+            "ExpirationTime": "11:00 am"
+        },
+        "CashSettlement": {
+            "Type": "Applicable",
+            "PaymentDates": {
+                "Type": "Fixed",
+                "Dates": [
+                    "2023-03-01",
+                    "2048-03-01"
+                ]
+            },
+            "BusinessDayConvention": "Following",
+            "CalculationAgent": "As stated in the Agreement"
+        },
+        "RecordingOfConversations": {
+            "Type": "Applicable"
+        },
+        "AccountDetails": {
+            "Type": "Applicable"
+        },
+        "Offices": {
+            "PartyA": {
+                "Office": "London, United Kingdom",
+                "Fax": "+1 866 218 8487"
+            },
+            "PartyB": {
+                "Office": "Sydney-NSW, AUSTRALIA"
+            }
+        }
+    }
+}

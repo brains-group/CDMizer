@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "Confirmation",
+  "description": "A class to specify a trade confirmation.",
+  "properties": {
+    "identifier": {
+      "description": "The identifier(s) associated with the trade and resulting confirmation.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-identifier-Identifier.schema.json"
+      },
+      "minItems": 1
+    },
+    "party": {
+      "description": "The parties associated with the trade.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-party-Party.schema.json"
+      },
+      "minItems": 1
+    },
+    "partyRole": {
+      "description": "The role(s) that party(ies) may have in relation to the trade",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-party-PartyRole.schema.json"
+      },
+      "minItems": 1
+    },
+    "lineage": {
+      "description": "The lineage attribute provides a linkage to previous lifecycle events and associated data.",
+      "$ref": "cdm-event-common-Lineage.schema.json"
+    },
+    "status": {
+      "$ref": "cdm-event-common-ConfirmationStatusEnum.schema.json"
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

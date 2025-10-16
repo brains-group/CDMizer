@@ -1,0 +1,561 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "Trade Identifier",
+            "issuerReference": {
+                "globalReference": "10fb089c",
+                "externalReference": "partyA"
+            },
+            "issuer": {
+                "value": "Party A",
+                "meta": {
+                    "scheme": "http://www.PartyA.com/com-issuer"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "1234",
+                        "meta": {
+                            "scheme": "http://www.PartyA.com/com-trade-id"
+                        }
+                    }
+                },
+                {
+                    "identifier": {
+                        "value": "2345",
+                        "meta": {
+                            "scheme": "http://www.PartyB.com/com-trade-id"
+                        }
+                    }
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "February 5, 2008",
+            "meta": {
+                "globalKey": "February 5, 2008",
+                "externalKey": "Trade Date"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2008-02-05",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following",
+                                    "meta": {
+                                        "globalKey": "78ae45cf"
+                                    }
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2008-02-05",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following",
+                                    "meta": {
+                                        "globalKey": "78ae45cf"
+                                    }
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party B",
+                                        "seller": "Party A"
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": false,
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9",
+                                                    "externalKey": "floatingLegCalculationPeriods"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "First",
+                                                "businessCenters": ""
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Commodity",
+                                                "value": "Gas Oil-IPE"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "optionType: \"Call\"",
+                                    "exerciseTerms": {
+                                        "style": "European",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2008-02-05",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "NotApplicable"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-08-30",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NotApplicable"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NotApplicable",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "2008-08-01",
+                                                        "externalReference": "PricingDate"
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": 0,
+                                                    "period": "D"
+                                                }
+                                            },
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-09-30",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NotApplicable"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NotApplicable",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "2008-09-01",
+                                                        "externalReference": "PricingDate"
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": 0,
+                                                    "period": "D"
+                                                }
+                                            },
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-10-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NotApplicable"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NotApplicable",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "2008-10-01",
+                                                        "externalReference": "PricingDate"
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": 0,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "value": 1120,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "perUnitOf": {
+                                                "capacityUnit": "MT"
+                                            },
+                                            "priceType": "AssetPrice"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party B",
+                                        "receiver": "Party A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-2"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "\"settlementType\": \"Cash\"",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "classification": [
+                                                    {
+                                                        "value": "Commodity",
+                                                        "ordinal": 1
+                                                    },
+                                                    {
+                                                        "value": "Option",
+                                                        "ordinal": 2
+                                                    },
+                                                    {
+                                                        "value": "Gas Oil-IPE",
+                                                        "ordinal": 3
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "exerciseDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 5,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": false,
+                                            "calculationMethod": "Arithmetic"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "conversionFactor": 0.4913
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business",
+                                            "dayDistribution": "Last",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "NYMEX-NATURAL-GAS"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "acc66859"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "M",
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodEndDate",
+                                        "paymentDaysOffset": {
+                                            "periodMultiplier": 5,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Following",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "NYMEX-NATURAL-GAS"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "acc66859"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": "commodity-1"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party 2",
+                                        "receiver": "Party 1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodStartDate",
+                                        "paymentDaysOffset": {
+                                            "periodMultiplier": 5,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "ea4acac1"
+                                            },
+                                            "dayType": "Business"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NONE",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "price-1"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party2",
+                                        "receiver": "Party1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party A and Party B",
+                            "calculationAgentPartyEnum": "Counterparty"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Energy"
+                        },
+                        "productQualifier": "Commodity Option",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "Commodity_Option",
+                                "meta": {
+                                    "scheme": "http://www.fpml.org/coding-scheme/product-taxonomy"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": ""
+                                        },
+                                        "priceType": "Strike Price",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": "Fixed"
+                                        },
+                                        "value": 1120,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "M"
+                                        },
+                                        "value": 100000,
+                                        "unit": {
+                                            "capacityUnit": "MT"
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": {
+                "role": "Party1",
+                "partyReference": {
+                    "globalReference": "f0466d0f",
+                    "externalReference": "partyB"
+                }
+            },
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "549300KFSLY4U7N3LL12",
+                            "externalReference": "Party A"
+                        },
+                        {
+                            "globalReference": "549300AJRHKBLY9GM262",
+                            "externalReference": "Party B"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "549300KFSLY4U7N3LL12"
+                        },
+                        "identifierType": "LEI"
+                    }
+                ],
+                "name": {
+                    "value": "Bank"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "USA"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "549300AJRHKBLY9GM262"
+                        },
+                        "identifierType": "LEI"
+                    }
+                ],
+                "name": {
+                    "value": "Energy Co."
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "USA"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": {
+                "agreementDate": "2008-02-05",
+                "legalAgreementIdentification": {
+                    "agreementName": {
+                        "agreementType": "Commodity Option",
+                        "contractualDefinitionsType": [
+                            {
+                                "value": "Commodity_Option"
+                            }
+                        ],
+                        "masterAgreementType": {
+                            "value": "ISDA Master"
+                        }
+                    },
+                    "vintage": 2008
+                },
+                "contractualParty": [
+                    {
+                        "globalReference": "10fb089c",
+                        "externalReference": "partyA"
+                    },
+                    {
+                        "globalReference": "f0466d0f",
+                        "externalReference": "partyB"
+                    }
+                ]
+            }
+        }
+    }
+}

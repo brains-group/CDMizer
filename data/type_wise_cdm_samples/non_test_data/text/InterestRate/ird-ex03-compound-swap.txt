@@ -1,0 +1,100 @@
+**Interest Rate Swap Contract**
+
+**General Terms**
+
+This interest rate swap contract is entered into between Party A (Party1) and Party B (Party2) on the Trade Date of 2000-04-25. The contract is governed by the ISDA Master Agreement and the 2006 ISDA Definitions.
+
+**Trade Details**
+
+* Trade Identifier: 56323 (Party A) and 56990 (Party B)
+* Trade Date: 2000-04-25
+* Trade Lot: 1
+* Counterparty: Party A (Party1) and Party B (Party2)
+
+**Product Details**
+
+* Tradable Product: Interest Rate IRSwap_FixedFloat
+* Product Taxonomy: ISDA
+* Economic Terms:
+	+ Payout: Interest Rate Payout
+	+ Interest Rate Payout:
+		- Payer/Receiver: Party A (Party1) pays to Party B (Party2)
+		- Price/Quantity: USD Notional Amount
+		- Rate Specification: Floating Rate
+		- Floating Rate:
+			- Rate Option: USD-LIBOR-BBA
+			- Index Tenor: 3 months
+			- Final Rate Rounding: Nearest, 7 decimal places
+		- Day Count Fraction: ACT/360
+		- Calculation Period Dates:
+			- Effective Date: 2000-04-27
+			- Termination Date: 2002-04-27
+			- Calculation Period Frequency: 3 months
+			- Roll Convention: 27
+		- Payment Dates:
+			- Payment Frequency: 6 months
+			- PayRelativeTo: Calculation Period End Date
+			- Payment Days Offset: 5 days
+		- Reset Dates:
+			- Calculation Period Dates Reference: floatingCalcPeriodDates
+			- ResetRelativeTo: Calculation Period Start Date
+			- Fixing Dates:
+				- Period: -2 days
+				- Day Type: Business
+				- Business Day Convention: NONE
+				- Business Centers: GBLO
+			- Reset Frequency: 3 months
+		- Compounding Method: Flat
+
+**Cash Flow Representation**
+
+* Cashflows Match Parameters: true
+* Payment Calculation Period:
+	+ Adjusted Payment Date: 2000-11-03
+	+ Calculation Period:
+		- Adjusted Start Date: 2000-04-27
+		- Adjusted End Date: 2000-07-27
+		- Notional Amount: 100,000,000.00
+		- Floating Rate Definition:
+			- Rate Observation:
+				- Adjusted Fixing Date: 2000-04-25
+				- Observation Weight: 1
+	+...
+	+...
+
+**Party Details**
+
+* Party A (Party1):
+	+ Party ID: Party A
+	+ Party Reference: 33f59567
+* Party B (Party2):
+	+ Party ID: 549300TJF420N3F01V87
+	+ Party Reference: 22a03742
+
+**Risk Disclosure**
+
+The parties acknowledge that this contract involves significant risks, including interest rate risk, fixing risk, liquidity risk, and credit risk. The parties understand and accept these risks and agree to assume them.
+
+**Representations**
+
+Each party represents to the other party that it has the power to enter into this contract and to perform its obligations under this contract. Each party represents that it is acting for its own account and has made its own independent decisions to enter into this contract.
+
+**Governing Law**
+
+This contract is governed by the laws of the Province of Ontario and the laws of Canada applicable therein.
+
+**Calculation Agent**
+
+The calculation agent for this contract is Party A (Party1).
+
+**Termination Date**
+
+The termination date for this contract is 2002-04-27.
+
+**Mandatory Early Termination**
+
+This contract may be terminated early on the Mandatory Early Termination Date at the market value of the contract, subject to adjustment in accordance with the Modified Following Business Day Convention.
+
+**Cash Settlement Amount**
+
+On 2 Business Days after the Mandatory Early Termination Date, the party which is out-of-the-money shall pay to the party which is in-the-money, the Cash Settlement Amount, which shall be an amount in USD equal to the absolute value of the market value of the contract, as determined on the Mandatory Early Termination Date.

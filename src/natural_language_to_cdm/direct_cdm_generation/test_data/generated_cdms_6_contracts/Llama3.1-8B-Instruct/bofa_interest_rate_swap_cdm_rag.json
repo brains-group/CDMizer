@@ -1,0 +1,244 @@
+{
+    "agreement": {
+        "agreementDate": "1999-02-17",
+        "agreementType": "ISDA Master Agreement",
+        "agreementId": "ISDA Master Agreement",
+        "counterparty": {
+            "partyA": {
+                "partyId": "Merrill Lynch International",
+                "partyIdSource": "ISDA"
+            },
+            "partyB": {
+                "partyId": "Party B",
+                "partyIdSource": "ISDA"
+            }
+        }
+    },
+    "confirmation": {
+        "confirmationDate": "2018-03-01",
+        "confirmationType": "ISDA Confirmation",
+        "confirmationId": "ISDA Confirmation",
+        "counterparty": {
+            "partyA": {
+                "partyId": "Merrill Lynch International",
+                "partyIdSource": "ISDA"
+            },
+            "partyB": {
+                "partyId": "Party B",
+                "partyIdSource": "ISDA"
+            }
+        }
+    },
+    "trade": {
+        "tradeDate": "2018-03-01",
+        "tradeType": "Interest Rate Swap",
+        "tradeId": "Interest Rate Swap",
+        "tradeStatus": "Active",
+        "tradeStart": {
+            "date": "2018-03-16",
+            "time": "00:00:00"
+        },
+        "tradeEnd": {
+            "date": "2048-03-16",
+            "time": "00:00:00"
+        },
+        "notionalAmount": {
+            "amount": "1000000",
+            "currency": "USD"
+        },
+        "fixedRate": {
+            "rate": "4.60000",
+            "dayCountFraction": "30/360"
+        },
+        "floatingRate": {
+            "rateOption": "USD-LIBOR-BBA",
+            "spread": "0.00000",
+            "dayCountFraction": "ACT/360",
+            "calculationPeriodDates": {
+                "calculationPeriodFrequency": {
+                    "periodMultiplier": 1,
+                    "period": "M",
+                    "meta": {
+                        "globalKey": "204b"
+                    },
+                    "rollConvention": "4"
+                },
+                "calculationPeriodStart": {
+                    "date": "2018-06-16",
+                    "time": "00:00:00"
+                },
+                "calculationPeriodEnd": {
+                    "date": "2048-03-16",
+                    "time": "00:00:00"
+                }
+            },
+            "resetDates": {
+                "resetFrequency": {
+                    "periodMultiplier": 1,
+                    "period": "M",
+                    "meta": {
+                        "globalKey": "204b"
+                    },
+                    "rollConvention": "4"
+                },
+                "resetStart": {
+                    "date": "2018-06-16",
+                    "time": "00:00:00"
+                },
+                "resetEnd": {
+                    "date": "2048-03-16",
+                    "time": "00:00:00"
+                }
+            },
+            "paymentDates": {
+                "paymentFrequency": {
+                    "periodMultiplier": 1,
+                    "period": "M",
+                    "meta": {
+                        "globalKey": "204b"
+                    }
+                },
+                "paymentRelativeTo": "CalculationPeriodEndDate"
+            }
+        },
+        "payout": {
+            "interestRatePayout": [
+                {
+                    "payerReceiver": {
+                        "payer": "Party A",
+                        "receiver": "Party B"
+                    },
+                    "priceQuantity": {
+                        "quantityReference": {
+                            "globalReference": "4cf",
+                            "externalReference": "EquityNotionalAmount"
+                        },
+                        "meta": {
+                            "globalKey": "54b65ddd"
+                        }
+                    },
+                    "rateSpecification": {
+                        "floatingRate": {
+                            "rateOption": {
+                                "address": {
+                                    "scope": "DOCUMENT",
+                                    "value": "rateOption-1"
+                                }
+                            },
+                            "spreadSchedule": {
+                                "price": {
+                                    "address": {
+                                        "scope": "DOCUMENT",
+                                        "value": "price-2"
+                                    }
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "0"
+                            }
+                        }
+                    },
+                    "dayCountFraction": {
+                        "value": "ACT/360"
+                    },
+                    "calculationPeriodDates": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2018-03-16",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "FOLLOWING",
+                                    "meta": {
+                                        "globalKey": "d3bf0271"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "bf772f3a"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "bf772f3a"
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2048-03-16",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "FOLLOWING",
+                                    "meta": {
+                                        "globalKey": "d3bf0271"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "bf772f3a"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "bf772f3a"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "earlyTermination": {
+            "earlyTerminationType": "Optional Early Termination",
+            "earlyTerminationDates": {
+                "earlyTerminationFrequency": {
+                    "periodMultiplier": 1,
+                    "period": "M",
+                    "meta": {
+                        "globalKey": "204b"
+                    }
+                },
+                "earlyTerminationStart": {
+                    "date": "2019-03-16",
+                    "time": "00:00:00"
+                },
+                "earlyTerminationEnd": {
+                    "date": "2047-03-16",
+                    "time": "00:00:00"
+                }
+            },
+            "businessDayConvention": "FOLLOWING",
+            "exerciseBusinessDay": "London, New York and Sydney",
+            "exerciseTime": "11:00:00",
+            "calculationAgent": "As stated in the Agreement"
+        },
+        "settlement": {
+            "settlementType": "Cash Settlement",
+            "settlementDates": {
+                "settlementFrequency": {
+                    "periodMultiplier": 1,
+                    "period": "M",
+                    "meta": {
+                        "globalKey": "204b"
+                    }
+                },
+                "settlementStart": {
+                    "date": "2023-03-01",
+                    "time": "00:00:00"
+                },
+                "settlementEnd": {
+                    "date": "2048-03-01",
+                    "time": "00:00:00"
+                }
+            },
+            "settlementAmount": {
+                "amount": "1000000",
+                "currency": "USD"
+            }
+        },
+        "calculationAgent": "As stated in the Agreement",
+        "recordingOfConversations": "Each party to this Transaction acknowledges and agrees to the recording of conversations between trading and marketing personnel of the parties to this Transaction whether by one or other or both of the parties or their agents.",
+        "accountDetails": "As advised under separate cover with reference to this Confirmation, each party shall provide appropriate payment instructions to the other party in writing and such instructions shall be deemed to be incorporated into this Confirmation.",
+        "offices": {
+            "partyA": {
+                "office": "London, United Kingdom",
+                "faxNumber": "+1 866 218 8487"
+            },
+            "partyB": {
+                "office": "Sydney-NSW, AUSTRALIA"
+            }
+        }
+    }
+}

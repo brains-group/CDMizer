@@ -1,0 +1,93 @@
+{
+    "Contract": {
+        "ContractDescription": {
+            "ContractType": "Commodity Option",
+            "ProductType": "Commodity",
+            "Commodity": "Natural Gas",
+            "Underlying": "HTOXVX (Henry Hub Natural Gas Futures)"
+        },
+        "TradeDetails": {
+            "TradeDate": "2021-12-03",
+            "TradeIdentifier": "MOCKUPSTRIKEPRICEE01",
+            "TradeLot": 1000000,
+            "NotionalAmount": 1000000.0,
+            "TradeType": "Call Option"
+        },
+        "CommodityDetails": {
+            "DeliveryDate": "The 1st business day following the last trading day of the contract month",
+            "DeliveryLocation": "New York Mercantile Exchange (NYMEX)"
+        },
+        "OptionTerms": {
+            "StrikePrice": [
+                {
+                    "StrikePrice": 2000.0,
+                    "FixingDate": "2022-07-01"
+                },
+                {
+                    "StrikePrice": 3000.0,
+                    "FixingDate": "2022-08-01"
+                }
+            ],
+            "ExpirationDate": "2022-07-31",
+            "ExerciseStyle": "European",
+            "AutomaticExercise": true,
+            "FollowUpConfirmation": false
+        },
+        "PayoutTerms": {
+            "Payer": "Bank B",
+            "Receiver": "Bank A",
+            "SettlementCurrency": "USD",
+            "SettlementDate": "The 5th business day following the expiration date",
+            "SettlementType": "Cash"
+        },
+        "CounterpartyDetails": {
+            "Party1": {
+                "PartyName": "Bank A",
+                "LEI": "DUMMY0000000000LEI02"
+            },
+            "Party2": {
+                "PartyName": "Bank B",
+                "LEI": "DUMMY0000000000LEI01"
+            }
+        },
+        "ContractualParty": {
+            "MasterAgreement": {
+                "AgreementName": "Master Agreement",
+                "AgreementType": "ISDA Master Agreement",
+                "AgreementVersion": "2002 vintage"
+            }
+        },
+        "TransferHistory": [
+            {
+                "TransferDate": "2021-12-07",
+                "TransferType": "Premium payment",
+                "Payer": "Bank A",
+                "Receiver": "Bank B",
+                "Amount": 452500.0
+            }
+        ],
+        "RiskDisclosure": {
+            "RiskDisclosureText": "The parties acknowledge that this contract involves significant risks, including but not limited to, price risk, liquidity risk, and credit risk."
+        },
+        "Representations": {
+            "RepresentationsText": "Each party represents that it has the power to enter into this contract and has taken all necessary action to authorize its execution."
+        },
+        "GoverningLaw": {
+            "GoverningLawJurisdiction": "Province of Ontario",
+            "GoverningLawCountry": "Canada"
+        },
+        "CalculationAgent": {
+            "CalculationAgentName": "Bank A",
+            "CalculationAgentLEI": "DUMMY0000000000LEI02"
+        },
+        "Valuation": {
+            "ValuationPlatform": "Optimize"
+        },
+        "Termination": {
+            "TerminationDate": "The expiration date"
+        },
+        "Miscellaneous": {
+            "Confidentiality": true
+        }
+    }
+}

@@ -1,0 +1,655 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "UniqueTransactionIdentifier",
+            "issuerReference": {
+                "globalReference": "4a5d2d9f",
+                "externalReference": "party1"
+            },
+            "issuer": {
+                "value": "UTIPREFIX",
+                "meta": {
+                    "scheme": "http://www.fpml.org/coding-scheme/external/cftc/issuer-identifier"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "UTITRADEID",
+                        "meta": {
+                            "scheme": "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
+                        }
+                    }
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "Foreign Exchange Non-Deliverable Forward (NDF) Contract",
+            "meta": {
+                "globalKey": "trade",
+                "externalKey": "trade1",
+                "tradeDate": "2013-04-01"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourceProvider": {
+                                                    "value": "ISDA"
+                                                },
+                                                "sourcePage": {
+                                                    "value": "2006 ISDA Definitions"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "observationSchedule": {
+                                                "observationDate": [
+                                                    {
+                                                        "adjustedDate": "2013-04-01",
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-04-01"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-10-01"
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "rollConvention": "6M",
+                                                    "periodMultiplier": 1,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "ISDA Master Agreement",
+                                                            "value": "2006 ISDA Definitions"
+                                                        }
+                                                    }
+                                                },
+                                                "exchangedCurrency": "BRL"
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "Party2",
+                                                    "receiver": "Party1"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "ISDA Master Agreement",
+                                                            "value": "2006 ISDA Definitions"
+                                                        }
+                                                    }
+                                                },
+                                                "exchangedCurrency": "USD"
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "style: \"payer receiver\"",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2013-04-01",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "FOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "212500d8"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "d018b854"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "d018b854"
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "adjustableDate": {
+                                                "adjustedDate": {
+                                                    "value": "2013-04-01",
+                                                    "meta": {
+                                                        "globalKey": "contract-entry-date"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "value": 0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "ExchangeRate",
+                                            "composite": {
+                                                "baseValue": null
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "ISDA",
+                                                                "value": "USD/BRL"
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "HSBCGB01"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "ISDA Master Agreement"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2013-04-01"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "16:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"settlementType\" : \"Cash\"",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2013-04-01"
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "Party1",
+                                                    "receiver": "Party2"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "BRL",
+                                                            "value": "BRL 3,000,000"
+                                                        }
+                                                    }
+                                                },
+                                                "exchangedCurrency2": {
+                                                    "payerReceiver": {
+                                                        "payer": "Party2",
+                                                        "receiver": "Party1"
+                                                    },
+                                                    "priceQuantity": {
+                                                        "quantitySchedule": {
+                                                            "address": {
+                                                                "scope": "USD",
+                                                                "value": "USD 2,307,000"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "tenorPeriod": {
+                                                "periodMultiplier": 6,
+                                                "period": "months"
+                                            },
+                                            "exchangeRate": {
+                                                "crossRate": [
+                                                    {
+                                                        "rate": 1,
+                                                        "currency1": {
+                                                            "value": "BRL"
+                                                        },
+                                                        "currency2": {
+                                                            "value": "USD"
+                                                        },
+                                                        "quoteBasis": "spot"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "HSBCGB01"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "BNPPGB01"
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "BRL.PTAX/BRL09"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2013-04-01",
+                                                                "dateAdjustments": {
+                                                                    "businessDayConvention": "Following"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "16:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"settlementType\" : \"Cash\"",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "2013-04-01"
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO",
+                                                "meta": {
+                                                    "globalKey": "contract_business_center"
+                                                }
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourcePage": {
+                                                    "value": "ISDA"
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "currencyPair": {
+                                                "value": {
+                                                    "currency1": {
+                                                        "value": "BRL"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Currency2PerCurrency1"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-04-01"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-10-01"
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": "Business"
+                                            }
+                                        },
+                                        "numberOfObservationDates": "22"
+                                    },
+                                    "valuationDates": {
+                                        "finalValuationDate": {
+                                            "valuationDates": {
+                                                "relativeDates": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "cef5340c"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "InterestRate",
+                                                "value": 0.151,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": 100000.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 252,
+                                            "meanAdjustment": true
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "InterestRate",
+                                                "value": 0.151,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 252,
+                                            "meanAdjustment": true
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-4"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "adjustedDate": {
+                                                    "value": "2013-10-01",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": ""
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": ""
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "HSBCGB01"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "productQualifier": "ForeignExchange_NonDeliverableForward",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "Foreign Exchange NDF",
+                                "meta": {
+                                    "scheme": "http://www.fpml.org/coding-scheme/product-type-simple"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        },
+                                        "priceType": "ExchangeRate",
+                                        "composite": {
+                                            "baseValue": 0.8935
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": 3000000,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "BRL"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "currencyPair": {
+                                    "value": {
+                                        "currency1": {
+                                            "value": "BRL"
+                                        },
+                                        "currency2": {
+                                            "value": "USD"
+                                        },
+                                        "quoteBasis": "Spot"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": {
+                "role": "Party1",
+                "partyReference": {
+                    "globalReference": "HSBCGB01",
+                    "externalReference": "party1"
+                }
+            },
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgentIndependent",
+                    "partyReference": [
+                        {
+                            "globalReference": "HSBCGB01",
+                            "externalReference": "Party1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "HSBCGB01",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "c87765a4"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Party1"
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "BNPPGB01",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/iso17442"
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": "4a5d2d9f"
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Party2"
+                }
+            }
+        ],
+        "account": [
+            {
+                "accountNumber": {
+                    "value": "d26b18a8"
+                },
+                "servicingParty": {
+                    "globalReference": "HSBCGB01",
+                    "externalReference": "Party1"
+                }
+            }
+        ]
+    }
+}

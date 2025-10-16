@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.observable.asset",
+  "type": "object",
+  "title": "FloatingRateOption",
+  "description": "Specification of a floating rate option as a floating rate index and tenor.",
+  "properties": {
+    "floatingRateIndex": {
+      "description": "The reference index that is used to specify the floating interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.",
+      "$ref": "cdm-base-staticdata-asset-rates-metafields-FieldWithMetaFloatingRateIndexEnum.schema.json"
+    },
+    "inflationRateIndex": {
+      "description": "The reference index that is used to specify the inflation interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.",
+      "$ref": "cdm-base-staticdata-asset-rates-metafields-FieldWithMetaInflationRateIndexEnum.schema.json"
+    },
+    "indexTenor": {
+      "description": "The ISDA Designated Maturity, i.e. the floating rate tenor.",
+      "$ref": "cdm-base-datetime-Period.schema.json"
+    },
+    "indexReferenceInformation": {
+      "description": "This Attribute contains all the terms relevant to defining an Index.",
+      "$ref": "cdm-base-staticdata-asset-common-IndexReferenceInformation.schema.json"
+    }
+  }
+}

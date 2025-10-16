@@ -1,0 +1,1431 @@
+{
+    "trade": {
+        "description": "Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.",
+        "tradeIdentifier": [
+            {
+                "description": "Defines a trade identifier as a special case of the generic identifier type, that also includes the trade identifier class.",
+                "issuerReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "assignedIdentifier": [
+                    {
+                        "description": "A class to specify the identifier value and its associated version.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "version": null
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "",
+            "meta": {
+                "globalKey": "",
+                "externalKey": ""
+            }
+        },
+        "tradableProduct": {
+            "description": "Definition of a product as ready to be traded, i.e. included in an execution or contract, by associating a specific price and quantity to this product plus an (optional) mechanism for any potential future quantity adjustment.",
+            "product": {
+                "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                "contractualProduct": {
+                    "description": " A class to specify the contractual products' economic terms, alongside their product identification and product taxonomy. The contractual product class is meant to be used across the pre-execution, execution and (as part of the Contract) post-execution lifecycle contexts.",
+                    "economicTerms": {
+                        "description": " This class represents the full set of price-forming features associated with a contractual product: the payout component, the notional/quantity, the effective and termination date and the date adjustment provisions when applying uniformily across the payout components. This class also includes the legal provisions which have valuation implications: cancelable provision, extendible provision, early termination provision and extraordinary events specification.",
+                        "effectiveDate": {
+                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                            "adjustableDate": {
+                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                "unadjustedDate": "",
+                                "dateAdjustments": {
+                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                    "businessDayConvention": "",
+                                    "businessCenters": {
+                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                        "businessCenter": [
+                                            {
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "relativeDate": {
+                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                "businessDayConvention": "",
+                                "businessCenters": {
+                                    "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                    "businessCenter": [
+                                        {
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                "dateRelativeTo": {
+                                    "globalReference": "",
+                                    "externalReference": ""
+                                },
+                                "dayType": "",
+                                "periodMultiplier": null,
+                                "period": ""
+                            }
+                        },
+                        "terminationDate": {
+                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                            "adjustableDate": {
+                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                "unadjustedDate": "",
+                                "dateAdjustments": {
+                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                    "businessDayConvention": "",
+                                    "businessCenters": {
+                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                        "businessCenter": [
+                                            {
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "relativeDate": {
+                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                "businessDayConvention": "",
+                                "businessCenters": {
+                                    "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                    "businessCenter": [
+                                        {
+                                            "value": ""
+                                        }
+                                    ]
+                                },
+                                "dateRelativeTo": {
+                                    "globalReference": "",
+                                    "externalReference": ""
+                                },
+                                "periodMultiplier": null,
+                                "period": ""
+                            }
+                        },
+                        "payout": {
+                            "description": "A class to represent the set of future cashflow methodologies in the form of specific payout class(es) that can be associated for the purpose of specifying a financial product. For example, two interest rate payouts can be combined to specify an interest rate swap, or one interest rate payout can be combined with a credit default payout to specify a credit default swap.",
+                            "interestRatePayout": [
+                                {
+                                    "description": " A class to specify all of the terms necessary to define and calculate a cash flow based on a fixed, a floating or an inflation index rate. The interest rate payout can be applied to interest rate swaps and FRA (which both have two associated interest rate payouts), credit default swaps (to represent the fee leg when subject to periodic payments) and equity swaps (to represent the funding leg). The associated globalKey denotes the ability to associate a hash value to the InterestRatePayout instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                    "rateSpecification": {
+                                        "description": " A class to specify the fixed interest rate, floating interest rate or inflation rate.",
+                                        "floatingRate": {
+                                            "description": "A class to specify the floating interest rate by extending the floating rate definition with a set of attributes that specify such rate: the initial value specified as part of the trade, the rounding convention, the averaging method and the negative interest rate treatment.",
+                                            "calculationParameters": {
+                                                "description": "Defines the structures needed to represent the calculation parameters for daily averaged and compounded modular rates as defined in the 2021 ISDA Definitions in Section 7. This type is used to represent modular computed rates in interestRatePayouts.",
+                                                "calculationMethod": "",
+                                                "lookbackCalculation": {
+                                                    "description": "Defines business day shifts for daily componded or averaged rates.  This type is used for lookback and lockout rates. This type is used to represent modular computed rates in interestRatePayouts.",
+                                                    "offsetDays": null
+                                                },
+                                                "applicableBusinessDays": {
+                                                    "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "",
+                                                    "value": ""
+                                                }
+                                            },
+                                            "spreadSchedule": {
+                                                "description": "Adds an optional spread type element to the Schedule to identify a long or short spread value.",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dayCountFraction": {
+                                        "value": "",
+                                        "meta": {
+                                            "scheme": ""
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "description": "A data for:  defining the parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods. A calculation period schedule consists of an optional initial stub calculation period, one or more regular calculation periods and an optional final stub calculation period. In the absence of any initial or final stub calculation periods, the regular part of the calculation period schedule is assumed to be between the effective date and the termination date. No implicit stubs are allowed, i.e. stubs must be explicitly specified using an appropriate combination of firstPeriodStartDate, firstRegularPeriodStartDate and lastRegularPeriodEndDate.",
+                                        "effectiveDate": {
+                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                            "adjustableDate": {
+                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                "businessDayConvention": "",
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "terminationDate": {
+                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                            "adjustableDate": {
+                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                "businessDayConvention": "",
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "description": "Specifies the parameters to generate the payment date schedule, either through a parametric representation or by reference to specified dates.",
+                                        "paymentDateSchedule": {
+                                            "description": "The payment dates when specified as relative to a set of dates specified somewhere else in the instance document/transaction, e.g. the valuation dates as typically the case for equity swaps, or when specified as a calculation period schedule.",
+                                            "interimPaymentDates": [
+                                                {
+                                                    "description": "A class giving the choice between defining a series of dates as an explicit list of dates together with applicable adjustments or as relative to some other series of (anchor) dates, or as a calculation period schedule.",
+                                                    "adjustableDates": {
+                                                        "description": "A class for defining a series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the dates.",
+                                                        "unadjustedDate": [
+                                                            ""
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                            "businessDayConvention": "",
+                                                            "businessCenters": {
+                                                                "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": ""
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "relativeDates": {
+                                                        "description": "A class describing a set of dates defined as relative to another set of dates.",
+                                                        "businessDayConvention": "",
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dayType": "",
+                                                        "periodMultiplier": null,
+                                                        "period": ""
+                                                    },
+                                                    "periodicDates": {
+                                                        "description": "A class for specifying a calculation period schedule.",
+                                                        "startDate": {
+                                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                            "adjustableDate": {
+                                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                                "unadjustedDate": "",
+                                                                "dateAdjustments": {
+                                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                                    "businessDayConvention": "",
+                                                                    "businessCenters": {
+                                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                                        "businessCenter": [
+                                                                            {
+                                                                                "value": ""
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            },
+                                                            "relativeDate": {
+                                                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                                "businessDayConvention": "",
+                                                                "dateRelativeTo": {
+                                                                    "globalReference": "",
+                                                                    "externalReference": ""
+                                                                },
+                                                                "periodMultiplier": null,
+                                                                "period": ""
+                                                            }
+                                                        },
+                                                        "endDate": {
+                                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                            "relativeDate": {
+                                                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                                "businessDayConvention": "",
+                                                                "dateRelativeTo": {
+                                                                    "globalReference": "",
+                                                                    "externalReference": ""
+                                                                },
+                                                                "periodMultiplier": null,
+                                                                "period": ""
+                                                            }
+                                                        },
+                                                        "periodFrequency": {
+                                                            "description": "A class to specify the frequency at which calculation period end dates occur within the regular part of the calculation period schedule and their roll date convention.",
+                                                            "rollConvention": "",
+                                                            "periodMultiplier": null,
+                                                            "period": ""
+                                                        },
+                                                        "periodDatesAdjustments": {
+                                                            "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                            "businessDayConvention": "",
+                                                            "businessCenters": {
+                                                                "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": ""
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "resetDates": {
+                                        "description": "A data defining:  the parameters used to generate the reset dates schedule and associated fixing dates. The reset dates are the dates on which the new index value (which is observed on the fixing date) is applied for each period and on which the interest rate hence begins to accrue.",
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        },
+                                        "resetRelativeTo": "",
+                                        "fixingDates": {
+                                            "description": "A class defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date). If the anchor date is itself an adjustable date then the offset is assumed to be calculated from the adjusted anchor date. A number of different scenarios can be supported, namely; 1) the derived date may simply be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date; 2) the unadjusted derived date may be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date with the resulting unadjusted derived date subject to adjustment in accordance with a specified business day convention, i.e. the derived date must fall on a good business day; 3) the derived date may be a number of business days preceding or following the anchor date. Note that the businessDayConvention specifies any required adjustment to the unadjusted derived date. A negative or positive value in the periodMultiplier indicates whether the unadjusted derived precedes or follows the anchor date. The businessDayConvention should contain a value NONE if the day type element contains a value of Business (since specifying a negative or positive business days offset would already guarantee that the derived date would fall on a good business day in the specified business centers).",
+                                            "businessDayConvention": "",
+                                            "businessCenters": {
+                                                "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                "businessCenter": [
+                                                    {
+                                                        "value": ""
+                                                    }
+                                                ]
+                                            },
+                                            "dateRelativeTo": {
+                                                "globalReference": "",
+                                                "externalReference": ""
+                                            },
+                                            "dayType": "",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "resetFrequency": {
+                                            "description": "A class defining the reset frequency. In the case of a weekly reset, also specifies the day of the week that the reset occurs. If the reset frequency is greater than the calculation period frequency the this implies that more or more reset dates is established for each calculation period and some form of rate averaging is applicable. The specific averaging method of calculation is specified in FloatingRateCalculation. In case the reset frequency is of value T (term), the period is defined by the swap/swapStream/calculationPerioDates/effectiveDate and the swap/swapStream/calculationPerioDates/terminationDate.",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        }
+                                    },
+                                    "stubPeriod": {
+                                        "description": " A class defining how the initial or final stub calculation period amounts is calculated. For example, the rate to be applied to the initial or final stub calculation period may be the linear interpolation of two different tenors for the floating rate index specified in the calculation period amount component, e.g. A two month stub period may used the linear interpolation of a one month and three month floating rate. The different rate tenors would be specified in this component. Note that a maximum of two rate tenors can be specified. If a stub period uses a single index tenor and this is the same as that specified in the calculation period amount component then the initial stub or final stub component, as the case may be, must not be included.",
+                                        "initialStub": {
+                                            "description": "A type defining how a stub calculation period amount is calculated. A single floating rate tenor different to that used for the regular part of the calculation periods schedule may be specified, or two floating rate tenors many be specified. If two floating rate tenors are specified then Linear Interpolation (in accordance with the 2000 ISDA Definitions, Section 8.3 Interpolation) is assumed to apply. Alternatively, an actual known stub rate or stub amount may be specified.",
+                                            "stubRate": null
+                                        },
+                                        "finalStub": {
+                                            "description": "A type defining how a stub calculation period amount is calculated. A single floating rate tenor different to that used for the regular part of the calculation periods schedule may be specified, or two floating rate tenors many be specified. If two floating rate tenors are specified then Linear Interpolation (in accordance with the 2000 ISDA Definitions, Section 8.3 Interpolation) is assumed to apply. Alternatively, an actual known stub rate or stub amount may be specified.",
+                                            "floatingRate": [
+                                                {
+                                                    "description": "A class defining a floating rate.",
+                                                    "floatingRateIndex": "",
+                                                    "indexTenor": {
+                                                        "description": "A class to define recurring periods or time offsets.",
+                                                        "periodMultiplier": null,
+                                                        "period": ""
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "priceQuantity": {
+                                        "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        },
+                                        "quantityReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "description": "Represents a fixed price payout. There is no underlier associated with this payout type and is based on fixed pricing per a given unit (e.g. in commodities price per barrel)",
+                                    "fixedPrice": {
+                                        "description": "A predefined price accorded by the counterparties."
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "priceQuantity": {
+                                        "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "adjustableOrRelativeDate": {
+                                                "description": "This Rosetta class specifies the date as either an unadjusted, adjusted or relative date. It supplements the features of the AdjustableOrAdjustedDate to support the credit default swap option premium, which uses the relative date construct.",
+                                                "relativeDate": {
+                                                    "description": "A class defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date). If the anchor date is itself an adjustable date then the offset is assumed to be calculated from the adjusted anchor date. A number of different scenarios can be supported, namely; 1) the derived date may simply be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date; 2) the unadjusted derived date may be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date with the resulting unadjusted derived date subject to adjustment in accordance with a specified business day convention, i.e. the derived date must fall on a good business day; 3) the derived date may be a number of business days preceding or following the anchor date. Note that the businessDayConvention specifies any required adjustment to the unadjusted derived date. A negative or positive value in the periodMultiplier indicates whether the unadjusted derived precedes or follows the anchor date. The businessDayConvention should contain a value NONE if the day type element contains a value of Business (since specifying a negative or positive business days offset would already guarantee that the derived date would fall on a good business day in the specified business centers).",
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "description": "Contains the necessary specifications for all performance payouts, encompassing equity return, dividend, variance, volatility and correlation products.",
+                                    "observationTerms": {
+                                        "description": "Class containing terms that are associated with observing a price/benchmark/index across either single or multiple observations. ",
+                                        "observationDates": {
+                                            "description": "Describes date details for a set of observation dates in parametric or non-parametric form.",
+                                            "periodicSchedule": {
+                                                "description": "A class for specifying a calculation period schedule.",
+                                                "startDate": {
+                                                    "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                    "adjustableDate": {
+                                                        "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                        "unadjustedDate": "",
+                                                        "dateAdjustments": {
+                                                            "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                            "businessDayConvention": ""
+                                                        }
+                                                    },
+                                                    "relativeDate": {
+                                                        "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": ""
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "periodMultiplier": null,
+                                                        "period": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "valuationDates": {
+                                        "description": "Defines how and when a performance type option or performance type swap is to be valued, including initial, interim and final valuation dates.",
+                                        "initialValuationDate": {
+                                            "description": "Defines how and when a performance type option or performance type swap is to be valued.",
+                                            "determinationMethod": "",
+                                            "valuationDate": {
+                                                "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                "adjustableDate": {
+                                                    "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": ""
+                                                    }
+                                                }
+                                            },
+                                            "valuationTimeType": ""
+                                        },
+                                        "interimValuationDate": {
+                                            "description": "Defines how and when a performance type option or performance type swap is to be valued.",
+                                            "determinationMethod": "",
+                                            "valuationDates": {
+                                                "description": "A class giving the choice between defining a series of dates as an explicit list of dates together with applicable adjustments or as relative to some other series of (anchor) dates, or as a calculation period schedule.",
+                                                "adjustableDates": {
+                                                    "description": "A class for defining a series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the dates.",
+                                                    "unadjustedDate": [
+                                                        ""
+                                                    ],
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": ""
+                                                    }
+                                                },
+                                                "relativeDates": {
+                                                    "description": "A class describing a set of dates defined as relative to another set of dates.",
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                },
+                                                "periodicDates": {
+                                                    "description": "A class for specifying a calculation period schedule.",
+                                                    "startDate": {
+                                                        "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                        "adjustableDate": {
+                                                            "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                            "unadjustedDate": "",
+                                                            "dateAdjustments": {
+                                                                "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                                "businessDayConvention": ""
+                                                            }
+                                                        },
+                                                        "relativeDate": {
+                                                            "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                            "businessDayConvention": "",
+                                                            "dateRelativeTo": {
+                                                                "globalReference": "",
+                                                                "externalReference": ""
+                                                            },
+                                                            "periodMultiplier": null,
+                                                            "period": ""
+                                                        }
+                                                    },
+                                                    "endDate": {
+                                                        "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                        "adjustableDate": {
+                                                            "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                            "unadjustedDate": "",
+                                                            "dateAdjustments": {
+                                                                "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                                "businessDayConvention": ""
+                                                            }
+                                                        },
+                                                        "relativeDate": {
+                                                            "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                            "businessDayConvention": "",
+                                                            "dateRelativeTo": {
+                                                                "globalReference": "",
+                                                                "externalReference": ""
+                                                            },
+                                                            "periodMultiplier": null,
+                                                            "period": ""
+                                                        }
+                                                    },
+                                                    "periodFrequency": {
+                                                        "description": "A class to specify the frequency at which calculation period end dates occur within the regular part of the calculation period schedule and their roll date convention.",
+                                                        "rollConvention": "",
+                                                        "periodMultiplier": null,
+                                                        "period": ""
+                                                    },
+                                                    "periodDatesAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "",
+                                                                    "meta": {
+                                                                        "scheme": ""
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "valuationTimeType": ""
+                                        },
+                                        "finalValuationDate": {
+                                            "description": "Defines how and when a performance type option or performance type swap is to be valued.",
+                                            "determinationMethod": "",
+                                            "valuationDate": {
+                                                "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                "adjustableDate": {
+                                                    "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": ""
+                                                                }
+                                                            ],
+                                                            "businessCentersReference": {
+                                                                "globalReference": "",
+                                                                "externalReference": ""
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "valuationTimeType": ""
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "description": "Specifies the parameters to generate the payment date schedule, either through a parametric representation or by reference to specified dates.",
+                                        "paymentDateSchedule": {
+                                            "description": "The payment dates when specified as relative to a set of dates specified somewhere else in the instance document/transaction, e.g. the valuation dates as typically the case for equity swaps, or when specified as a calculation period schedule.",
+                                            "interimPaymentDates": [
+                                                {
+                                                    "description": "A class giving the choice between defining a series of dates as an explicit list of dates together with applicable adjustments or as relative to some other series of (anchor) dates, or as a calculation period schedule.",
+                                                    "adjustableDates": {
+                                                        "description": "A class for defining a series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the dates.",
+                                                        "unadjustedDate": [
+                                                            ""
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                            "businessDayConvention": "",
+                                                            "businessCenters": {
+                                                                "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": ""
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "relativeDates": {
+                                                        "description": "A class describing a set of dates defined as relative to another set of dates.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": ""
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dayType": "",
+                                                        "periodMultiplier": null,
+                                                        "period": ""
+                                                    }
+                                                }
+                                            ],
+                                            "finalPaymentDate": {
+                                                "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                "adjustableDate": {
+                                                    "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": ""
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    },
+                                                    "businessCentersReference": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                                        "index": {
+                                            "description": "Identifies an index by referencing a product identifier.",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                            "securityType": "",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "description": "Defines a custom basket by referencing a product identifier and its consituents.",
+                                            "basketConstituent": [
+                                                {
+                                                    "description": "Identifies the constituents of the basket",
+                                                    "index": {
+                                                        "description": "Identifies an index by referencing a product identifier.",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                                        "securityType": "",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "fxFeature": [
+                                        {
+                                            "description": "A type for defining FX Features.",
+                                            "referenceCurrency": {
+                                                "value": "",
+                                                "meta": {
+                                                    "globalKey": "",
+                                                    "externalKey": ""
+                                                }
+                                            },
+                                            "composite": {
+                                                "description": "Specifies the conditions to be applied for converting into a reference currency when the actual currency rate is not determined upfront.",
+                                                "determinationMethod": ""
+                                            },
+                                            "quanto": {
+                                                "description": "Determines the currency rate that the seller of the equity amounts will apply at each valuation date for converting the respective amounts into a currency that is different from the currency denomination of the underlier.",
+                                                "fxRate": [
+                                                    {
+                                                        "description": "A class describing the rate of a currency conversion: pair of currency, quotation mode and exchange rate.",
+                                                        "quotedCurrencyPair": {
+                                                            "description": "A class that describes the composition of a rate that has been quoted or is to be quoted. This includes the two currencies and the quotation relationship between the two currencies and is used as a building block throughout the FX specification.",
+                                                            "currency1": {
+                                                                "value": ""
+                                                            },
+                                                            "currency2": {
+                                                                "value": ""
+                                                            },
+                                                            "quoteBasis": ""
+                                                        },
+                                                        "rate": null
+                                                    }
+                                                ]
+                                            },
+                                            "crossCurrency": {
+                                                "description": "Specifies the conditions to be applied for converting into a reference currency when the actual currency rate is not determined upfront.",
+                                                "fxSpotRateSource": {
+                                                    "description": "A class defining the rate source and fixing time for an FX rate.",
+                                                    "primarySource": {
+                                                        "description": "A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.",
+                                                        "sourceProvider": {
+                                                            "value": ""
+                                                        },
+                                                        "sourcePage": {
+                                                            "value": "",
+                                                            "meta": {
+                                                                "scheme": ""
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "fixingTime": {
+                                                    "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                                    "hourMinuteTime": "",
+                                                    "businessCenter": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "returnTerms": {
+                                        "description": "Specifies the type of return of a performance payout.",
+                                        "priceReturnTerms": {
+                                            "returnType": ""
+                                        },
+                                        "dividendReturnTerms": {
+                                            "description": "A class describing the conditions governing the payment of dividends to the receiver of the equity return, with the exception of the dividend payout ratio, which is defined for each of the underlying components.",
+                                            "dividendPayoutRatio": [
+                                                {
+                                                    "description": "A class describing the dividend payout ratio associated with an equity underlier. In certain cases the actual ratio is not known on trade inception, and only general conditions are then specified.",
+                                                    "totalRatio": null,
+                                                    "cashRatio": null,
+                                                    "nonCashRatio": null,
+                                                    "basketConstituent": {
+                                                        "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                                                        "security": {
+                                                            "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                                            "securityType": "",
+                                                            "productIdentifier": [
+                                                                {
+                                                                    "address": {
+                                                                        "scope": "",
+                                                                        "value": ""
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "dividendReinvestment": null,
+                                            "dividendEntitlement": "",
+                                            "dividendAmountType": "",
+                                            "firstOrSecondPeriod": "",
+                                            "extraordinaryDividendsParty": "",
+                                            "excessDividendAmount": "",
+                                            "dividendCurrency": {
+                                                "description": "A class to specify the currency in which the dividends will be denominated, i.e. either in the dividend currency or in a currency specified as part of the contract.",
+                                                "currency": {
+                                                    "value": ""
+                                                },
+                                                "determinationMethod": "",
+                                                "currencyReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            },
+                                            "nonCashDividendTreatment": "",
+                                            "dividendComposition": "",
+                                            "specialDividends": null,
+                                            "materialDividend": null,
+                                            "dividendPeriod": [
+                                                {
+                                                    "description": "Time bounded dividend payment periods, each with a dividend payment date per period.",
+                                                    "startDate": {
+                                                        "description": "A class describing the date on which the dividend will be paid/received. This class is also used to specify the date on which the FX rate will be determined, when applicable.",
+                                                        "dividendDate": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    },
+                                                    "endDate": {
+                                                        "description": "A class describing the date on which the dividend will be paid/received. This class is also used to specify the date on which the FX rate will be determined, when applicable.",
+                                                        "dividendDate": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    },
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": "",
+                                                        "businessCenters": {
+                                                            "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": ""
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "dividendPaymentDate": {
+                                                        "description": "A class describing the date on which the dividend will be paid/received. This class is also used to specify the date on which the FX rate will be determined, when applicable.",
+                                                        "dividendDateReference": {
+                                                            "description": "A class to specify the dividend date by reference to another date, with the ability to apply and offset. This class doesn't exist in FpML and is meant to simplify the choice constraint associated with the DividendPaymentDate class.",
+                                                            "dateReference": ""
+                                                        }
+                                                    },
+                                                    "dividendValuationDate": {
+                                                        "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                        "relativeDate": {
+                                                            "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                                            "businessDayConvention": "",
+                                                            "dateRelativeTo": {
+                                                                "externalReference": ""
+                                                            },
+                                                            "dayType": "",
+                                                            "periodMultiplier": null,
+                                                            "period": ""
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                                "priceType": "",
+                                                "value": null
+                                            },
+                                            "varianceCapFloor": {
+                                                "boundedVariance": {
+                                                    "realisedVarianceMethod": "",
+                                                    "daysInRangeAdjustment": null,
+                                                    "upperBarrier": null,
+                                                    "lowerBarrier": null
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": null,
+                                                "unit": {
+                                                    "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                    "currency": {
+                                                        "value": ""
+                                                    }
+                                                }
+                                            },
+                                            "exchangeTradedContractNearest": {
+                                                "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+                                                "productIdentifier": [
+                                                    {
+                                                        "value": {
+                                                            "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                                            "identifier": {
+                                                                "value": "",
+                                                                "meta": {
+                                                                    "scheme": ""
+                                                                }
+                                                            },
+                                                            "source": ""
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "valuationTerms": {
+                                                "futuresPriceValuation": null,
+                                                "optionsPriceValuation": null
+                                            },
+                                            "dividendApplicability": {
+                                                "description": "The parameters which define whether dividends are applicable",
+                                                "optionsExchangeDividends": null,
+                                                "additionalDividends": null,
+                                                "allDividends": null
+                                            },
+                                            "initialLevel": null
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                                "priceType": "",
+                                                "value": null
+                                            },
+                                            "volatilityCapFloor": {
+                                                "description": "Contains volatility-based barriers. Volatility Cap needs to be specified in accordance with the ISDA 2011 Equity Derivatives Definitions.",
+                                                "applicable": null,
+                                                "totalVolatilityCap": null,
+                                                "volatilityCapFactor": null
+                                            },
+                                            "valuationTerms": {
+                                                "futuresPriceValuation": null
+                                            },
+                                            "expectedN": null
+                                        },
+                                        "correlationReturnTerms": {
+                                            "correlationStrikePrice": {
+                                                "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                                "priceType": "",
+                                                "value": null
+                                            },
+                                            "boundedCorrelation": {
+                                                "description": "The number range defined as either a lower and upper number bound, or both.",
+                                                "lowerBound": {
+                                                    "description": "The number bound is defined as a number and whether the bound is inclusive.",
+                                                    "number": null
+                                                },
+                                                "upperBound": {
+                                                    "description": "The number bound is defined as a number and whether the bound is inclusive.",
+                                                    "number": null
+                                                }
+                                            },
+                                            "numberOfDataSeries": null,
+                                            "dividendApplicability": {
+                                                "description": "The parameters which define whether dividends are applicable",
+                                                "allDividends": null
+                                            },
+                                            "expectedN": null
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "priceQuantity": {
+                                        "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        },
+                                        "reset": null
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "settlementType": "",
+                                        "settlementCurrency": {
+                                            "value": ""
+                                        },
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "adjustableOrRelativeDate": {
+                                                "description": "This Rosetta class specifies the date as either an unadjusted, adjusted or relative date. It supplements the features of the AdjustableOrAdjustedDate to support the credit default swap option premium, which uses the relative date construct.",
+                                                "relativeDate": {
+                                                    "description": "A class defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date). If the anchor date is itself an adjustable date then the offset is assumed to be calculated from the adjusted anchor date. A number of different scenarios can be supported, namely; 1) the derived date may simply be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date; 2) the unadjusted derived date may be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date with the resulting unadjusted derived date subject to adjustment in accordance with a specified business day convention, i.e. the derived date must fall on a good business day; 3) the derived date may be a number of business days preceding or following the anchor date. Note that the businessDayConvention specifies any required adjustment to the unadjusted derived date. A negative or positive value in the periodMultiplier indicates whether the unadjusted derived precedes or follows the anchor date. The businessDayConvention should contain a value NONE if the day type element contains a value of Business (since specifying a negative or positive business days offset would already guarantee that the derived date would fall on a good business day in the specified business centers).",
+                                                    "businessDayConvention": "",
+                                                    "businessCenters": {
+                                                        "description": "A class for specifying the business day calendar location used in determining whether a day is a business day or not, either by specifying this business center by reference to an enumerated list that is maintained by the FpML standard, or by reference to such specification when it exists elsewhere as part of the instance document. This class corresponds to the FpML BusinessCentersOrReference.model.",
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": ""
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "terminationProvision": {
+                            "description": "A class for defining option provisions.",
+                            "earlyTerminationProvision": {
+                                "description": "A data defining:  an early termination provision for a swap. This early termination is at fair value, i.e. on termination the fair value of the product must be settled between the parties.",
+                                "optionalEarlyTermination": {
+                                    "description": "A data defining:  an early termination provision where either or both parties have the right to exercise.",
+                                    "mutualEarlyTermination": null
+                                }
+                            }
+                        },
+                        "calculationAgent": {
+                            "description": "A class defining the ISDA calculation agent responsible for performing duties as defined in the applicable product definitions.",
+                            "calculationAgentParty": ""
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+                            "productQualifier": "",
+                            "source": "",
+                            "value": {
+                                "description": "Defines a taxonomy value as either a simple string or a more granular expression with class names and values for each class.",
+                                "name": {
+                                    "value": "",
+                                    "meta": {
+                                        "scheme": ""
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "description": "Specifies the price and quantity of a trade lot, where the same product could be traded multiple times with the same counterparty but in different lots (at a different date, in a different quantity and at a different price). One trade lot combined with a product definition specifies the entire economics of a trade. The lifecycle mechanics of each such trade lot (e.g. cashflow payments) is independent of the other lots.",
+                    "priceQuantity": [
+                        {
+                            "description": "Defines a settlement as an exchange between two parties of a specified quantity of an asset (the quantity) against a specified quantity of another asset (the price). The settlement is optional and can be either cash or physical. In the case of non-cash products, the settlement of the price/quantity would not be specified here and instead would be delegated to the product mechanics, as parameterised by the price/quantity values.",
+                            "price": [
+                                {
+                                    "value": {
+                                        "description": "Specifies the price of a financial instrument in a trade as a schedule of measures. A price generically expresses the value of an exchange as a ratio: it measures the amount of one thing needed to be exchanged for 1 unit of another thing (e.g. cash in a specific currency in exchange for a bond or share). This generic representation can be used to support any type of financial price beyond just cash price: e.g. an interest rate, a foreign exchange rate, etc. This data type is generically based on a schedule and can also be used to represent a price as a single value.",
+                                        "perUnitOf": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "financialUnit": "",
+                                            "currency": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        },
+                                        "priceType": "",
+                                        "arithmeticOperator": "",
+                                        "datedValue": [
+                                            {
+                                                "description": "Defines a date and value pair. This definition is used for varying rate or amount schedules, e.g. a notional amortisation or a step-up coupon schedule.",
+                                                "date": "",
+                                                "value": null
+                                            }
+                                        ],
+                                        "value": null,
+                                        "unit": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "currency": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": null,
+                                        "unit": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "financialUnit": "",
+                                            "currency": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+                                "rateOption": {
+                                    "value": {
+                                        "description": "Specification of a floating rate option as a floating rate index and tenor.",
+                                        "floatingRateIndex": {
+                                            "value": "",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "indexTenor": {
+                                            "description": "A class to define recurring periods or time offsets.",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                            "identifier": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "source": ""
+                                        }
+                                    }
+                                ]
+                            },
+                            "settlementTerms": {
+                                "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                "settlementType": ""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "description": "Defines a counterparty enumerated value, e.g. Party1 or Party2, with an associated party reference. The product is agnostic to the actual parties to the transaction, with the party references abstracted away from the product definition and replaced by the CounterpartyEnum (e.g. values Party1 or Party2). The CounterpartyEnum can then be positioned in the product (e.g. to specify which counterparty is the payer, receiver etc) and this Counterparty type, which is positioned outside of the product definition, allows the CounterpartyEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "",
+                        "externalReference": ""
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "description": "Defines an ancillary role enumerated value with an associated party reference. The product is agnostic to the actual parties involved in the transaction, with the party references abstracted away from the product definition and replaced by the AncillaryRoleEnum. The AncillaryRoleEnum can then be positioned in the product and this AncillaryParty type, which is positioned outside of the product definition, allows the AncillaryRoleEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": [
+                        {
+                            "globalReference": "",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ],
+            "adjustment": ""
+        },
+        "party": [
+            {
+                "description": "A class to specify the FIRST party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": ""
+                }
+            },
+            {
+                "description": "A class to specify the SECOND party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": ""
+                }
+            }
+        ],
+        "partyRole": [
+            {
+                "description": "A class to specify the role(s) that party(ies) may have in relation to the execution, contract or other legal agreement.",
+                "partyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "role": ""
+            }
+        ],
+        "contractDetails": {
+            "description": "Defines specific attributes that relate to contractual details of trades.",
+            "documentation": [
+                {
+                    "description": "The specification of a legal agreement between two parties, being negotiated or having been executed. This includes the baseline information and the optional specialised elections",
+                    "agreementDate": "",
+                    "legalAgreementIdentification": {
+                        "description": "Specifies the type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.",
+                        "agreementName": {
+                            "description": "Specifies the agreement name through an agreement type and optional detailed sub agreement type.",
+                            "agreementType": "",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "",
+                                    "meta": {
+                                        "scheme": ""
+                                    }
+                                }
+                            ],
+                            "contractualMatrix": [
+                                {
+                                    "matrixType": {
+                                        "value": "",
+                                        "meta": {
+                                            "scheme": ""
+                                        }
+                                    },
+                                    "matrixTerm": {
+                                        "value": "",
+                                        "meta": {
+                                            "scheme": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "",
+                                "meta": {
+                                    "scheme": ""
+                                }
+                            },
+                            "masterConfirmationType": {
+                                "value": "",
+                                "meta": {
+                                    "scheme": ""
+                                }
+                            },
+                            "masterConfirmationAnnexType": {
+                                "value": ""
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": ""
+            }
+        },
+        "collateral": {
+            "description": "A type for defining the obligations of the counterparty subject to credit support requirements.",
+            "independentAmount": {
+                "description": "A class specifying the Independent Amount as the combination of a payer/receiver, a payment amount, a payment date and an associated payment calculation rule.",
+                "paymentDetail": [
+                    {
+                        "paymentDate": {
+                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                            "adjustableDate": {
+                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                "unadjustedDate": "",
+                                "dateAdjustments": {
+                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                    "businessDayConvention": ""
+                                }
+                            },
+                            "relativeDate": {
+                                "description": "A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.",
+                                "businessDayConvention": "",
+                                "dateRelativeTo": {
+                                    "externalReference": ""
+                                },
+                                "periodMultiplier": null,
+                                "period": ""
+                            }
+                        },
+                        "paymentRule": {
+                            "description": "A class defining the payment calculation rule. As of FpML 5.10, percentage rule is the only calculation rule that has been specified as part of the standard.",
+                            "percentageRule": {
+                                "description": "A class defining a content model for a calculation rule defined as percentage of the notional amount.",
+                                "paymentPercent": null,
+                                "notionalAmountReference": {
+                                    "globalReference": "",
+                                    "externalReference": ""
+                                }
+                            }
+                        },
+                        "paymentAmount": {
+                            "description": "Defines a monetary amount in a specified currency.",
+                            "value": null,
+                            "unit": {
+                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                "currency": {
+                                    "value": ""
+                                }
+                            }
+                        }
+                    }
+                ],
+                "payerPartyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "receiverPartyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                }
+            }
+        },
+        "account": [
+            {
+                "description": "A class to specify an account as an account number alongside, optionally. an account name, an account type, an account beneficiary and a servicing party.",
+                "accountNumber": {
+                    "value": "",
+                    "meta": {
+                        "scheme": ""
+                    }
+                },
+                "servicingParty": {
+                    "globalReference": "",
+                    "externalReference": ""
+                }
+            }
+        ]
+    }
+}

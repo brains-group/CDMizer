@@ -1,0 +1,158 @@
+{
+    "Agreement": {
+        "AgreementDate": "1994-12-12",
+        "AgreementId": "TW9235",
+        "AgreementType": "InterestRateSwap",
+        "Counterparty": {
+            "CounterpartyId": "549300VBWWV6BYQOWM67",
+            "CounterpartyName": "Party A"
+        },
+        "EffectiveDate": "1994-12-14",
+        "TerminationDate": "1999-12-14",
+        "TerminationDateType": "Fixed",
+        "TerminationDateAdjustments": {
+            "BusinessDayConvention": "ModifiedFollowing"
+        },
+        "MandatoryEarlyTerminationDate": "1999-11-03",
+        "MandatoryEarlyTerminationDateAdjustments": {
+            "BusinessDayConvention": "ModifiedFollowing"
+        },
+        "CalculationAgent": {
+            "CalculationAgentId": "549300VBWWV6BYQOWM67",
+            "CalculationAgentName": "Party A"
+        },
+        "GoverningLaw": "Ontario, Canada"
+    },
+    "Trade": {
+        "TradeDate": "1994-12-12",
+        "TradeId": "TW9235",
+        "TradeType": "InterestRateSwap",
+        "TradeLot": 1,
+        "Counterparty": {
+            "CounterpartyId": "529900DTJ5A7S5UCBB52",
+            "CounterpartyName": "Party B"
+        },
+        "Product": {
+            "ProductType": "InterestRateIRSwapFixedFloat",
+            "ProductTaxonomy": "ISDA, InterestRateIRSwapFixedFloat"
+        },
+        "EconomicTerms": {
+            "Payout": {
+                "PayerReceiver": {
+                    "Payer": {
+                        "PayerId": "549300VBWWV6BYQOWM67",
+                        "PayerName": "Party A"
+                    },
+                    "Receiver": {
+                        "ReceiverId": "529900DTJ5A7S5UCBB52",
+                        "ReceiverName": "Party B"
+                    }
+                },
+                "PriceQuantity": 50000000.0,
+                "RateSpecification": {
+                    "RateOption": "EUR-LIBOR-BBA",
+                    "IndexTenor": "6 months"
+                },
+                "DayCountFraction": "ACT/360",
+                "CalculationPeriodDates": {
+                    "EffectiveDate": "1994-12-14",
+                    "TerminationDate": "1999-12-14",
+                    "CalculationPeriodFrequency": "6 months",
+                    "RollConvention": 14
+                },
+                "PaymentDates": {
+                    "PaymentFrequency": "6 months",
+                    "PayRelativeTo": "CalculationPeriodEnd",
+                    "PaymentDatesAdjustments": {
+                        "BusinessDayConvention": "ModifiedFollowing"
+                    }
+                },
+                "ResetDates": {
+                    "ResetRelativeTo": "CalculationPeriodStart",
+                    "FixingDates": "-2 days",
+                    "ResetFrequency": "6 months",
+                    "ResetDatesAdjustments": {
+                        "BusinessDayConvention": "ModifiedFollowing"
+                    }
+                }
+            }
+        }
+    },
+    "Party": [
+        {
+            "PartyId": "549300VBWWV6BYQOWM67",
+            "PartyName": "Party A"
+        },
+        {
+            "PartyId": "529900DTJ5A7S5UCBB52",
+            "PartyName": "Party B"
+        }
+    ],
+    "RiskDisclosure": {
+        "RiskDisclosureText": "The parties acknowledge that this contract involves significant risks, including interest rate risk, fixing risk, liquidity risk, and credit risk."
+    },
+    "Representations": {
+        "RepresentationsText": "Each party represents that it has the power to enter into this contract and has made its own independent decisions to enter into this contract."
+    },
+    "ScenarioAnalysis": [
+        {
+            "ScenarioDescription": "EUR-LIBOR-BBA remains unchanged over the tenor of the trade.",
+            "ScenarioImpact": "Neutral"
+        },
+        {
+            "ScenarioDescription": "EUR-LIBOR-BBA increases over the tenor of the trade.",
+            "ScenarioImpact": "Adversely impacted"
+        },
+        {
+            "ScenarioDescription": "EUR-LIBOR-BBA decreases over the tenor of the trade.",
+            "ScenarioImpact": "Favorably impacted"
+        }
+    ],
+    "MTMSensitivityAnalysis": [
+        {
+            "MTMAnalysisDescription": "Parallel shift in EUR-LIBOR-BBA curve",
+            "MTMAnalysisImpact": [
+                {
+                    "MTMAnalysisValue": 500,
+                    "MTMAnalysisImpact": "-3,969,875 EUR"
+                },
+                {
+                    "MTMAnalysisValue": 100,
+                    "MTMAnalysisImpact": "-796,597 EUR"
+                },
+                {
+                    "MTMAnalysisValue": 50,
+                    "MTMAnalysisImpact": "-398,415 EUR"
+                },
+                {
+                    "MTMAnalysisValue": 10,
+                    "MTMAnalysisImpact": "-79,698 EUR"
+                },
+                {
+                    "MTMAnalysisValue": 0,
+                    "MTMAnalysisImpact": "0 EUR"
+                },
+                {
+                    "MTMAnalysisValue": -10,
+                    "MTMAnalysisImpact": "79,712 EUR"
+                }
+            ]
+        }
+    ],
+    "LevelOfPricingVariables": [
+        {
+            "PricingVariable": "EUR 10 year LIBOR-BBA Rate",
+            "PricingVariableValue": 4.427
+        }
+    ],
+    "ImpactOfVariablesOnPricing": [
+        {
+            "ImpactDescription": "Downward parallel shift in EUR-LIBOR-BBA curve",
+            "ImpactImpact": "Favorably impacted"
+        },
+        {
+            "ImpactDescription": "Upward parallel shift in EUR-LIBOR-BBA curve",
+            "ImpactImpact": "Adversely impacted"
+        }
+    ]
+}

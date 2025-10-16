@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "TransferBase",
+  "properties": {
+    "identifier": {
+      "description": "Represents a unique reference to the transfer.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-identifier-metafields-FieldWithMetaIdentifier.schema.json"
+      },
+      "minItems": 0
+    },
+    "quantity": {
+      "description": "Represents the amount of the asset to be transferred.",
+      "$ref": "cdm-base-math-NonNegativeQuantity.schema.json"
+    },
+    "asset": {
+      "description": "Represents the object that is subject to the transfer, it could be an asset or a reference.",
+      "$ref": "cdm-base-staticdata-asset-common-Asset.schema.json"
+    },
+    "payerReceiver": {
+      "description": "Represents the parties to the transfer and their role.",
+      "$ref": "cdm-base-staticdata-party-PartyReferencePayerReceiver.schema.json"
+    },
+    "settlementDate": {
+      "description": "Represents the date on which the transfer to due.",
+      "$ref": "cdm-base-datetime-AdjustableOrAdjustedOrRelativeDate.schema.json"
+    }
+  },
+  "required": [
+    "quantity",
+    "asset",
+    "payerReceiver",
+    "settlementDate"
+  ]
+}

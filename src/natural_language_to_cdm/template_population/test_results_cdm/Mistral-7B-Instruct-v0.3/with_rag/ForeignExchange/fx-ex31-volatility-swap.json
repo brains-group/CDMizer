@@ -1,0 +1,763 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "UniqueTransactionIdentifier",
+                "issuerReference": {
+                    "globalReference": "UTIPREFIX",
+                    "externalReference": "farLeg2"
+                },
+                "issuer": {
+                    "value": "UTIPREFIX",
+                    "meta": {
+                        "scheme": "http://www.fpml.org/coding-scheme/external/cftc/issuer-identifier"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "bc0f2fa8",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "FX Volatility Swap",
+            "meta": {
+                "globalKey": "bc0f2fa8",
+                "externalKey": "productType"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "16:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourceProvider": {
+                                                    "value": "Sponsor Mid Page"
+                                                },
+                                                "sourcePage": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "observationSchedule": {
+                                                "observationDate": [
+                                                    {
+                                                        "adjustedDate": "",
+                                                        "weight": null
+                                                    },
+                                                    {
+                                                        "adjustedDate": "",
+                                                        "weight": null
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "March 5, 2011"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "March 5, 2034"
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "rollConvention": "Following",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Y"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "549300SRLRVTR996F086",
+                                                    "receiver": "549300RE0FSXJE8G1L65"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "100,000 units"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "549300RE0FSXJE8G1L65",
+                                                    "receiver": "549300SRLRVTR996F086"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "100,000 units"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "style": " Based on the provided context and the contract description, the best suited information for the key \"style\" can be derived from the \"Payout\" section of the contract description. The style of the derivatives contract in this case is a \"Fixed-Floating\" payout structure, where Party A pays a fixed percentage (4.427%) annually, and Party B pays a floating rate (SOFR-COMPOUND).\n\nTo populate the placeholder for the key \"style\", we can create a string that represents this payout structure.\n\nHere's the populated JSON object:\n\n```json\n{\n  \"style\": \"Fixed-Floating\"\n}\n```\n\nThis JSON object contains the key \"style\" with the value \"Fixed-Floating\", which represents the payout structure of the FX Volatility Swap Contract as described in the provided contract details.",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "March 1, 2011",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "212500d8"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "d018b854"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "adjustedDate": {
+                                                        "value": "2011-03-01",
+                                                        "meta": {
+                                                            "globalKey": "3ed8df"
+                                                        }
+                                                    },
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "FOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "USNY"
+                                                                }
+                                                            ],
+                                                            "meta": {
+                                                                "globalKey": "27e4e9"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "212500d8"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "d018b854"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "d018b854"
+                                                }
+                                            }
+                                        ],
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO",
+                                                "meta": {
+                                                    "globalKey": "some_unique_identifier"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "ExchangeRate",
+                                            "composite": {
+                                                "baseValue": 0.8935,
+                                                "operator": "Quote Basis"
+                                            },
+                                            "value": 12.4,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "6cf6fa10"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": {
+                                            "payerPartyReference": {
+                                                "globalReference": "549300SRLRVTR996F086",
+                                                "externalReference": "partyA"
+                                            }
+                                        },
+                                        "receiver": {
+                                            "receiverPartyReference": {
+                                                "globalReference": "549300RE0FSXJE8G1L65",
+                                                "externalReference": "partyB"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "EUR/USD",
+                                                                "value": ""
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": "Sponsor",
+                                                                "sourcePage": "Mid Page"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2011-03-01"
+                                                            },
+                                                            "meta": {
+                                                                "globalKey": "afa87ab1"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO",
+                                                        "meta": {
+                                                            "globalKey": "d018b854"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": " Based on the provided context and the contract description, the best suited information for the key \"settlementType\" can be derived from the \"settlementTerms\" section of the contract. The settlement type for this FX Volatility Swap Contract is \"Cash\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"settlementType\": \"Cash\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": {
+                                                "adjustableOrRelativeDate": {
+                                                    "adjustedDate": {
+                                                        "value": "2011-10-09",
+                                                        "meta": {
+                                                            "globalKey": "0"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "34d12999"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "3ed904"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "549300SRLRVTR996F086",
+                                                    "receiver": "549300RE0FSXJE8G1L65"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "100,000 units"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "549300RE0FSXJE8G1L65",
+                                                    "receiver": "549300SRLRVTR996F086"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "Trade Lot",
+                                                            "value": "100,000 units"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "tenorPeriod": {
+                                                "periodMultiplier": null,
+                                                "period": "Annually"
+                                            },
+                                            "exchangeRate": {
+                                                "crossRate": [
+                                                    {
+                                                        "rate": null,
+                                                        "currency1": {
+                                                            "value": "EUR"
+                                                        },
+                                                        "currency2": {
+                                                            "value": "USD"
+                                                        },
+                                                        "quoteBasis": "Currency2PerCurrency1"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "",
+                                                                "value": "EUR/USD"
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "Sponsor"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "Mid Page"
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "Compounded SOFR"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2011-04-04",
+                                                                "dateAdjustments": {
+                                                                    "businessDayConvention": "Modified Following"
+                                                                }
+                                                            },
+                                                            "meta": {
+                                                                "globalKey": "0"
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "globalKey": "34d12999"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "afa87ab1"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO",
+                                                        "meta": {
+                                                            "globalKey": "d018b854"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": " Based on the provided context and the derivatives contract description, the best suited information for the key \"settlementType\" can be found in the \"settlementTerms\" section of the \"economicTerms\" under the \"productDetails\" of the contract.\n\nThe settlement type for this FX Volatility Swap Contract is \"Cash\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"settlementType\": \"Cash\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": {
+                                                "adjustableOrRelativeDate": {
+                                                    "adjustedDate": {
+                                                        "value": "2011-10-09",
+                                                        "meta": {
+                                                            "globalKey": "0"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "34d12999"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "3ed904"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "16:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourcePage": {
+                                                    "value": "Sponsor Mid Page"
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "currencyPair": {
+                                                "value": {
+                                                    "currency1": {
+                                                        "value": "EUR"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Currency2PerCurrency1"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "March 1, 2011"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "October 7, 2034"
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "GBLO"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": "Calendar Day"
+                                            }
+                                        },
+                                        "numberOfObservationDates": " Based on the provided context and the contract description, the number of observation dates can be determined by counting the number of times the contract is valued. In this case, the contract is valued on the final valuation date, which is determined by the Calculation Agent. However, the contract does not specify the exact number of times it is valued after the initial valuation. Therefore, the placeholder for the key \"numberOfObservationDates\" should remain unchanged, as no highly relevant data exists for this key.\n\nHere is the updated JSON object with the placeholder left unchanged:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"performancePayout\": [\n                {\n                  \"observationTerms\": {\n                    \"numberOfObservationDates\": \"\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```"
+                                    },
+                                    "valuationDates": {
+                                        "finalValuationDate": {
+                                            "valuationDates": {
+                                                "relativeDates": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "cef5340c"
+                                                    }
+                                                },
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "FOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "212500d8"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "returnTerms": {
+                                            "volatilityReturnTerms": {
+                                                "annualizationFactor": 252,
+                                                "meanAdjustment": true,
+                                                "volatilityStrikePrice": {
+                                                    "value": "0.1510",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "USD"
+                                                        }
+                                                    },
+                                                    "perUnitOf": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    },
+                                                    "priceType": "InterestRate"
+                                                },
+                                                "vegaNotionalAmount": {
+                                                    "value": "100000.00",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "USD"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "69413e6b"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": {
+                                            "payerPartyReference": {
+                                                "globalReference": "549300SRLRVTR996F086",
+                                                "externalReference": "partyA"
+                                            }
+                                        },
+                                        "receiver": {
+                                            "receiverPartyReference": {
+                                                "globalReference": "549300RE0FSXJE8G1L65",
+                                                "externalReference": "partyB"
+                                            }
+                                        }
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "TRADE",
+                                                "value": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.performancePayout[0].priceQuantity"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "adjustedDate": {
+                                                    "value": "",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "0"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "34d12999"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "CalculationAgentIndependent"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "FX Volatility Swap",
+                                    "meta": {
+                                        "scheme": "http://www.fpml.org/coding-scheme/product-type-simple"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "value": "ExchangeRate",
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        },
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "EUR"
+                                            }
+                                        },
+                                        "priceType": "",
+                                        "composite": {
+                                            "baseValue": 0.913,
+                                            "operand": 0.0045,
+                                            "arithmeticOperator": "Add",
+                                            "operandType": "ForwardPoint"
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": "100000",
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "currencyPair": {
+                                    "value": {
+                                        "currency1": {
+                                            "value": "EUR"
+                                        },
+                                        "currency2": {
+                                            "value": "USD"
+                                        },
+                                        "quoteBasis": "Currency2PerCurrency1"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "549300SRLRVTR996F086",
+                        "externalReference": "Party A"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "549300RE0FSXJE8G1L65",
+                        "externalReference": "Party B"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgentIndependent",
+                    "partyReference": [
+                        {
+                            "globalReference": "ad2b4ce5",
+                            "externalReference": "partyB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "549300SRLRVTR996F086",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": ""
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "549300RE0FSXJE8G1L65",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": "LEI",
+                        "meta": {
+                            "globalKey": ""
+                        }
+                    }
+                ],
+                "name": {
+                    "value": "Party A"
+                }
+            }
+        ],
+        "account": [
+            {
+                "accountNumber": {
+                    "value": "123-acc123"
+                },
+                "servicingParty": {
+                    "globalReference": "bc0f2fa8",
+                    "externalReference": "partyA"
+                }
+            }
+        ]
+    }
+}

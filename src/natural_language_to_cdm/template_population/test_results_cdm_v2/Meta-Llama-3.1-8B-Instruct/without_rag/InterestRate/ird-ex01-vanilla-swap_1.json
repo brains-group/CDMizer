@@ -1,0 +1,1768 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "Trade Identifier",
+            "issuerReference": {
+                "globalReference": "549300VBWWV6BYQOWM67",
+                "externalReference": "529900DTJ5A7S5UCBB52"
+            },
+            "issuer": {
+                "value": "Party A",
+                "meta": {
+                    "scheme": "LEI"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "TW9235",
+                        "meta": {
+                            "scheme": "ISIN"
+                        }
+                    },
+                    "version": "1"
+                },
+                {
+                    "identifier": {
+                        "value": "SW2000",
+                        "meta": {
+                            "scheme": "ISIN"
+                        }
+                    },
+                    "version": "1"
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "December 12, 1994",
+            "meta": {
+                "globalKey": "TW9235",
+                "externalKey": "549300VBWWV6BYQOWM67"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "December 12, 1994",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODFOLLOWING"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "December 12, 1994",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "MODFOLLOWING"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "interestRatePayout": [
+                                {
+                                    "rateSpecification": {
+                                        "fixedRate": {
+                                            "rateSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Party A (549300VBWWV6BYQOWM67)",
+                                                        "value": "549300VBWWV6BYQOWM67"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "floatingRate": {
+                                            "initialRate": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                },
+                                                "priceType": "Floating Rate",
+                                                "value": 50000000.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            },
+                                            "finalRateRounding": {
+                                                "roundingDirection": "ROUND_HALF_UP",
+                                                "precision": 2
+                                            },
+                                            "floatingRateMultiplierSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "partyA",
+                                                        "value": "549300VBWWV6BYQOWM67"
+                                                    }
+                                                }
+                                            },
+                                            "rateTreatment": "\"ACT/360\"",
+                                            "calculationParameters": {
+                                                "calculationMethod": "Floating Rate",
+                                                "observationShiftCalculation": {
+                                                    "offsetDays": 0,
+                                                    "calculationBase": "ACT/360",
+                                                    "additionalBusinessDays": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUR-LIBOR-BBA"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "lookbackCalculation": {
+                                                    "offsetDays": 0
+                                                },
+                                                "lockoutCalculation": {
+                                                    "offsetDays": 0
+                                                },
+                                                "applicableBusinessDays": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "EUR-LIBOR-BBA"
+                                                        }
+                                                    ]
+                                                },
+                                                "observationParameters": {
+                                                    "observationCapRate": 4.427
+                                                }
+                                            },
+                                            "fallbackRate": {
+                                                "floatingRateIndex": "EUR-LIBOR-BBA",
+                                                "effectiveDate": "1994-12-14",
+                                                "calculationParameters": {
+                                                    "calculationMethod": "ACT/360",
+                                                    "observationShiftCalculation": {
+                                                        "offsetDays": 0,
+                                                        "calculationBase": "MODFOLLOWING",
+                                                        "additionalBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "ISDA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "applicableBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "ISDA"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "spreadAdjustment": 0
+                                                }
+                                            },
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "ISDA",
+                                                    "value": "Interest Rate IR Swap Fixed Float"
+                                                }
+                                            },
+                                            "spreadSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Party A (549300VBWWV6BYQOWM67)",
+                                                        "value": "549300VBWWV6BYQOWM67"
+                                                    }
+                                                }
+                                            },
+                                            "capRateSchedule": {
+                                                "buyer": "Party B (529900DTJ5A7S5UCBB52)",
+                                                "seller": "Party A (549300VBWWV6BYQOWM67)",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "ISDA, Interest Rate IR Swap Fixed Float",
+                                                        "value": "50000000.00 EUR"
+                                                    }
+                                                }
+                                            },
+                                            "floorRateSchedule": {
+                                                "buyer": "Party B (529900DTJ5A7S5UCBB52)",
+                                                "seller": "Party A (549300VBWWV6BYQOWM67)",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "ISDA, Interest Rate IR Swap Fixed Float",
+                                                        "value": "50000000.00 EUR"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "inflationRate": {
+                                            "inflationLag": {
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            },
+                                            "indexSource": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "mainPublication": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "interpolationMethod": {
+                                                "value": ""
+                                            },
+                                            "initialIndexLevel": null,
+                                            "fallbackBondApplicable": null,
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "",
+                                                    "value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dayCountFraction": {
+                                        "value": "ACT/360"
+                                    },
+                                    "calculationPeriodDates": {
+                                        "effectiveDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "1994-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "1994-12-12",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "relativeDateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Province of Ontario"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business Day",
+                                                "periodMultiplier": 1,
+                                                "period": "6 months"
+                                            }
+                                        },
+                                        "terminationDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "1994-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "1999-12-14",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Province of Ontario"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "6 months"
+                                            }
+                                        },
+                                        "calculationPeriodDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "London"
+                                                    },
+                                                    {
+                                                        "value": "New York"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        },
+                                        "firstPeriodStartDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "December 12, 1994",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "firstRegularPeriodStartDate": "December 14, 1994",
+                                        "firstCompoundingPeriodEndDate": "December 14, 1994",
+                                        "lastRegularPeriodEndDate": "\"December 14, 1999\"",
+                                        "stubPeriodType": "\"6 months\"",
+                                        "calculationPeriodFrequency": {
+                                            "rollConvention": "14",
+                                            "periodMultiplier": null,
+                                            "period": "6 months"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "paymentFrequency": {
+                                            "periodMultiplier": 6,
+                                            "period": "months"
+                                        },
+                                        "firstPaymentDate": "1994-12-14",
+                                        "lastRegularPaymentDate": "1999-12-14",
+                                        "paymentDateSchedule": {
+                                            "interimPaymentDates": [
+                                                {
+                                                    "periodicDates": {
+                                                        "periodFrequency": {
+                                                            "periodMultiplier": 6,
+                                                            "period": "months"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "payRelativeTo": "Calculation Period End Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "business days",
+                                            "periodMultiplier": null,
+                                            "period": ""
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Ontario"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "paymentDate": {
+                                        "unadjustedDate": "1994-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York"
+                                                    },
+                                                    {
+                                                        "value": "London"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resetDates": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        },
+                                        "resetRelativeTo": "Calculation Period Start Date",
+                                        "fixingDates": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "EUR-LIBOR-BBA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            },
+                                            "dateRelativeTo": {
+                                                "globalReference": "",
+                                                "externalReference": ""
+                                            },
+                                            "dayType": "Business",
+                                            "periodMultiplier": -2,
+                                            "period": "6 months"
+                                        },
+                                        "resetFrequency": {
+                                            "weeklyRollConvention": "",
+                                            "periodMultiplier": null,
+                                            "period": "6 months"
+                                        },
+                                        "resetDatesAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "EUR-LIBOR-BBA"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "discountingMethod": {
+                                        "discountingType": "ACT/360"
+                                    },
+                                    "compoundingMethod": "\"Floating Rate\"",
+                                    "cashflowRepresentation": {
+                                        "cashflowsMatchParameters": "\"cashflowsMatchParameters\": [\n  {\n    \"cashflowType\": \"Payment\",\n    \"cashflowDirection\": \"Outgoing\",\n    \"cashflowAmount\": 50000000.00,\n    \"cashflowFrequency\": \"6 months\",\n    \"cashflowRelativeTo\": \"Calculation Period End Date\",\n    \"cashflowAdjustments\": \"Business Day Convention: MODFOLLOWING\"\n  },\n  {\n    \"cashflowType\": \"Payment\",\n    \"cashflowDirection\": \"Incoming\",\n    \"cashflowAmount\": -50000000.00,\n    \"cashflowFrequency\": \"6 months\",\n    \"cashflowRelativeTo\": \"Calculation Period End Date\",\n    \"cashflowAdjustments\": \"Business Day Convention: MODFOLLOWING\"\n  }\n]",
+                                        "paymentCalculationPeriod": [
+                                            {
+                                                "adjustedPaymentDate": "1994-12-14",
+                                                "calculationPeriod": [
+                                                    {
+                                                        "unadjustedStartDate": "1994-12-14",
+                                                        "unadjustedEndDate": "1999-12-14",
+                                                        "calculationPeriodNumberOfDays": 1825,
+                                                        "notionalAmount": 50000000.0,
+                                                        "fxLinkedNotionalAmount": {
+                                                            "adjustedFxSpotFixingDate": ""
+                                                        },
+                                                        "floatingRateDefinition": {
+                                                            "rateObservation": [
+                                                                {
+                                                                    "adjustedFixingDate": "",
+                                                                    "observationWeight": 1
+                                                                }
+                                                            ]
+                                                        },
+                                                        "fixedRate": 0,
+                                                        "adjustedStartDate": "1994-12-14",
+                                                        "adjustedEndDate": "1999-12-14"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "stubPeriod": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        },
+                                        "initialStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "EUR-LIBOR-BBA",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": null,
+                                                        "period": "6 months"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": null
+                                        },
+                                        "finalStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "EUR-LIBOR-BBA",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": null,
+                                                        "period": "6 months"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": null
+                                        }
+                                    },
+                                    "bondReference": {
+                                        "bond": {
+                                            "identifier": {
+                                                "value": "TW9235",
+                                                "meta": {
+                                                    "scheme": "ISDA"
+                                                }
+                                            },
+                                            "source": "Party A (549300VBWWV6BYQOWM67)"
+                                        },
+                                        "conditionPrecedentBond": null
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A (549300VBWWV6BYQOWM67)",
+                                        "receiver": "Party B (529900DTJ5A7S5UCBB52)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Party A (549300VBWWV6BYQOWM67) and Party B (529900DTJ5A7S5UCBB52)",
+                                                "value": "549300VBWWV6BYQOWM67 and 529900DTJ5A7S5UCBB52"
+                                            }
+                                        },
+                                        "quantityReference": {
+                                            "globalReference": "549300VBWWV6BYQOWM67",
+                                            "externalReference": "TW9235"
+                                        },
+                                        "quantityMultiplier": {
+                                            "fxLinkedNotionalSchedule": {
+                                                "varyingNotionalCurrency": {
+                                                    "value": "EUR"
+                                                },
+                                                "varyingNotionalFixingDates": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUR"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -2,
+                                                    "period": "6 months"
+                                                },
+                                                "fxSpotRateSource": {
+                                                    "primarySource": {
+                                                        "sourceProvider": {
+                                                            "value": "BBA"
+                                                        },
+                                                        "sourcePage": {
+                                                            "value": "EUR-LIBOR-BBA"
+                                                        },
+                                                        "sourcePageHeading": ""
+                                                    }
+                                                },
+                                                "fixingTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "EUR"
+                                                    }
+                                                },
+                                                "varyingNotionalInterimExchangePaymentDates": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "EUR"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -2,
+                                                    "period": "6 months"
+                                                }
+                                            }
+                                        },
+                                        "futureValueNotional": {
+                                            "quantity": {
+                                                "address": {
+                                                    "scope": "Party A (549300VBWWV6BYQOWM67)",
+                                                    "value": "549300VBWWV6BYQOWM67"
+                                                }
+                                            },
+                                            "currency": {
+                                                "value": "EUR"
+                                            },
+                                            "calculationPeriodNumberOfDays": 365,
+                                            "valueDate": "1994-12-12"
+                                        }
+                                    },
+                                    "principalPayment": {
+                                        "initialPayment": {
+                                            "value": 0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "finalPayment": {
+                                            "value": 0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "intermediatePayment": {
+                                            "value": 0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "principalPaymentSchedule": {
+                                            "initialPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "1994-12-14",
+                                                    "adjustedDate": {
+                                                        "value": "1994-12-15",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Party A (549300VBWWV6BYQOWM67)",
+                                                    "receiver": "Party B (529900DTJ5A7S5UCBB52)"
+                                                },
+                                                "principalAmount": {
+                                                    "value": 50000000,
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "finalPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "1999-12-14",
+                                                    "adjustedDate": {
+                                                        "value": "1999-12-15",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Party A (549300VBWWV6BYQOWM67)",
+                                                    "receiver": "Party B (529900DTJ5A7S5UCBB52)"
+                                                },
+                                                "principalAmount": {
+                                                    "value": 50000000,
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "EUR-LIBOR-BBA",
+                                                                "meta": {
+                                                                    "scheme": "ISDA"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "EUR"
+                                                            }
+                                                        }
+                                                    },
+                                                    "minimumQuotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "EUR"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Province of Ontario"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToPaymentDates": {
+                                                            "paymentDatesReference": [
+                                                                {
+                                                                    "globalReference": "Party A (549300VBWWV6BYQOWM67)",
+                                                                    "externalReference": "549300VBWWV6BYQOWM67"
+                                                                },
+                                                                {
+                                                                    "globalReference": "Party B (529900DTJ5A7S5UCBB52)",
+                                                                    "externalReference": "529900DTJ5A7S5UCBB52"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToCalculationPeriodDates": {
+                                                            "calculationPeriodDatesReference": [
+                                                                {
+                                                                    "globalReference": "Party A (549300VBWWV6BYQOWM67)",
+                                                                    "externalReference": "549300VBWWV6BYQOWM67"
+                                                                },
+                                                                {
+                                                                    "globalReference": "Party B (529900DTJ5A7S5UCBB52)",
+                                                                    "externalReference": "529900DTJ5A7S5UCBB52"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dayType": "ACT/360",
+                                                        "periodMultiplier": 1,
+                                                        "period": "6 months"
+                                                    },
+                                                    "fxFixingSchedule": {
+                                                        "unadjustedDate": [
+                                                            "December 14, 1994"
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "businessDayConvention": "MODFOLLOWING",
+                                                            "businessCenters": {
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": "Province of Ontario"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "cashSettlementAmount": {
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "EUR"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        }
+                                    }
+                                }
+                            ],
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party A (549300VBWWV6BYQOWM67)",
+                                        "seller": "Party B (529900DTJ5A7S5UCBB52)"
+                                    },
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISDA",
+                                                        "value": "Interest Rate IR Swap Fixed Float"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "Interest Rate IR Swap Fixed Float",
+                                    "exerciseTerms": {
+                                        "style": "style = \"Fixed Float\"",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "December 12, 1994",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "December 12, 1994",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "MODFOLLOWING",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Province of Ontario"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": null,
+                                            "integralMultipleAmount": null,
+                                            "minimumNumberOfOptions": null
+                                        },
+                                        "exerciseProcedure": {
+                                            "manualExercise": {
+                                                "exerciseNotice": {
+                                                    "exerciseNoticeGiver": "Party A (549300VBWWV6BYQOWM67) and Party B (529900DTJ5A7S5UCBB52)",
+                                                    "businessCenter": {
+                                                        "value": "Ontario, Canada"
+                                                    }
+                                                }
+                                            },
+                                            "followUpConfirmation": null,
+                                            "limitedRightToConfirm": null,
+                                            "splitTicket": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            },
+                                            "priceType": "Floating Rate",
+                                            "value": 50000000.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "referenceSwapCurve": {
+                                            "swapUnwindValue": {
+                                                "floatingRateIndex": "EUR-LIBOR-BBA",
+                                                "indexTenor": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "6 months"
+                                                },
+                                                "spread": 0,
+                                                "side": "Payer"
+                                            },
+                                            "makeWholeAmount": {
+                                                "interpolationMethod": "",
+                                                "earlyCallDate": {
+                                                    "value": "1999-11-03",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                },
+                                                "floatingRateIndex": "EUR-LIBOR-BBA",
+                                                "spread": 0,
+                                                "side": "Payer"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A (549300VBWWV6BYQOWM67)",
+                                        "receiver": "Party B (529900DTJ5A7S5UCBB52)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Party A (549300VBWWV6BYQOWM67)",
+                                                "value": "549300VBWWV6BYQOWM67"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "\"Physical\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "unadjustedDate": "1994-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Ontario"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISDA",
+                                                        "value": "Interest Rate IR Swap Fixed Float"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A (549300VBWWV6BYQOWM67)",
+                                        "receiver": "Party B (529900DTJ5A7S5UCBB52)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "EUR",
+                                                "value": "50000000.00"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash"
+                                    }
+                                }
+                            ]
+                        },
+                        "terminationProvision": {
+                            "cancelableProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "Party A (549300VBWWV6BYQOWM67) and Party B (529900DTJ5A7S5UCBB52)"
+                                    }
+                                },
+                                "followUpConfirmation": "None",
+                                "exerciseTerms": {
+                                    "style": "style = \"Fixed Float\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "December 12, 1994",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "December 12, 1994"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Province of Ontario"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": "\"Party A (549300VBWWV6BYQOWM67)\"",
+                                "seller": "\"Party A (549300VBWWV6BYQOWM67)\""
+                            },
+                            "earlyTerminationProvision": {
+                                "mandatoryEarlyTermination": {
+                                    "mandatoryEarlyTerminationDate": {
+                                        "unadjustedDate": "1994-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "MODFOLLOWING",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Ontario"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "549300VBWWV6BYQOWM67"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Physical",
+                                                "valuationMethod": {
+                                                    "quotationMethod": "Bid"
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "EUR"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "externalReference": "1994-12-12"
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": -2,
+                                                        "period": "6 months"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "14:00:00",
+                                                    "businessCenter": {
+                                                        "value": "EUR"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"Net\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        }
+                                    }
+                                },
+                                "optionalEarlyTermination": {
+                                    "exerciseNotice": [
+                                        {
+                                            "businessCenter": {
+                                                "value": "Party A (549300VBWWV6BYQOWM67) and Party B (529900DTJ5A7S5UCBB52)"
+                                            }
+                                        }
+                                    ],
+                                    "followUpConfirmation": "None",
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "549300VBWWV6BYQOWM67",
+                                        "calculationAgentPartyEnum": "Party A"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Physical",
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": "Party A (549300VBWWV6BYQOWM67)"
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationMethod": "Bid",
+                                                    "cashCollateralValuationMethod": {
+                                                        "applicableCsa": "ISDA",
+                                                        "cashCollateralCurrency": "EUR",
+                                                        "cashCollateralInterestRate": {
+                                                            "value": "4.427%"
+                                                        },
+                                                        "agreedDiscountRate": {
+                                                            "value": "4.427%"
+                                                        },
+                                                        "protectedParty": [
+                                                            {
+                                                                "value": "Party A (549300VBWWV6BYQOWM67)"
+                                                            }
+                                                        ],
+                                                        "prescribedDocumentationAdjustment": null
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "EUR-LIBOR-BBA"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "December 14, 1994",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": -2,
+                                                        "period": "6 months"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "EUR-LIBOR-BBA"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"Netting\"",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableDates": {
+                                                "unadjustedDate": [
+                                                    "1994-12-14"
+                                                ],
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "businessDateRange": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Ontario"
+                                                        }
+                                                    ]
+                                                },
+                                                "startDate": "1994-12-14",
+                                                "endDate": "1999-12-14"
+                                            }
+                                        }
+                                    },
+                                    "optionalEarlyTerminationAdjustedDates": {
+                                        "earlyTerminationEvent": [
+                                            {
+                                                "adjustedExerciseDate": "December 14, 1999",
+                                                "adjustedEarlyTerminationDate": "November 3, 1999",
+                                                "adjustedCashSettlementValuationDate": "November 3, 1999",
+                                                "adjustedCashSettlementPaymentDate": "December 14, 1999"
+                                            }
+                                        ]
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "style = \"Modified Following Business Day Convention\"",
+                                        "commencementDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Party A (549300VBWWV6BYQOWM67)"
+                                                        },
+                                                        {
+                                                            "value": "Party B (529900DTJ5A7S5UCBB52)"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "exerciseDates": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Party A (549300VBWWV6BYQOWM67)"
+                                                        },
+                                                        {
+                                                            "value": "Party B (529900DTJ5A7S5UCBB52)"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Ontario"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "relevantUnderlyingDate": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "dateRelativeTo": {
+                                                    "globalReference": "December 12, 1994",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "6 months"
+                                            }
+                                        },
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "12:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "12:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "extendibleProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "Party A (549300VBWWV6BYQOWM67) and Party B (529900DTJ5A7S5UCBB52)"
+                                    }
+                                },
+                                "followUpConfirmation": "\"None\"",
+                                "exerciseTerms": {
+                                    "style": "style = \"Fixed Float\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "December 12, 1994",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "MODFOLLOWING",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "December 14, 1994"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "MODFOLLOWING",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Province of Ontario"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    }
+                                },
+                                "buyer": "\"Party A (549300VBWWV6BYQOWM67)\"",
+                                "seller": "seller\n\"Party A (549300VBWWV6BYQOWM67)\""
+                            }
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "549300VBWWV6BYQOWM67",
+                            "calculationAgentBusinessCenter": {
+                                "value": "Party A",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        },
+                        "nonStandardisedTerms": "\"Interest Rate IR Swap Fixed Float\""
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Interest Rate",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        },
+                        "productQualifier": "IR Swap Fixed Float",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "Interest Rate IR Swap Fixed Float",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": {
+                                "value": {
+                                    "perUnitOf": {
+                                        "currency": {
+                                            "value": "EUR",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        }
+                                    },
+                                    "priceType": "Interest Rate",
+                                    "arithmeticOperator": "",
+                                    "datedValue": [
+                                        {
+                                            "date": "1994-12-14",
+                                            "value": 50000000.0
+                                        }
+                                    ],
+                                    "value": 50000000.0,
+                                    "unit": {
+                                        "currency": {
+                                            "value": "EUR",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": 1,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "datedValue": [
+                                            {
+                                                "date": "1994-12-14",
+                                                "value": 50000000.0
+                                            },
+                                            {
+                                                "date": "1999-12-14",
+                                                "value": 50000000.0
+                                            }
+                                        ],
+                                        "value": 50000000.0,
+                                        "unit": {
+                                            "financialUnit": "EUR",
+                                            "currency": {
+                                                "value": "EUR",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "rateOption": {
+                                    "value": {
+                                        "floatingRateIndex": {
+                                            "value": "EUR-LIBOR-BBA",
+                                            "meta": {
+                                                "scheme": "ISDA"
+                                            }
+                                        },
+                                        "inflationRateIndex": {
+                                            "value": "",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "indexTenor": {
+                                            "periodMultiplier": 6,
+                                            "period": "months"
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "TW9235",
+                                                "meta": {
+                                                    "scheme": "ISDA"
+                                                }
+                                            },
+                                            "source": "Party A"
+                                        }
+                                    },
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "SW2000",
+                                                "meta": {
+                                                    "scheme": "ISDA"
+                                                }
+                                            },
+                                            "source": "Party B"
+                                        }
+                                    }
+                                ]
+                            },
+                            "settlementTerms": {
+                                "cashSettlementTerms": {
+                                    "valuationMethod": {
+                                        "quotationAmount": {
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "minimumQuotationAmount": {
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "cashSettlementAmount": {
+                                        "unit": {
+                                            "currency": {
+                                                "value": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                "settlementType": "\"Fixed\""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party A",
+                    "partyReference": {
+                        "globalReference": "549300VBWWV6BYQOWM67",
+                        "externalReference": "Party A"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "549300VBWWV6BYQOWM67",
+                            "externalReference": "Party A"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "549300VBWWV6BYQOWM67"
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": "Party A"
+                },
+                "businessUnit": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": ""
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "",
+                        "surname": ""
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Canada"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "529900DTJ5A7S5UCBB52",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        },
+                        "identifierType": ""
+                    }
+                ],
+                "name": {
+                    "value": "Party B"
+                },
+                "businessUnit": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": ""
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "",
+                        "surname": ""
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": ""
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "partyRole": [
+            {
+                "partyReference": {
+                    "globalReference": "549300VBWWV6BYQOWM67",
+                    "externalReference": "Party A"
+                },
+                "role": "Counterparty",
+                "ownershipPartyReference": {
+                    "globalReference": "529900DTJ5A7S5UCBB52",
+                    "externalReference": "Party B"
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Interest Rate Swap",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                },
+                                {
+                                    "value": "Interest Rate IR Swap Fixed Float",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA 2013",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        },
+                        "contractualParty": [
+                            {
+                                "globalReference": "549300VBWWV6BYQOWM67",
+                                "externalReference": "Party A"
+                            },
+                            {
+                                "globalReference": "529900DTJ5A7S5UCBB52",
+                                "externalReference": "Party B"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "account": [
+            {
+                "partyReference": {
+                    "globalReference": "549300VBWWV6BYQOWM67",
+                    "externalReference": "529900DTJ5A7S5UCBB52"
+                },
+                "accountNumber": {
+                    "value": "TW9235"
+                },
+                "accountName": {
+                    "value": "Party A"
+                },
+                "accountBeneficiary": {
+                    "globalReference": "529900DTJ5A7S5UCBB52",
+                    "externalReference": "549300VBWWV6BYQOWM67"
+                }
+            }
+        ]
+    }
+}

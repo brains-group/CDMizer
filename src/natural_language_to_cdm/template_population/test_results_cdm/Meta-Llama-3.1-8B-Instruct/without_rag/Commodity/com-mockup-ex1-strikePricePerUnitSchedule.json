@@ -1,0 +1,586 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "ISIN:US0378331005",
+                    "externalReference": "MOCKUPSTRIKEPRICEE01"
+                },
+                "issuer": {
+                    "value": "Bank A",
+                    "meta": {
+                        "scheme": "LEI",
+                        "identifier": "DUMMY0000000000LEI02"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "MOCKUPSTRIKEPRICEE01",
+                            "meta": {
+                                "scheme": "ISIN",
+                                "identifier": "US0378331005"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "MOCKUPSTRIKEPRICEE02",
+                            "meta": {
+                                "scheme": "ISIN",
+                                "identifier": "US0378331006"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "2021-12-03",
+            "meta": {
+                "globalKey": "MOCKUPSTRIKEPRICEE01",
+                "externalKey": "DUMMY0000000000LEI02"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2021-12-03",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2021-12-03",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Following"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Bank A (LEI: DUMMY0000000000LEI02)",
+                                        "seller": "Bank B (LEI: DUMMY0000000000LEI01)"
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": "1",
+                                                "periodMultiplier": "1",
+                                                "period": "business day"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "business day",
+                                                "dayDistribution": "equally spaced",
+                                                "businessCenters": {
+                                                    "businessCenter": "New York Mercantile Exchange (NYMEX)"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Natural Gas",
+                                                "value": "HTOXVX (Henry Hub Natural Gas Futures)"
+                                            }
+                                        }
+                                    },
+                                    "optionType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and the prior context, we can identify the best-suited information for the given key `optionType`.\n\nThe prior context `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType` indicates that we are looking for the option type associated with the payout terms of the contract.\n\nIn the contract description, under the **Option Terms** section, it is mentioned that the **Trade Type** is a **Call option**. This information is relevant to the option type.\n\nHowever, since the prior context is associated with the payout terms, we need to consider the option type in the context of the payout terms. In this case, the option type is still a **Call option**, as it is the type of option being exercised by the receiver (Bank A) as per the **Payout Terms** section.\n\n### Maintaining the Same Datatype\n\nThe placeholder is an empty string (`\"\"`), so we need to replace it with a STRING derived from the contract information.\n\nBased on the above analysis, the best-suited value for the `optionType` key is a **Call option**.\n\n### Populated Placeholder\n\n```json\n\"Call option\"\n```\n\n### Final JSON Template\n\n```json\n{\n  \"optionType\": \"Call option\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "European",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2021-12-03",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2022-07-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Month"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            },
+                                            "followUpConfirmation": false
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "capacityUnit": "units of natural gas futures"
+                                            },
+                                            "priceType": "fixed",
+                                            "datedValue": [
+                                                {
+                                                    "date": "2022-07-01",
+                                                    "value": 2000.0
+                                                },
+                                                {
+                                                    "date": "2022-08-01",
+                                                    "value": 3000.0
+                                                }
+                                            ],
+                                            "value": 2000.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity",
+                                                "value": "Natural Gas"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Based on the provided instructions and inputs, I will populate the placeholder for the'settlementType' key.\n\nThe prior context is: `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`\n\nFrom the contract description, under the **Payout Terms** section, it is mentioned that:\n\n* Settlement Type: Cash\n\nSince the placeholder is an empty string (\"\") and we need to replace it with a STRING derived from the contract information, we will populate the placeholder with the 'Cash' value.\n\nHere is the populated placeholder:\n\n`\"Cash\"`\n\nThe final populated placeholder maintains the same datatype as the original placeholder, which is a STRING.",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "New York Mercantile Exchange (NYMEX)"
+                                                            },
+                                                            {
+                                                                "value": "Toronto Stock Exchange (TSX)"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date: 2021-12-03"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": "Days"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingMethod": {
+                                            "isWeighted": false,
+                                            "calculationMethod": "Simple Average"
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "Commodity Price",
+                                                    "value": "Natural Gas Futures Price"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": 1.0,
+                                        "commodity": "Natural Gas",
+                                        "underlying": "HTOXVX (Henry Hub Natural Gas Futures)",
+                                        "deliveryDate": "The 1st business day following the last trading day of the contract month",
+                                        "deliveryLocation": "New York Mercantile Exchange (NYMEX)",
+                                        "strikePrice": [
+                                            {
+                                                "value": 2000.0,
+                                                "date": "2022-07-01"
+                                            },
+                                            {
+                                                "value": 3000.0,
+                                                "date": "2022-08-01"
+                                            }
+                                        ],
+                                        "expirationDate": "2022-07-31",
+                                        "exerciseStyle": "European",
+                                        "automaticExercise": true,
+                                        "followUpConfirmation": false,
+                                        "payoutCurrency": "USD",
+                                        "payoutDate": "The 5th business day following the expiration date",
+                                        "payoutType": "Cash",
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A",
+                                        "settlementCurrency": "USD",
+                                        "settlementDate": "The 5th business day following the expiration date",
+                                        "settlementType": "Cash",
+                                        "counterparty": [
+                                            {
+                                                "party": "Bank A",
+                                                "lei": "DUMMY0000000000LEI02"
+                                            },
+                                            {
+                                                "party": "Bank B",
+                                                "lei": "DUMMY0000000000LEI01"
+                                            }
+                                        ],
+                                        "masterAgreement": "ISDA Master Agreement (2002 vintage)",
+                                        "agreementName": "Master Agreement",
+                                        "agreementType": "ISDA Master Agreement",
+                                        "transferHistory": [
+                                            {
+                                                "transferDate": "2021-12-07",
+                                                "transferType": "Premium payment",
+                                                "payer": "Bank A",
+                                                "receiver": "Bank B",
+                                                "amount": 452500.0
+                                            }
+                                        ],
+                                        "riskDisclosure": [
+                                            "price risk",
+                                            "liquidity risk",
+                                            "credit risk"
+                                        ],
+                                        "representations": [
+                                            {
+                                                "party": "Bank A",
+                                                "representation": "has the power to enter into this contract and has taken all necessary action to authorize its execution"
+                                            },
+                                            {
+                                                "party": "Bank B",
+                                                "representation": "has the power to enter into this contract and has taken all necessary action to authorize its execution"
+                                            }
+                                        ],
+                                        "governingLaw": "The laws of the Province of Ontario and the laws of Canada applicable therein",
+                                        "calculationAgent": "Bank A (LEI: DUMMY0000000000LEI02)",
+                                        "valuation": "The valuation of this contract shall be made available to Bank B on the Optimize platform",
+                                        "termination": "The contract shall terminate on the expiration date, unless terminated earlier by either party in accordance with the terms of the contract",
+                                        "miscellaneous": [
+                                            "This contract is confidential and shall not be disclosed to any third party without the prior written consent of both parties",
+                                            "The parties acknowledge that this contract involves significant risks and that they have made their own independent decisions to enter into it"
+                                        ]
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business",
+                                            "dayDistribution": "Uniform",
+                                            "businessCenters": {
+                                                "businessCenter": "New York Mercantile Exchange (NYMEX)"
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": "0",
+                                            "periodMultiplier": "1",
+                                            "period": "Monthly"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Calendar Days"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York Mercantile Exchange (NYMEX)"
+                                                    },
+                                                    {
+                                                        "value": "Toronto Stock Exchange (TSX)"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Natural Gas",
+                                                "value": "HTOXVX (Henry Hub Natural Gas Futures)"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Commodity",
+                                                "value": "Natural Gas"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "Trade Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business Days",
+                                            "periodMultiplier": 1,
+                                            "period": "Days"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York Mercantile Exchange (NYMEX)"
+                                                    },
+                                                    {
+                                                        "value": "Toronto Stock Exchange (TSX)"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Natural Gas Futures",
+                                                "value": "USD 2,000"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B",
+                                        "receiver": "Bank A"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "commodity",
+                                                "value": "Natural Gas"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Bank A (LEI: DUMMY0000000000LEI02)",
+                            "calculationAgentPartyEnum": "Payer"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "primaryAssetClass": {
+                            "value": "Commodity"
+                        },
+                        "productQualifier": "Option",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "Natural Gas Futures",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "capacityUnit": ""
+                                        },
+                                        "priceType": "",
+                                        "arithmeticOperator": "",
+                                        "cashPrice": {
+                                            "cashPriceType": ""
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "currency": {
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": null,
+                                            "period": "monthly"
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "capacityUnit": "units of natural gas futures"
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Spot",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "business days"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "business day",
+                                                "periodMultiplier": 1,
+                                                "period": "business days"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Payer",
+                    "partyReference": {
+                        "globalReference": "DUMMY0000000000LEI01",
+                        "externalReference": "Bank B (LEI: DUMMY0000000000LEI01)"
+                    }
+                },
+                {
+                    "role": "Receiver",
+                    "partyReference": {
+                        "globalReference": "DUMMY0000000000LEI02",
+                        "externalReference": "Bank A (LEI: DUMMY0000000000LEI02)"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Buyer",
+                    "partyReference": [
+                        {
+                            "globalReference": "DUMMY0000000000LEI02",
+                            "externalReference": "Bank A"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI02",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    },
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI01",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    }
+                ],
+                "name": {
+                    "value": "Bank A"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Canada"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2021-12-03",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "ISDA Master Agreement",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Master Agreement"
+                                },
+                                {
+                                    "value": "ISDA Master Agreement (2002 vintage)"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement"
+                            }
+                        },
+                        "vintage": "2002"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "LEI: DUMMY0000000000LEI02",
+                            "externalReference": "Bank A"
+                        },
+                        {
+                            "globalReference": "LEI: DUMMY0000000000LEI01",
+                            "externalReference": "Bank B"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

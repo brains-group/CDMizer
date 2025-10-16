@@ -1,0 +1,461 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "PartyA",
+                    "externalReference": "party1"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "http://www.PartyA.com/tradeId/OTC"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "95918657"
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "Derivatives Agreement between Party A and Party B",
+            "meta": {
+                "globalKey": "tradeIdentifier",
+                "externalKey": "tradeDate"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party A",
+                                        "seller": "Party B"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-1"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "Ahold (AHLD.NA)"
+                                                    }
+                                                },
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "Royal Dutch (RD.NA)"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "tradeIdentifier"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "underlyingSecurities[0].basketConstituent[0].security.productIdentifier[0].address.value"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "underlyingSecuries[0].basketConstituent[1].security.productIdentifier[0].address.value"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "CONTRACT",
+                                                                                "value": "underlyingSecurities[0].basketConstituent[0].security.productIdentifier[0].address.value"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "CONTRACT",
+                                                                                "value": "underlyingSecurities[0].basketConstituent[1].security.productIdentifier[0].address.value"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the key to be populated is \"optionType\". The prior context leads us to the \"trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType\".\n\nFrom the derivatives contract description, we can see that the option type is a call. Therefore, the placeholder for the \"optionType\" key should be replaced with the string \"Call\".\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"optionType\": \"Call\"\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-07-13",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "NONE",
+                                                    "meta": {
+                                                        "globalKey": "24a738"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eae7f1c5"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "eae7f1c5"
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2002-09-27",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NONE",
+                                                        "meta": {
+                                                            "globalKey": "24a738"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "eb080ed3"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eb080ed3"
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "17:15:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "Close",
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "6bfa93dd"
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "Share"
+                                            },
+                                            "priceType": "AssetPrice",
+                                            "value": {
+                                                "value": "32",
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "e9e6181b"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": {
+                                            "partyReference": {
+                                                "globalReference": "33f59568",
+                                                "externalReference": "party2"
+                                            }
+                                        },
+                                        "receiver": {
+                                            "partyReference": {
+                                                "globalReference": "33f59567",
+                                                "externalReference": "party1"
+                                            }
+                                        }
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "quantity-1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "2c4c46fb"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "June 28, 2000"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "2c4c46fb"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "38606287"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "CalculationAgentIndependent"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "Trade Identifier",
+                            "value": {
+                                "name": {
+                                    "value": "1234"
+                                }
+                            }
+                        },
+                        {
+                            "productQualifier": "",
+                            "source": "Trade Date",
+                            "value": {
+                                "name": {
+                                    "value": "June 28, 2000"
+                                }
+                            }
+                        },
+                        {
+                            "productQualifier": "",
+                            "source": "Trade Lot",
+                            "value": {
+                                "name": {
+                                    "value": "79.099093 contracts"
+                                }
+                            }
+                        },
+                        {
+                            "productQualifier": "",
+                            "source": "Counterparty",
+                            "value": {
+                                "name": {
+                                    "value": "Party B"
+                                }
+                            }
+                        },
+                        {
+                            "productQualifier": "",
+                            "source": "Ancillary Party",
+                            "value": {
+                                "name": {
+                                    "value": "Calculation Agent Independent (Party A)"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "value": "79.099093",
+                                        "unit": {
+                                            "financialUnit": "Contract"
+                                        }
+                                    },
+                                    "unit": {
+                                        "financialUnit": ""
+                                    }
+                                },
+                                {
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "tradeLot[0].priceQuantity[0].quantity"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "1234",
+                                                "meta": {
+                                                    "scheme": "http://www.partyA.com/coding-scheme/trade-id"
+                                                }
+                                            },
+                                            "source": "partyA"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "33f59567",
+                        "externalReference": "party1"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgentIndependent",
+                    "partyReference": [
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "party1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party A",
+                            "meta": {
+                                "globalKey": "33f59567"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party B",
+                            "meta": {
+                                "globalKey": "33f59568"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "June 28, 2000",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Confirmation",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA2000"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA2000, ISDA2002EquityDerivatives"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party B",
+                            "externalReference": "Party B"
+                        },
+                        {
+                            "globalReference": "Calculation Agent Independent (Party A)",
+                            "externalReference": "Calculation Agent Independent (Party A)"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": {
+                    "identifier": {
+                        "value": "GBEN",
+                        "source": "Governing Law"
+                    },
+                    "meta": {
+                        "globalKey": "9fe061e3"
+                    }
+                },
+                "meta": {
+                    "location": [
+                        {
+                            "scope": "DOCUMENT",
+                            "value": "governingLaw"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

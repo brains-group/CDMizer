@@ -1,0 +1,128 @@
+{
+    "Agreement": {
+        "AgreementDate": "2001-07-13",
+        "AgreementDateType": "TradeDate",
+        "AgreementDateSpecified": false,
+        "EffectiveDate": null,
+        "EffectiveDateSpecified": false,
+        "TerminationDate": null,
+        "TerminationDateSpecified": false,
+        "MandatoryEarlyTermination": false,
+        "NotionalAmount": 150000,
+        "NotionalAmountCurrency": "USD",
+        "BusinessDayConvention": null,
+        "BusinessDayConventionSpecified": false,
+        "CalculationAgent": null,
+        "CalculationAgentSpecified": false,
+        "GoverningLaw": null,
+        "GoverningLawSpecified": false,
+        "Documentation": "ISDA"
+    },
+    "Parties": {
+        "Party": [
+            {
+                "PartyID": "Party1",
+                "PartyIDType": "Entity",
+                "PartyRole": "Buyer",
+                "PartyRoleSpecified": true
+            },
+            {
+                "PartyID": "Party2",
+                "PartyIDType": "Entity",
+                "PartyRole": "Seller",
+                "PartyRoleSpecified": true
+            }
+        ]
+    },
+    "Product": {
+        "ProductTaxonomy": "EquityOption",
+        "ProductTaxonomySpecified": true,
+        "ProductTaxonomyType": "PriceReturnBasicPerformance",
+        "ProductTaxonomyTypeSpecified": true,
+        "ProductTaxonomySubType": "SingleName",
+        "ProductTaxonomySubTypeSpecified": true,
+        "EconomicTerms": {
+            "Payout": {
+                "PayoutType": "OptionPayout",
+                "PayoutTypeSpecified": true,
+                "PayerReceiver": "Party2",
+                "PayerReceiverSpecified": true,
+                "PriceQuantity": {
+                    "PriceQuantityType": "QuantitySchedule",
+                    "PriceQuantityTypeSpecified": true,
+                    "Quantity": 150000,
+                    "QuantitySpecified": true,
+                    "Currency": "USD",
+                    "CurrencySpecified": true
+                },
+                "SettlementTerms": {
+                    "SettlementType": "Physical",
+                    "SettlementTypeSpecified": true,
+                    "SettlementCurrency": "USD",
+                    "SettlementCurrencySpecified": true
+                },
+                "Underlier": {
+                    "UnderlierType": "SingleAsset",
+                    "UnderlierTypeSpecified": true,
+                    "UnderlierAsset": "STMicroelectronicsNV",
+                    "UnderlierAssetSpecified": true
+                },
+                "OptionType": "Call",
+                "OptionTypeSpecified": true,
+                "ExerciseTerms": {
+                    "ExerciseStyle": "American",
+                    "ExerciseStyleSpecified": true,
+                    "ExerciseDate": "ExpirationDate",
+                    "ExerciseDateSpecified": true
+                },
+                "Strike": {
+                    "StrikeType": "Fixed",
+                    "StrikeTypeSpecified": true,
+                    "StrikeValue": 32,
+                    "StrikeValueSpecified": true,
+                    "StrikeCurrency": "USD",
+                    "StrikeCurrencySpecified": true
+                }
+            }
+        },
+        "CalculationAgent": "Party1",
+        "CalculationAgentSpecified": true
+    },
+    "TradeLot": {
+        "PriceQuantity": {
+            "PriceQuantityType": "QuantitySchedule",
+            "PriceQuantityTypeSpecified": true,
+            "Quantity": 150000,
+            "QuantitySpecified": true,
+            "Currency": "USD",
+            "CurrencySpecified": true
+        },
+        "Observable": "STMicroelectronicsNV",
+        "ObservableSpecified": true
+    },
+    "TransferHistory": {
+        "Transfer": [
+            {
+                "TransferAmount": 405000,
+                "TransferAmountCurrency": "EUR",
+                "TransferAmountCurrencySpecified": true,
+                "PayerReceiver": "Party2",
+                "PayerReceiverSpecified": true,
+                "SettlementDate": "2001-07-17",
+                "SettlementDateSpecified": true,
+                "TransferExpression": "Premium",
+                "TransferExpressionSpecified": true
+            }
+        ]
+    },
+    "RiskDisclosure": {
+        "RiskDisclosureText": "The parties acknowledge that this contract involves significant risks, including but not limited to, foreign exchange risk, price risk, liquidity risk, and credit risk. The parties should consult their own financial, legal, accounting, and tax advisors to understand the risks associated with this contract."
+    },
+    "Representations": {
+        "RepresentationsText": "Each party represents that it has the power to enter into this contract and has made its own independent decisions to enter into this contract. The parties acknowledge that they are not relying on any communication from the other party as investment advice or as a recommendation to enter into this contract."
+    },
+    "Acceptance": {
+        "AcceptanceDate": "2001-07-13",
+        "AcceptanceDateSpecified": true
+    }
+}

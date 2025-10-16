@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.observable.asset",
+  "type": "string",
+  "title": "OptionReferenceTypeEnum",
+  "description": "The enumeration values to specify the reference source that determines the final settlement price of the option.",
+  "enum": [
+    "Future",
+    "Spot"
+  ],
+  "oneOf": [
+    {
+      "enum": [
+        "Future"
+      ],
+      "title": "Future",
+      "description": "Reference from the price of a future contract."
+    },
+    
+    {
+      "enum": [
+        "Spot"
+      ],
+      "title": "Spot",
+      "description": "Reference from an underlyer spot price."
+    }
+  ]
+}

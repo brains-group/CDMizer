@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.collateral",
+  "type": "object",
+  "title": "IssuerCriteria",
+  "description": "Represents a criteria used to specify eligible collateral issuers.",
+  "properties": {
+    "issuerType": {
+      "description": "Represents a filter based on the type of entity issuing the asset.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-CollateralIssuerType.schema.json"
+      },
+      "minItems": 0
+    },
+    "issuerCountryOfOrigin": {
+      "description": "Represents a filter on the issuing entity country of origin based on the ISO Standard 3166, which is the same as filtering by eligible Sovereigns.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ISOCountryCodeEnum.schema.json"
+      },
+      "minItems": 0
+    },
+    "issuerName": {
+      "description": "Specifies the issuing entity name or LEI.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-party-LegalEntity.schema.json"
+      },
+      "minItems": 0
+    },
+    "issuerAgencyRating": {
+      "description": "Represents an agency rating based on default risk and creditors claim in event of default associated with asset issuer.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-collateral-AgencyRatingCriteria.schema.json"
+      },
+      "minItems": 0
+    },
+    "sovereignAgencyRating": {
+      "description": "Represents an agency rating based on default risk of the country of the issuer.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-collateral-AgencyRatingCriteria.schema.json"
+      },
+      "minItems": 0
+    },
+    "counterpartyOwnIssuePermitted": {
+      "description": "Represents a filter based on whether it is permitted for the underlying asset to be issued by the posting entity or part of their corporate family.",
+      "type": "boolean"
+    }
+  }
+}

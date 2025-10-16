@@ -1,0 +1,199 @@
+**Interest Rate Swap Contract**
+
+**General Terms**
+
+This interest rate swap contract is entered into between Party A (JPMorgan Chase Bank, N.A., Mumbai Branch) and Party B (Counterparty) on Trade Date: 2018-10-31.
+
+**Trade Details**
+
+* Trade Identifier: 1051b (clearing service)
+* Issuer Reference: 1051b (clearing service)
+* Issuer: 1010000023 (cftc_Namespace)
+* Assigned Identifier:
+	+ 9369933 (cme_trade_id)
+	+ 43401034-2 (client_trade_id)
+	+ 43401034 (platform_trade_id)
+	+ 43402020 (platform_side_id)
+	+ 43401034 (block_trade_id)
+	+ CCCIRS9369933 (reg_trade_id)
+* Trade Date: 2018-10-31
+* Tradable Product:
+	+ Contractual Product: InterestRate_IRSwap_FixedFloat
+	+ Economic Terms:
+		- Payout: InterestRatePayout
+			- PayerReceiver: Party1 (payer), Party2 (receiver)
+			- PriceQuantity: quantity-2
+			- RateSpecification: fixedRate
+				- RateSchedule: price-1
+			- DayCountFraction: ACT/360
+			- CalculationPeriodDates:
+				- EffectiveDate: 2018-11-02
+				- TerminationDate: 2020-11-02
+				- CalculationPeriodDatesAdjustments: MODFOLLOWING
+			- PaymentDates:
+				- PaymentFrequency: Y
+				- PayRelativeTo: CalculationPeriodEndDate
+				- PaymentDaysOffset: 2D
+				- PaymentDatesAdjustments: MODFOLLOWING
+			- CashflowRepresentation:
+				- CashflowsMatchParameters: true
+				- PaymentCalculationPeriod:
+					- AdjustedPaymentDate: 2019-11-06
+					- CalculationPeriod:
+						- AdjustedStartDate: 2018-11-02
+						- AdjustedEndDate: 2019-11-04
+						- NotionalAmount: 100000000.00
+						- FixedRate: 0.02345
+					- AdjustedPaymentDate: 2020-11-04
+					- CalculationPeriod:
+						- AdjustedStartDate: 2019-11-04
+						- AdjustedEndDate: 2020-11-02
+						- NotionalAmount: 100000000.00
+						- FixedRate: 0.02345
+		- Payout: InterestRatePayout
+			- PayerReceiver: Party2 (payer), Party1 (receiver)
+			- PriceQuantity: quantity-1
+			- RateSpecification: floatingRate
+				- RateOption: rateOption-1
+			- DayCountFraction: ACT/360
+			- CalculationPeriodDates:
+				- EffectiveDate: 2018-11-02
+				- TerminationDate: 2020-11-02
+				- CalculationPeriodDatesAdjustments: MODFOLLOWING
+			- PaymentDates:
+				- PaymentFrequency: Y
+				- PayRelativeTo: CalculationPeriodEndDate
+				- PaymentDaysOffset: 2D
+				- PaymentDatesAdjustments: MODFOLLOWING
+			- ResetDates:
+				- CalculationPeriodDatesReference: floatingCalcPeriodDates
+				- ResetRelativeTo: CalculationPeriodEndDate
+				- FixingDates:
+					- PeriodMultiplier: 0
+					- Period: D
+					- BusinessDayConvention: PRECEDING
+					- BusinessCenters: USGS
+					- DateRelativeTo: floatingLegResetDates
+				- ResetFrequency:
+					- PeriodMultiplier: 1
+					- Period: Y
+			- CashflowRepresentation:
+				- CashflowsMatchParameters: true
+				- PaymentCalculationPeriod:
+					- AdjustedPaymentDate: 2019-11-06
+					- CalculationPeriod:
+						- AdjustedStartDate: 2018-11-02
+						- AdjustedEndDate: 2019-11-04
+						- NotionalAmount: 100000000.00
+						- FloatingRateDefinition:
+							- RateObservation:
+								- AdjustedFixingDate: 2019-11-01
+								- ObservedRate: 0
+					- AdjustedPaymentDate: 2020-11-04
+					- CalculationPeriod:
+						- AdjustedStartDate: 2019-11-04
+						- AdjustedEndDate: 2020-11-02
+						- NotionalAmount: 100000000.00
+						- FloatingRateDefinition:
+							- RateObservation:
+								- AdjustedFixingDate: 2020-10-30
+								- ObservedRate: 0
+
+**Trade Lot**
+
+* PriceQuantity:
+	+ Price: 0.02345 (USD)
+	+ Quantity: 100000000.00 (USD)
+* Observable:
+	+ RateOption: USD-SOFR-COMPOUND
+
+**Counterparty**
+
+* Role: Party1
+* PartyReference: clearing_firm
+* Role: Party2
+* PartyReference: clearing_service
+
+**Party**
+
+* PartyId:
+	+ Identifier: 010 (clearing_member_firms)
+	+ Identifier: CME (cftc_Namespace)
+	+ Identifier: MARKIT_WIRE (trade_source)
+* PartyRole:
+	+ PartyReference: trade_source
+	+ Role: DataSubmitter
+	+ OwnershipPartyReference: clearing_firm
+
+**Cleared Date**
+
+* ClearedDate: 2018-10-31
+
+**Account**
+
+* PartyReference: clearing_firm
+* AccountNumber: 010S3 (clearing_firm_accounts)
+* ServicingParty: clearing_firm
+
+**Credit Limit Information**
+
+* LimitApplicable:
+	+ LimitType: Notional
+	+ AmountUtilized: 1222268700
+	+ AmountRemaining: 998777731300
+	+ Currency: USD
+	+ LimitLevel: Customer
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 100000000
+	+ LimitType: NPV
+	+ AmountUtilized: 5600080
+	+ AmountRemaining: 999994399919
+	+ Currency: USD
+	+ LimitLevel: Customer
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 708934
+	+ LimitType: PV01
+	+ AmountUtilized: 99392
+	+ AmountRemaining: 999999900607
+	+ Currency: USD
+	+ LimitLevel: Customer
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 19784
+	+ LimitType: PV01
+	+ AmountUtilized: 101854
+	+ AmountRemaining: 999999898145
+	+ Currency: USD
+	+ LimitLevel: Account
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 19784
+	+ LimitType: Notional
+	+ AmountUtilized: 1200000000
+	+ AmountRemaining: 998800000000
+	+ Currency: USD
+	+ LimitLevel: Account
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 100000000
+	+ LimitType: NPV
+	+ AmountUtilized: 5145303
+	+ AmountRemaining: 999994854696
+	+ Currency: USD
+	+ LimitLevel: Account
+	+ LimitAmount: 1000000000000
+	+ LimitImpactDueToTrade: 708934
+
+**Workflow State**
+
+* WorkflowStatus: Cleared
+
+**Message Information**
+
+* MessageId: 0109369933 (cme_message_id)
+* SentBy: CME (cme_clearingorg_id)
+* SentTo:
+	+ Value: 010 (cme_firm_id)
+	+ Value: CME (cme_exchange_id)
+
+**Timestamp**
+
+* DateTime: 2018-10-31T09:34:54-05:00 (eventCreationDateTime)
+* DateTime: 2018-10-31T14:15:19.417Z (clearingReceiptDateTime)

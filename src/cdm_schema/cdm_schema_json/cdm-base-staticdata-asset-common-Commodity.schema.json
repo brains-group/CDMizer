@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "Commodity",
+  "description": "Identifies a specific commodity by referencing a product identifier or by a product definition.",
+  "properties": {
+    "commodityProductDefinition": {
+      "description": "Specifies the commodity underlier in the event that no ISDA Commodity Reference Benchmark exists.",
+      "$ref": "cdm-base-staticdata-asset-common-CommodityProductDefinition.schema.json"
+    },
+    "priceQuoteType": {
+      "description": "Describes the required quote type of the underlying price that will be observed. Example values include 'Bid, 'Ask', 'Settlement' (for a futures contract) and 'WeightedAverage' (for some published prices and indices).",
+      "$ref": "cdm-observable-asset-QuotationSideEnum.schema.json"
+    },
+    "deliveryDateReference": {
+      "description": "Specifies the parameters for identifying the relevant contract date when the commodity reference price is a futures contract.",
+      "$ref": "cdm-base-staticdata-asset-common-DeliveryDateParameters.schema.json"
+    },
+    "description": {
+      "description": "Provides additional information about the commodity underlier.",
+      "type": "string"
+    },
+    "productTaxonomy": {
+      "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ProductTaxonomy.schema.json"
+      },
+      "minItems": 0
+    },
+    "productIdentifier": {
+      "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-metafields-ReferenceWithMetaProductIdentifier.schema.json"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "priceQuoteType"
+  ]
+}

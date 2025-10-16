@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.observable.asset",
+  "type": "object",
+  "title": "FxRateObservable",
+  "description": "Defines foreign exchange (FX) asset class specific parameters for market observations.",
+  "properties": {
+    "quotedCurrencyPair": {
+      "description": "Describes the composition of a rate that has been quoted or is to be quoted.",
+      "$ref": "cdm-observable-asset-metafields-ReferenceWithMetaQuotedCurrencyPair.schema.json"
+    },
+    "primaryFxSpotRateSource": {
+      "description": "Specifies the primary source from which a rate should be observed.",
+      "$ref": "cdm-observable-asset-InformationSource.schema.json"
+    },
+    "secondaryFxSpotRateSource": {
+      "description": "Specifies an alternative, or secondary, source from which a rate should be observed.",
+      "$ref": "cdm-observable-asset-InformationSource.schema.json"
+    }
+  },
+  "required": [
+    "quotedCurrencyPair",
+    "primaryFxSpotRateSource"
+  ]
+}

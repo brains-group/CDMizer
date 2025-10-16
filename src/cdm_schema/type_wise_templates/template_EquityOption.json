@@ -1,0 +1,394 @@
+{
+    "trade": {
+        "description": "Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.",
+        "tradeIdentifier": [
+            {
+                "description": "Defines a trade identifier as a special case of the generic identifier type, that also includes the trade identifier class.",
+                "issuerReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "assignedIdentifier": [
+                    {
+                        "description": "A class to specify the identifier value and its associated version.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "",
+            "meta": {
+                "globalKey": "",
+                "externalKey": ""
+            }
+        },
+        "tradableProduct": {
+            "description": "Definition of a product as ready to be traded, i.e. included in an execution or contract, by associating a specific price and quantity to this product plus an (optional) mechanism for any potential future quantity adjustment.",
+            "product": {
+                "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                "contractualProduct": {
+                    "description": " A class to specify the contractual products' economic terms, alongside their product identification and product taxonomy. The contractual product class is meant to be used across the pre-execution, execution and (as part of the Contract) post-execution lifecycle contexts.",
+                    "economicTerms": {
+                        "description": " This class represents the full set of price-forming features associated with a contractual product: the payout component, the notional/quantity, the effective and termination date and the date adjustment provisions when applying uniformily across the payout components. This class also includes the legal provisions which have valuation implications: cancelable provision, extendible provision, early termination provision and extraordinary events specification.",
+                        "payout": {
+                            "description": "A class to represent the set of future cashflow methodologies in the form of specific payout class(es) that can be associated for the purpose of specifying a financial product. For example, two interest rate payouts can be combined to specify an interest rate swap, or one interest rate payout can be combined with a credit default payout to specify a credit default swap.",
+                            "optionPayout": [
+                                {
+                                    "description": " The option payout specification terms. The associated globalKey denotes the ability to associate a hash value to the respective OptionPayout instantiation for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                    "buyerSeller": {
+                                        "description": "This class corresponds to the FpML BuyerSeller.model construct.",
+                                        "buyer": "",
+                                        "seller": ""
+                                    },
+                                    "underlier": {
+                                        "description": "Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.",
+                                        "index": {
+                                            "description": "Identifies an index by referencing a product identifier.",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                            "securityType": "",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "description": "Defines a custom basket by referencing a product identifier and its consituents.",
+                                            "basketConstituent": [
+                                                {
+                                                    "description": "Identifies the constituents of the basket",
+                                                    "index": {
+                                                        "description": "Identifies an index by referencing a product identifier.",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                                        "securityType": "",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "description": "Defines a custom basket by referencing a product identifier and its consituents.",
+                                                        "basketConstituent": [
+                                                            {
+                                                                "description": "Identifies the constituents of the basket",
+                                                                "security": {
+                                                                    "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+                                                                    "securityType": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "",
+                                    "exerciseTerms": {
+                                        "description": "A class defining the exercise period for an option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees.",
+                                        "style": "",
+                                        "commencementDate": {
+                                            "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                            "adjustableDate": {
+                                                "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                "unadjustedDate": "",
+                                                "dateAdjustments": {
+                                                    "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "description": "A class giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.",
+                                                "adjustableDate": {
+                                                    "description": "A class for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.",
+                                                    "unadjustedDate": "",
+                                                    "dateAdjustments": {
+                                                        "description": "A class defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business center.",
+                                                        "businessDayConvention": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "description": "A class for defining a time with respect to a business day calendar location. For example, 11:00:00 GBLO.",
+                                            "hourMinuteTime": "",
+                                            "businessCenter": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "expirationTimeType": "",
+                                        "multipleExercise": {
+                                            "description": "A class defining multiple exercises. As defined in the 2000 ISDA Definitions, Section 12.4. Multiple Exercise, the buyer of the option has the right to exercise all or less than all the unexercised notional amount of the underlying swap on one or more days in the exercise period, but on any such day may not exercise less than the minimum notional amount or more than the maximum notional amount, and if an integral multiple amount is specified, the notional exercised must be equal to or, be an integral multiple of, the integral multiple amount. In FpML, MultipleExercise is built upon the PartialExercise.model.",
+                                            "maximumNumberOfOptions": null,
+                                            "integralMultipleAmount": null,
+                                            "minimumNumberOfOptions": null
+                                        },
+                                        "exerciseProcedure": {
+                                            "description": "A class describing how notice of exercise should be given. This can be either manual or automatic.",
+                                            "automaticExercise": {
+                                                "description": "A type to define automatic exercise of a swaption. With automatic exercise the option is deemed to have exercised if it is in the money by more than the threshold amount on the exercise date.",
+                                                "isApplicable": null
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "description": "Defines the strike price of an option.",
+                                        "strikePrice": {
+                                            "description": "Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.",
+                                            "perUnitOf": {
+                                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                "financialUnit": ""
+                                            },
+                                            "priceType": "",
+                                            "value": null,
+                                            "unit": {
+                                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                "currency": {
+                                                    "value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "description": "Specifies the parties responsible for making and receiving payments defined by this structure.",
+                                        "payer": "",
+                                        "receiver": ""
+                                    },
+                                    "priceQuantity": {
+                                        "description": "Generic class to specify the quantity for different payout legs in a contractual product, when that quantity can vary across payout legs or across time. A resolvable quantity can always be resolved into a single quantity from the quantity notation which has a corresponding asset identifier. In addition to the base case, where quantity is directly specified as a number as part of the quantity notation, the other use cases are: (i) quantity based on some pre-defined schedule (eg amortising notional), (ii) quantity based on some pre-defined events (eg resetting cross-currency notional), or quantity set as reference to another quantity (eg equity notional as no. securities x price).",
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "description": "Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.",
+                                        "settlementType": "",
+                                        "settlementCurrency": {
+                                            "value": ""
+                                        },
+                                        "settlementDate": {
+                                            "description": "A data defining the settlement date(s) for cash or physical settlement as either a set of explicit dates, together with applicable adjustments, or as a date relative to some other (anchor) date, or as any date in a range of contiguous business days. This data type provides a level of abstraction on top of the different legacy methods used to specify a settlement / payment date, which vary across product types, asset classes and delivery types.",
+                                            "adjustableOrRelativeDate": {
+                                                "description": "This Rosetta class specifies the date as either an unadjusted, adjusted or relative date. It supplements the features of the AdjustableOrAdjustedDate to support the credit default swap option premium, which uses the relative date construct.",
+                                                "relativeDate": {
+                                                    "description": "A class defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date). If the anchor date is itself an adjustable date then the offset is assumed to be calculated from the adjusted anchor date. A number of different scenarios can be supported, namely; 1) the derived date may simply be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date; 2) the unadjusted derived date may be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date with the resulting unadjusted derived date subject to adjustment in accordance with a specified business day convention, i.e. the derived date must fall on a good business day; 3) the derived date may be a number of business days preceding or following the anchor date. Note that the businessDayConvention specifies any required adjustment to the unadjusted derived date. A negative or positive value in the periodMultiplier indicates whether the unadjusted derived precedes or follows the anchor date. The businessDayConvention should contain a value NONE if the day type element contains a value of Business (since specifying a negative or positive business days offset would already guarantee that the derived date would fall on a good business day in the specified business centers).",
+                                                    "businessDayConvention": "",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "",
+                                                    "periodMultiplier": null,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "description": "A class defining the ISDA calculation agent responsible for performing duties as defined in the applicable product definitions.",
+                            "calculationAgentParty": ""
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+                            "productQualifier": "",
+                            "source": "",
+                            "value": {
+                                "description": "Defines a taxonomy value as either a simple string or a more granular expression with class names and values for each class.",
+                                "name": {
+                                    "value": ""
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "description": "Specifies the price and quantity of a trade lot, where the same product could be traded multiple times with the same counterparty but in different lots (at a different date, in a different quantity and at a different price). One trade lot combined with a product definition specifies the entire economics of a trade. The lifecycle mechanics of each such trade lot (e.g. cashflow payments) is independent of the other lots.",
+                    "priceQuantity": [
+                        {
+                            "description": "Defines a settlement as an exchange between two parties of a specified quantity of an asset (the quantity) against a specified quantity of another asset (the price). The settlement is optional and can be either cash or physical. In the case of non-cash products, the settlement of the price/quantity would not be specified here and instead would be delegated to the product mechanics, as parameterised by the price/quantity values.",
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "description": "Defines a concrete measure as a number associated to a unit. It extends MeasureBase by requiring the value attribute to be present. A measure may be unit-less so the unit attribute is still optional.",
+                                            "value": null,
+                                            "unit": {
+                                                "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                                "financialUnit": ""
+                                            }
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "description": "Defines the unit to be used for price, quantity, or other purposes",
+                                            "financialUnit": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "description": "Specifies the object to be observed for a price, it could be an asset or a reference.",
+                                "commodity": {
+                                    "value": {
+                                        "description": "Identifies a specific commodity by referencing a product identifier or by a product definition.",
+                                        "priceQuoteType": "",
+                                        "deliveryDateReference": {
+                                            "description": "Specifies a specific date or the parameters for identifying the relevant contract date when the commodity reference price is a futures contract.",
+                                            "deliveryNearby": {
+                                                "description": "A class defining an offset used in calculating a new date relative to a reference date, e.g. calendar days, business days, commodity Business days, etc.",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                                            "identifier": {
+                                                "value": "",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "source": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "description": "Defines a counterparty enumerated value, e.g. Party1 or Party2, with an associated party reference. The product is agnostic to the actual parties to the transaction, with the party references abstracted away from the product definition and replaced by the CounterpartyEnum (e.g. values Party1 or Party2). The CounterpartyEnum can then be positioned in the product (e.g. to specify which counterparty is the payer, receiver etc) and this Counterparty type, which is positioned outside of the product definition, allows the CounterpartyEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "",
+                        "externalReference": ""
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "description": "Defines an ancillary role enumerated value with an associated party reference. The product is agnostic to the actual parties involved in the transaction, with the party references abstracted away from the product definition and replaced by the AncillaryRoleEnum. The AncillaryRoleEnum can then be positioned in the product and this AncillaryParty type, which is positioned outside of the product definition, allows the AncillaryRoleEnum to be associated with an actual party reference.",
+                    "role": "",
+                    "partyReference": [
+                        {
+                            "globalReference": "",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "description": "A class to specify the FIRST party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "description": "A class to specify the SECOND party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ",
+                "partyId": [
+                    {
+                        "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the PartyIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+                        "identifier": {
+                            "value": "",
+                            "meta": {
+                                "scheme": ""
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "description": "Defines specific attributes that relate to contractual details of trades.",
+            "documentation": [
+                {
+                    "description": "The specification of a legal agreement between two parties, being negotiated or having been executed. This includes the baseline information and the optional specialised elections",
+                    "agreementDate": "",
+                    "legalAgreementIdentification": {
+                        "description": "Specifies the type of legal agreement, identified via a set of composable attributes: agreementName, publisher, governing law and version, e.g. ISDA 2013 Standard Credit Support Annex English Law.",
+                        "agreementName": {
+                            "description": "Specifies the agreement name through an agreement type and optional detailed sub agreement type.",
+                            "agreementType": "",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": ""
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": ""
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": ""
+            }
+        }
+    }
+}

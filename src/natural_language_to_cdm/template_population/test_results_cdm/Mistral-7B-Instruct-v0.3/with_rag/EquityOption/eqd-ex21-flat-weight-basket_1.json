@@ -1,0 +1,548 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "33f59567",
+                    "externalReference": "party1"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "http://www.PartyA.com/tradeId/OTC"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "95918657"
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "",
+            "meta": {
+                "globalKey": "95918657",
+                "externalKey": "1234"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party1",
+                                        "seller": "Party2"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-2"
+                                                    }
+                                                },
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-3"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-4"
+                                                    }
+                                                },
+                                                {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "productIdentifier-5"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-2"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-3"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-4"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-5"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-1"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "CONTRACT",
+                                                                    "value": "productIdentifier-6"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity"
+                                                                }
+                                                            },
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity"
+                                                                }
+                                                            },
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity"
+                                                                }
+                                                            },
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the key to be populated is \"optionType\". The prior context (path) leads to \"trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType\".\n\nFrom the contract description, the option type is \"Call\". However, the prior context suggests that we should look for the option type within the \"optionPayout\" array. Since there is only one option payout in the provided contract description, we can directly use \"Call\" as the value for the \"optionType\" key.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": [\n              {\n                \"optionPayout\": [\n                  {\n                    \"optionType\": \"Call\"\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "American",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-07-13",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "NONE",
+                                                    "meta": {
+                                                        "globalKey": "24a738"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eae7f1c5"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "eae7f1c5"
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2005-09-27",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "NONE",
+                                                        "meta": {
+                                                            "globalKey": "24a738"
+                                                        }
+                                                    },
+                                                    "meta": {
+                                                        "globalKey": "eb080ed3"
+                                                    }
+                                                },
+                                                "meta": {
+                                                    "globalKey": "eb080ed3"
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "15:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "Close",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 150000,
+                                            "integralMultipleAmount": null,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "6bfa93dd"
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "EUR"
+                                            },
+                                            "priceType": "AssetPrice",
+                                            "value": "32.00",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "Your unique global key"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": {
+                                            "payerPartyReference": {
+                                                "globalReference": "33f59568",
+                                                "externalReference": "party2"
+                                            }
+                                        },
+                                        "receiver": {
+                                            "receiverPartyReference": {
+                                                "globalReference": "33f59567",
+                                                "externalReference": "party1"
+                                            }
+                                        }
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "TRADE",
+                                                "value": "trade.tradeDetails.tradeLot"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "unique_global_key_for_settlement_date"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "trade_date"
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "unique_global_key_for_settlement_date"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "unique_global_key_for_settlement_terms"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "CalculationAgentIndependent"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "Basket Option",
+                            "value": {
+                                "name": {
+                                    "value": "Basket Option Taxonomy"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": 150000,
+                                    "unit": {
+                                        "financialUnit": "Contract"
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "1234",
+                                                "meta": {
+                                                    "scheme": "http://www.partyA.com/coding-scheme/trade-id"
+                                                }
+                                            },
+                                            "source": "Other"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "33f59568",
+                        "externalReference": "party2"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "33f59567",
+                        "externalReference": "party1"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "CalculationAgentIndependent",
+                    "partyReference": [
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "party1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party1",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/dummy-party-id"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "33f59567"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party2",
+                            "meta": {
+                                "scheme": "http://www.fpml.org/coding-scheme/dummy-party-id"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "33f59568"
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "July 13, 2001",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Confirmation",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA2000"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": ""
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "party1"
+                        },
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "party2"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": {
+                    "tradeDate": "July 13, 2001",
+                    "tradeIdentifier": "1234",
+                    "issuerReference": "33f59567",
+                    "assignedIdentifier": "1234",
+                    "globalKey": "95918657",
+                    "productType": "Basket Option",
+                    "underlier": "Basket of Equities",
+                    "optionType": "Call",
+                    "strikePrice": "32.00 EUR",
+                    "exerciseTerms": {
+                        "style": "American",
+                        "commencementDate": "July 13, 2001",
+                        "expirationDate": "September 27, 2005",
+                        "latestExerciseTime": "17:15:00 (GBLO)",
+                        "multipleExercise": "1-150,000 options",
+                        "automaticExercise": "Applicable"
+                    },
+                    "priceQuantity": {
+                        "quantity": "150,000 contracts",
+                        "unit": "Contract",
+                        "multiplier": "1.00"
+                    },
+                    "observable": [
+                        {
+                            "productIdentifier": {
+                                "value": "FXI",
+                                "source": "Other"
+                            },
+                            "quantity": "0.50 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        },
+                        {
+                            "productIdentifier": {
+                                "value": "FTSE/Xinhua China 25 Index",
+                                "source": "Name"
+                            },
+                            "quantity": "0.50 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        },
+                        {
+                            "productIdentifier": {
+                                "value": "005440.KS",
+                                "source": "Other"
+                            },
+                            "quantity": "0.25 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        },
+                        {
+                            "productIdentifier": {
+                                "value": "HYUNDAI MOTOR COMPANY",
+                                "source": "Name"
+                            },
+                            "quantity": "0.25 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        },
+                        {
+                            "productIdentifier": {
+                                "value": "000270.KS",
+                                "source": "Other"
+                            },
+                            "quantity": "0.25 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        },
+                        {
+                            "productIdentifier": {
+                                "value": "KIA MOTORS CORPORATION",
+                                "source": "Name"
+                            },
+                            "quantity": "0.25 weights",
+                            "unit": {
+                                "financialUnit": "Weight"
+                            }
+                        }
+                    ],
+                    "counterparty": [
+                        {
+                            "role": "Party1",
+                            "partyReference": {
+                                "globalReference": "33f59568",
+                                "externalReference": "party2"
+                            }
+                        },
+                        {
+                            "role": "Party2",
+                            "partyReference": {
+                                "globalReference": "33f59569",
+                                "externalReference": "party1"
+                            }
+                        }
+                    ],
+                    "governingLaw": "GBEN",
+                    "documentation": "ISDA",
+                    "calculationAgent": "CalculationAgentIndependent",
+                    "transferHistory": [
+                        {
+                            "transferDate": "July 17, 2001",
+                            "asset": "Cash",
+                            "payerReceiver": {
+                                "payer": "Party2 (payer)",
+                                "receiver": "Party1 (receiver)"
+                            },
+                            "settlementDate": "July 17, 2001",
+                            "transferExpression": "Premium"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "tradeDate": "2023-10-05",
+    "effectiveDate": "2023-10-05",
+    "terminationDate": {
+        "relativeDate": {
+            "period": "P10Y",
+            "businessDayConvention": "MODIFIED_FOLLOWING",
+            "dateRelativeTo": {
+                "externalReference": "TradeDate"
+            }
+        },
+        "meta": {
+            "externalKey": "TerminationDate"
+        }
+    },
+    "partyA": {
+        "partyId": {
+            "scheme": "ISDA",
+            "id": "JPMorgan Chase Bank, N.A., Mumbai Branch"
+        },
+        "partyName": "JPMorgan"
+    },
+    "partyB": {
+        "partyId": {
+            "scheme": "ISDA",
+            "id": "[Counterparty]"
+        },
+        "partyName": "[Counterparty]"
+    },
+    "notionalAmount": {
+        "amount": 10000000,
+        "currency": "USD"
+    },
+    "businessDayConvention": "MODIFIED_FOLLOWING",
+    "fixingBusinessDays": {
+        "businessCenter": {
+            "value": "USGOVTBONDS"
+        }
+    },
+    "businessDays": {
+        "businessCenter": {
+            "value": "NY"
+        }
+    },
+    "calculationAgent": {
+        "partyId": {
+            "scheme": "ISDA",
+            "id": "JPMorgan Chase Bank, N.A., Mumbai Branch"
+        },
+        "partyName": "JPMorgan"
+    },
+    "governingLaw": "English",
+    "documentation": "ISDA",
+    "dealerName": "[Dealer Name]",
+    "clientType": "Non-Retail",
+    "payout": {
+        "interestRatePayout": [
+            {
+                "payerReceiver": {
+                    "payer": "PartyA",
+                    "receiver": "PartyB"
+                },
+                "priceQuantity": {
+                    "quantityReference": {
+                        "externalReference": "NotionalAmount"
+                    }
+                },
+                "rateSpecification": {
+                    "fixedRate": {
+                        "rate": 4427
+                    }
+                },
+                "dayCountFraction": {
+                    "value": "ACT/360"
+                },
+                "calculationPeriodDates": {
+                    "effectiveDate": {
+                        "relativeDate": {
+                            "periodMultiplier": 1,
+                            "period": "Y",
+                            "dayType": "ExchangeBusiness",
+                            "businessDayConvention": "MODIFIED_FOLLOWING",
+                            "dateRelativeTo": {
+                                "externalReference": "TradeDate"
+                            }
+                        }
+                    },
+                    "terminationDate": {
+                        "relativeDate": {
+                            "periodMultiplier": 1,
+                            "period": "Y",
+                            "dayType": "ExchangeBusiness",
+                            "businessDayConvention": "MODIFIED_FOLLOWING",
+                            "dateRelativeTo": {
+                                "externalReference": "TradeDate"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "mandatoryEarlyTermination": {
+        "mandatoryEarlyTerminationDate": "2023-11-03",
+        "terminationDate": {
+            "relativeDate": {
+                "period": "D",
+                "businessDayConvention": "MODIFIED_FOLLOWING",
+                "dateRelativeTo": {
+                    "externalReference": "MandatoryEarlyTerminationDate"
+                }
+            },
+            "meta": {
+                "externalKey": "TerminationDate"
+            }
+        }
+    },
+    "riskDisclosure": {
+        "riskDisclosureText": "There are significant risks associated with this Transaction including, but not limited to, foreign exchange risk, price risk, liquidity risk and credit risk."
+    },
+    "creditRisk": {
+        "creditRiskText": "The swap carries the credit risk of Party A."
+    },
+    "ordinaryCourseOfBusiness": {
+        "ordinaryCourseOfBusinessText": "In the ordinary course of their business, JPMorgan or any of its affiliates or subsidiaries may affect transactions for their own account or for the account of their customers."
+    },
+    "potentialConflictsOfInterest": {
+        "potentialConflictsOfInterestText": "Potential conflicts of interest may exist in the structure and operation of the strategy and the course of the normal business activities of JPMorgan or any of its affiliates or subsidiaries or their respective directors, officers, employees, representatives, delegates or agents of their normal business activities"
+    }
+}

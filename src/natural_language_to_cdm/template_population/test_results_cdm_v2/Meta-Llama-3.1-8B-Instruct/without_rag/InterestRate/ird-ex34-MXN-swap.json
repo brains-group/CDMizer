@@ -1,0 +1,1832 @@
+{
+    "trade": {
+        "tradeIdentifier": {
+            "identifierType": "Trade Identifier",
+            "issuerReference": {
+                "globalReference": "xyz1234",
+                "externalReference": "abc1234"
+            },
+            "issuer": {
+                "value": "Buyside and Sellside",
+                "meta": {
+                    "scheme": "ISDA"
+                }
+            },
+            "assignedIdentifier": [
+                {
+                    "identifier": {
+                        "value": "xyz1234",
+                        "meta": {
+                            "scheme": "ISDA"
+                        }
+                    },
+                    "version": "1"
+                },
+                {
+                    "identifier": {
+                        "value": "abc1234",
+                        "meta": {
+                            "scheme": "ISDA"
+                        }
+                    },
+                    "version": "1"
+                }
+            ]
+        },
+        "tradeDate": {
+            "value": "Interest Rate Swap Contract",
+            "meta": {
+                "globalKey": "Interest Rate Swap",
+                "externalKey": "xyz1234 (buyside-trade-id) and abc1234 (sellside-trade-id)"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "December 12, 2010",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Modified Following"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "December 12, 2010",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Modified Following"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "interestRatePayout": [
+                                {
+                                    "rateSpecification": {
+                                        "fixedRate": {
+                                            "rateSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": ""
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "floatingRate": {
+                                            "initialRate": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                },
+                                                "priceType": "Floating Rate",
+                                                "value": null,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            },
+                                            "finalRateRounding": {
+                                                "roundingDirection": "ROUND_HALF_UP",
+                                                "precision": 4
+                                            },
+                                            "floatingRateMultiplierSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Buyside",
+                                                        "value": "Sellside"
+                                                    }
+                                                }
+                                            },
+                                            "rateTreatment": "rateTreatment: \"Floating\"",
+                                            "calculationParameters": {
+                                                "calculationMethod": "ACT/360",
+                                                "observationShiftCalculation": {
+                                                    "offsetDays": 2,
+                                                    "calculationBase": "Modified Following",
+                                                    "additionalBusinessDays": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "lookbackCalculation": {
+                                                    "offsetDays": 2
+                                                },
+                                                "lockoutCalculation": {
+                                                    "offsetDays": 2
+                                                },
+                                                "applicableBusinessDays": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "observationParameters": {
+                                                    "observationCapRate": 4.427
+                                                }
+                                            },
+                                            "fallbackRate": {
+                                                "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                "effectiveDate": "2010-12-12",
+                                                "calculationParameters": {
+                                                    "calculationMethod": "ACT/360",
+                                                    "observationShiftCalculation": {
+                                                        "offsetDays": 0,
+                                                        "calculationBase": "October 5",
+                                                        "additionalBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "applicableBusinessDays": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "spreadAdjustment": 0
+                                                }
+                                            },
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "Mexico",
+                                                    "value": "Buyside and Sellside"
+                                                }
+                                            },
+                                            "spreadSchedule": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "Buyside",
+                                                        "value": "Sellside"
+                                                    }
+                                                }
+                                            },
+                                            "capRateSchedule": {
+                                                "buyer": "Buyside",
+                                                "seller": "Sellside",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "ISDA Master Agreement",
+                                                        "value": "Mexico"
+                                                    }
+                                                }
+                                            },
+                                            "floorRateSchedule": {
+                                                "buyer": "Buyside",
+                                                "seller": "Sellside",
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "ISDA Master Agreement",
+                                                        "value": "Mexico"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "inflationRate": {
+                                            "inflationLag": {
+                                                "periodMultiplier": null,
+                                                "period": "Annually"
+                                            },
+                                            "indexSource": {
+                                                "value": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                "meta": {
+                                                    "scheme": "ISDA Master Agreement"
+                                                }
+                                            },
+                                            "mainPublication": {
+                                                "value": "ISDA Master Agreement",
+                                                "meta": {
+                                                    "scheme": "ISDA Master Agreement"
+                                                }
+                                            },
+                                            "interpolationMethod": {
+                                                "value": "ACT/360"
+                                            },
+                                            "initialIndexLevel": null,
+                                            "fallbackBondApplicable": null,
+                                            "rateOption": {
+                                                "address": {
+                                                    "scope": "Mexico",
+                                                    "value": "Buyside"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dayCountFraction": {
+                                        "value": "ACT/360"
+                                    },
+                                    "calculationPeriodDates": {
+                                        "effectiveDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "2010-12-13",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "relativeDateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business Day",
+                                                "periodMultiplier": 1,
+                                                "period": "Year"
+                                            }
+                                        },
+                                        "terminationDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ],
+                                                        "businessCentersReference": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        }
+                                                    }
+                                                },
+                                                "adjustedDate": {
+                                                    "value": "2015-12-14",
+                                                    "meta": {
+                                                        "globalKey": ""
+                                                    }
+                                                }
+                                            },
+                                            "relativeDate": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "P1Y"
+                                            }
+                                        },
+                                        "calculationPeriodDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        },
+                                        "firstPeriodStartDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "firstRegularPeriodStartDate": "October 5, 2011",
+                                        "firstCompoundingPeriodEndDate": "October 5, 2011",
+                                        "lastRegularPeriodEndDate": "October 5, 2015",
+                                        "stubPeriodType": "\"Annually\"",
+                                        "calculationPeriodFrequency": {
+                                            "rollConvention": "Modified Following",
+                                            "periodMultiplier": 1,
+                                            "period": "Annually"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "paymentFrequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "Annually"
+                                        },
+                                        "firstPaymentDate": "2011-10-07",
+                                        "lastRegularPaymentDate": "2015-10-07",
+                                        "paymentDateSchedule": {
+                                            "interimPaymentDates": [
+                                                {
+                                                    "periodicDates": {
+                                                        "periodFrequency": {
+                                                            "periodMultiplier": 1,
+                                                            "period": "Annually"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "payRelativeTo": "Reset Date",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business Days",
+                                            "periodMultiplier": 2,
+                                            "period": "Days"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "paymentDate": {
+                                        "unadjustedDate": "2010-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "resetDates": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "",
+                                            "externalReference": ""
+                                        },
+                                        "resetRelativeTo": "October 5 of each year",
+                                        "fixingDates": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            },
+                                            "dateRelativeTo": {
+                                                "globalReference": "",
+                                                "externalReference": ""
+                                            },
+                                            "dayType": "Business",
+                                            "periodMultiplier": -2,
+                                            "period": "Year"
+                                        },
+                                        "resetFrequency": {
+                                            "weeklyRollConvention": "",
+                                            "periodMultiplier": null,
+                                            "period": "Year"
+                                        },
+                                        "resetDatesAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ],
+                                                "businessCentersReference": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "discountingMethod": {
+                                        "discountingType": "ACT/360"
+                                    },
+                                    "compoundingMethod": "compoundingMethod: \"ACT/360\"",
+                                    "cashflowRepresentation": {
+                                        "cashflowsMatchParameters": "[\"Fixed Rate\", \"Floating Rate\"]",
+                                        "paymentCalculationPeriod": [
+                                            {
+                                                "adjustedPaymentDate": "2011-10-07",
+                                                "calculationPeriod": [
+                                                    {
+                                                        "unadjustedStartDate": "2010-10-05",
+                                                        "unadjustedEndDate": "2011-10-05",
+                                                        "calculationPeriodNumberOfDays": 365,
+                                                        "notionalAmount": 50000000,
+                                                        "fxLinkedNotionalAmount": {
+                                                            "adjustedFxSpotFixingDate": ""
+                                                        },
+                                                        "floatingRateDefinition": {
+                                                            "rateObservation": [
+                                                                {
+                                                                    "adjustedFixingDate": "2011-10-03",
+                                                                    "observationWeight": 1
+                                                                }
+                                                            ]
+                                                        },
+                                                        "fixedRate": 4.427,
+                                                        "adjustedStartDate": "2011-10-05",
+                                                        "adjustedEndDate": "2012-10-05"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "stubPeriod": {
+                                        "calculationPeriodDatesReference": {
+                                            "globalReference": "2010-12-12",
+                                            "externalReference": ""
+                                        },
+                                        "initialStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "month"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": null
+                                        },
+                                        "finalStub": {
+                                            "floatingRate": [
+                                                {
+                                                    "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                    "indexTenor": {
+                                                        "periodMultiplier": 1,
+                                                        "period": "month"
+                                                    }
+                                                }
+                                            ],
+                                            "stubRate": null
+                                        }
+                                    },
+                                    "bondReference": {
+                                        "bond": {
+                                            "identifier": {
+                                                "value": "xyz1234 (buyside-trade-id)",
+                                                "meta": {
+                                                    "scheme": "ISDA"
+                                                }
+                                            },
+                                            "source": "Buyside"
+                                        },
+                                        "conditionPrecedentBond": null
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Buyside",
+                                        "receiver": "Sellside"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Mexico",
+                                                "value": "Buyside"
+                                            }
+                                        },
+                                        "quantityReference": {
+                                            "globalReference": "Interest Rate Swap Contract",
+                                            "externalReference": "xyz1234 (buyside-trade-id) and abc1234 (sellside-trade-id)"
+                                        },
+                                        "quantityMultiplier": {
+                                            "fxLinkedNotionalSchedule": {
+                                                "varyingNotionalCurrency": {
+                                                    "value": "MXN"
+                                                },
+                                                "varyingNotionalFixingDates": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -2,
+                                                    "period": "Year"
+                                                },
+                                                "fxSpotRateSource": {
+                                                    "primarySource": {
+                                                        "sourceProvider": {
+                                                            "value": "Buyside"
+                                                        },
+                                                        "sourcePage": {
+                                                            "value": "ISDA Master Agreement"
+                                                        },
+                                                        "sourcePageHeading": ""
+                                                    }
+                                                },
+                                                "fixingTime": {
+                                                    "hourMinuteTime": "10:00:00",
+                                                    "businessCenter": {
+                                                        "value": "Mexico"
+                                                    }
+                                                },
+                                                "varyingNotionalInterimExchangePaymentDates": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": -2,
+                                                    "period": "Year"
+                                                }
+                                            },
+                                            "fxSpotRateSource": {
+                                                "primarySource": {
+                                                    "sourceProvider": {
+                                                        "value": "Buyside"
+                                                    },
+                                                    "sourcePage": {
+                                                        "value": "ISDA Master Agreement"
+                                                    },
+                                                    "sourcePageHeading": ""
+                                                }
+                                            },
+                                            "fixingTime": {
+                                                "hourMinuteTime": "10:00:00",
+                                                "businessCenter": {
+                                                    "value": "Mexico"
+                                                }
+                                            },
+                                            "varyingNotionalInterimExchangePaymentDates": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business",
+                                                "periodMultiplier": -2,
+                                                "period": "Year"
+                                            }
+                                        },
+                                        "futureValueNotional": {
+                                            "quantity": {
+                                                "address": {
+                                                    "scope": "Buyside",
+                                                    "value": "Sellside"
+                                                }
+                                            },
+                                            "currency": {
+                                                "value": "MXN"
+                                            },
+                                            "calculationPeriodNumberOfDays": 365,
+                                            "valueDate": "October 5"
+                                        }
+                                    },
+                                    "principalPayment": {
+                                        "initialPayment": null,
+                                        "finalPayment": null,
+                                        "intermediatePayment": null,
+                                        "principalPaymentSchedule": {
+                                            "initialPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2010-12-12",
+                                                    "adjustedDate": {
+                                                        "value": "2010-12-13",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Buyside",
+                                                    "receiver": "Sellside"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "50000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "finalPrincipalPayment": {
+                                                "principalPaymentDate": {
+                                                    "unadjustedDate": "2015-10-05",
+                                                    "adjustedDate": {
+                                                        "value": "2015-10-06",
+                                                        "meta": {
+                                                            "globalKey": ""
+                                                        }
+                                                    }
+                                                },
+                                                "payerReceiver": {
+                                                    "payer": "Sellside",
+                                                    "receiver": "Buyside"
+                                                },
+                                                "principalAmount": {
+                                                    "value": "50000000",
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "Fixing",
+                                                                "meta": {
+                                                                    "scheme": "ISDA"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "MXN"
+                                                            }
+                                                        }
+                                                    },
+                                                    "minimumQuotationAmount": {
+                                                        "unit": {
+                                                            "currency": {
+                                                                "value": "MXN"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToPaymentDates": {
+                                                            "paymentDatesReference": [
+                                                                {
+                                                                    "globalReference": "2011-10-07",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2012-10-07",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2013-10-07",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2014-10-07",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2015-10-07",
+                                                                    "externalReference": ""
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeToCalculationPeriodDates": {
+                                                            "calculationPeriodDatesReference": [
+                                                                {
+                                                                    "globalReference": "2011-10-05",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2012-10-05",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2013-10-05",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2014-10-05",
+                                                                    "externalReference": ""
+                                                                },
+                                                                {
+                                                                    "globalReference": "2015-10-05",
+                                                                    "externalReference": ""
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dayType": "ACT/360",
+                                                        "periodMultiplier": 1,
+                                                        "period": "Annually"
+                                                    },
+                                                    "fxFixingSchedule": {
+                                                        "unadjustedDate": [
+                                                            "2011-10-05",
+                                                            "2012-10-05",
+                                                            "2013-10-05",
+                                                            "2014-10-05",
+                                                            "2015-10-05"
+                                                        ],
+                                                        "dateAdjustments": {
+                                                            "businessDayConvention": "Modified Following",
+                                                            "businessCenters": {
+                                                                "businessCenter": [
+                                                                    {
+                                                                        "value": "Mexico"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "cashSettlementAmount": {
+                                                    "unit": {
+                                                        "currency": {
+                                                            "value": "MXN"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        }
+                                    }
+                                }
+                            ],
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Buyside",
+                                        "seller": "Sellside"
+                                    },
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Mexican",
+                                                        "value": "Interest Rate Swap Contract"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "\"vanilla\"",
+                                    "exerciseTerms": {
+                                        "style": "style = \"American\"",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2010-12-12",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 5,
+                                            "integralMultipleAmount": 10000000,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "manualExercise": {
+                                                "exerciseNotice": {
+                                                    "exerciseNoticeGiver": "Both parties",
+                                                    "businessCenter": {
+                                                        "value": "Mexico"
+                                                    }
+                                                }
+                                            },
+                                            "followUpConfirmation": null,
+                                            "limitedRightToConfirm": null,
+                                            "splitTicket": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "MXN",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            },
+                                            "priceType": "fixed",
+                                            "value": 50000000,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "MXN",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "referenceSwapCurve": {
+                                            "swapUnwindValue": {
+                                                "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                "indexTenor": {
+                                                    "periodMultiplier": 1,
+                                                    "period": "year"
+                                                },
+                                                "spread": 0,
+                                                "side": "fixed"
+                                            },
+                                            "makeWholeAmount": {
+                                                "interpolationMethod": "linear",
+                                                "earlyCallDate": {
+                                                    "value": "2015-12-14",
+                                                    "meta": {
+                                                        "globalKey": "terminationDate"
+                                                    }
+                                                },
+                                                "floatingRateIndex": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                                "spread": 0,
+                                                "side": "fixed"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Buyside",
+                                        "receiver": "Sellside"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Buyside and Sellside",
+                                                "value": "Interest Rate Swap Contract"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "\"Fixed\"",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": ""
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "security": {
+                                            "securityType": "Interest Rate Swap",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISIN",
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Buyside",
+                                        "receiver": "Sellside"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "ISIN",
+                                                "value": "MXN"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash"
+                                    }
+                                }
+                            ]
+                        },
+                        "terminationProvision": {
+                            "cancelableProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "Buyside and Sellside"
+                                    }
+                                },
+                                "followUpConfirmation": "\"true\"",
+                                "exerciseTerms": {
+                                    "style": "style = \"American\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "2010-12-12"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "GBLO"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "12:00:00",
+                                        "businessCenter": {
+                                            "value": "Mexico"
+                                        }
+                                    }
+                                },
+                                "buyer": "buyer\n\"Buyside\"",
+                                "seller": "seller\n\"Buyside\""
+                            },
+                            "earlyTerminationProvision": {
+                                "mandatoryEarlyTermination": {
+                                    "mandatoryEarlyTerminationDate": {
+                                        "unadjustedDate": "2010-12-12",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "Modified Following",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "Mexico"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Buyside"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Fixed-for-floating interest rate swap",
+                                                "valuationMethod": {
+                                                    "quotationMethod": "Bid"
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "externalReference": "2010-12-12"
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": -2,
+                                                        "period": "Year"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "10:00:00",
+                                                    "businessCenter": {
+                                                        "value": "Mexico"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"Physical\"",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        }
+                                    }
+                                },
+                                "optionalEarlyTermination": {
+                                    "exerciseNotice": [
+                                        {
+                                            "businessCenter": {
+                                                "value": "Buyside and Sellside"
+                                            }
+                                        }
+                                    ],
+                                    "followUpConfirmation": "None",
+                                    "calculationAgent": {
+                                        "calculationAgentParty": "Buyside",
+                                        "calculationAgentPartyEnum": "Buyside"
+                                    },
+                                    "cashSettlement": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "cashSettlementMethod": "Physical",
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": "Buyside"
+                                                            }
+                                                        }
+                                                    },
+                                                    "quotationMethod": "Bid",
+                                                    "cashCollateralValuationMethod": {
+                                                        "applicableCsa": "ISDA Master Agreement",
+                                                        "cashCollateralCurrency": "MXN",
+                                                        "cashCollateralInterestRate": {
+                                                            "value": "4.427%"
+                                                        },
+                                                        "agreedDiscountRate": {
+                                                            "value": "0.0%"
+                                                        },
+                                                        "protectedParty": [
+                                                            {
+                                                                "value": "Buyside"
+                                                            }
+                                                        ],
+                                                        "prescribedDocumentationAdjustment": null
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "valuationDate": {
+                                                        "businessDayConvention": "Modified Following",
+                                                        "businessCenters": {
+                                                            "businessCenter": [
+                                                                {
+                                                                    "value": "Mexico"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "dateRelativeTo": {
+                                                            "globalReference": "",
+                                                            "externalReference": ""
+                                                        },
+                                                        "dayType": "Business",
+                                                        "periodMultiplier": -2,
+                                                        "period": "Year"
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "10:00:00",
+                                                    "businessCenter": {
+                                                        "value": "Mexico"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "\"Physical\"",
+                                        "settlementCurrency": {
+                                            "value": "MXN"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableDates": {
+                                                "unadjustedDate": [
+                                                    "2011-10-05"
+                                                ],
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "businessDateRange": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "startDate": "2011-10-05",
+                                                "endDate": "2015-10-05"
+                                            }
+                                        }
+                                    },
+                                    "optionalEarlyTerminationAdjustedDates": {
+                                        "earlyTerminationEvent": [
+                                            {
+                                                "adjustedExerciseDate": "October 5, 2011",
+                                                "adjustedEarlyTerminationDate": "November 3, 2015",
+                                                "adjustedCashSettlementValuationDate": "October 5, 2015",
+                                                "adjustedCashSettlementPaymentDate": "October 7, 2015"
+                                            }
+                                        ]
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "style = \"American\"",
+                                        "commencementDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "ACT/360",
+                                                "periodMultiplier": 1,
+                                                "period": "Annually"
+                                            }
+                                        },
+                                        "exerciseDates": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "Business Day",
+                                                "periodMultiplier": 1,
+                                                "period": "Year"
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "relativeDate": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                },
+                                                "dateRelativeTo": {
+                                                    "globalReference": "",
+                                                    "externalReference": ""
+                                                },
+                                                "dayType": "",
+                                                "periodMultiplier": null,
+                                                "period": ""
+                                            }
+                                        },
+                                        "relevantUnderlyingDate": {
+                                            "relativeDates": {
+                                                "businessDayConvention": "Modified Following",
+                                                "dateRelativeTo": {
+                                                    "globalReference": "December 12, 2010",
+                                                    "externalReference": ""
+                                                },
+                                                "periodMultiplier": 1,
+                                                "period": "Annually"
+                                            }
+                                        },
+                                        "earliestExerciseTime": {
+                                            "hourMinuteTime": "10:00:00",
+                                            "businessCenter": {
+                                                "value": "Mexico City"
+                                            }
+                                        },
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "Mexico"
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "12:00:00",
+                                            "businessCenter": {
+                                                "value": "Mexico"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "extendibleProvision": {
+                                "exerciseNotice": {
+                                    "businessCenter": {
+                                        "value": "Buyside and Sellside"
+                                    }
+                                },
+                                "followUpConfirmation": "\"yes\"",
+                                "exerciseTerms": {
+                                    "style": "style\n\"American\"",
+                                    "expirationDate": [
+                                        {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2010-12-12",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "Mexico"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "relevantUnderlyingDate": {
+                                        "adjustableDates": {
+                                            "unadjustedDate": [
+                                                "2010-12-12"
+                                            ],
+                                            "dateAdjustments": {
+                                                "businessDayConvention": "Modified Following",
+                                                "businessCenters": {
+                                                    "businessCenter": [
+                                                        {
+                                                            "value": "Mexico"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "earliestExerciseTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "Mexico"
+                                        }
+                                    },
+                                    "expirationTime": {
+                                        "hourMinuteTime": "11:00:00",
+                                        "businessCenter": {
+                                            "value": "Mexico"
+                                        }
+                                    }
+                                },
+                                "buyer": "buyer\n\"Buyside\"",
+                                "seller": "seller\n\"Buyside\""
+                            }
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Buyside",
+                            "calculationAgentBusinessCenter": {
+                                "value": "Buyside",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        },
+                        "nonStandardisedTerms": "nonStandardisedTerms: [\"Interest Rate Swap\", \"Fixed-for-Floating\", \"Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate\"]"
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Interest Rate",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            },
+                            "productQualifier": "Fixed-for-Floating",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "Interest Rate Swap",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "MXN",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        },
+                                        "priceType": "Fixed",
+                                        "arithmeticOperator": "Multiply",
+                                        "datedValue": [
+                                            {
+                                                "date": "2010-12-12",
+                                                "value": 4.427
+                                            }
+                                        ],
+                                        "value": 50.0,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "MXN",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": 1,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "MXN",
+                                                    "meta": {
+                                                        "scheme": "ISO 4217"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "datedValue": [
+                                            {
+                                                "date": "2010-12-12",
+                                                "value": 50000000
+                                            },
+                                            {
+                                                "date": "2011-10-07",
+                                                "value": 50000000
+                                            },
+                                            {
+                                                "date": "2012-10-05",
+                                                "value": 50000000
+                                            },
+                                            {
+                                                "date": "2013-10-07",
+                                                "value": 50000000
+                                            },
+                                            {
+                                                "date": "2014-10-05",
+                                                "value": 50000000
+                                            },
+                                            {
+                                                "date": "2015-10-07",
+                                                "value": 50000000
+                                            }
+                                        ],
+                                        "value": 50000000,
+                                        "unit": {
+                                            "financialUnit": "MXN",
+                                            "currency": {
+                                                "value": "MXN",
+                                                "meta": {
+                                                    "scheme": "ISO 4217"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "rateOption": {
+                                    "value": {
+                                        "floatingRateIndex": {
+                                            "value": "Mexican TIIE (Tipo de Inter\u00e9s Interbancario) rate",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "inflationRateIndex": {
+                                            "value": "",
+                                            "meta": {
+                                                "scheme": ""
+                                            }
+                                        },
+                                        "indexTenor": {
+                                            "periodMultiplier": null,
+                                            "period": "Annually"
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "xyz1234 (buyside-trade-id)",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "source": "Buyside"
+                                        }
+                                    },
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "abc1234 (sellside-trade-id)",
+                                                "meta": {
+                                                    "scheme": ""
+                                                }
+                                            },
+                                            "source": "Sellside"
+                                        }
+                                    }
+                                ]
+                            },
+                            "settlementTerms": {
+                                "cashSettlementTerms": [
+                                    {
+                                        "valuationMethod": {
+                                            "quotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            },
+                                            "minimumQuotationAmount": {
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "MXN"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "cashSettlementAmount": {
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "MXN"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "settlementType": "\"Fixed\""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party",
+                    "partyReference": {
+                        "globalReference": "Buyside",
+                        "externalReference": "Sellside"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "Buyside",
+                            "externalReference": "Sellside"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Buyside-trade-id"
+                        },
+                        "identifierType": "Trade Identifier"
+                    }
+                ],
+                "name": {
+                    "value": "Buyside"
+                },
+                "businessUnit": [
+                    {
+                        "name": "Buyside Business Unit"
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "Buyside Person Id"
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "John",
+                        "surname": "Doe"
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Mexico"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Sellside-trade-id"
+                        },
+                        "identifierType": "Trade Identifier"
+                    }
+                ],
+                "name": {
+                    "value": "Sellside"
+                },
+                "businessUnit": [
+                    {
+                        "name": "Sellside Business Unit"
+                    }
+                ],
+                "person": [
+                    {
+                        "personId": [
+                            {
+                                "value": {
+                                    "identifier": {
+                                        "value": "Sellside Person Id"
+                                    }
+                                }
+                            }
+                        ],
+                        "firstName": "Jane",
+                        "surname": "Doe"
+                    }
+                ],
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "Mexico"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "partyRole": [
+            {
+                "partyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                },
+                "role": "Counterparty",
+                "ownershipPartyReference": {
+                    "globalReference": "",
+                    "externalReference": ""
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Interest Rate Swap",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA Master Agreement",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement",
+                                "meta": {
+                                    "scheme": "ISDA"
+                                }
+                            }
+                        },
+                        "contractualParty": [
+                            {
+                                "globalReference": "Buyside",
+                                "externalReference": "Sellside"
+                            },
+                            {
+                                "globalReference": "Sellside",
+                                "externalReference": "Buyside"
+                            }
+                        ]
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Buyside",
+                            "externalReference": "Sellside"
+                        },
+                        {
+                            "globalReference": "Sellside",
+                            "externalReference": "Buyside"
+                        }
+                    ],
+                    "trade": {
+                        "contractDetails": {
+                            "documentation": [
+                                {
+                                    "value": "ISDA Master Agreement",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "account": [
+            {
+                "partyReference": {
+                    "globalReference": "Buyside",
+                    "externalReference": "Sellside"
+                },
+                "accountNumber": {
+                    "value": "xyz1234"
+                },
+                "accountName": {
+                    "value": "Buyside and Sellside"
+                },
+                "accountBeneficiary": {
+                    "globalReference": "Buyside",
+                    "externalReference": "Sellside"
+                }
+            }
+        ]
+    }
+}

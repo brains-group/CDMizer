@@ -1,0 +1,420 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "bc0f2fa8",
+                    "externalReference": "partyA"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "12345",
+                            "meta": {
+                                "scheme": "http://www.citi.com/fx/trade-id"
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "globalKey": "984bc438"
+                }
+            }
+        ],
+        "tradeDate": {
+            "value": "2011-03-01",
+            "meta": {
+                "globalKey": "3ed8c1",
+                "externalKey": "TradeDate"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "productTaxonomy": [
+                        {
+                            "source": "Other",
+                            "value": {
+                                "name": {
+                                    "value": "FxVolatilitySwap",
+                                    "meta": {
+                                        "scheme": "http://www.fpml.org/coding-scheme/product-type-simple"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "source": "ISDA",
+                            "productQualifier": "ForeignExchange_ParameterReturnVolatility"
+                        }
+                    ],
+                    "meta": {
+                        "globalKey": "f5b5b4a3"
+                    }
+                },
+                "meta": {
+                    "globalKey": "f5b5b4a3"
+                }
+            },
+            "meta": {
+                "globalKey": "f5b5b4a3"
+            }
+        },
+        "tradeLot": {
+            "quantity": {
+                "value": 100000,
+                "unit": {
+                    "currency": {
+                        "value": "USD"
+                    }
+                }
+            },
+            "meta": {
+                "globalKey": "f5b5b4a3"
+            }
+        },
+        "meta": {
+            "globalKey": "f5b5b4a3"
+        }
+    },
+    "party": [
+        {
+            "partyReference": {
+                "globalReference": "549300SRLRVTR996F086",
+                "externalReference": "partyA"
+            },
+            "partyName": {
+                "value": "Party A",
+                "meta": {
+                    "globalKey": "3ed8c1"
+                }
+            },
+            "partyRole": {
+                "value": "Buyer",
+                "meta": {
+                    "globalKey": "3ed8c1"
+                }
+            },
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        },
+        {
+            "partyReference": {
+                "globalReference": "549300RE0FSXJE8G1L65",
+                "externalReference": "partyB"
+            },
+            "partyName": {
+                "value": "Party B",
+                "meta": {
+                    "globalKey": "3ed8c1"
+                }
+            },
+            "partyRole": {
+                "value": "Seller",
+                "meta": {
+                    "globalKey": "3ed8c1"
+                }
+            },
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        }
+    ],
+    "account": [
+        {
+            "accountReference": {
+                "globalReference": "bc0f2fa8",
+                "externalReference": "partyA"
+            },
+            "accountName": {
+                "value": "Account A",
+                "meta": {
+                    "globalKey": "3ed8c1"
+                }
+            },
+            "servicingParty": {
+                "globalReference": "bc0f2fa8",
+                "externalReference": "partyA"
+            },
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        }
+    ],
+    "transferHistory": [
+        {
+            "transfer": {
+                "quantity": {
+                    "value": 5000.0,
+                    "unit": {
+                        "currency": {
+                            "value": "USD"
+                        }
+                    }
+                },
+                "asset": {
+                    "Cash": {
+                        "identifier": [
+                            {
+                                "identifier": {
+                                    "value": "USD"
+                                },
+                                "identifierType": "CurrencyCode"
+                            }
+                        ]
+                    }
+                },
+                "payerReceiver": {
+                    "payerPartyReference": {
+                        "globalReference": "bc0f2fa8",
+                        "externalReference": "partyA"
+                    },
+                    "receiverPartyReference": {
+                        "globalReference": "ad2b4ce5",
+                        "externalReference": "partyB"
+                    }
+                },
+                "settlementDate": {
+                    "adjustedDate": {
+                        "value": "2011-03-03",
+                        "meta": {
+                            "globalKey": "3ed8c3"
+                        }
+                    }
+                },
+                "transferExpression": {
+                    "priceTransfer": "Upfront"
+                }
+            },
+            "meta": {
+                "globalKey": "c6003197"
+            }
+        }
+    ],
+    "economicTerms": {
+        "payout": {
+            "performancePayout": [
+                {
+                    "payerReceiver": {
+                        "payer": "Party1",
+                        "receiver": "Party2"
+                    },
+                    "settlementTerms": {
+                        "settlementType": "Cash",
+                        "settlementCurrency": {
+                            "value": "USD"
+                        },
+                        "settlementDate": {
+                            "adjustableOrRelativeDate": {
+                                "adjustedDate": {
+                                    "value": "2011-04-04",
+                                    "meta": {
+                                        "globalKey": "3ed904"
+                                    }
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "0"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "34d12999"
+                        }
+                    },
+                    "observationTerms": {
+                        "pricingTime": {
+                            "hourMinuteTime": "16:00:00",
+                            "businessCenter": {
+                                "value": "GBLO"
+                            }
+                        },
+                        "informationSource": {
+                            "primarySource": {
+                                "sourcePage": {
+                                    "value": "Sponsor Mid Page"
+                                }
+                            }
+                        },
+                        "observable": {
+                            "currencyPair": {
+                                "value": {
+                                    "currency1": {
+                                        "value": "EUR"
+                                    },
+                                    "currency2": {
+                                        "value": "USD"
+                                    },
+                                    "quoteBasis": "Currency2PerCurrency1"
+                                },
+                                "meta": {
+                                    "location": [
+                                        {
+                                            "scope": "DOCUMENT",
+                                            "value": "currencyPair-1"
+                                        }
+                                    ]
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "32f63268"
+                            }
+                        },
+                        "observationDates": {
+                            "periodicSchedule": {
+                                "startDate": {
+                                    "adjustableDate": {
+                                        "unadjustedDate": "2011-03-01",
+                                        "meta": {
+                                            "globalKey": "3ed8c1"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "3ed8c1"
+                                    }
+                                },
+                                "endDate": {
+                                    "adjustableDate": {
+                                        "unadjustedDate": "2011-03-31",
+                                        "meta": {
+                                            "globalKey": "3ed8df"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "3ed8df"
+                                    }
+                                },
+                                "periodDatesAdjustments": {
+                                    "businessCenters": {
+                                        "businessCenter": [
+                                            {
+                                                "value": "USNY"
+                                            }
+                                        ],
+                                        "meta": {
+                                            "globalKey": "27e4e9"
+                                        }
+                                    },
+                                    "meta": {
+                                        "globalKey": "27e4e9"
+                                    }
+                                },
+                                "meta": {
+                                    "globalKey": "27e4e9"
+                                }
+                            },
+                            "meta": {
+                                "globalKey": "27e4e9"
+                            }
+                        },
+                        "meta": {
+                            "globalKey": "32f63268"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "34d12999"
+                    }
+                }
+            ],
+            "meta": {
+                "globalKey": "34d12999"
+            }
+        },
+        "meta": {
+            "globalKey": "34d12999"
+        }
+    },
+    "calculationAgent": {
+        "calculationAgentParty": {
+            "globalReference": "549300RE0FSXJE8G1L65",
+            "externalReference": "partyB"
+        },
+        "meta": {
+            "globalKey": "3ed8c1"
+        }
+    },
+    "paymentTerms": {
+        "paymentDates": {
+            "periodicSchedule": {
+                "startDate": {
+                    "adjustableDate": {
+                        "unadjustedDate": "2014-03-05",
+                        "meta": {
+                            "globalKey": "3ed8c1"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "3ed8c1"
+                    }
+                },
+                "endDate": {
+                    "adjustableDate": {
+                        "unadjustedDate": "2033-03-05",
+                        "meta": {
+                            "globalKey": "3ed8df"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "3ed8df"
+                    }
+                },
+                "periodDatesAdjustments": {
+                    "businessCenters": {
+                        "businessCenter": [
+                            {
+                                "value": "USNY"
+                            }
+                        ],
+                        "meta": {
+                            "globalKey": "27e4e9"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "27e4e9"
+                    }
+                },
+                "meta": {
+                    "globalKey": "27e4e9"
+                }
+            },
+            "meta": {
+                "globalKey": "27e4e9"
+            }
+        },
+        "businessDayConvention": {
+            "value": "ModifiedFollowing",
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        },
+        "dayCount": {
+            "value": "A/360",
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        },
+        "meta": {
+            "globalKey": "27e4e9"
+        }
+    },
+    "mandatoryEarlyTermination": {
+        "mandatoryEarlyTerminationDate": {
+            "value": "2011-11-03",
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        },
+        "cashSettlementAmount": {
+            "value": "Market Value",
+            "meta": {
+                "globalKey": "3ed8c1"
+            }
+        },
+        "meta": {
+            "globalKey": "3ed8c1"
+        }
+    },
+    "meta": {
+        "globalKey": "69f8e0ab"
+    }
+}

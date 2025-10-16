@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.collateral",
+  "type": "object",
+  "title": "ContactElection",
+  "description": "A class to specify the parties' election to specify contact information, in relation to elections such as the Addresses for Transfer or the Demand and Notices as specified in the ISDA Credit Support Annex agreement.",
+  "properties": {
+    "partyElection": {
+      "description": "The parties' contact information election.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-party-PartyContactInformation.schema.json"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

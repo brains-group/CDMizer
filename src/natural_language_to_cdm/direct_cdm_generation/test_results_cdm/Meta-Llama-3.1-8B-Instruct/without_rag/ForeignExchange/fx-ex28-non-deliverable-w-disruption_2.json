@@ -1,0 +1,85 @@
+{
+    "Agreement": {
+        "AgreementDate": "2013-04-01",
+        "AgreementId": "ISDA",
+        "AgreementType": "Master",
+        "Definitions": "2006 ISDA Definitions",
+        "GoverningLaw": "Province of Ontario, Canada"
+    },
+    "Trade": {
+        "TradeDate": "2013-04-01",
+        "TradeId": {
+            "Party1": "d26b18a8",
+            "Party2": "733fed68"
+        },
+        "TradeType": "Foreign Exchange NDF",
+        "TradeLot": 1,
+        "NotionalAmount": {
+            "Party1": {
+                "Currency": "BRL",
+                "Amount": 3000000
+            },
+            "Party2": {
+                "Currency": "USD",
+                "Amount": 2307000
+            }
+        }
+    },
+    "Product": {
+        "ProductType": "Foreign Exchange NDF",
+        "Underlier": "Foreign Exchange",
+        "ExchangedCurrency": [
+            {
+                "Currency": "BRL",
+                "Payer": "Party1",
+                "Receiver": "Party2"
+            },
+            {
+                "Currency": "USD",
+                "Payer": "Party2",
+                "Receiver": "Party1"
+            }
+        ],
+        "TenorPeriod": {
+            "Unit": "months",
+            "Value": 6
+        },
+        "ForwardPayout": {
+            "Currency": "USD",
+            "Type": "Cash"
+        }
+    },
+    "Settlement": {
+        "SettlementType": "Cash",
+        "SettlementCurrency": "USD",
+        "SettlementDate": "2013-10-01",
+        "CashSettlementTerms": {
+            "Method": "valuation method based on BRL.PTAX/BRL09 settlement rate option"
+        }
+    },
+    "Counterparty": {
+        "Party1": {
+            "PartyId": "HSBCGB01",
+            "PartyName": "Party1"
+        },
+        "Party2": {
+            "PartyId": "BNPPGB01",
+            "PartyName": "Party2"
+        }
+    },
+    "RiskDisclosure": {
+        "RiskDisclosureText": "The parties acknowledge that this contract involves significant risks, including foreign exchange risk, price risk, liquidity risk, and credit risk."
+    },
+    "Representations": {
+        "RepresentationsText": "Each party represents to the other party that they have the power to enter into this contract and have taken all necessary action to authorize its execution and performance."
+    },
+    "CalculationAgent": {
+        "PartyId": "HSBCGB01",
+        "PartyName": "Party1"
+    },
+    "ValuationStatements": {
+        "Platform": "Optimize",
+        "PartyId": "BNPPGB01",
+        "PartyName": "Party2"
+    }
+}

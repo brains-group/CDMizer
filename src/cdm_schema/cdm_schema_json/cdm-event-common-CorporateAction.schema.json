@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.event.common",
+  "type": "object",
+  "title": "CorporateAction",
+  "description": "Specifies the relevant data regarding a corporate action",
+  "properties": {
+    "corporateActionType": {
+      "description": "The type of corporate action taking place.",
+      "$ref": "cdm-event-common-CorporateActionTypeEnum.schema.json"
+    },
+    "exDate": {
+      "description": "The date on which the corporate action is known to have taken place.",
+      "type": "string"
+    },
+    "payDate": {
+      "description": "The date on which resulting from the corporate action are delivered.",
+      "type": "string"
+    },
+    "underlier": {
+      "description": "The entity impacted by the corporate action.",
+      "$ref": "cdm-product-template-Product.schema.json"
+    }
+  },
+  "required": [
+    "corporateActionType",
+    "exDate",
+    "payDate",
+    "underlier"
+  ]
+}

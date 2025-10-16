@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "DebtEconomics",
+  "description": "Specifies selected economics of a debt instrument.",
+  "properties": {
+    "debtSeniority": {
+      "description": "Specifies the order of repayment in the event of a sale or bankruptcy of the issuer or a related party (eg guarantor).",
+      "$ref": "cdm-base-staticdata-asset-common-DebtSeniorityEnum.schema.json"
+    },
+    "debtInterest": {
+      "description": "Specifies the general rule for periodic interest rate payment.",
+      "$ref": "cdm-base-staticdata-asset-common-DebtInterestEnum.schema.json"
+    },
+    "debtPrincipal": {
+      "description": "Specifies the general rule for repayment of principal.",
+      "$ref": "cdm-base-staticdata-asset-common-DebtPrincipalEnum.schema.json"
+    }
+  }
+}

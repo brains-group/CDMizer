@@ -1,0 +1,173 @@
+{
+    "trade": {
+        "tradeId": "2492844434-ND1-1",
+        "tradeDate": "2024-07-29",
+        "tradeType": "Option",
+        "tradeStatus": "Active",
+        "tradeLot": [
+            {
+                "priceQuantity": [
+                    {
+                        "quantity": [
+                            {
+                                "value": {
+                                    "value": 6120,
+                                    "unit": {
+                                        "financialUnit": "Contract"
+                                    },
+                                    "multiplier": {
+                                        "value": 50,
+                                        "unit": {
+                                            "financialUnit": "IndexUnit"
+                                        }
+                                    }
+                                },
+                                "meta": {
+                                    "location": [
+                                        {
+                                            "scope": "DOCUMENT",
+                                            "value": "quantity-1"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "observable": {
+                            "productIdentifier": [
+                                {
+                                    "value": {
+                                        "identifier": {
+                                            "value": ".SXPP"
+                                        },
+                                        "source": "RIC"
+                                    },
+                                    "meta": {
+                                        "location": [
+                                            {
+                                                "scope": "DOCUMENT",
+                                                "value": "productIdentifier-1"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "indexAnnexSource": {
+                                "value": "Publisher"
+                            }
+                        },
+                        "optionType": "Put",
+                        "exerciseTerms": {
+                            "style": "European",
+                            "expirationDate": [
+                                {
+                                    "adjustableDate": {
+                                        "unadjustedDate": "2024-12-20",
+                                        "dateAdjustments": {
+                                            "businessDayConvention": "NONE"
+                                        }
+                                    }
+                                }
+                            ],
+                            "expirationTimeType": "OSP",
+                            "exerciseProcedure": {
+                                "automaticExercise": {
+                                    "isApplicable": true
+                                }
+                            }
+                        },
+                        "strike": {
+                            "strikePrice": {
+                                "value": 480,
+                                "unit": {
+                                    "currency": {
+                                        "value": "EUR"
+                                    }
+                                },
+                                "perUnitOf": {
+                                    "financialUnit": "IndexUnit"
+                                },
+                                "priceType": "AssetPrice"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "calculationAgent": {
+            "calculationAgentParty": "CalculationAgentIndependent"
+        },
+        "contractualDefinitions": {
+            "contractualDefinitionsType": [
+                {
+                    "value": "ISDA2000"
+                },
+                {
+                    "value": "ISDA2006"
+                }
+            ]
+        },
+        "contractualParty": [
+            {
+                "externalReference": "PartyA"
+            },
+            {
+                "externalReference": "PartyB"
+            }
+        ],
+        "transferHistory": [
+            {
+                "transfer": {
+                    "quantity": {
+                        "value": 2448918,
+                        "unit": {
+                            "currency": {
+                                "value": "EUR"
+                            }
+                        }
+                    },
+                    "asset": {
+                        "Cash": {
+                            "identifier": [
+                                {
+                                    "identifier": {
+                                        "value": "EUR"
+                                    },
+                                    "identifierType": "CurrencyCode"
+                                }
+                            ]
+                        }
+                    },
+                    "payerReceiver": {
+                        "payerPartyReference": {
+                            "externalReference": "PartyA"
+                        },
+                        "receiverPartyReference": {
+                            "externalReference": "PartyB"
+                        }
+                    },
+                    "settlementDate": {
+                        "relativeDate": {
+                            "periodMultiplier": 3,
+                            "period": "D",
+                            "dayType": "Business",
+                            "businessDayConvention": "NONE",
+                            "businessCenters": {
+                                "businessCenter": [
+                                    {
+                                        "value": "GBLO"
+                                    }
+                                ]
+                            },
+                            "dateRelativeTo": {
+                                "externalReference": "TRADEDATE"
+                            }
+                        }
+                    },
+                    "transferExpression": {
+                        "priceTransfer": "Premium"
+                    }
+                }
+            }
+        ]
+    }
+}

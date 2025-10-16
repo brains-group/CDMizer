@@ -1,0 +1,62 @@
+{
+    "Agreement": {
+        "AgreementType": "Confirmation",
+        "AgreementDate": "2013-02-15",
+        "Parties": [
+            {
+                "PartyID": "PartyA",
+                "PartyName": "Merrill Lynch International Bank Limited",
+                "PartyType": "Buyer"
+            },
+            {
+                "PartyID": "PartyB",
+                "PartyName": "Party B",
+                "PartyType": "Seller"
+            }
+        ],
+        "MasterAgreement": {
+            "MasterAgreementType": "ISDA Master Agreement",
+            "MasterAgreementDate": "1993-05-06",
+            "Amendments": [
+                {
+                    "AmendmentType": "Amendment",
+                    "AmendmentDate": "2013-02-15"
+                }
+            ]
+        },
+        "Derivatives": [
+            {
+                "DerivativesType": "Currency Option",
+                "TradeDate": "2013-02-15",
+                "Currency": "CNY/USD",
+                "OptionType": "Call",
+                "OptionStyle": "European",
+                "CallCurrency": "CNY",
+                "CallAmount": "437500000.00",
+                "PutCurrency": "USD",
+                "PutAmount": "70000000.00",
+                "StrikePrice": "6250.00",
+                "ExpirationDate": "2014-02-17",
+                "ExpirationTime": "15:00:00",
+                "SettlementDate": "2014-02-19",
+                "Premium": "3403757.50",
+                "PremiumPaymentDate": "2014-02-19",
+                "SettlementType": "Deliverable",
+                "AdditionalDisruptionEventProvisions": {
+                    "OffshoreDeliverableCNY": {
+                        "Transaction": "Applicable",
+                        "FallbackMatrix": "ISDA Offshore Deliverable CNY Transaction Disruption Fallback Matrix"
+                    }
+                },
+                "BusinessDays": [
+                    "New York",
+                    "Hong Kong",
+                    "Beijing"
+                ],
+                "NonReliance": {
+                    "Representation": "Each party represents to the other party that it is acting for its own account, and has made its own independent decisions to enter into this transaction as appropriate or proper for it based on its own judgment and upon advice from such advisors as it has deemed necessary."
+                }
+            }
+        ]
+    }
+}

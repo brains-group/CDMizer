@@ -1,0 +1,376 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "Party A",
+                    "externalReference": "1234"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "Party A"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party B",
+                            "meta": {
+                                "scheme": "Party B"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "79.099093",
+            "meta": {
+                "globalKey": "1234",
+                "externalKey": "ISDA2000, ISDA2002EquityDerivatives"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party A",
+                                        "seller": "Party B"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Global",
+                                                        "value": "1234"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Option",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "GBEN",
+                                                        "value": "ISDA2000"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "GBEN",
+                                                                    "value": "1234"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "GBEN",
+                                                                    "value": "AHLD.NA"
+                                                                }
+                                                            },
+                                                            {
+                                                                "address": {
+                                                                    "scope": "GBEN",
+                                                                    "value": "RD.NA"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "GBEN",
+                                                                                "value": "AHLD.NA"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "GBEN",
+                                                                                "value": "RD.NA"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "GBEN",
+                                                                                "value": "AHLD.NA"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "GBEN",
+                                                                                "value": "RD.NA"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the relevant information for the `optionType` key.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`, which indicates that we are looking for the option type of the payout option.\n\nIn the contract description, under **Option Details**, we find the following information:\n\n* Option Type: Call\n\nThis information is highly relevant to the `optionType` key, as it directly corresponds to the option type of the payout option.\n\n### Maintaining the Same Datatype\n\nThe placeholder for `optionType` is an empty string (`\"\"`). Since the identified information is a string, we will replace the placeholder with the string value.\n\n### Populated Placeholder\n\n```json\n\"optionType\": \"Call\"\n```\n\n### Final Output\n\nThe populated placeholder for the `optionType` key is:\n\n```json\n{\n  \"optionType\": \"Call\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "European",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2000-06-28",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2002-07-01",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "European",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 79.099093,
+                                            "integralMultipleAmount": 1.0,
+                                            "minimumNumberOfOptions": 1
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "EUR"
+                                            },
+                                            "priceType": "Strike Price",
+                                            "value": 79.099093,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party A",
+                                        "receiver": "Party B"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Party A",
+                                                "value": "79.099093"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": "Days"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Calculation Agent Independent (Party A)"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "productQualifier": "basket option",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "basket option"
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": {
+                                "value": {
+                                    "multiplier": {
+                                        "value": 1.0,
+                                        "unit": {
+                                            "financialUnit": "Contracts"
+                                        }
+                                    },
+                                    "value": 79.099093,
+                                    "unit": {
+                                        "financialUnit": "Contracts"
+                                    }
+                                }
+                            },
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Spot",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1.0,
+                                                "period": "Calendar Days"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": {
+                                    "value": {
+                                        "identifier": {
+                                            "value": "1234",
+                                            "meta": {
+                                                "scheme": "Party A"
+                                            }
+                                        },
+                                        "source": "Party A"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": {
+                "role": "Counterparty",
+                "partyReference": {
+                    "globalReference": "Party B",
+                    "externalReference": "Party B"
+                }
+            },
+            "ancillaryParty": [
+                {
+                    "role": "Calculation Agent Independent",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party A",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "1234",
+                            "meta": {
+                                "scheme": "Party A"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "5678",
+                            "meta": {
+                                "scheme": "Party B"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "June 28, 2000",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Master Agreement",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA2000"
+                                },
+                                {
+                                    "value": "ISDA2002EquityDerivatives"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDAMaster"
+                            }
+                        },
+                        "vintage": "2000"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party A",
+                            "externalReference": "1234"
+                        },
+                        {
+                            "globalReference": "Party B",
+                            "externalReference": ""
+                        },
+                        {
+                            "globalReference": "Calculation Agent Independent",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "GBEN"
+            }
+        }
+    }
+}

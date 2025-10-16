@@ -1,0 +1,173 @@
+{
+    "contractDetails": {
+        "documentation": [
+            {
+                "legalAgreementIdentification": {
+                    "agreementName": {
+                        "agreementType": "MasterAgreement",
+                        "masterAgreementType": {
+                            "value": "ISDAMaster",
+                            "meta": {
+                                "scheme": "http://www.swapewire.com/spec/2001/master-agreement-type-1-0"
+                            }
+                        }
+                    }
+                },
+                "contractualParty": [
+                    {
+                        "globalReference": "eb26c8f",
+                        "externalReference": "partyA"
+                    },
+                    {
+                        "globalReference": "1b3745e1",
+                        "externalReference": "partyB"
+                    }
+                ],
+                "meta": {
+                    "globalKey": "eaa25368"
+                }
+            }
+        ],
+        "meta": {
+            "globalKey": "eaa25368"
+        }
+    },
+    "protectionTerms": [
+        {
+            "creditEvents": {
+                "bankruptcy": true,
+                "failureToPay": {
+                    "applicable": true,
+                    "paymentRequirement": {
+                        "value": 500000,
+                        "unit": {
+                            "currency": {
+                                "value": "USD"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "generalTerms": {
+        "referenceInformation": {
+            "referenceEntity": {
+                "name": {
+                    "value": "Royal Bank of Canada"
+                },
+                "meta": {
+                    "globalKey": "444aeec5"
+                }
+            },
+            "referenceObligation": [
+                {
+                    "loan": {
+                        "identifier": [
+                            {
+                                "identifier": {
+                                    "value": "XS0427557888"
+                                },
+                                "identifierType": "ISDA Identifier"
+                            }
+                        ],
+                        "lien": {
+                            "value": "Senior"
+                        },
+                        "facilityType": {
+                            "value": "Revolving"
+                        },
+                        "creditAgreementDate": "2009-04-30",
+                        "tranche": {
+                            "value": "2304"
+                        }
+                    }
+                }
+            ],
+            "noReferenceObligation": true,
+            "allGuarantees": false,
+            "referencePrice": {
+                "value": 100.0,
+                "unit": {
+                    "currency": {
+                        "value": "CAD"
+                    }
+                },
+                "perUnitOf": {
+                    "currency": {
+                        "value": "CAD"
+                    }
+                },
+                "priceType": "AssetPrice"
+            },
+            "securedList": true
+        }
+    },
+    "transferHistory": [
+        {
+            "transfer": {
+                "quantity": {
+                    "value": 1060000,
+                    "unit": {
+                        "currency": {
+                            "value": "CAD"
+                        }
+                    }
+                },
+                "asset": {
+                    "Cash": {
+                        "identifier": [
+                            {
+                                "identifier": {
+                                    "value": "CAD"
+                                },
+                                "identifierType": "CurrencyCode"
+                            }
+                        ]
+                    }
+                },
+                "payerReceiver": {
+                    "payerPartyReference": {
+                        "globalReference": "eb26c8f",
+                        "externalReference": "partyA"
+                    },
+                    "receiverPartyReference": {
+                        "globalReference": "1b3745e1",
+                        "externalReference": "partyB"
+                    }
+                }
+            }
+        }
+    ],
+    "physicalSettlementTerms": {
+        "physicalSettlementPeriod": {
+            "maximumBusinessDays": 30
+        },
+        "deliverableObligations": {
+            "accruedInterest": false,
+            "category": "Loan",
+            "notSubordinated": true,
+            "notContingent": true,
+            "consentRequiredLoan": {
+                "applicable": true
+            },
+            "transferable": true,
+            "maximumMaturity": {
+                "periodMultiplier": 30,
+                "period": "Y",
+                "meta": {
+                    "globalKey": "3fb"
+                }
+            },
+            "notBearer": true,
+            "excluded": true,
+            "othReferenceEntityObligations": true
+        },
+        "meta": {
+            "globalKey": "df3ad6f7"
+        }
+    },
+    "meta": {
+        "globalKey": "1cca4b77"
+    }
+}

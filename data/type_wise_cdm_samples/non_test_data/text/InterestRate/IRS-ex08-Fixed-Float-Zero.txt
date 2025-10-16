@@ -1,0 +1,118 @@
+**Interest Rate Swap Contract**
+
+**Parties:**
+
+* Party A: CME (Counterparty)
+* Party B: Party 1 (Buyer)
+* Party C: Party 2 (Seller)
+
+**Trade Details:**
+
+* Trade Date: 2018-10-31
+* Effective Date: 2018-11-02
+* Termination Date: 2019-11-02
+* Mandatory Early Termination Date: Not Applicable
+* Notional Amount: USD 100,000,000
+* Currency: USD
+
+**Interest Rate Swap Terms:**
+
+* Party A pays (in USD): 4.427% p.a. on the USD Notional Amount
+* Party A Calculation Period: From and including 5th October to, but excluding, 5th October of the consecutive year
+* Party A Payment Dates: Annually 2 Business Days after 5th October of each year commencing on 7th October 2024 up to and including 7th October 2033
+* Party A Day Count: ACT/360, Adjusted
+
+* Party B pays (in USD): USD SOFR-COMPOUND p.a. on USD Notional Amount
+* Party B Calculation Period: From and including 5th October to, but excluding, 5th October of the consecutive year
+* Party B Payment Dates: Annually 2 Business Days after 5th October of each year commencing on 7th October 2024 up to and including 7th October 2033
+* Party B Day Count: ACT/360, Adjusted
+
+**Reset Dates:**
+
+* Calculation Period Dates Reference: FloatingCalcPeriodDates
+* ResetRelativeTo: CalculationPeriodStartDate
+* FixingDates: PeriodMultiplier: -2, Period: D, Meta: GlobalKey: 1a78799e
+* ResetFrequency: PeriodMultiplier: 3, Period: M, Meta: GlobalKey: aa
+
+**Compounding Method:**
+
+* Straight
+
+**Cashflow Representation:**
+
+* CashflowsMatchParameters: True
+* PaymentCalculationPeriod: 
+  - AdjustedPaymentDate: 2019-11-04
+  - CalculationPeriod: 
+    - AdjustedStartDate: 2018-11-02
+    - AdjustedEndDate: 2019-11-04
+    - NotionalAmount: 100,000,000.00
+    - FixedRate: 0.02178
+
+**Trade Lot:**
+
+* PriceQuantity: 
+  - Price: 
+    - Value: 0.02178
+    - Unit: Currency: Value: USD
+  - Quantity: 
+    - Value: 100,000,000.00
+    - Unit: Currency: Value: USD
+* Observable: 
+  - RateOption: 
+    - Value: FloatingRateIndex: Value: USD-LIBOR-BBA
+    - IndexTenor: PeriodMultiplier: 3, Period: M, Meta: GlobalKey: aa
+
+**Counterparty:**
+
+* Role: Party 1
+* PartyReference: GlobalReference: ba4f, ExternalReference: clearing_firm
+* Role: Party 2
+* PartyReference: GlobalReference: 1051b, ExternalReference: clearing_service
+
+**Party:**
+
+* PartyId: 
+  - Identifier: Value: 010, Meta: Scheme: clearing_member_firms
+* PartyId: 
+  - Identifier: Value: CME
+* PartyId: 
+  - Identifier: Value: MARKIT_WIRE
+
+**PartyRole:**
+
+* PartyReference: GlobalReference: 66b48bac, ExternalReference: trade_source
+* Role: DataSubmitter
+* OwnershipPartyReference: GlobalReference: ba4f, ExternalReference: clearing_firm
+
+**ClearedDate:**
+
+* 2018-10-31
+
+**Account:**
+
+* PartyReference: GlobalReference: ba4f, ExternalReference: clearing_firm
+* AccountNumber: Value: 010S3, Meta: Scheme: clearing_firm_accounts
+* ServicingParty: GlobalReference: ba4f, ExternalReference: clearing_firm
+
+**CreditLimitInformation:**
+
+* LimitApplicable: 
+  - LimitType: Value: Notional, Meta: Scheme: http://www.fpml.org/coding-scheme/credit-limit-type
+  - AmountUtilized: 1222268700
+  - AmountRemaining: 998777731300
+  - Currency: Value: USD, Meta: Scheme: http://www.fpml.org/ext/iso4217-2001-08-15
+  - LimitLevel: Value: Customer, Meta: Scheme: creditLimitLevelScheme
+  - LimitAmount: 1000000000000
+  - LimitImpactDueToTrade: 100000000
+
+**WorkflowState:**
+
+* WorkflowStatus: Cleared
+
+**Timestamp:**
+
+* DateTime: 2018-10-31T09:18:18-05:00
+* Qualification: eventCreationDateTime
+* DateTime: 2018-10-31T14:12:29.654Z
+* Qualification: clearingReceiptDateTime

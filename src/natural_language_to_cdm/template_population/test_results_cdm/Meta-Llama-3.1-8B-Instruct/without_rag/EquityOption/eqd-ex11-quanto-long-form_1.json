@@ -1,0 +1,339 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "ISDA",
+                    "externalReference": "ISDA"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "Equity Option Contract",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Equity Option Contract",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "150,000",
+            "meta": {
+                "globalKey": "Equity Option Contract",
+                "externalKey": "ISDA"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "Party 1",
+                                        "seller": "Party 2"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "STMicroelectronics N.V. ordinary shares",
+                                                        "value": "STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity Option",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "ISIN",
+                                                        "value": "Not specified"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "ISIN",
+                                                                    "value": "US88390X1032"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "Equity",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "ISIN",
+                                                                    "value": "US88390X1032"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "Equity",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "ISIN",
+                                                                                "value": "US88390X1032"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the best-suited information for the given key `optionType`.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`, which indicates that we are looking for the option type within the `optionPayout` object.\n\nIn the contract description, under **Contractual Product** > **Economic Terms** > **Payout** > **Option Payout**, we find the following information:\n\n* **Payer/Receiver**: Party 2 pays to Party 1\n* **Price/Quantity**: Quantity Schedule - 150,000 contracts\n* **Settlement Terms**: Physical settlement in USD\n* **Underlier**: STMicroelectronics N.V. ordinary shares\n* **Option Type**: Call\n* **Exercise Terms**: American style, exercise on expiration date\n* **Strike**: 32 USD per share\n\nBased on this information, we can populate the placeholder with the value `Call`, which is the option type specified in the contract.\n\n### Maintaining the Same Datatype\n\nThe placeholder is a single string, so we will replace it with a string value `Call`.\n\n### Final Result\n\nThe populated placeholder will be:\n\n`Call`\n\n### JSON Template with Populated Placeholder\n\n```json\n{\n  \"optionType\": \"Call\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "American",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2001-07-13",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2001-07-13",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "expirationTimeType": "On Expiration Date",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": 150000,
+                                            "integralMultipleAmount": 150000,
+                                            "minimumNumberOfOptions": 150000
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "USD"
+                                            },
+                                            "priceType": "Strike",
+                                            "value": 32.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party 2",
+                                        "receiver": "Party 1"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "Equity Option - Price Return Basic Performance - Single Name",
+                                                "value": "150,000 contracts"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Physical",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "Trade Date"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": "Days"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "Party 1"
+                        }
+                    },
+                    "productTaxonomy": {
+                        "productQualifier": "Equity Option",
+                        "source": "ISDA",
+                        "value": {
+                            "name": {
+                                "value": "Equity Option"
+                            }
+                        }
+                    }
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": 150000,
+                                            "unit": {
+                                                "financialUnit": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Spot",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "Calendar Days"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": {
+                                    "value": {
+                                        "identifier": {
+                                            "value": "EquityOptionContract",
+                                            "meta": {
+                                                "scheme": "ISDA"
+                                            }
+                                        },
+                                        "source": "ISDA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": {
+                "role": "Counterparty",
+                "partyReference": {
+                    "globalReference": "Party 1",
+                    "externalReference": "Party 2"
+                }
+            },
+            "ancillaryParty": [
+                {
+                    "role": "Calculation Agent Independent",
+                    "partyReference": [
+                        {
+                            "globalReference": "Party 1",
+                            "externalReference": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "Party 1",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "Party 2",
+                            "meta": {
+                                "scheme": "ISDA"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2001-07-13",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Equity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA"
+                                },
+                                {
+                                    "value": "Equity Option - Price Return Basic Performance - Single Name"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA"
+                            }
+                        },
+                        "vintage": "2001"
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "Party 1",
+                            "externalReference": "Party 1"
+                        },
+                        {
+                            "globalReference": "Party 2",
+                            "externalReference": "Party 2"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "ISDA"
+            }
+        }
+    }
+}

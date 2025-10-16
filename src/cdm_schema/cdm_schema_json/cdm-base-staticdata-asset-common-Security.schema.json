@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "object",
+  "title": "Security",
+  "description": "Identifies a security by referencing a product identifier and by specifying the sector.",
+  "properties": {
+    "securityType": {
+      "description": "Identifies the type of security using an enumerated list.",
+      "$ref": "cdm-base-staticdata-asset-common-SecurityTypeEnum.schema.json"
+    },
+    "debtType": {
+      "description": "Identifies the type of debt and selected debt economics.",
+      "$ref": "cdm-base-staticdata-asset-common-DebtType.schema.json"
+    },
+    "equityType": {
+      "description": "Identifies the type of equity.",
+      "$ref": "cdm-base-staticdata-asset-common-EquityTypeEnum.schema.json"
+    },
+    "fundType": {
+      "description": "Identifies the type of fund.",
+      "$ref": "cdm-base-staticdata-asset-common-FundProductTypeEnum.schema.json"
+    },
+    "economicTerms": {
+      "description": "The economic terms associated with a contractual product, i.e. the set of features that are price-forming.",
+      "$ref": "cdm-product-template-EconomicTerms.schema.json"
+    },
+    "productTaxonomy": {
+      "description": "Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-ProductTaxonomy.schema.json"
+      },
+      "minItems": 0
+    },
+    "productIdentifier": {
+      "description": "Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-base-staticdata-asset-common-metafields-ReferenceWithMetaProductIdentifier.schema.json"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "securityType"
+  ]
+}

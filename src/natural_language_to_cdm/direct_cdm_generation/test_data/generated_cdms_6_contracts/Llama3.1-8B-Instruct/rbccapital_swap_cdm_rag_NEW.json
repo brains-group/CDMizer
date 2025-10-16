@@ -1,0 +1,188 @@
+{
+    "tradeDate": "2009-04-30",
+    "effectiveDate": "2009-05-26",
+    "terminationDate": "2011-05-26",
+    "meta": {
+        "globalKey": "12022cd2"
+    },
+    "party": {
+        "issuer": {
+            "name": {
+                "value": "Royal Bank of Canada (Toronto Branch)"
+            },
+            "meta": {
+                "globalKey": "444aeec5"
+            }
+        },
+        "counterparty": {
+            "name": {
+                "value": "Royal Bank of Canada Europe Limited"
+            },
+            "meta": {
+                "globalKey": "444afa68"
+            }
+        },
+        "calculationAgent": {
+            "calculationAgentParty": "CalculationAgentIndependent",
+            "calculationAgentBusinessCenter": {
+                "value": "USNY"
+            }
+        }
+    },
+    "product": {
+        "productType": "FixedForFloat",
+        "meta": {
+            "globalKey": "3661d727"
+        }
+    },
+    "economicTerms": {
+        "effectiveDate": {
+            "adjustableDate": {
+                "unadjustedDate": "2009-05-26",
+                "dateAdjustments": {
+                    "businessDayConvention": "FOLLOWING",
+                    "businessCenters": {
+                        "businessCenter": [
+                            {
+                                "value": "GBLO"
+                            },
+                            {
+                                "value": "USNY"
+                            }
+                        ],
+                        "meta": {
+                            "globalKey": "42f910b"
+                        }
+                    },
+                    "meta": {
+                        "globalKey": "da556d3a"
+                    }
+                },
+                "meta": {
+                    "globalKey": "18601d49"
+                }
+            },
+            "meta": {
+                "globalKey": "18601d49"
+            }
+        },
+        "terminationDate": {
+            "adjustableDate": {
+                "unadjustedDate": "2011-05-26",
+                "dateAdjustments": {
+                    "businessDayConvention": "NONE",
+                    "meta": {
+                        "globalKey": "24a738"
+                    }
+                },
+                "meta": {
+                    "globalKey": "f02f5604"
+                }
+            },
+            "meta": {
+                "globalKey": "f02f5604"
+            }
+        },
+        "dateAdjustments": {
+            "businessDayConvention": "FOLLOWING",
+            "businessCenters": {
+                "businessCenter": [
+                    {
+                        "value": "GBLO"
+                    },
+                    {
+                        "value": "USNY"
+                    }
+                ],
+                "meta": {
+                    "globalKey": "42f910b"
+                }
+            },
+            "meta": {
+                "globalKey": "da556d3a"
+            }
+        },
+        "payout": {
+            "creditDefaultPayout": {
+                "payerReceiver": {
+                    "payer": "Party1",
+                    "receiver": "Party2"
+                },
+                "meta": {
+                    "globalKey": "7af7892c"
+                }
+            },
+            "meta": {
+                "globalKey": "7af7892c"
+            }
+        },
+        "fixedRate": {
+            "rate": {
+                "value": 0.03,
+                "unit": {
+                    "currency": {
+                        "value": "CAD"
+                    }
+                }
+            },
+            "meta": {
+                "globalKey": "7af7892c"
+            }
+        },
+        "floatingRate": {
+            "rateSource": {
+                "value": "3M-CAD-BA-CDOR"
+            },
+            "meta": {
+                "globalKey": "7af7892c"
+            }
+        },
+        "spread": {
+            "value": 0.00515,
+            "unit": {
+                "currency": {
+                    "value": "CAD"
+                }
+            },
+            "meta": {
+                "globalKey": "7af7892c"
+            }
+        },
+        "meta": {
+            "globalKey": "7af7892c"
+        }
+    },
+    "protectionTerms": [
+        {
+            "creditEvents": {
+                "failureToPayPrincipal": true,
+                "writedown": true,
+                "meta": {
+                    "globalKey": "99e0"
+                }
+            },
+            "floatingAmountEvents": {
+                "failureToPayPrincipal": true,
+                "interestShortfall": {
+                    "interestShortfallCap": "Fixed",
+                    "compounding": true,
+                    "rateSource": {
+                        "value": "USD-LIBOR-BBA"
+                    }
+                },
+                "writedown": true,
+                "floatingAmountProvisions": {
+                    "wacCapInterestProvision": true
+                },
+                "additionalFixedPayments": {
+                    "interestShortfallReimbursement": true,
+                    "principalShortfallReimbursement": true,
+                    "writedownReimbursement": true
+                }
+            },
+            "meta": {
+                "globalKey": "74b7090"
+            }
+        }
+    ]
+}

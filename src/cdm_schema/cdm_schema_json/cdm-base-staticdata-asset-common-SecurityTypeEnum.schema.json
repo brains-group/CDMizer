@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.base.staticdata.asset.common",
+  "type": "string",
+  "title": "SecurityTypeEnum",
+  "description": "Represetns an enumeration list to indentify the type of security.",
+  "enum": [
+    "Certificate",
+    "Debt",
+    "Equity",
+    "Fund",
+    "LetterOfCredit",
+    "ListedDerivative",
+    "Warrant"
+  ],
+  "oneOf": [
+    {
+      "enum": [
+        "Certificate"
+      ],
+      "title": "Certificate",
+      "description": "Identifies a security as one that that offers a derivative-based economic return which is not structured as a bond, an equity or a warrant. Note that this security type is not a Certificate of Deposit (aka CD)."
+    },
+    
+    {
+      "enum": [
+        "Debt"
+      ],
+      "title": "Debt",
+      "description": "Identifies a security as a fixed income instrument of debt issued and securitized as a tradable asset."
+    },
+    
+    {
+      "enum": [
+        "Equity"
+      ],
+      "title": "Equity",
+      "description": "Identifies a security as an Equity value of holding of shares in listed company."
+    },
+    
+    {
+      "enum": [
+        "Fund"
+      ],
+      "title": "Fund",
+      "description": "Identifies a security as an Instrument representing holding in an investment fund."
+    },
+    
+    {
+      "enum": [
+        "LetterOfCredit"
+      ],
+      "title": "LetterOfCredit",
+      "description": "Identifies a security as a letter of credit or documentary credit/ bankers commercial credit.  A payment mechanism used in international trade to provide economic guarantee of payment by a creditworthy issuer for payment of exported goods."
+    },
+    
+    {
+      "enum": [
+        "ListedDerivative"
+      ],
+      "title": "ListedDerivative",
+      "description": "Identifies a security as a listed derivative on an exchange."
+    },
+    
+    {
+      "enum": [
+        "Warrant"
+      ],
+      "title": "Warrant",
+      "description": "Identifies a security as a Warrant that give the right, but not the obligation, to buy or sell a security — most commonly an equity — at a certain price before expiration, or to receive the cash equivalent."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+**Interest Rate Cross-Currency Swap Contract**
+
+**General Terms**
+
+This contract is an interest rate cross-currency swap between Party A (Party1) and Party B (Party2). The trade date is January 9, 2001.
+
+**Trade Details**
+
+* Trade Identifier: 33f59567 (Party1) and 33f59568 (Party2)
+* Trade Date: January 9, 2001
+* Trade Lot: 1 (single trade)
+
+**Counterparties**
+
+* Party A (Party1): Party A is the fixed-rate payer and the floating-rate receiver.
+* Party B (Party2): Party B is the floating-rate payer and the fixed-rate receiver.
+
+**Trade Product**
+
+* Product Type: Interest Rate Cross-Currency Swap
+* Contractual Product: InterestRate_CrossCurrency_FixedFloat
+* Economic Terms:
+	+ Payout: InterestRatePayout
+	+ Principal Payment: Initial, Final, and Intermediate Payments
+	+ Rate Specification: FixedRate and FloatingRate
+	+ Day Count Fraction: ACT/365.FIXED (Party A) and ACT/360 (Party B)
+	+ Calculation Period Dates: Effective Date (January 11, 2006) and Termination Date (January 11, 2011)
+	+ Payment Dates: Annually 2 Business Days after the Calculation Period End Date
+	+ Cashflow Representation: CashflowsMatchParameters is true
+
+**Fixed Rate**
+
+* Fixed Rate: 0.01 (1%)
+* Fixed Rate Schedule: Price-1 (JPY)
+* Notional Amount: 1,000,000,000 JPY
+
+**Floating Rate**
+
+* Floating Rate: USD SOFR-COMPOUND
+* Floating Rate Index: USD-LIBOR-BBA
+* Index Tenor: 3 months
+* Floating Rate Schedule: RateOption-1 (USD)
+* Notional Amount: 1,000,000,000 USD
+* Varying Notional Currency: USD
+* Varying Notional Fixing Dates: 2 days prior to the beginning of the coupon period
+* Fixing Time: 17:00:00 JPTO
+* Varying Notional Interim Exchange Payment Dates: None
+
+**Reset Dates**
+
+* ResetRelativeTo: CalculationPeriodStartDate
+* FixingDates: 2 days prior to the beginning of the coupon period
+* ResetFrequency: 3 months
+* ResetDatesAdjustments: Modified Following Business Day Convention
+
+**Cashflow Representation**
+
+* CashflowsMatchParameters is true
+* PaymentCalculationPeriod: 12 periods (January 11, 2006 to January 11, 2011)
+* AdjustedPaymentDate: Each payment date
+* CalculationPeriod: Each period
+* NotionalAmount: 1,000,000,000 JPY (Party A) and 1,000,000,000 USD (Party B)
+* FixedRate: 0.01 (1%)
+* FloatingRateDefinition: RateObservation (adjusted fixing date, observation weight, and meta)
+
+**Trade Lot**
+
+* PriceQuantity: 2 (JPY and USD)
+	+ Price: 0.01 (1%) per annum
+	+ Quantity: 1,000,000,000 JPY and 1,000,000,000 USD
+	+ Meta: GlobalKey: 66617482
+
+**Party Information**
+
+* Party A (Party1): Party A is the fixed-rate payer and the floating-rate receiver.
+* Party B (Party2): Party B is the floating-rate payer and the fixed-rate receiver.
+
+**Governing Law**
+
+* Governing Law: English
+
+**Risk Disclosure**
+
+* There are significant risks associated with this Transaction, including foreign exchange risk, price risk, liquidity risk, and credit risk.
+
+**Representations**
+
+* Each party represents to the other party that they are acting for their own account and have made their own independent decisions to enter into this Transaction.
+
+**Acceptance**
+
+* This contract is accepted and agreed upon by the parties.
+
+Note: This description is a concise summary of the contract details from the provided CDM representation. It covers all the necessary information and excludes unnecessary details.

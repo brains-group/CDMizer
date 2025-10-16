@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "Duration",
+  "description": "Specifies the Duration Terms of the Security Financing Transaction, and optionally any Evergreen terms.",
+  "properties": {
+    "durationType": {
+      "description": "Specifies the Duration Terms of the Security Financing transaction. e.g. Open or Term.",
+      "$ref": "cdm-product-template-DurationTypeEnum.schema.json"
+    },
+    "evergreenProvision": {
+      "description": "A data defining: the right of a party to exercise an Evergreen option",
+      "$ref": "cdm-product-template-EvergreenProvision.schema.json"
+    }
+  },
+  "required": [
+    "durationType"
+  ]
+}

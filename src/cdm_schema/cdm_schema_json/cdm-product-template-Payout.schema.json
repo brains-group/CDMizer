@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$anchor": "cdm.product.template",
+  "type": "object",
+  "title": "Payout",
+  "description": "A class to represent the set of future cashflow methodologies in the form of specific payout class(es) that can be associated for the purpose of specifying a financial product. For example, two interest rate payouts can be combined to specify an interest rate swap, or one interest rate payout can be combined with a credit default payout to specify a credit default swap.",
+  "properties": {
+    "interestRatePayout": {
+      "description": "All of the terms necessary to define and calculate a cash flow based on a fixed, a floating or an inflation index rate. The interest rate payout can be applied to interest rate swaps and FRA (which both have two associated interest rate payouts), credit default swaps (to represent the fee leg when subject to periodic payments) and equity swaps (to represent the funding leg).",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-asset-InterestRatePayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "creditDefaultPayout": {
+      "description": "The credit default payout, which provides the details necessary for determining when a credit payout will be triggered as well as the parameters for calculating the payout and the settlement terms.",
+      "$ref": "cdm-product-asset-CreditDefaultPayout.schema.json"
+    },
+    "optionPayout": {
+      "description": "The option payout.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-OptionPayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "commodityPayout": {
+      "description": "Defines the payout for the floating leg of a Commodity Swap.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-asset-CommodityPayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "forwardPayout": {
+      "description": "Represents a forward settling payout. The 'Underlier' attribute captures the underlying payout, which is settled according to the 'SettlementTerms' attribute. Both FX Spot and FX Forward should use this component.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-ForwardPayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "fixedPricePayout": {
+      "description": "Defines a payout in which one or more payouts are defined as a fixed price.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-FixedPricePayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "cashflow": {
+      "description": "A cashflow between the parties to the trade. For interest rate and equity products, this corresponds to the FpML additionalPayment element. For credit default swaps, this corresponds to the FpML initialPayment element and the singlePayment element of the fee leg. For option products, it represents the FpML premium element.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-common-settlement-Cashflow.schema.json"
+      },
+      "minItems": 0
+    },
+    "performancePayout": {
+      "description": "The performance payout, which encompasses the equity price returns, dividend returns, volatility return, variance return and correlation provisions.",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-PerformancePayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "assetPayout": {
+      "description": "The security payout when the product involves some form of securities, such as collateral in a securities financing transaction",
+      "type": "array",
+      "items": {
+        "$ref": "cdm-product-template-AssetPayout.schema.json"
+      },
+      "minItems": 0
+    },
+    "settlementCommitment": {
+      "description": "This is a simple payout used to define the commitment to settle a trade, for example a purchase of a cash security.",
+      "$ref": "cdm-product-template-SettlementCommitment.schema.json"
+    }
+  }
+}

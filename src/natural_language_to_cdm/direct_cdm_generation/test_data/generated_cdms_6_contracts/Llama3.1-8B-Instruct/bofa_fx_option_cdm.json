@@ -1,0 +1,61 @@
+{
+    "Agreement": {
+        "AgreementDate": "1993-05-06",
+        "AgreementId": "ISDA Master Agreement",
+        "AgreementType": "Master Agreement",
+        "Counterparty": {
+            "PartyId": "Party B",
+            "PartyIdSource": "ISDA"
+        },
+        "Underlying": {
+            "Currency": "USD",
+            "NotionalAmount": 70000000
+        },
+        "Product": {
+            "ProductType": "Option",
+            "OptionType": "Call",
+            "Currency": "CNY",
+            "NotionalAmount": 437500000,
+            "StrikePrice": 6.25,
+            "OptionStyle": "European",
+            "ExpirationDate": "2014-02-17",
+            "ExpirationTime": "15:00:00",
+            "SettlementDate": "2014-02-19",
+            "SettlementType": "Deliverable"
+        },
+        "Trade": {
+            "TradeDate": "2013-02-15",
+            "Buyer": {
+                "PartyId": "Party A",
+                "PartyIdSource": "ISDA"
+            },
+            "Seller": {
+                "PartyId": "Party B",
+                "PartyIdSource": "ISDA"
+            },
+            "Premium": {
+                "Currency": "USD",
+                "Amount": 340375
+            },
+            "PremiumPaymentDate": "2014-02-19",
+            "BusinessDays": [
+                "New York",
+                "Hong Kong",
+                "Beijing"
+            ]
+        },
+        "DisruptionEvents": {
+            "DisruptionEventProvisions": {
+                "DisruptionEventProvision": {
+                    "DisruptionEvent": "Offshore Deliverable CNY Transaction Disruption",
+                    "FallbackMatrix": "Applicable"
+                }
+            }
+        },
+        "NonReliance": {
+            "NonRelianceProvision": {
+                "NonReliance": true
+            }
+        }
+    }
+}

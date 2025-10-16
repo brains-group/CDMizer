@@ -1,0 +1,652 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "DUMMY0000000000LEI02",
+                    "externalReference": "Bank A"
+                },
+                "issuer": {
+                    "value": "DUMMY0000000000LEI02",
+                    "meta": {
+                        "scheme": "LEI"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "MOCKUPSTRIKEPRICEE01",
+                            "meta": {
+                                "scheme": "http://www.custom-scheme.com/trade-id"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Commodity Option Agreement",
+            "meta": {
+                "globalKey": "tradeTypeDescription",
+                "externalKey": ""
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "effectiveDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2022-07-31",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "NotApplicable"
+                                }
+                            }
+                        },
+                        "terminationDate": {
+                            "adjustableDate": {
+                                "unadjustedDate": "2022-07-31",
+                                "dateAdjustments": {
+                                    "businessDayConvention": "Follows the business days of the New York Mercantile Exchange (NYMEX)"
+                                }
+                            }
+                        },
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": {
+                                            "LEI": "DUMMY0000000000LEI02",
+                                            "partyName": "Bank A"
+                                        },
+                                        "seller": {
+                                            "LEI": "DUMMY0000000000LEI01",
+                                            "partyName": "Bank B"
+                                        }
+                                    },
+                                    "observationTerms": {
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "balanceOfFirstPeriod": false,
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9",
+                                                    "externalKey": "floatingLegCalculationPeriods"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "11e9"
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "First",
+                                                "businessCenters": ""
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Henry Hub Natural Gas Futures",
+                                                "value": "HTOXVX"
+                                            }
+                                        }
+                                    },
+                                    "optionType": " Based on the provided context and the contract description, the best suited value for the 'optionType' key would be 'Call option'. This is because the contract is a call option agreement for the purchase and sale of natural gas futures.\n\nHere is the populated JSON object:\n\n```json\n{\n  \"optionType\": \"Call option\"\n}\n```\n\nThe prior context (Path) provided is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].optionType`. Following this path, we can see that the 'optionType' key is related to the type of option in the contract (Call or Put). In this case, the contract is a Call option.",
+                                    "exerciseTerms": {
+                                        "style": "",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2022-07-31",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Following"
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2022-07-31",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": "Following"
+                                                    }
+                                                },
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Following",
+                                                    "dateRelativeTo": {
+                                                        "globalReference": "",
+                                                        "externalReference": "PricingDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 0,
+                                                    "period": "D"
+                                                }
+                                            }
+                                        ],
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": true
+                                            },
+                                            "followUpConfirmation": null
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "Fixed",
+                                            "datedValue": [
+                                                {
+                                                    "date": "2022-07-01",
+                                                    "value": 2000
+                                                },
+                                                {
+                                                    "date": "2022-08-01",
+                                                    "value": 3000
+                                                }
+                                            ],
+                                            "value": null,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "Your_Unique_Identifier"
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B (LEI: DUMMY0000000000LEI01)",
+                                        "receiver": "Bank A (LEI: DUMMY0000000000LEI02)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "tradeLot"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": " Based on the provided inputs, the key to be populated is \"settlementType\". The prior context (path) leads to this key as follows: `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`.\n\nFrom the given derivatives contract description, the settlement type for this contract is \"Cash\".\n\nNow, let's populate the placeholder with the correct data type and structure according to the instructions:\n\n```json\n\"settlementType\": \"Cash\"\n```\n\nSince the placeholder is a string, we replace it with a string value \"Cash\". The populated JSON object would look like this:\n\n```json\n{\n  \"trade\": {\n    \"tradableProduct\": {\n      \"product\": {\n        \"contractualProduct\": {\n          \"economicTerms\": {\n            \"payout\": {\n              \"optionPayout\": [\n                {\n                  \"settlementTerms\": {\n                    \"settlementType\": \"Cash\"\n                  }\n                }\n              ]\n            }\n          }\n        }\n      }\n    }\n  }\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": {
+                                                "classification": [
+                                                    {
+                                                        "value": "Energy",
+                                                        "ordinal": 1
+                                                    },
+                                                    {
+                                                        "value": "Natural Gas",
+                                                        "ordinal": 2
+                                                    },
+                                                    {
+                                                        "value": "HTOXVX",
+                                                        "ordinal": 3
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "NONE",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "USNY"
+                                                            }
+                                                        ],
+                                                        "meta": {
+                                                            "globalKey": "27e4e9"
+                                                        }
+                                                    },
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "expirationDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 5,
+                                                    "period": "D"
+                                                },
+                                                "meta": {
+                                                    "globalKey": "60481a18"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "commodityPayout": [
+                                {
+                                    "averagingFeature": {
+                                        "averagingFeature": {
+                                            "averagingMethod": {
+                                                "isWeighted": false,
+                                                "calculationMethod": "Arithmetic"
+                                            }
+                                        }
+                                    },
+                                    "commodityPriceReturnTerms": {
+                                        "spread": {
+                                            "price": {
+                                                "address": {
+                                                    "scope": "DOCUMENT",
+                                                    "value": "price-1"
+                                                }
+                                            }
+                                        },
+                                        "conversionFactor": null,
+                                        "commodityPriceReturnTerms": {
+                                            "spread": {
+                                                "price": {
+                                                    "address": {
+                                                        "scope": "DOCUMENT",
+                                                        "value": "price-1"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "pricingDates": {
+                                            "parametricDates": {
+                                                "dayType": "Business",
+                                                "dayDistribution": "Last",
+                                                "businessCenters": {
+                                                    "commodityBusinessCalendar": [
+                                                        {
+                                                            "value": "NYMEX-NATURAL-GAS"
+                                                        }
+                                                    ],
+                                                    "meta": {
+                                                        "globalKey": "acc66859"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "calculationPeriodDates": {
+                                            "calculationPeriodFrequency": {
+                                                "periodMultiplier": 1,
+                                                "period": "M",
+                                                "meta": {
+                                                    "globalKey": "11e9"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "pricingDates": {
+                                        "parametricDates": {
+                                            "dayType": "Business",
+                                            "dayDistribution": "First",
+                                            "businessCenters": {
+                                                "commodityBusinessCalendar": [
+                                                    {
+                                                        "value": "NYMEX"
+                                                    }
+                                                ],
+                                                "meta": {
+                                                    "globalKey": "businessCenter"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "calculationPeriodDates": {
+                                        "calculationPeriodFrequency": {
+                                            "balanceOfFirstPeriod": false,
+                                            "periodMultiplier": 1,
+                                            "period": "M"
+                                        }
+                                    },
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodEndDate",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business",
+                                            "periodMultiplier": 5,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NotApplicable",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York Mercantile Exchange (NYMEX)"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "commodity": {
+                                            "address": {
+                                                "scope": "Henry Hub Natural Gas Futures",
+                                                "value": "HTOXVX"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B (LEI: DUMMY0000000000LEI01)",
+                                        "receiver": "Bank A (LEI: DUMMY0000000000LEI02)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "DOCUMENT",
+                                                "value": "tradeLot"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "0"
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "periodMultiplier": 5,
+                                                    "period": "D",
+                                                    "meta": {
+                                                        "globalKey": "5f333497"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "businessDayConvention": "NONE"
+                                                }
+                                            },
+                                            "meta": {
+                                                "globalKey": "5f333497"
+                                            }
+                                        },
+                                        "meta": {
+                                            "globalKey": "80c9229e"
+                                        }
+                                    }
+                                }
+                            ],
+                            "fixedPricePayout": [
+                                {
+                                    "paymentDates": {
+                                        "payRelativeTo": "CalculationPeriodEndDate",
+                                        "paymentDaysOffset": {
+                                            "dayType": "Business",
+                                            "periodMultiplier": 5,
+                                            "period": "D"
+                                        },
+                                        "paymentDatesAdjustments": {
+                                            "businessDayConvention": "NotApplicable",
+                                            "businessCenters": {
+                                                "businessCenter": [
+                                                    {
+                                                        "value": "New York Mercantile Exchange (NYMEX)"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "fixedPrice": {
+                                        "price": {
+                                            "address": {
+                                                "scope": "Contract",
+                                                "value": "Strike Price"
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Bank B (LEI: DUMMY0000000000LEI01)",
+                                        "receiver": "Bank A (LEI: DUMMY0000000000LEI02)"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "CONTRACT",
+                                                "value": "quantity-1"
+                                            }
+                                        },
+                                        "quantitySchedule.address.scope": "CONTRACT",
+                                        "quantitySchedule.address.value": "quantity-1",
+                                        "quantitySchedule.quantitySchedule": {
+                                            "amortisingNotional": {
+                                                "notionalAmount": "1000000.00",
+                                                "schedule": [
+                                                    {
+                                                        "startDate": "2021-12-03",
+                                                        "endDate": "2022-07-31",
+                                                        "quantity": "0.0",
+                                                        "meta": {
+                                                            "globalKey": "0"
+                                                        }
+                                                    },
+                                                    {
+                                                        "startDate": "2022-07-32",
+                                                        "endDate": "2022-08-31",
+                                                        "quantity": "1000000.00",
+                                                        "meta": {
+                                                            "globalKey": "1"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": "DUMMY0000000000LEI02",
+                            "calculationAgentPartyEnum": "party1"
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Oil",
+                            "source": "ISDA",
+                            "value": {
+                                "name": {
+                                    "value": "OilWTI",
+                                    "meta": {
+                                        "scheme": "http://www.dtcc.com/coding-scheme/product-taxonomy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "primaryAssetClass": {
+                                "value": "Energy"
+                            },
+                            "productQualifier": "Oil",
+                            "source": "EMIR",
+                            "value": {
+                                "name": {
+                                    "value": "WTIO",
+                                    "meta": {
+                                        "scheme": "http://www.dtcc.com/coding-scheme/product-taxonomy"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "value": "2000.0",
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    },
+                                    "perUnitOf": {
+                                        "capacityUnit": "MMBTU"
+                                    },
+                                    "priceType": "CashPrice",
+                                    "cashPrice": {
+                                        "cashPriceType": "Fee"
+                                    },
+                                    "arithmeticOperator": ""
+                                }
+                            ],
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "frequency": {
+                                            "periodMultiplier": 1,
+                                            "period": "D",
+                                            "meta": {
+                                                "globalKey": "63"
+                                            }
+                                        },
+                                        "value": null,
+                                        "unit": {
+                                            "capacityUnit": "USMMBTU"
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "Settlement",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": 1,
+                                                "period": "M"
+                                            },
+                                            "deliveryDateRollConvention": {
+                                                "dayType": "Business",
+                                                "periodMultiplier": null,
+                                                "period": "1"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "Party1",
+                    "partyReference": {
+                        "globalReference": "DUMMY0000000000LEI02",
+                        "externalReference": "Bank A"
+                    }
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": {
+                        "globalReference": "DUMMY0000000000LEI01",
+                        "externalReference": "Bank B"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Party1",
+                    "partyReference": [
+                        {
+                            "globalReference": "DUMMY0000000000LEI02",
+                            "externalReference": "partyA"
+                        }
+                    ]
+                },
+                {
+                    "role": "Party2",
+                    "partyReference": [
+                        {
+                            "globalReference": "DUMMY0000000000LEI01",
+                            "externalReference": "partyB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI02",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    },
+                    {
+                        "identifier": {
+                            "value": "DUMMY0000000000LEI01",
+                            "meta": {
+                                "scheme": "LEI"
+                            }
+                        },
+                        "identifierType": "LEI"
+                    }
+                ],
+                "name": {
+                    "value": "Bank A"
+                },
+                "contactInformation": {
+                    "address": [
+                        {
+                            "country": {
+                                "value": "United States"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2021-12-03",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Confirmation",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "ISDA2000"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "Not applicable"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "DUMMY0000000000LEI01",
+                            "externalReference": "Bank B"
+                        },
+                        {
+                            "globalReference": "DUMMY0000000000LEI02",
+                            "externalReference": "Bank A"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

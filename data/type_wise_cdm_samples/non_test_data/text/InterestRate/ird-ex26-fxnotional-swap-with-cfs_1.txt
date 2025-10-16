@@ -1,0 +1,81 @@
+**Interest Rate Cross-Currency Swap Contract**
+
+**General Terms**
+
+This contract is an interest rate cross-currency swap between Party A (Party1) and Party B (Party2). The trade date is January 9, 2001.
+
+**Trade Details**
+
+* Trade Identifier: 33f59567 (Party1) and 33f59568 (Party2)
+* Trade Date: January 9, 2001
+* Trade Lot: 1 (single trade)
+
+**Counterparties**
+
+* Party A (Party1): Party A is the fixed-rate payer and the floating-rate receiver.
+* Party B (Party2): Party B is the floating-rate payer and the fixed-rate receiver.
+
+**Trade Product**
+
+* Product Type: Interest Rate Cross-Currency Swap
+* Contractual Product: InterestRate_CrossCurrency_FixedFloat
+* Economic Terms:
+	+ Payout: InterestRatePayout
+	+ Principal Payment: Initial, Final, and Intermediate Payments
+	+ Rate Specification: FixedRate and FloatingRate
+	+ Day Count Fraction: ACT/365.FIXED (Party A) and ACT/360 (Party B)
+	+ Calculation Period Dates: Effective Date (January 11, 2006) and Termination Date (January 11, 2011)
+	+ Payment Dates: Annually, 2 Business Days after the Calculation Period End Date
+	+ Cashflow Representation: CashflowsMatchParameters is true
+
+**Fixed Rate Terms**
+
+* Fixed Rate: 0.01 (1%)
+* Fixed Rate Schedule: Price-1
+* Notional Amount: 1,000,000,000 JPY
+
+**Floating Rate Terms**
+
+* Floating Rate: USD SOFR-COMPOUND
+* Floating Rate Index: USD-LIBOR-BBA
+* Index Tenor: 3 months
+* Floating Rate Schedule: RateOption-1
+* Notional Amount: 1,000,000,000 USD (variable)
+
+**Reset Dates**
+
+* ResetRelativeTo: CalculationPeriodStartDate
+* FixingDates: PeriodMultiplier -2, Period D, BusinessDayConvention NONE, BusinessCenters GBLO, USNY, JPTO
+* ResetFrequency: PeriodMultiplier 3, Period M, RollConvention 11
+
+**Cashflow Representation**
+
+* CashflowsMatchParameters is true
+* PaymentCalculationPeriod: 12 periods, each with a fixed rate of 0.01 and a notional amount of 1,000,000,000 JPY (Party A) or 1,000,000,000 USD (Party B)
+
+**Trade Lot**
+
+* PriceQuantity: 1 (single trade)
+* Quantity: 1,000,000,000 JPY
+* Observable: RateOption-1 (USD-LIBOR-BBA)
+
+**Party Information**
+
+* Party A (Party1): Party A is the fixed-rate payer and the floating-rate receiver.
+* Party B (Party2): Party B is the floating-rate payer and the fixed-rate receiver.
+
+**Governing Law**
+
+* Governing Law: English
+
+**Risk Disclosure**
+
+* There are significant risks associated with this transaction, including foreign exchange risk, price risk, liquidity risk, and credit risk.
+
+**Representations**
+
+* Each party represents to the other party that they are acting for their own account and have made their own independent decisions to enter into this transaction.
+
+**Acceptance**
+
+* This contract is accepted and agreed upon by the parties as of the trade date.

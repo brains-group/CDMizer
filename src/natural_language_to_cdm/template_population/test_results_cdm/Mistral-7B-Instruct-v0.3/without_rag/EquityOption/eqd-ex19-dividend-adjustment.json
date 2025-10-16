@@ -1,0 +1,348 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "issuerReference": {
+                    "globalReference": "33f59568",
+                    "externalReference": "PartyB"
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "STM-FP",
+                            "meta": {
+                                "scheme": "STMicroelectronics N.V. ordinary shares"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "Equity Option Contract",
+            "meta": {
+                "globalKey": "STM-FP",
+                "externalKey": "STMicroelectronics N.V. ordinary shares"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "33f59568",
+                                        "seller": "33f59567"
+                                    },
+                                    "underlier": {
+                                        "index": {
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "",
+                                                        "value": "STM-FP, STMicroelectronics N.V. ordinary shares"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "security": {
+                                            "securityType": "Equity Option",
+                                            "productIdentifier": [
+                                                {
+                                                    "address": {
+                                                        "scope": "Product",
+                                                        "value": "STM-FP"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "basket": {
+                                            "basketConstituent": [
+                                                {
+                                                    "index": {
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": ""
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "security": {
+                                                        "securityType": "",
+                                                        "productIdentifier": [
+                                                            {
+                                                                "address": {
+                                                                    "scope": "",
+                                                                    "value": "STM-FP"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "basket": {
+                                                        "basketConstituent": [
+                                                            {
+                                                                "security": {
+                                                                    "securityType": "",
+                                                                    "productIdentifier": [
+                                                                        {
+                                                                            "address": {
+                                                                                "scope": "",
+                                                                                "value": "STM-FP"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "optionType": " Based on the provided inputs, the 'key' is 'optionType' and the prior context leads us to the 'optionType' within the 'payout' section of the 'economicTerms' of the 'contractualProduct' of the 'tradableProduct' of the 'trade'.\n\nThe derivatives contract description specifies that the option type is a 'Call'. Therefore, the placeholder for 'optionType' should be populated with the string 'Call'.\n\nThe final JSON object with the populated placeholder would look like this:\n\n```json\n{\n  \"optionType\": \"Call\"\n}\n```",
+                                    "exerciseTerms": {
+                                        "style": "American",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "2006-08-14",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": ""
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": [
+                                            {
+                                                "adjustableDate": {
+                                                    "unadjustedDate": "2008-08-14",
+                                                    "dateAdjustments": {
+                                                        "businessDayConvention": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "latestExerciseTime": {
+                                            "hourMinuteTime": "17:15:00",
+                                            "businessCenter": {
+                                                "value": ""
+                                            }
+                                        },
+                                        "expirationTimeType": "Close",
+                                        "multipleExercise": {
+                                            "maximumNumberOfOptions": "150000",
+                                            "integralMultipleAmount": "150000",
+                                            "minimumNumberOfOptions": "1"
+                                        },
+                                        "exerciseProcedure": {
+                                            "automaticExercise": {
+                                                "isApplicable": "True"
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "financialUnit": "EUR"
+                                            },
+                                            "priceType": "Single",
+                                            "value": "32.00",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "EUR"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "PartyB",
+                                        "receiver": "jb2890"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0]",
+                                                "value": "1"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "cash",
+                                        "settlementCurrency": {
+                                            "value": "EUR"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "relativeDate": {
+                                                    "businessDayConvention": "Not specified",
+                                                    "dateRelativeTo": {
+                                                        "externalReference": "trade.tradeDate"
+                                                    },
+                                                    "dayType": "Business",
+                                                    "periodMultiplier": 1,
+                                                    "period": ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": {
+                                "globalReference": "33f59567",
+                                "externalReference": "jb2890"
+                            }
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "",
+                            "source": "STM-FP",
+                            "value": {
+                                "name": {
+                                    "value": "Equity Option Contract"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "quantity": [
+                                {
+                                    "value": {
+                                        "multiplier": {
+                                            "value": "150000",
+                                            "unit": {
+                                                "financialUnit": "contracts"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "observable": {
+                                "commodity": {
+                                    "value": {
+                                        "priceQuoteType": "",
+                                        "deliveryDateReference": {
+                                            "deliveryNearby": {
+                                                "periodMultiplier": null,
+                                                "period": "Not specified"
+                                            }
+                                        }
+                                    }
+                                },
+                                "productIdentifier": [
+                                    {
+                                        "value": {
+                                            "identifier": {
+                                                "value": "STM-FP",
+                                                "meta": {
+                                                    "scheme": "STMicroelectronics N.V. ordinary shares"
+                                                }
+                                            },
+                                            "source": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "33f59568",
+                        "externalReference": "PartyB"
+                    }
+                },
+                {
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "33f59567",
+                        "externalReference": "jb2890"
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "AncillaryParty",
+                    "partyReference": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "33f59568",
+                            "meta": {
+                                "scheme": "Global Reference"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "33f59567",
+                            "meta": {
+                                "scheme": "External Reference"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "contractDetails": {
+            "documentation": [
+                {
+                    "agreementDate": "2006-08-14",
+                    "legalAgreementIdentification": {
+                        "agreementName": {
+                            "agreementType": "Equity Option Contract",
+                            "contractualDefinitionsType": [
+                                {
+                                    "value": "Equity Option Contract"
+                                }
+                            ],
+                            "masterAgreementType": {
+                                "value": "ISDA Master Agreement"
+                            }
+                        },
+                        "vintage": null
+                    },
+                    "contractualParty": [
+                        {
+                            "globalReference": "33f59568",
+                            "externalReference": "PartyB"
+                        },
+                        {
+                            "globalReference": "33f59567",
+                            "externalReference": "jb2890"
+                        }
+                    ]
+                }
+            ],
+            "governingLaw": {
+                "value": "Not specified"
+            }
+        }
+    }
+}

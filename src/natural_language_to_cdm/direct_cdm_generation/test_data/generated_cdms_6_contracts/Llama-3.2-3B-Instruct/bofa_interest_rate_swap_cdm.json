@@ -1,0 +1,90 @@
+{
+    "Agreement": {
+        "AgreementType": "ISDA Master Agreement",
+        "AgreementDate": "1999-02-17",
+        "AmendmentDate": "2018-03-16",
+        "TerminationDate": "2048-03-16",
+        "Parties": {
+            "PartyA": {
+                "Name": "Merrill Lynch International",
+                "Address": "London, United Kingdom",
+                "FaxNumber": "+1 866 218 8487"
+            },
+            "PartyB": {
+                "Name": "Party B",
+                "Address": "Sydney-NSW, AUSTRALIA",
+                "FaxNumber": "+1 866 218 8487"
+            }
+        },
+        "Confirmations": [
+            {
+                "ConfirmationDate": "2018-03-01",
+                "TradeDate": "2018-03-01",
+                "ScheduleA": {
+                    "NotionalAmount": 10000000
+                },
+                "ScheduleB": {
+                    "FloatingRate": 0.0,
+                    "Spread": 0.0
+                },
+                "FixedAmountPayer": "Party A",
+                "FloatingRatePayer": "Party B",
+                "FixedRate": 0.046,
+                "FixedRateDayCount": "30/360",
+                "Fraction": 0.046,
+                "FloatingAmounts": {
+                    "FloatingRatePayer": {
+                        "NotionalAmount": 10000000,
+                        "FloatingRateOption": "USD-LIBOR-BBA",
+                        "DesignatedMaturity": "3 Month",
+                        "Spread": 0.0,
+                        "FloatingRateDayCountFraction": "Actual/360",
+                        "ResetDates": [
+                            "2018-06-01"
+                        ],
+                        "BusinessDays": [
+                            "London",
+                            "New York",
+                            "Sydney"
+                        ],
+                        "EarlyTerminationI": {
+                            "OptionalEarlyTermination": "Applicable",
+                            "OptionStyle": "Bermuda",
+                            "Buyer": "Party A",
+                            "Seller": "Party B",
+                            "BusinessDaysForPayments": [
+                                "London",
+                                "New York",
+                                "Sydney"
+                            ],
+                            "ExerciseBusinessDay": [
+                                "London",
+                                "New York",
+                                "Sydney"
+                            ],
+                            "ProcedureForExercise": {
+                                "BermudaOption": {
+                                    "ExerciseDates": [
+                                        "2018-03-10"
+                                    ],
+                                    "ExpirationDate": "2018-03-10",
+                                    "EarliestExerciseTime": "09:00:00",
+                                    "ExpirationTime": "11:00:00"
+                                }
+                            },
+                            "OptionalEarlyTerminationTerms": {
+                                "OptionalEarlyTerminationDates": [
+                                    "2018-03-16"
+                                ],
+                                "BusinessDayConvention": "Following"
+                            }
+                        }
+                    }
+                },
+                "SettlementTerms": {
+                    "CashSettlement": "Inapplicable"
+                }
+            }
+        ]
+    }
+}

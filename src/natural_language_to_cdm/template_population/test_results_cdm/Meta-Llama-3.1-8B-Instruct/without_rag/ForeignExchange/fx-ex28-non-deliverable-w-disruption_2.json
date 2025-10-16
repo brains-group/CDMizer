@@ -1,0 +1,663 @@
+{
+    "trade": {
+        "tradeIdentifier": [
+            {
+                "identifierType": "Trade Identifier",
+                "issuerReference": {
+                    "globalReference": "ISDA Master Agreement",
+                    "externalReference": "2006 ISDA Definitions"
+                },
+                "issuer": {
+                    "value": "Party1",
+                    "meta": {
+                        "scheme": "Party Identifier Scheme"
+                    }
+                },
+                "assignedIdentifier": [
+                    {
+                        "identifier": {
+                            "value": "d26b18a8",
+                            "meta": {
+                                "scheme": "Party Identifier Scheme"
+                            }
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "value": "733fed68",
+                            "meta": {
+                                "scheme": "Party Identifier Scheme"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tradeDate": {
+            "value": "April 1, 2013",
+            "meta": {
+                "globalKey": "d26b18a8-733fed68",
+                "externalKey": "NDF Contract between HSBCGB01 and BNPPGB01"
+            }
+        },
+        "tradableProduct": {
+            "product": {
+                "contractualProduct": {
+                    "economicTerms": {
+                        "payout": {
+                            "optionPayout": [
+                                {
+                                    "buyerSeller": {
+                                        "buyer": "HSBCGB01",
+                                        "seller": "BNPPGB01"
+                                    },
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourceProvider": {
+                                                    "value": "ISDA"
+                                                },
+                                                "sourcePage": {
+                                                    "value": "2006 ISDA Definitions"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "observationSchedule": {
+                                                "observationDate": [
+                                                    {
+                                                        "adjustedDate": "April 1, 2013",
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            },
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "April 1, 2013"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "October 1, 2013"
+                                                    }
+                                                },
+                                                "periodFrequency": {
+                                                    "rollConvention": "6 months",
+                                                    "periodMultiplier": 1,
+                                                    "period": "6M"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "HSBCGB01",
+                                                    "receiver": "BNPPGB01"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "BRL",
+                                                            "value": "3,000,000"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "BNPPGB01",
+                                                    "receiver": "HSBCGB01"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "USD",
+                                                            "value": "2,307,000"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "exerciseTerms": {
+                                        "style": "### Inputs:\n\n- The 'key' form a JSON Object (to be populated):\nstyle\n\n- Placeholder:\nstyle\n\n- Derivatives Contract Description:\n**Foreign Exchange Non-Deliverable Forward (NDF) Contract**\n\n**General Terms**\n\nThis contract is a Foreign Exchange Non-Deliverable Forward (NDF) contract between two parties, Party1 and Party2, entered into on April 1, 2013. The contract is governed by the ISDA Master Agreement and the 2006 ISDA Definitions.\n\n**Trade Details**\n\n* Trade Identifier: d26b18a8 (Party1) and 733fed68 (Party2)\n* Trade Date: April 1, 2013\n* Trade Lot: 1 lot\n* Notional Amount: BRL 3,000,000 (Party1) and USD 2,307,000 (Party2)\n\n**Product Details**\n\n* Product Type: Foreign Exchange NDF\n* Underlier: Foreign Exchange\n* Exchanged Currency 1: BRL (payer: Party1, receiver: Party2)\n* Exchanged Currency 2: USD (payer: Party2, receiver: Party1)\n* Tenor Period: 6 months\n* Forward Payout: Cash settlement in USD\n\n**Settlement Terms**\n\n* Settlement Type: Cash\n* Settlement Currency: USD\n* Settlement Date: October 1, 2013\n* Cash Settlement Terms: valuation method based on BRL.PTAX/BRL09 settlement rate option\n\n**Counterparty Details**\n\n* Party1: HSBCGB01 (Party1)\n* Party2: BNPPGB01 (Party2)\n\n**Risk Disclosure**\n\nThe parties acknowledge that this contract involves significant risks, including foreign exchange risk, price risk, liquidity risk, and credit risk. The parties represent that they have made their own independent decisions to enter into this contract and have sufficient financial resources to bear the risks associated with it.\n\n**Representations**\n\nEach party represents to the other party that they have the power to enter into this contract and have taken all necessary action to authorize its execution and performance.\n\n**Governing Law**\n\nThis contract is governed by the laws of the Province of Ontario and the laws of Canada applicable therein.\n\n**Calculation Agent**\n\nThe calculation agent for this contract is Party1 (HSBCGB01).\n\n**Valuation Statements**\n\nValuation statements will be made available to Party2 on the Optimize platform.\n\n- Prior Context (Path):\ntrade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].exerciseTerms.style\n\n### Task:\n\nFind a value that is best suited for the provided key from the provided derivatives contract. Use the key and prior context to accurately find the value.\n\n### Solution:\n\nBased on the prior context `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].exerciseTerms.style`, we are looking for the style of the exercise terms of the payout option.\n\nFrom the contract description, we can see that the payout option is related to the cash settlement in USD. Therefore, we can infer that the style of the exercise terms is likely to be related to the valuation method used for the cash settlement.\n\nBased on this information, we can populate the placeholder with the following value:\n\n```json\n{\n  \"style\": \"valuation method based on BRL.PTAX/BRL09 settlement rate option\"\n}\n```\n\nThis value is a string, which matches the expected datatype of the placeholder.\n\n### Final Answer:\n\n```json\nstyle\n{\n  \"style\": \"valuation method based on BRL.PTAX/BRL09 settlement rate option\"\n}\n```",
+                                        "commencementDate": {
+                                            "adjustableDate": {
+                                                "unadjustedDate": "April 1, 2013",
+                                                "dateAdjustments": {
+                                                    "businessDayConvention": "Modified Following",
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "ISDA"
+                                                            },
+                                                            {
+                                                                "value": "ISDA"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationDate": {
+                                            "adjustableDate": {
+                                                "adjustedDate": {
+                                                    "value": "April 1, 2013",
+                                                    "meta": {
+                                                        "globalKey": "trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].exerciseTerms.expirationDate"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "expirationTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        }
+                                    },
+                                    "strike": {
+                                        "strikePrice": {
+                                            "perUnitOf": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            },
+                                            "priceType": "strike",
+                                            "composite": {
+                                                "baseValue": 1,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "value": 1.0,
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "ISDA Master Agreement",
+                                                                "value": "valuation method based on BRL.PTAX/BRL09 settlement rate option"
+                                                            },
+                                                            "informationSource": {
+                                                                "primarySource": {
+                                                                    "sourceProvider": {
+                                                                        "value": "Party1 (HSBCGB01)"
+                                                                    },
+                                                                    "sourcePage": {
+                                                                        "value": "Optimize platform"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "October 1, 2013"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the best-suited information for the `settlementType` key.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.optionPayout[0].settlementTerms.settlementType`, which indicates that we are looking for the settlement type of the payout option.\n\nIn the contract description, we find the following relevant information under the **Settlement Terms** section:\n\n* Settlement Type: Cash\n* Settlement Currency: USD\n* Settlement Date: October 1, 2013\n* Cash Settlement Terms: valuation method based on BRL.PTAX/BRL09 settlement rate option\n\nSince the placeholder is an empty string (`\"\"`), we will replace it with a STRING derived from the contract information. The best-suited information for the `settlementType` key is the \"Cash\" settlement type.\n\n### Maintaining the Same Datatype\n\nSince the placeholder is an empty string (`\"\"`), we will replace it with a STRING. The resulting populated placeholder will be:\n\n`\"Cash\"`\n\n### Final Answer\n\n```json\n{\n  \"settlementType\": \"Cash\"\n}\n```",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "October 1, 2013"
+                                        }
+                                    }
+                                }
+                            ],
+                            "forwardPayout": [
+                                {
+                                    "underlier": {
+                                        "foreignExchange": {
+                                            "exchangedCurrency1": {
+                                                "payerReceiver": {
+                                                    "payer": "HSBCGB01",
+                                                    "receiver": "BNPPGB01"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "BRL",
+                                                            "value": "3,000,000"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "exchangedCurrency2": {
+                                                "payerReceiver": {
+                                                    "payer": "BNPPGB01",
+                                                    "receiver": "HSBCGB01"
+                                                },
+                                                "priceQuantity": {
+                                                    "quantitySchedule": {
+                                                        "address": {
+                                                            "scope": "USD",
+                                                            "value": "2,307,000"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "tenorPeriod": {
+                                                "periodMultiplier": 1,
+                                                "period": "6 months"
+                                            },
+                                            "exchangeRate": {
+                                                "crossRate": [
+                                                    {
+                                                        "rate": 1,
+                                                        "currency1": {
+                                                            "value": "BRL"
+                                                        },
+                                                        "currency2": {
+                                                            "value": "USD"
+                                                        },
+                                                        "quoteBasis": "Spot"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "cashSettlementTerms": [
+                                            {
+                                                "valuationMethod": {
+                                                    "valuationSource": {
+                                                        "quotedCurrencyPair": {
+                                                            "address": {
+                                                                "scope": "BRL/USD",
+                                                                "value": "BRL/USD"
+                                                            }
+                                                        },
+                                                        "informationSource": {
+                                                            "primarySource": {
+                                                                "sourceProvider": {
+                                                                    "value": "BRL.PTAX/BRL09 settlement rate option"
+                                                                },
+                                                                "sourcePage": {
+                                                                    "value": "BRL.PTAX/BRL09 settlement rate option"
+                                                                }
+                                                            }
+                                                        },
+                                                        "settlementRateOption": {
+                                                            "settlementRateOption": {
+                                                                "value": "BRL.PTAX/BRL09"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationDate": {
+                                                    "fxFixingDate": {
+                                                        "fxFixingDate": {
+                                                            "adjustableDate": {
+                                                                "unadjustedDate": "2013-04-01",
+                                                                "dateAdjustments": {
+                                                                    "businessDayConvention": "Following",
+                                                                    "calendar": "ISDA",
+                                                                    "shiftDays": 0,
+                                                                    "shiftWeekends": true,
+                                                                    "shiftWeekdays": true
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "valuationTime": {
+                                                    "hourMinuteTime": "11:00:00",
+                                                    "businessCenter": {
+                                                        "value": "GBLO"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "settlementType": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the best-suited information for the given key `settlementType`.\n\nThe prior context is `trade.tradableProduct.product.contractualProduct.economicTerms.payout.forwardPayout[0].settlementTerms.settlementType`, which indicates that we are looking for the settlement type of the forward payout.\n\nFrom the contract description, we can see that the **Settlement Terms** section mentions:\n\n* Settlement Type: Cash\n* Settlement Currency: USD\n* Settlement Date: October 1, 2013\n\nSince the placeholder is an empty string (`\"\"`), we will replace it with a STRING derived from the contract information.\n\n### Maintaining the Same Datatype\n\nThe placeholder is an empty string, so we will replace it with a STRING. The best-suited information for the given key `settlementType` is \"Cash\".\n\n### Final Output\n\nHere is the populated placeholder:\n\n```json\n\"settlementType\": \"Cash\"\n```\n\n### Explanation\n\nWe have successfully populated the placeholder with the correct information based on the provided derivatives contract description and prior context. The `settlementType` key is now populated with the value \"Cash\", which is the correct settlement type for the forward payout.",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "valueDate": "October 1, 2013"
+                                        }
+                                    }
+                                }
+                            ],
+                            "performancePayout": [
+                                {
+                                    "observationTerms": {
+                                        "pricingTime": {
+                                            "hourMinuteTime": "11:00:00",
+                                            "businessCenter": {
+                                                "value": "GBLO"
+                                            }
+                                        },
+                                        "informationSource": {
+                                            "primarySource": {
+                                                "sourcePage": {
+                                                    "value": "ISDA Master Agreement and the 2006 ISDA Definitions"
+                                                }
+                                            }
+                                        },
+                                        "observable": {
+                                            "currencyPair": {
+                                                "value": {
+                                                    "currency1": {
+                                                        "value": "BRL"
+                                                    },
+                                                    "currency2": {
+                                                        "value": "USD"
+                                                    },
+                                                    "quoteBasis": "Forward Payout: Cash settlement in USD"
+                                                }
+                                            }
+                                        },
+                                        "observationDates": {
+                                            "periodicSchedule": {
+                                                "startDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-04-01"
+                                                    }
+                                                },
+                                                "endDate": {
+                                                    "adjustableDate": {
+                                                        "unadjustedDate": "2013-10-01"
+                                                    }
+                                                },
+                                                "periodDatesAdjustments": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "ISDA"
+                                                            },
+                                                            {
+                                                                "value": "Province of Ontario"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "dayType": "Business Day"
+                                            }
+                                        },
+                                        "numberOfObservationDates": "### Populating the Placeholder\n\nBased on the provided derivatives contract description and prior context, we can identify the relevant information for the key `numberOfObservationDates`.\n\nFrom the contract description, we can see that the contract is a Foreign Exchange Non-Deliverable Forward (NDF) contract with a tenor period of 6 months. This implies that there will be multiple observation dates during this period.\n\nThe prior context `trade.tradableProduct.product.contractualProduct.economicTerms.payout.performancePayout[0].observationTerms.numberOfObservationDates` suggests that we are looking for the number of observation dates for the performance payout.\n\n### Populating the Placeholder with Relevant Data\n\nBased on the contract description, we can infer that there will be 2 observation dates for the performance payout, one at the beginning of the tenor period and another at the end of the tenor period.\n\n```json\n[\n  {\n    \"observationDate\": \"April 1, 2013\"\n  },\n  {\n    \"observationDate\": \"October 1, 2013\"\n  }\n]\n```\n\n### Maintaining the Same Datatype\n\nThe placeholder is an empty list (\"[]\"), so we populate it with a LIST of items derived from the contract information. In this case, we have a list of objects with a single property `observationDate`.\n\n### Final Output\n\nThe populated placeholder for the key `numberOfObservationDates` is:\n\n```json\n[\n  {\n    \"observationDate\": \"April 1, 2013\"\n  },\n  {\n    \"observationDate\": \"October 1, 2013\"\n  }\n]\n```"
+                                    },
+                                    "valuationDates": {
+                                        "finalValuationDate": {
+                                            "valuationDates": {
+                                                "relativeDates": {
+                                                    "businessCenters": {
+                                                        "businessCenter": [
+                                                            {
+                                                                "value": "ISDA"
+                                                            },
+                                                            {
+                                                                "value": "ISDA"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "dayType": "Business Day",
+                                                    "periodMultiplier": 1,
+                                                    "period": "6 months"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "returnTerms": {
+                                        "varianceReturnTerms": {
+                                            "varianceStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "strikePrice",
+                                                "value": 1.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "vegaNotionalAmount": {
+                                                "value": 1000000.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 2.0,
+                                            "meanAdjustment": 0.0
+                                        },
+                                        "volatilityReturnTerms": {
+                                            "volatilityStrikePrice": {
+                                                "perUnitOf": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                },
+                                                "priceType": "strikePrice",
+                                                "value": 1.0,
+                                                "unit": {
+                                                    "currency": {
+                                                        "value": "USD"
+                                                    }
+                                                }
+                                            },
+                                            "annualizationFactor": 2.0,
+                                            "meanAdjustment": 0.0
+                                        }
+                                    },
+                                    "payerReceiver": {
+                                        "payer": "Party1",
+                                        "receiver": "Party2"
+                                    },
+                                    "priceQuantity": {
+                                        "quantitySchedule": {
+                                            "address": {
+                                                "scope": "ISDA Master Agreement",
+                                                "value": "2006 ISDA Definitions"
+                                            }
+                                        }
+                                    },
+                                    "settlementTerms": {
+                                        "settlementType": "Cash",
+                                        "settlementCurrency": {
+                                            "value": "USD"
+                                        },
+                                        "settlementDate": {
+                                            "adjustableOrRelativeDate": {
+                                                "adjustedDate": {
+                                                    "value": "October 1, 2013",
+                                                    "meta": {
+                                                        "globalKey": "2013-10-01"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "calculationAgent": {
+                            "calculationAgentParty": {
+                                "partyId": "HSBCGB01",
+                                "partyName": "HSBC",
+                                "partyDescription": "Party1, the calculation agent for this contract"
+                            }
+                        }
+                    },
+                    "productTaxonomy": [
+                        {
+                            "productQualifier": "Foreign Exchange NDF",
+                            "source": "ISDA Master Agreement and 2006 ISDA Definitions",
+                            "value": {
+                                "name": {
+                                    "value": "Foreign Exchange",
+                                    "meta": {
+                                        "scheme": "ISDA"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "tradeLot": [
+                {
+                    "priceQuantity": [
+                        {
+                            "price": [
+                                {
+                                    "value": {
+                                        "perUnitOf": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        },
+                                        "priceType": "Forward Payout",
+                                        "composite": {
+                                            "baseValue": 3000000,
+                                            "operand": "+",
+                                            "arithmeticOperator": "addition",
+                                            "unit": {
+                                                "currency": {
+                                                    "value": "USD"
+                                                }
+                                            }
+                                        },
+                                        "value": 2307000,
+                                        "unit": {
+                                            "currency": {
+                                                "value": "USD"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "quantity": {
+                                "value": {
+                                    "value": 3000000,
+                                    "unit": {
+                                        "currency": {
+                                            "value": "BRL"
+                                        }
+                                    }
+                                }
+                            },
+                            "observable": {
+                                "currencyPair": {
+                                    "value": {
+                                        "currency1": {
+                                            "value": "BRL"
+                                        },
+                                        "currency2": {
+                                            "value": "USD"
+                                        },
+                                        "quoteBasis": "Spot"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "counterparty": [
+                {
+                    "role": "",
+                    "partyReference": {
+                        "globalReference": "",
+                        "externalReference": ""
+                    }
+                }
+            ],
+            "ancillaryParty": [
+                {
+                    "role": "Counterparty",
+                    "partyReference": [
+                        {
+                            "globalReference": "HSBCGB01",
+                            "externalReference": "Party1"
+                        },
+                        {
+                            "globalReference": "BNPPGB01",
+                            "externalReference": "Party2"
+                        }
+                    ]
+                }
+            ]
+        },
+        "party": [
+            {
+                "partyId": [
+                    {
+                        "identifier": {
+                            "value": "HSBCGB01",
+                            "meta": {
+                                "scheme": "Party Identifier Scheme"
+                            }
+                        },
+                        "identifierType": "Party Identifier"
+                    },
+                    {
+                        "identifier": {
+                            "value": "BNPPGB01",
+                            "meta": {
+                                "scheme": "Party Identifier Scheme"
+                            }
+                        },
+                        "identifierType": "Party Identifier"
+                    }
+                ],
+                "name": {
+                    "value": "Party1"
+                }
+            }
+        ],
+        "account": [
+            {
+                "accountNumber": {
+                    "value": "d26b18a8"
+                },
+                "servicingParty": {
+                    "globalReference": "HSBCGB01",
+                    "externalReference": "BNPPGB01"
+                }
+            }
+        ]
+    }
+}
