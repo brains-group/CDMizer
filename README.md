@@ -4,7 +4,8 @@
 
 ---
 
-Paper : https://arxiv.org/abs/2506.01063
+IJCAI'25 Paper : https://arxiv.org/abs/2506.01063
+AI4F Symposium'25 Paper : https://arxiv.org/abs/2510.23990
 
 ## Overview
 
